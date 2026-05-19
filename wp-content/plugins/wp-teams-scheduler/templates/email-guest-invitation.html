@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Invitation</title>
+    <style>
+        /* --- Base Styles (Light Mode) --- */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: #333; /* Dark text for light mode */
+            margin: 0; 
+            padding: 0; 
+            background-color: #f6f8fa;
+        }
+        .container { 
+            width: 100%; 
+            max-width: 600px; 
+            margin: 40px auto; 
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #000 0%, #2d5a3d 100%);
+            color: white;
+            padding: 40px 30px 0px;
+            text-align: center;
+        }
+        /* --- NEW: Logo Styling for Both Themes --- */
+        .logo {
+            background-color: white; /* White background for the logo */
+            padding: 10px;
+            border-radius: 12px;
+            height: auto;
+            margin-bottom: 20px;
+            max-width: 150px;
+            display: inline-block;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 12px 0 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .meeting-details {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 24px 0;
+            border-left: 4px solid #000;
+        }
+        .meeting-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        .meeting-detail:last-child {
+            margin-bottom: 0;
+        }
+        .meeting-detail strong {
+            min-width: 80px;
+            color: #000;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #000;
+            color: white !important; /* Ensure white text */
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 24px 0;
+            text-align: center;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer h4 {
+            margin: 0 0 12px 0;
+            font-size: 16px;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        .footer a {
+            color: #4ade80;
+            text-decoration: none;
+        }
+        .attachment-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .attachment-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .attachment-list li:last-child {
+            border-bottom: none;
+        }
+        .attachment-list a {
+            color: #ff4916;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .attachment-list a:hover {
+            text-decoration: underline;
+        }
+        .additional-info {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        [data-ogsc] h1, [data-ogsb] h1 {
+  color: #4ade80 !important;
+}
+
+
+        /* --- NEW: Dark Mode Styles --- */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0; /* Light text for dark mode */
+            }
+            .container {
+                background-color: #1e1e1e;
+                box-shadow: none;
+            }
+            /* The header and footer are already dark-friendly, so no changes needed there */
+            .meeting-details {
+                background-color: #2d2d2d;
+                border-left-color: #4ade80; /* Use a brighter green for the border */
+            }
+            .meeting-detail strong {
+                color: #4ade80; /* Brighter green for labels */
+            }
+            .attachment-list {
+                background-color: #2d2d2d;
+            }
+            .attachment-list li {
+                border-bottom-color: #404040;
+            }
+            .attachment-list a {
+                color: #ff6b3d;
+            }
+            .additional-info {
+                background-color: #2d2d2d;
+                color: #e0e0e0;
+            }
+            /* Dark mode for signature section */
+            div[style*="border-top: 2px solid #e5e7eb"] {
+                border-top-color: #404040 !important;
+            }
+            p[style*="color: #666"] {
+                 color: #999999 !important; /* Target the inline-styled link and make it lighter */
+            }
+        }
+    </style>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f6f8fa;">
+    <div class="container" style="width: 100%; max-width: 600px; margin: 40px auto; background-color: #ffffff; border-radius: 12px; overflow: hidden;">
+        <div class="header" style="background: linear-gradient(135deg, #000 0%, #2d5a3d 100%); background-color: #000; color: white; padding: 40px 30px 0px; text-align: center;">
+            <!-- Logo with white background - Using PNG instead of SVG for Gmail compatibility -->
+            <div style="background-color: white; padding: 10px; border-radius: 12px; display: inline-block; margin-bottom: 20px;">
+                <img src="https://salesnanny.com/wp-content/themes/salesnanny/assets/salesnanny-favi-logo.png" alt="SalesNanny Logo" style="max-width: 120px; height: auto; display: block;" width="120">
+            </div>
+            <h1 style="color: #ffffff; font-size: 28px; margin: 0 0 20px 0; font-weight: 700;">
+                <span style="color: #fff;">Meeting Invitation</span>
+            </h1>
+        </div>
+        
+        <div class="content" style="padding: 40px 30px;">
+            <p style="margin: 0 0 16px 0; font-size: 16px; color: #333;">Hello {{GUEST_FIRST_NAME}},</p>
+            
+            <p style="margin: 0 0 24px 0; font-size: 16px; color: #333;">{{USER_NAME}} has invited you to join a meeting:</p>
+            
+            <div class="meeting-details" style="background-color: #f8f9fa; border-radius: 8px; padding: 24px; margin: 24px 0;">
+                <div class="meeting-detail" style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e7eb;">
+                    <strong style="color: #000;">Event:</strong> <span style="color: #333;">{{EVENT_NAME}}</span>
+                </div>
+                <div class="meeting-detail" style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e7eb;">
+                    <strong style="color: #000;">Date:</strong> <span style="color: #333;">{{MEETING_TIME}}</span>
+                </div>
+                <div class="meeting-detail" style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e7eb;">
+                    <strong style="color: #000;">Duration:</strong> <span style="color: #333;">{{DURATION}}</span>
+                </div>
+                <div class="meeting-detail" style="margin-bottom: 0;">
+                    <strong style="color: #000;">Organizer:</strong> <span style="color: #333;">{{USER_NAME}} ({{USER_EMAIL}})</span>
+                </div>
+            </div>
+            
+            {{ADDITIONAL_INFO_SECTION}}
+            {{UPLOADED_FILES_SECTION}}
+            
+            <p style="margin: 24px 0 16px 0; font-size: 16px; color: #333;">Click the button below to join the meeting:</p>
+            
+            <div style="text-align: center; margin: 32px 0;">
+                <a href="{{MEETING_LINK}}" class="cta-button" style="display: inline-block; background-color: #ff4916; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">Join Meeting</a>
+            </div>
+            
+            <p style="margin: 24px 0 8px 0; font-size: 14px; color: #666;">If the button doesn't work, you can copy and paste this link into your browser:</p>
+            <p style="word-break: break-all; color: #000; font-size: 13px; margin: 0 0 24px 0;">{{MEETING_LINK}}</p>
+            
+            <!-- Professional Email Signature -->
+            <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #e5e7eb;">
+                <p style="margin: 0 0 8px 0; font-size: 16px; color: #333; font-weight: 600;">Best regards,</p>
+                <table style="border: none; border-collapse: collapse; margin-top: 16px;" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="border: none; padding: 0; vertical-align: top;">
+                            <div style="padding-right: 20px; border-right: 3px solid #ff4916;">
+                                <img src="https://salesnanny.com/wp-content/themes/salesnanny/assets/salesnanny-favi-logo.png" alt="{{SITE_TITLE}}" style="width: 60px; height: 60px; display: block;" width="60" height="60">
+                            </div>
+                        </td>
+                        <td style="border: none; padding: 0 0 0 20px; vertical-align: top;">
+                            <p style="margin: 0 0 4px 0; font-size: 16px; font-weight: 600; color: #000;">{{SITE_TITLE}} Team</p>
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #666;">Your Digital Partner for Logistics Success</p>
+                            <p style="margin: 0; font-size: 14px; color: #333;">
+                                <strong style="color: #000;">Email:</strong> <a href="mailto:{{ADMIN_EMAIL}}" style="color: #ff4916; text-decoration: none;">{{ADMIN_EMAIL}}</a><br>
+                                <strong style="color: #000;">Phone:</strong> <span style="color: #333;">+91 81223 46800</span><br>
+                                <strong style="color: #000;">Website:</strong> <a href="{{SITE_URL}}" style="color: #ff4916; text-decoration: none;">{{SITE_URL}}</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="footer" style="background-color: #f8f9fa; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb;">
+            <h4 style="margin: 0 0 12px 0; font-size: 18px; color: #000; font-weight: 600;">Need Help?</h4>
+            <p style="margin: 0; font-size: 14px; color: #666;">If you have any questions, please contact us at <a href="mailto:{{ADMIN_EMAIL}}" style="color: #000; text-decoration: underline;">{{ADMIN_EMAIL}}</a></p>
+        </div>
+    </div>
+</body>
+</html>

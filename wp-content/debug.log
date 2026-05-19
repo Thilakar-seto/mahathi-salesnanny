@@ -1,0 +1,37 @@
+[15-May-2026 06:34:56 UTC] Automatic updates starting...
+[15-May-2026 06:34:58 UTC] Automatic updates complete.
+[15-May-2026 13:45:38 UTC] Automatic updates starting...
+[15-May-2026 13:45:40 UTC] Automatic updates complete.
+[17-May-2026 06:29:18 UTC] PHP Warning:  wp_version_check(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in D:\wamp64\www\SalesNanny\wp-includes\functions.php on line 6131
+[17-May-2026 06:29:18 UTC] PHP Stack trace:
+[17-May-2026 06:29:18 UTC] PHP   1. {main}() D:\wamp64\www\SalesNanny\wp-cron.php:0
+[17-May-2026 06:29:18 UTC] PHP   2. do_action_ref_array($hook_name = 'wp_version_check', $args = []) D:\wamp64\www\SalesNanny\wp-cron.php:191
+[17-May-2026 06:29:18 UTC] PHP   3. WP_Hook->do_action($args = []) D:\wamp64\www\SalesNanny\wp-includes\plugin.php:570
+[17-May-2026 06:29:18 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = []) D:\wamp64\www\SalesNanny\wp-includes\class-wp-hook.php:365
+[17-May-2026 06:29:18 UTC] PHP   5. wp_version_check($extra_stats = *uninitialized*, $force_check = *uninitialized*) D:\wamp64\www\SalesNanny\wp-includes\class-wp-hook.php:341
+[17-May-2026 06:29:18 UTC] PHP   6. wp_trigger_error($function_name = 'wp_version_check', $message = 'An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.)', $error_level = 512) D:\wamp64\www\SalesNanny\wp-includes\update.php:256
+[17-May-2026 06:29:18 UTC] PHP   7. trigger_error($message = 'wp_version_check(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.)', $error_level = 512) D:\wamp64\www\SalesNanny\wp-includes\functions.php:6131
+[17-May-2026 06:29:18 UTC] PHP Warning:  wp_update_plugins(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in D:\wamp64\www\SalesNanny\wp-includes\functions.php on line 6131
+[17-May-2026 06:29:18 UTC] PHP Stack trace:
+[17-May-2026 06:29:18 UTC] PHP   1. {main}() D:\wamp64\www\SalesNanny\wp-cron.php:0
+[17-May-2026 06:29:18 UTC] PHP   2. do_action_ref_array($hook_name = 'wp_update_plugins', $args = []) D:\wamp64\www\SalesNanny\wp-cron.php:191
+[17-May-2026 06:29:18 UTC] PHP   3. WP_Hook->do_action($args = []) D:\wamp64\www\SalesNanny\wp-includes\plugin.php:570
+[17-May-2026 06:29:18 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = []) D:\wamp64\www\SalesNanny\wp-includes\class-wp-hook.php:365
+[17-May-2026 06:29:18 UTC] PHP   5. wp_update_plugins($extra_stats = *uninitialized*) D:\wamp64\www\SalesNanny\wp-includes\class-wp-hook.php:341
+[17-May-2026 06:29:18 UTC] PHP   6. wp_trigger_error($function_name = 'wp_update_plugins', $message = 'An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.)', $error_level = 512) D:\wamp64\www\SalesNanny\wp-includes\update.php:482
+[17-May-2026 06:29:18 UTC] PHP   7. trigger_error($message = 'wp_update_plugins(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.)', $error_level = 512) D:\wamp64\www\SalesNanny\wp-includes\functions.php:6131
+[17-May-2026 06:29:18 UTC] PHP Warning:  wp_update_themes(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in D:\wamp64\www\SalesNanny\wp-includes\functions.php on line 6131
+[17-May-2026 06:29:18 UTC] PHP Stack trace:
+[17-May-2026 06:29:18 UTC] PHP   1. {main}() D:\wamp64\www\SalesNanny\wp-cron.php:0
+[17-May-2026 06:29:18 UTC] PHP   2. do_action_ref_array($hook_name = 'wp_update_themes', $args = []) D:\wamp64\www\SalesNanny\wp-cron.php:191
+[17-May-2026 06:29:18 UTC] PHP   3. WP_Hook->do_action($args = []) D:\wamp64\www\SalesNanny\wp-includes\plugin.php:570
+[17-May-2026 06:29:18 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = []) D:\wamp64\www\SalesNanny\wp-includes\class-wp-hook.php:365
+[17-May-2026 06:29:18 UTC] PHP   5. wp_update_themes($extra_stats = *uninitialized*) D:\wamp64\www\SalesNanny\wp-includes\class-wp-hook.php:341
+[17-May-2026 06:29:18 UTC] PHP   6. wp_trigger_error($function_name = 'wp_update_themes', $message = 'An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.)', $error_level = 512) D:\wamp64\www\SalesNanny\wp-includes\update.php:768
+[17-May-2026 06:29:18 UTC] PHP   7. trigger_error($message = 'wp_update_themes(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.)', $error_level = 512) D:\wamp64\www\SalesNanny\wp-includes\functions.php:6131
+[18-May-2026 06:48:36 UTC] Automatic updates starting...
+[18-May-2026 06:48:38 UTC] Automatic updates complete.
+[18-May-2026 09:42:06 UTC] Automatic updates starting...
+[18-May-2026 09:42:07 UTC] Automatic updates complete.
+[19-May-2026 09:37:33 UTC] Automatic updates starting...
+[19-May-2026 09:37:34 UTC] Automatic updates complete.

@@ -1,0 +1,1869 @@
+/*
+ * =========================================
+ *  WP Teams Scheduler - Calendly Style UI
+ * =========================================
+ */
+
+/* 1. Global Wrapper & Font */
+/* ------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.wpts-hyper-modern-wrapper {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    padding: 120px 16px;
+     /* Let the wrapper height be driven by content */
+     min-height: auto;
+     overflow: visible;
+}
+
+:root {
+    --wpts-color-primary: #0069ff;
+    --wpts-color-primary-light: #e6f2ff;
+    --wpts-color-primary-dark: #0056cc;
+    --wpts-text-dark: #1a1a1a;
+    --wpts-text-medium: #1a1a1a9c;
+    --wpts-text-light: #6b7280;
+    --wpts-border-color: #e5e7eb;
+    --wpts-card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --wpts-card-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* 2. Main Scheduler Card & Step Transitions */
+/* ------------------------------------ */
+#wpts-scheduler {
+    max-width: 940px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: var(--wpts-card-shadow);
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    position: relative;
+    overflow: visible; /* allow content to grow */
+}
+
+#wpts-info-panel {
+    background-color: #ffffff;
+    border-right: 1px solid var(--wpts-border-color);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.wpts-back-button-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.wpts-back-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--wpts-color-primary);
+    transition: background-color 0.2s ease;
+}
+
+.wpts-back-btn:hover {
+    background-color: var(--wpts-color-primary-light);
+}
+
+.wpts-logo-container {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.wpts-logo-container img {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#wpts-main-panel {
+    position: relative;
+    background-color: #ffffff;
+    /* Let content define height; allow it to grow/shrink */
+    height: auto;
+    overflow: visible;
+}
+
+.wpts-corner-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #6b7280;
+    color: white;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    transform: rotate(45deg);
+    transform-origin: bottom left;
+    width: 120px;
+    z-index: 5;
+}
+
+/* Variables for easy theming */
+:root {
+    --wpts-color-primary: #007bff;
+    --wpts-color-primary-light: #e6f2ff;
+    --wpts-text-dark: #1e1e1e;
+    --wpts-text-medium: #6c757d;
+    --wpts-text-light: #adb5bd;
+}
+
+/* --- ORIGINAL STYLES (with minor modifications) --- */
+.wpts-step {
+    padding: 40px 48px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    /* Changed transform for the new pop effect */
+    transform: scale(0.95);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.wpts-step.wpts-active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.wpts-step.is-exiting {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+/* 3. Component Styling */
+/* ------------------------------------ */
+
+/* --- Info Panel --- */
+#wpts-info-panel h3 {
+    margin: 0 0 8px 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#wpts-info-panel h2 {
+    margin: 0 0 32px 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.wpts-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: var(--wpts-text-medium);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.wpts-info-item svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.wpts-info-description {
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--wpts-text-medium);
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* --- Step Titles --- */
+.wpts-step-title {
+    margin: 0 0 16px 0; /* Adjusted margin */
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--wpts-text-dark);
+    text-align: center;
+}
+
+.wpts-step-subtitle {
+    margin: 0 0 48px 0; /* Adjusted margin */
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--wpts-text-medium);
+    text-align: center;
+}
+
+/* --- UNUSED CALENDAR STYLES (PRESERVED AS REQUESTED) --- */
+.wpts-calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 24px 0;
+    position: relative;
+}
+
+.wpts-icon-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: var(--wpts-color-primary);
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.wpts-icon-button:hover,
+.wpts-icon-button:focus {
+    background-color: var(--wpts-color-primary-light);
+}
+
+.wpts-icon-button:disabled {
+    background-color: transparent;
+    color: var(--wpts-text-light);
+    pointer-events: none;
+}
+
+.wpts-icon-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.wpts-month-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 16px;
+    min-width: 140px;
+    text-align: center;
+    color: var(--wpts-text-dark);
+}
+
+/* --- NEW & MODIFIED STYLES FOR EFFECTS --- */
+        
+        /* NEW: Keyframes for the pulse animation */
+        @keyframes pulse-shadow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(0, 123, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+            }
+        }
+
+        .wpts-event-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .wpts-event-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            /* overflow: hidden; */
+            opacity: 0;
+            transform: scale(0.8);
+            animation: pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .wpts-active .wpts-event-card:nth-child(1) { animation-delay: 0.1s; }
+        .wpts-active .wpts-event-card:nth-child(2) { animation-delay: 0.2s; }
+        .wpts-active .wpts-event-card:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes pop-in {
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .wpts-event-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--wpts-color-primary);
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+        }
+
+        /* NEW: Style for the popular item */
+        .wpts-is-popular {
+            border-color: var(--wpts-color-primary);
+            /* Apply the pulse animation */
+            animation: pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s forwards, /* pop-in first */
+                         pulse-shadow 2s infinite 1s; /* then start pulsing after a delay */
+        }
+        
+        .wpts-event-card h3,
+        .wpts-event-card p { margin: 0; transition: color 0.3s ease; }
+        .wpts-event-card h3 { font-size: 16px; font-weight: 600; color: var(--wpts-text-dark); }
+        .wpts-event-card p { font-size: 14px; color: var(--wpts-text-medium); }
+        
+        .wpts-popular-tag {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--wpts-color-primary);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .wpts-popular-tag::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--wpts-color-primary) transparent transparent transparent;
+        }
+        
+        .wpts-arrow-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            font-size: 24px;
+            color: var(--wpts-color-primary);
+            opacity: 0;
+            transform: translate(-10px, -50%);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .wpts-event-card:hover .wpts-arrow-icon {
+            opacity: 1;
+            transform: translate(0, -50%);
+        }
+
+
+
+.wpts-datetime-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.wpts-calendar-wrapper {
+    max-width: 320px;
+}
+
+#wpts-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.wpts-day-name {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--wpts-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wpts-day {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--wpts-text-dark);
+}
+
+.wpts-day.wpts-other-month {
+    visibility: hidden;
+}
+
+.wpts-day.wpts-available:hover {
+    background-color: var(--wpts-color-primary-light);
+    color: var(--wpts-color-primary);
+}
+
+.wpts-day.wpts-selected {
+    background-color: var(--wpts-color-primary);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Holiday highlighting */
+.wpts-day.wpts-holiday {
+    position: relative;
+    background-color: #fff7ed; /* soft orange tint */
+    border: 1px solid #fdba74; /* orange border */
+    color: #c2410c;
+}
+
+.wpts-day.wpts-holiday.wpts-available:hover {
+    background-color: #ffedd5;
+    color: #9a3412;
+}
+
+/* Tooltip for holidays (uses title attr fallback plus custom bubble) */
+.wpts-day.wpts-holiday::after {
+    content: attr(data-holiday);
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: #111827;
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s ease, transform .15s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+.wpts-day.wpts-holiday::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 110%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #111827 transparent transparent transparent;
+    opacity: 0;
+    transition: opacity .15s ease;
+}
+
+.wpts-day.wpts-holiday:hover::after,
+.wpts-day.wpts-holiday:hover::before {
+    opacity: 1;
+}
+
+.wpts-day.wpts-disabled {
+    color: #d1d5db;
+    cursor: not-allowed;
+}
+
+/* --- Timezone Info --- */
+.wpts-timezone-info {
+    border-top: 1px solid var(--wpts-border-color);
+    padding-top: 24px;
+    margin-top: 24px;
+}
+
+.wpts-timezone-display {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--wpts-text-medium);
+    font-size: 14px;
+}
+
+.wpts-timezone-display svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+
+
+
+
+/* --- Time Slots --- */
+#wpts-time-slots {
+    max-height: 380px; /* ensures scroll appears when content exceeds */
+    overflow-y: auto;
+    padding-right: 8px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+
+/* Modern, subtle scrollbar for time slots */
+#wpts-time-slots::-webkit-scrollbar {
+    width: 10px;
+}
+
+#wpts-time-slots::-webkit-scrollbar-track {
+    /* background: #f3f4f6; */
+    border-radius: 8px;
+}
+
+#wpts-time-slots::-webkit-scrollbar-thumb {
+    background: var(--wpts-color-primary-light);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+#wpts-time-slots:hover::-webkit-scrollbar-thumb {
+    background: #cfe0ff;
+}
+
+#wpts-time-slots {
+    scrollbar-width: thin;                /* Firefox */
+}
+
+.wpts-time-slot {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border: 2px solid var(--wpts-color-primary);
+    color: var(--wpts-color-primary);
+    background: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.wpts-time-slot:hover {
+    background-color: var(--wpts-color-primary);
+    color: #ffffff;
+}
+
+.wpts-time-placeholder {
+    text-align: center;
+    color: var(--wpts-text-light);
+    font-size: 14px;
+    padding: 40px 0;
+    margin: 0;
+}
+
+.no-slots-msg {
+    text-align: center;
+    color: #dc2626;
+    font-size: 14px;
+    padding: 30px 20px;
+    margin: 0;
+    background-color: #fef2f2;
+    border-radius: 8px;
+    border: 1px solid #fecaca;
+    line-height: 1.6;
+    position: absolute;
+    font-weight: 600;
+    transform: translateY(-8px);
+  }
+  
+  /* Caret (triangle below left) */
+  .no-slots-msg::after {
+    content: "";
+    position: absolute;
+    bottom: -8px; /* place it below the bubble */
+    left: 20px; /* adjust horizontal offset */
+    width: 0;
+    height: 0;
+    border-width: 8px 8px 0 8px;
+    border-style: solid;
+    border-color: #fef2f2 transparent transparent transparent; /* caret color same as bg */
+  }
+  
+  /* Optional: caret border to match box border */
+  .no-slots-msg::before {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 19px;
+    width: 0;
+    height: 0;
+    border-width: 9px 9px 0 9px;
+    border-style: solid;
+    border-color: #fecaca transparent transparent transparent;
+  }
+  
+
+.no-slots-msg a {
+    color: #1e4d2b;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.no-slots-msg a:hover {
+    color: #16a34a;
+}
+
+/* --- Form --- */
+.wpts-form-group {
+    margin-bottom: 24px;
+}
+
+.wpts-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 800;
+    color: var(--wpts-text-dark);
+    font-size: 14px;
+}
+
+.wpts-form-group input,
+.wpts-form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--wpts-border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.wpts-form-group input:focus,
+.wpts-form-group textarea:focus {
+    outline: none;
+    border-color: var(--wpts-color-primary);
+    box-shadow: 0 0 0 3px var(--wpts-color-primary-light);
+}
+
+.wpts-form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.wpts-add-guests-btn {
+    background: none;
+    border: none;
+    color: var(--wpts-color-primary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.wpts-add-guests-btn:hover {
+    color: var(--wpts-color-primary-dark);
+}
+
+/* Guest Functionality Styles */
+.wpts-guests-section {
+    background-color: #f9fafb;
+    border: 1px solid var(--wpts-border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.wpts-guests-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--wpts-text-dark);
+    margin: 0 0 8px 0;
+}
+
+.wpts-guests-header p {
+    font-size: 14px;
+    color: var(--wpts-text-light);
+    margin: 0 0 16px 0;
+    line-height: 1.4;
+}
+
+.wpts-guests-list {
+    margin-bottom: 16px;
+}
+
+.wpts-guest-input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.wpts-guest-email {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--wpts-border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wpts-guest-email:focus {
+    outline: none;
+    border-color: var(--wpts-color-primary);
+    box-shadow: 0 0 0 3px var(--wpts-color-primary-light);
+}
+
+.wpts-remove-guest-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #dc2626;
+    background-color: #ffffff;
+    color: #dc2626;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.wpts-remove-guest-btn:hover {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.wpts-add-more-guests-btn {
+    background: none;
+    border: 1px dashed var(--wpts-border-color);
+    color: var(--wpts-color-primary);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.wpts-add-more-guests-btn:hover {
+    background-color: var(--wpts-color-primary-light);
+    border-color: var(--wpts-color-primary);
+}
+
+.wpts-terms-agreement {
+    margin: 24px 0;
+    font-size: 12px;
+    color: var(--wpts-text-light);
+    line-height: 1.5;
+}
+
+.wpts-link {
+    color: var(--wpts-color-primary);
+    text-decoration: none;
+}
+
+.wpts-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Buttons --- */
+.wpts-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 16px 24px;
+    margin-top: 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.2s ease;
+    background-color: var(--wpts-color-primary);
+    color: #ffffff;
+}
+
+.wpts-button:hover {
+    background-color: var(--wpts-color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--wpts-card-shadow-hover);
+}
+
+.wpts-button:disabled {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- Event Cards --- */
+.wpts-event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.wpts-event-card {
+    background: #ffffff;
+    border: 1px solid var(--wpts-border-color);
+    border-radius: 8px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    width: 100%;
+}
+
+.wpts-event-card:hover {
+    border-color: var(--wpts-color-primary);
+    box-shadow: var(--wpts-card-shadow);
+}
+
+.wpts-event-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--wpts-text-dark);
+}
+
+.wpts-event-card p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--wpts-text-light);
+}
+
+/* --- Confirmation Screen --- */
+#wpts-step-4-confirmation {
+    /* Do NOT set display here so hidden step stays hidden */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto; /* adapt to content */
+    padding: 20px 0;
+}
+
+/* When active, use flex layout for nicer vertical alignment */
+#wpts-step-4-confirmation.wpts-active {
+    display: flex;
+}
+
+
+
+.wpts-confirmation-content {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Elicit Technology Logo */
+img.wpts-logo-image {
+    width: 100%;
+    height: auto;
+}
+
+.wpts-logo-square {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    color: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wpts-logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.wpts-logo-tagline {
+    font-size: 8px;
+    font-weight: 400;
+    opacity: 0.8;
+    line-height: 1;
+}
+
+/* Confirmation Title and Subtitle */
+.wpts-confirmation-title {
+    color: #1a1a1a;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wpts-confirmation-subtitle {
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 32px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Meeting Details Card */
+.wpts-meeting-details-card {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.wpts-meeting-detail {
+    display: flex;
+    align-items: flex-start; /* allow multi-line link to align nicely */
+    gap: 12px;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wpts-meeting-detail:last-child {
+    margin-bottom: 0;
+}
+
+.wpts-meeting-detail svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #1a1a1a;
+}
+
+.wpts-meeting-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: normal;          /* allow wrapping */
+    word-break: break-word;       /* break long tokens */
+    overflow-wrap: anywhere;      /* modern wrap support */
+    max-width: 100%;
+    display: inline-block;
+    flex: 1;                      /* occupy remaining row space in flex container */
+    line-height: 1.5;
+}
+
+.wpts-meeting-link:hover {
+    text-decoration: underline;
+}
+
+/* Next Steps Section */
+.wpts-next-steps {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.wpts-next-steps h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wpts-next-steps p {
+    color: #1a1a1a;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Contact Information Section */
+.wpts-contact-info {
+    text-align: left;
+}
+
+.wpts-contact-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wpts-contact-info p {
+    color: #1a1a1a;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wpts-contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.wpts-contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Legacy confirmation styles (keeping for backward compatibility) */
+.wpts-confirmation-content .wpts-logo-container {
+    margin-bottom: 24px;
+}
+
+.wpts-confirmation-content .wpts-logo-container img {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.wpts-confirmation-checkmark {
+    width: 48px;
+    height: 48px;
+    background-color: #10b981;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.wpts-confirmation-checkmark svg {
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+}
+
+#wpts-step-4-confirmation h2 {
+    color: var(--wpts-text-dark);
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    display: inline-flex;
+    gap: 10px;
+}
+
+#wpts-confirmation-message {
+    color: var(--wpts-text-light);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 32px 0;
+}
+
+.wpts-confirmation-card {
+    background-color: #f9fafb;
+    border: 1px solid var(--wpts-border-color);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.wpts-confirmation-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--wpts-text-dark);
+    margin: 0 0 16px 0;
+}
+
+.wpts-confirmation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wpts-confirmation-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--wpts-text-medium);
+    font-size: 14px;
+}
+
+.wpts-confirmation-detail svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--wpts-text-light);
+}
+
+.wpts-confirmation-cta {
+    text-align: center;
+}
+
+.wpts-confirmation-cta h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--wpts-text-dark);
+    margin: 0 0 8px 0;
+}
+
+.wpts-confirmation-cta p {
+    color: var(--wpts-text-light);
+    font-size: 14px;
+    margin: 0 0 24px 0;
+}
+
+.wpts-signup-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.wpts-signup-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: 1px solid var(--wpts-border-color);
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: var(--wpts-text-dark);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.wpts-signup-btn:hover {
+    border-color: var(--wpts-color-primary);
+    box-shadow: 0 0 0 3px var(--wpts-color-primary-light);
+}
+
+.wpts-signup-btn svg {
+    flex-shrink: 0;
+}
+
+.wpts-email-signup {
+    color: var(--wpts-color-primary);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.wpts-email-signup:hover {
+    text-decoration: underline;
+}
+
+/* --- Loader --- */
+.wpts-hidden {
+    display: none !important;
+}
+
+.wpts-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--wpts-color-primary-light);
+    border-top: 3px solid var(--wpts-color-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Timezone Dropdown --- */
+.wpts-timezone-selector {
+    position: relative;
+}
+
+.wpts-timezone-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.wpts-timezone-select {
+    background: var(--wpts-background-color);
+    border: 1px solid var(--wpts-border-color);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--wpts-text-color);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+.wpts-timezone-select:hover {
+    border-color: var(--wpts-color-primary);
+}
+
+.wpts-timezone-select:focus {
+    outline: none;
+    border-color: var(--wpts-color-primary);
+    box-shadow: 0 0 0 2px rgba(0, 105, 255, 0.1);
+}
+
+.wpts-timezone-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--wpts-text-secondary);
+}
+
+.wpts-timezone-display svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+#wpts-current-timezone-display {
+    font-size: 13px;
+    color: var(--wpts-text-secondary);
+}
+
+/* Calendly-style timezone display */
+.wpts-timezone-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007cba;
+}
+
+.wpts-timezone-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.wpts-timezone-display svg {
+    width: 20px;
+    height: 20px;
+    color: #007cba;
+    flex-shrink: 0;
+}
+
+.wpts-timezone-display span {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.wpts-timezone-display strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.wpts-timezone-conversion {
+    padding-top: 8px;
+    border-top: 1px solid #e1e5e9;
+    margin-top: 8px;
+}
+
+.wpts-timezone-conversion small {
+    color: #666;
+    font-size: 12px;
+}
+
+#wpts-host-time-display {
+    font-weight: 600;
+    color: #007cba;
+}
+
+/* Timezone selector improvements */
+.wpts-timezone-dropdown-container {
+    position: relative;
+}
+
+.wpts-timezone-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    color: #000;
+}
+
+.wpts-timezone-display {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* 4. Responsive Design */
+/* ------------------------------------ */
+@media (max-width: 1024px) {
+    #wpts-scheduler {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        min-height: auto;
+    }
+    
+    #wpts-info-panel {
+        border-right: none;
+        border-bottom: 1px solid var(--wpts-border-color);
+        text-align: center;
+        padding: 32px 24px;
+    }
+    
+    .wpts-datetime-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .wpts-step {
+        position: static;
+        transform: none;
+    }
+    
+    .wpts-step.wpts-active {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .wpts-timezone-dropdown-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .wpts-timezone-select {
+        min-width: 200px;
+        max-width: 300px;
+    }
+    
+    /* Event grid - 2 columns on tablet */
+    .wpts-event-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    #wpts-scheduler {
+        border-radius: 8px;
+        max-width: 100%;
+        overflow: visible;
+        width: 100%;
+    }
+    
+    #wpts-main-panel {
+        overflow: visible;
+        min-height: auto;
+        padding: 24px 16px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #wpts-info-panel {
+        padding: 24px 16px;
+    }
+    
+    /* Make sure main panel allows content to flow properly on mobile */
+    #wpts-main-panel .wpts-step {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 16px !important;
+    }
+    
+    /* Prevent horizontal overflow */
+    * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    #wpts-info-panel h2 {
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+    
+    #wpts-info-panel h3 {
+        font-size: 14px;
+    }
+    
+    .wpts-info-item {
+        font-size: 13px;
+        gap: 10px;
+    }
+    
+    .wpts-info-item svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .wpts-info-description {
+        font-size: 13px;
+    }
+    
+    .wpts-step {
+        padding: 24px 16px;
+    }
+    
+    .wpts-step-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .wpts-step-subtitle {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+    
+    .wpts-datetime-container {
+        gap: 24px;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+    
+    .wpts-calendar-wrapper {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        display: block !important;
+    }
+    
+    .wpts-calendar-header {
+        display: flex !important;
+        margin-bottom: 20px;
+    }
+    
+    #wpts-calendar-grid {
+        gap: 8px;
+        display: grid !important;
+        grid-template-columns: repeat(7, 1fr) !important;
+        width: 100%;
+    }
+    
+    .wpts-day {
+        height: 36px;
+        width: 36px;
+        font-size: 13px;
+        display: flex !important;
+    }
+    
+    .wpts-day-name {
+        height: 36px;
+        font-size: 11px;
+        display: flex !important;
+    }
+    
+    #wpts-time-slots {
+        max-height: 300px;
+    }
+    
+    .wpts-time-slot {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    
+    .wpts-timezone-dropdown-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .wpts-timezone-select {
+        min-width: auto;
+        max-width: none;
+        font-size: 13px;
+    }
+
+    .wpts-timezone-info {
+        padding: 12px;
+        margin-top: 15px;
+    }
+    
+    .wpts-timezone-display {
+        font-size: 13px;
+    }
+    
+    .wpts-timezone-display svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    /* Event grid - single column on mobile */
+    .wpts-event-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .wpts-event-card {
+        padding: 16px;
+    }
+    
+    .wpts-event-card h3 {
+        font-size: 16px;
+    }
+    
+    .wpts-event-card p {
+        font-size: 13px;
+    }
+    
+    /* Form adjustments */
+    .wpts-form-group {
+        margin-bottom: 20px;
+    }
+    
+    .wpts-form-group label {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    
+    .wpts-form-group input,
+    .wpts-form-group textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .wpts-form-group textarea {
+        min-height: 70px;
+    }
+    
+    /* Button adjustments */
+    .wpts-button {
+        padding: 14px 20px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+    
+    /* Guest section */
+    .wpts-guests-section {
+        padding: 16px;
+    }
+    
+    .wpts-guests-header h4 {
+        font-size: 15px;
+    }
+    
+    .wpts-guests-header p {
+        font-size: 13px;
+    }
+    
+    .wpts-guest-email {
+        padding: 9px 11px;
+        font-size: 13px;
+    }
+    
+    /* Back button */
+    .wpts-back-button-container {
+        top: 12px;
+        left: 12px;
+    }
+    
+    .wpts-back-btn {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* Confirmation screen */
+    #wpts-step-4-confirmation {
+        padding: 20px 16px;
+    }
+    
+    #wpts-step-4-confirmation.wpts-active {
+        display: flex !important;
+    }
+    
+    .wpts-confirmation-content {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .wpts-logo-square {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 20px;
+    }
+    
+    .wpts-logo-square img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .wpts-confirmation-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+        line-height: 1.3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .wpts-confirmation-title svg {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+    }
+    
+    .wpts-confirmation-subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+        line-height: 1.4;
+    }
+    
+    .wpts-meeting-details-card {
+        padding: 18px;
+        margin-bottom: 24px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .wpts-meeting-detail {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        word-break: break-word;
+    }
+    
+    .wpts-meeting-detail:last-child {
+        margin-bottom: 0;
+    }
+    
+    .wpts-meeting-detail svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+    
+    .wpts-meeting-link {
+        font-size: 12px;
+        line-height: 1.6;
+        word-break: break-all;
+        overflow-wrap: anywhere;
+        display: inline-block;
+        max-width: 100%;
+    }
+    
+    .wpts-next-steps,
+    .wpts-contact-info {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .wpts-next-steps h4,
+    .wpts-contact-info h4 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+    
+    .wpts-next-steps p,
+    .wpts-contact-info p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    .wpts-contact-info a {
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .wpts-hyper-modern-wrapper {
+        overflow-x: hidden;
+    }
+    
+    #wpts-scheduler {
+        border-radius: 6px;
+        width: 100%;
+    }
+    
+    #wpts-main-panel {
+        overflow: visible;
+        padding: 20px 12px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #wpts-info-panel {
+        padding: 20px 12px;
+    }
+    
+    .wpts-step {
+        padding: 16px 12px !important;
+    }
+    
+    .wpts-step.wpts-active {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    #wpts-main-panel .wpts-step {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .wpts-step-title {
+        font-size: 20px;
+    }
+    
+    .wpts-step-subtitle {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+    
+    .wpts-calendar-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    #wpts-calendar-grid {
+        gap: 6px;
+        display: grid !important;
+        grid-template-columns: repeat(7, 1fr) !important;
+    }
+    
+    .wpts-day {
+        height: 32px;
+        width: 32px;
+        font-size: 12px;
+        display: flex !important;
+    }
+    
+    .wpts-day-name {
+        height: 32px;
+        font-size: 10px;
+        display: flex !important;
+    }
+    
+    .wpts-calendar-header .wpts-icon-button {
+        width: 32px;
+        height: 32px;
+        margin: 0 4px;
+    }
+    
+    .wpts-calendar-header .wpts-icon-button svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .wpts-month-label {
+        font-size: 16px;
+        min-width: 120px;
+        margin: 0 8px;
+    }
+    
+    .wpts-event-card {
+        padding: 14px;
+    }
+    
+    .wpts-event-card h3 {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    
+    .wpts-popular-tag {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    .wpts-arrow-icon {
+        font-size: 20px;
+        right: 14px;
+    }
+    
+    .wpts-button {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .wpts-logo-container img {
+        max-width: 120px;
+    }
+    
+    #wpts-step-4-confirmation {
+        padding: 16px 12px;
+    }
+    
+    .wpts-confirmation-content {
+        padding: 0 4px;
+    }
+    
+    .wpts-logo-square {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+    }
+    
+    .wpts-confirmation-title {
+        font-size: 19px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+        gap: 6px;
+    }
+    
+    .wpts-confirmation-title svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .wpts-confirmation-subtitle {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    
+    .wpts-meeting-details-card {
+        padding: 14px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+    
+    .wpts-meeting-detail {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        gap: 8px;
+    }
+    
+    .wpts-meeting-detail svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .wpts-meeting-link {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+    
+    .wpts-next-steps h4,
+    .wpts-contact-info h4 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .wpts-next-steps p,
+    .wpts-contact-info p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+    .no-slots-msg {
+        padding: 20px 16px;
+        font-size: 13px;
+    }
+}
+  
+
+

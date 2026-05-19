@@ -1,0 +1,39 @@
+# Redirect specific URL to 410 Gone
+Redirect 410 /digital-marketing/top-10-digital-marketing-strategies-for-startups-in-2025/
+Redirect 410 /digital-marketing/how-to-measure-roi-in-digital-marketing-for-2025/
+Redirect 410 /digital-marketing/top-10-email-marketing-platforms/
+Redirect 410 /seo/top-10-seo-strategies-for-2025/
+Redirect 410 /social-media/social-media-revolution-what-to-expect-in-2025/
+Redirect 410 /content-marketing/how-to-create-high-performing-pillar-pages/
+Redirect 410 /seo/the-googles-november-2024-core-update-a-seos-nightmare/
+Redirect 410 /ppc/the-top-10-ppc-strategies-for-2025/
+Redirect 410 /digital-marketing/what-is-sem-and-how-can-it-benefit-my-business/
+Redirect 410 /digital-marketing/sem-vs-seo-which-strategy-is-right-for-your-business/
+Redirect 410 /social-media/how-much-should-you-budget-for-linkedin-ads-in-2025/
+Redirect 410 /digital-marketing/top-10-inside-sales-strategies-to-boost-revenue-in-2025/
+Redirect 410 /digital-marketing/what-is-b2b-sales-and-how-does-it-work-in-2025/
+Redirect 410 /seo/googles-november-2024-core-update-is-complete/
+Redirect 410 /digital-marketing/what-is-b2c-sales-and-what-are-their-strategies-for-2025/
+Redirect 410 /digital-marketing/what-are-the-key-differences-between-b2b-and-b2c-sales/
+Redirect 410 /website-design/top-web-design-trends-to-watch-in-2025/
+Redirect 410 /content-marketing/how-to-measure-and-prove-the-roi-of-your-content-marketing/
+Redirect 410 /seo/google-seo-updates-2024-the-complete-recap/
+Redirect 410 /digital-marketing/10-must-have-tactics-for-e-commerce-digital-marketing-in-2025/
+Redirect 410 /seo/what-is-aso-and-how-can-it-help-your-app-succeed/
+Redirect 410 /seo/app-store-optimization-aso-vs-search-engine-optimization-seo-a-complete-breakdown/
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /salesnanny/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /salesnanny/index.php [L]
+</IfModule>
+
+# END WordPress
