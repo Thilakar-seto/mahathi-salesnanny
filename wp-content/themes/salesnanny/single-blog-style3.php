@@ -554,6 +554,100 @@ button.sblog-voted{background:#e8f3ff !important;color:#0a61b3}
     .faq-answer-content { padding: 0 18px 16px 18px; font-size: 0.9rem; }
 }
 
+/* Final visual alignment refinement */
+.sblog-article {
+    margin: 0 auto;
+}
+
+.sblog-title {
+    font-size: clamp(1.8rem, 3.2vw, 2.45rem);
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.sblog-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.sblog-content {
+    font-size: 1.06rem;
+    line-height: 1.8;
+}
+
+.sblog-content h2 {
+    font-size: clamp(1.45rem, 2.1vw, 2rem);
+    margin-top: 1.55em;
+}
+
+.sblog-content h3 {
+    font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+}
+
+.sblog-content p,
+.sblog-content li,
+.faq-answer-content,
+.author-wrap .author-content .entry-description {
+    line-height: 1.75;
+}
+
+.post-comment .section-heading h3,
+.leave-comment .section-heading h3 {
+    font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+}
+
+.post-comment .each-comment {
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid #eceef1;
+}
+
+.post-comment .comment-title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+.post-comment .comment-meta {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+    .sblog-post-container {
+        gap: 32px;
+        padding: 0 16px;
+    }
+
+    .sblog-content {
+        font-size: 1.02rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sblog-title {
+        text-align: left;
+    }
+
+    .sblog-meta {
+        font-size: 0.92rem;
+        gap: 6px;
+    }
+
+    .sblog-content {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .faq-container {
+        padding: 10px 16px 28px;
+    }
+}
+
 </style>
 
 <?php if (have_posts()) : while (have_posts()) : the_post();
@@ -1259,3 +1353,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>
+
+<!-- TrackIQ Blog Theme -->
