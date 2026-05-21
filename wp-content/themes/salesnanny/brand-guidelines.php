@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mahathi Infotech — Brand Guidelines</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 <style>
@@ -28,13 +28,24 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Atops', sans-serif; background: var(--cream); color: var(--forest); overflow-x: hidden; }
+  body { font-family: 'Aptos', sans-serif; background: var(--cream); color: var(--forest); overflow-x: hidden; }
+  /* Typography override: Aptos for body content, Bebas for headings/titles */
+  body * { font-family: 'Aptos', sans-serif !important; }
+  h1, h2, h3, h4, h5, h6,
+  .hero-headline, .section-title, .overview-card-headline, .brand-statement-quote,
+  .type-sample-headline, .type-pair-sample-bebas,
+  [class*="heading"], [class*="headline"], [class*="title"] {
+    font-family: 'Bebas Neue', sans-serif !important;
+  }
+  .bi, .bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    font-family: "bootstrap-icons" !important;
+  }
 
   /* ── SIDEBAR ── */
   .brand-sidebar {
     position: fixed; top: 0; left: 0;
     width: var(--sidebar-w); height: 100vh;
-    background: var(--forest);
+    background: #EEF0EC;
     display: flex; flex-direction: column;
     z-index: 100; overflow-y: auto; scrollbar-width: none;
   }
@@ -43,19 +54,19 @@
     padding: 2rem 1.5rem 1.5rem;
     border-bottom: 1px solid rgba(178,199,179,0.12);
   }
-  .sidebar-logo svg { width: 136px; height: auto; display: block; }
+  .sidebar-logo svg { width: 180px; height: auto; display: block; }
   .sidebar-brand-name {
-    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    font-family: 'Aptos', sans-serif; font-size: 0.6rem;
     letter-spacing: 3px; text-transform: uppercase;
-    color: var(--mint); opacity: 0.65; margin-top: 0.6rem;
+    color: #09240a; opacity: 0.65; margin-top: 0.6rem;
   }
   .sidebar-tagline {
-    font-family: 'DM Mono', monospace; font-size: 0.57rem;
+    font-family: 'Aptos', sans-serif; font-size: 0.57rem;
     letter-spacing: 1.5px; text-transform: uppercase;
     color: var(--sage2); margin-top: 0.2rem;
   }
   .sidebar-section-label {
-    font-family: 'DM Mono', monospace; font-size: 0.57rem;
+    font-family: 'Aptos', sans-serif; font-size: 0.57rem;
     letter-spacing: 3px; text-transform: uppercase;
     color: var(--sage2); padding: 1.4rem 1.5rem 0.4rem; opacity: 0.55;
   }
@@ -63,13 +74,15 @@
   .sidebar-nav li a {
     display: flex; align-items: center; gap: 0.65rem;
     padding: 0.52rem 0.75rem; border-radius: 6px;
-    color: rgba(178,199,179,0.7); text-decoration: none;
+    color: #253830; text-decoration: none;
     font-size: 0.79rem; font-weight: 400; letter-spacing: 0.15px;
     transition: all 0.2s;
   }
   .sidebar-nav li a i { font-size: 0.82rem; width: 17px; text-align: center; flex-shrink: 0; }
-  .sidebar-nav li a:hover,
-  .sidebar-nav li a.active { background: rgba(118,163,121,0.14); color: var(--gold); }
+  .sidebar-nav li a:hover
+ { background: rgba(118,163,121,0.14); color: var(--gold); }
+ .sidebar-nav li a.active {    background: hsl(80 17% 80% / 1);
+  color: #253830; };
   .sidebar-footer {
     padding: 1.2rem 1.5rem;
     border-top: 1px solid rgba(178,199,179,0.1);
@@ -128,7 +141,7 @@
   }
   .hero-meta-label {
     font-family: 'DM Mono', monospace; font-size: 0.6rem;
-    letter-spacing: 3px; text-transform: uppercase; color: var(--sage2);
+    letter-spacing: 3px; text-transform: uppercase; color: #ffffff;
   }
   .hero-meta-value {
     font-size: 0.85rem; font-weight: 500;
@@ -236,7 +249,7 @@
   .gradient-card { border-radius: 10px; overflow: hidden; border: 1px solid var(--cream2); }
   .gradient-swatch { height: 120px; }
   .gradient-meta { padding: 1rem; background: var(--white); }
-  .gradient-name { font-weight: 600; font-size: 0.85rem; color: var(--forest); margin-bottom: 2px; }
+  .gradient-name { font-weight: 400; font-size: 16px; color: var(--forest); margin-bottom: 2px;    font-family: 'Bebas Neue', sans-serif !important; letter-spacing: 1.2px;}
   .gradient-code { font-family: 'DM Mono', monospace; font-size: 0.67rem; color: var(--sage2); line-height: 1.6; }
   .color-quick-table {
     width: 100%; border-collapse: collapse;
@@ -301,12 +314,12 @@
     margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--cream2);
   }
   .type-scale-spec { font-family: 'DM Mono', monospace; font-size: 0.63rem; color: var(--mint); margin-top: 0.75rem; }
-  .type-pair-block { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; margin-top: 2rem; }
+  .type-pair-block { display: grid; grid-template-columns: 1fr 1fr 0fr; gap: 1.25rem; margin-top: 2rem; }
   .type-pair-card { background: var(--white); border-radius: 10px; padding: 2rem; border: 1px solid var(--cream2); }
   .type-pair-name { font-family: 'DM Mono', monospace; font-size: 0.59rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
   .type-pair-role { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--mint); margin-bottom: 0.5rem; }
   .type-pair-sample-bebas { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--forest); letter-spacing: 1px; line-height: 1; margin-bottom: 0.5rem; }
-  .type-pair-sample-dm { font-family: 'Atops', sans-serif; font-size: 0.875rem; color: var(--sage2); line-height: 1.68; }
+  .type-pair-sample-dm { font-family: 'Aptos', sans-serif; font-size: 0.875rem; color: var(--sage2); line-height: 1.68; }
   .type-pair-sample-mono { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--sage); letter-spacing: 0.5px; line-height: 1.65; }
 
   /* ── SCROLLBAR ── */
@@ -362,7 +375,7 @@
   .dont-card:hover { box-shadow: 0 8px 24px rgba(184,135,148,0.1); }
   .rule-preview {
     display: flex; align-items: center; justify-content: center;
-    padding: 2rem; height: 150px;
+    padding: 2rem;
     position: relative;
   }
   .rule-preview svg { max-width: 220px; width: 100%; height: auto; }
@@ -381,7 +394,7 @@
     color: #f9f9f9;
 }
   .rule-meta { padding: 1rem 1.25rem; border-top: 1px solid var(--cream2); }
-  .rule-title { font-weight: 600; font-size: 0.85rem; color: var(--forest); margin-bottom: 3px; }
+  .rule-title { font-weight: 500; font-size: 18px; color: var(--forest); margin-bottom: 3px; letter-spacing: 1.2px;}
   .rule-desc { font-size: 0.8rem; color: var(--sage2); line-height: 1.6; }
 
   /* ── FAVICON ── */
@@ -416,11 +429,11 @@
   }
   .component-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,56,48,0.08); }
   .component-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; color: var(--sage2); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--cream2); }
-  .btn-primary-mi { background: var(--forest); color: var(--cream); border: none; padding: 0.65rem 1.5rem; border-radius: 6px; font-family: 'Atops', sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-block; text-decoration: none; }
+  .btn-primary-mi { background: var(--forest); color: var(--cream); border: none; padding: 0.65rem 1.5rem; border-radius: 6px; font-family: 'Aptos', sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-block; text-decoration: none; }
   .btn-primary-mi:hover { background: #1e2e27; }
-  .btn-secondary-mi { background: transparent; color: var(--forest); border: 1.5px solid var(--sage); padding: 0.62rem 1.5rem; border-radius: 6px; font-family: 'Atops', sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-block; }
+  .btn-secondary-mi { background: transparent; color: var(--forest); border: 1.5px solid var(--sage); padding: 0.62rem 1.5rem; border-radius: 6px; font-family: 'Aptos', sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-block; }
   .btn-secondary-mi:hover { background: rgba(118,163,121,0.08); }
-  .btn-ghost-mi { background: transparent; color: var(--sage2); border: 1.5px solid var(--cream2); padding: 0.62rem 1.5rem; border-radius: 6px; font-family: 'Atops', sans-serif; font-size: 0.875rem; font-weight: 400; cursor: pointer; transition: all 0.2s; display: inline-block; }
+  .btn-ghost-mi { background: transparent; color: var(--sage2); border: 1.5px solid var(--cream2); padding: 0.62rem 1.5rem; border-radius: 6px; font-family: 'Aptos', sans-serif; font-size: 0.875rem; font-weight: 400; cursor: pointer; transition: all 0.2s; display: inline-block; }
   .btn-ghost-mi:hover { border-color: var(--sage2); color: var(--forest); }
   .tag-mi { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.63rem; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin: 3px; }
   .tag-forest { background: var(--forest); color: var(--cream); }
@@ -428,7 +441,7 @@
   .tag-gold { background: rgba(210,169,116,0.15); color: #a07840; }
   .tag-pink { background: rgba(184,135,148,0.15); color: var(--pink); }
   .tag-mint { background: rgba(178,199,179,0.3); color: var(--sage2); }
-  .input-mi { width: 100%; padding: 0.65rem 1rem; border: 1.5px solid var(--cream2); border-radius: 6px; font-family: 'Atops', sans-serif; font-size: 0.875rem; color: var(--forest); background: var(--cream); outline: none; transition: border-color 0.2s; margin-bottom: 0.75rem; }
+  .input-mi { width: 100%; padding: 0.65rem 1rem; border: 1.5px solid var(--cream2); border-radius: 6px; font-family: 'Aptos', sans-serif; font-size: 0.875rem; color: var(--forest); background: var(--cream); outline: none; transition: border-color 0.2s; margin-bottom: 0.75rem; }
   .input-mi:focus { border-color: var(--sage); }
   .badge-mi { display: inline-flex; align-items: center; gap: 5px; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; margin: 3px; font-weight: 500; }
   .badge-active { background: rgba(118,163,121,0.15); color: var(--sage); border: 1px solid rgba(118,163,121,0.25); }
@@ -436,7 +449,7 @@
   .badge-critical { background: rgba(184,135,148,0.15); color: var(--pink); border: 1px solid rgba(184,135,148,0.25); }
   .card-mi { background: var(--white); border-radius: 10px; border: 1px solid var(--cream2); padding: 1.5rem; margin-bottom: 0.75rem; }
   .card-mi-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
-  .card-mi-title { font-weight: 600; font-size: 0.9rem; color: var(--forest); }
+  .card-mi-title { font-weight: 400; font-size: 16px; color: var(--forest); letter-spacing: 1.2px;}
   .card-mi-body { font-size: 0.82rem; color: var(--sage2); line-height: 1.65; }
   .progress-mi { height: 5px; background: var(--cream2); border-radius: 10px; overflow: hidden; margin-top: 1rem; }
   .progress-mi-fill { height: 100%; border-radius: 10px; background: linear-gradient(90deg, var(--sage), var(--mint)); }
@@ -671,12 +684,12 @@
   .photo-rules-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 
   /* ── SHOWCASE ── */
-  .showcase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+  .showcase-grid { display: grid;  gap: 1.5rem; margin-bottom: 2rem; }
   .showcase-card {
-    border-radius: 12px; overflow: hidden; border: 1px solid var(--cream2);
-    background: var(--white); transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 12px; overflow: hidden; 
+     transition: transform 0.2s, box-shadow 0.2s;
   }
-  .showcase-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,56,48,0.1); }
+  /* .showcase-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,56,48,0.1); } */
   .showcase-mock { position: relative; overflow: hidden; }
   .showcase-meta { padding: 1.25rem; }
   .showcase-tag {
@@ -754,14 +767,14 @@
       <path d="M1119.87 178.033C1116.23 178.033 1113.17 176.825 1110.7 174.408C1108.23 171.991 1107 168.999 1107 165.432C1107 161.864 1108.23 158.872 1110.7 156.455C1113.17 154.038 1116.23 152.83 1119.87 152.83C1123.39 152.83 1126.39 154.038 1128.86 156.455C1131.33 158.872 1132.56 161.864 1132.56 165.432C1132.56 168.999 1131.33 171.991 1128.86 174.408C1126.39 176.825 1123.39 178.033 1119.87 178.033ZM1129.74 190.634V285.75H1109.64V190.634H1129.74Z" fill="#76A379"/>
     </svg>
     <div class="sidebar-brand-name">Brand Guidelines</div>
-    <div class="sidebar-tagline">2025 Edition</div>
+    <div class="sidebar-tagline">2026 Edition</div>
   </div>
 
   <div class="sidebar-section-label">Foundation</div>
   <ul class="sidebar-nav">
     <li><a href="#overview"><i class="bi bi-house"></i> Brand Overview</a></li>
-    <li><a href="#brand-story"><i class="bi bi-book"></i> Brand Story</a></li>
-    <li><a href="#brand-voice"><i class="bi bi-chat-quote"></i> Brand Voice</a></li>
+    <!-- <li><a href="#brand-story"><i class="bi bi-book"></i> Brand Story</a></li>
+    <li><a href="#brand-voice"><i class="bi bi-chat-quote"></i> Brand Voice</a></li> -->
   </ul>
   <div class="sidebar-section-label">Identity</div>
   <ul class="sidebar-nav">
@@ -782,10 +795,10 @@
   <div class="sidebar-section-label">Application</div>
   <ul class="sidebar-nav">
     <li><a href="#ui-system"><i class="bi bi-grid-1x2"></i> UI Components</a></li>
-    <!-- <li><a href="#showcase"><i class="bi bi-collection"></i> Brand Showcase</a></li> -->
+    <li><a href="#showcase"><i class="bi bi-collection"></i> Brand Showcase</a></li>
     <li><a href="#applications"><i class="bi bi-lightning-charge"></i> Quick Reference</a></li>
   </ul>
-  <div class="sidebar-footer">Mahathi Infotech &copy; 2025</div>
+  <div class="sidebar-footer">Mahathi Infotech &copy; 2026</div>
 </nav>
 
 <!-- ═══════ MAIN ═══════ -->
@@ -802,7 +815,7 @@
     <div class="hero-meta-row">
       <div><div class="hero-meta-label">Document</div><div class="hero-meta-value">Brand Guidelines v2.0</div></div>
       <div><div class="hero-meta-label">Category</div><div class="hero-meta-value">Insurance-Tech</div></div>
-      <div><div class="hero-meta-label">Edition</div><div class="hero-meta-value">2025</div></div>
+      <div><div class="hero-meta-label">Edition</div><div class="hero-meta-value">2026</div></div>
       <div><div class="hero-meta-label">Classification</div><div class="hero-meta-value">Enterprise</div></div>
     </div>
   </div>
@@ -841,15 +854,15 @@
       </div>
     </div>
 
-    <div class="brand-statement-block">
+    <!-- <div class="brand-statement-block">
       <div class="brand-statement-eyebrow">Brand Statement</div>
       <div class="brand-statement-quote">Where Enterprise Meets Intelligence.<br>Where Insurance Meets Trust.</div>
       <p class="brand-statement-body">Mahathi Infotech operates at the frontier of insurance-tech — bringing together advanced SaaS architecture, enterprise-grade security, and intuitive design to create platforms that power the most critical decisions in the industry. We don't follow trends. We establish standards.</p>
-    </div>
+    </div> -->
   </section>
 
   <!-- ═══ BRAND STORY ═══ -->
-  <section class="brand-section section-anchor" id="brand-story">
+  <!-- <section class="brand-section section-anchor" id="brand-story">
     <div class="section-label">02 — Brand Story</div>
     <h2 class="section-title">Who We Are</h2>
     <div class="section-divider"></div>
@@ -876,12 +889,10 @@
       <p style="font-size:0.92rem;color:rgba(238,240,236,0.6);line-height:1.78;max-width:560px;position:relative;z-index:1;">We combine enterprise-grade architecture with deep insurance domain knowledge to create platforms that don't just process data — they generate insight, accelerate decisions, and build institutional confidence across every stakeholder in the value chain.</p>
     </div>
 
-    <!-- Logo Story -->
     <div class="section-label" style="margin-bottom:0.5rem;margin-top:0.5rem;">Our Logo, Our Identity</div>
     <div class="section-divider" style="margin-bottom:1.5rem;"></div>
     <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;background:var(--white);border:1px solid var(--cream2);border-radius:12px;padding:3rem;margin-bottom:2.5rem;">
       <div style="display:flex;flex-direction:column;align-items:center;gap:1.5rem;">
-        <!-- Icon mark large -->
         <div style="width:110px;height:110px;border-radius:24px;background:var(--cream);border:1px solid var(--cream2);display:flex;align-items:center;justify-content:center;">
           <svg viewBox="100 100 240 250" xmlns="http://www.w3.org/2000/svg" style="width:86px;height:86px;">
             <path d="M313.643 191.558C313.352 194.717 295.172 195.63 273.037 193.595C250.901 191.561 233.193 187.35 233.484 184.19C233.774 181.031 251.954 180.119 274.09 182.153C296.225 184.187 313.934 188.398 313.643 191.558Z" fill="#76A379"/><path d="M216.252 275.148C215.961 278.308 197.781 279.22 175.645 277.186C153.51 275.151 135.801 270.941 136.092 267.781C136.383 264.621 154.563 263.709 176.699 265.743C198.834 267.778 216.542 271.989 216.252 275.148Z" fill="#76A379"/><path d="M320.746 241.623C318.897 244.202 302.749 235.807 284.679 222.872C266.608 209.937 253.459 197.359 255.308 194.78C257.158 192.2 273.306 200.596 291.376 213.531C309.446 226.466 322.596 239.044 320.746 241.623Z" fill="#76A379"/><path d="M194.427 264.559C192.577 267.138 176.429 258.743 158.359 245.808C140.289 232.872 127.139 220.295 128.989 217.716C130.838 215.136 146.986 223.531 165.056 236.467C183.127 249.402 196.276 261.979 194.427 264.559Z" fill="#76A379"/><path d="M302.258 287.473C299.374 288.799 289.501 273.519 280.206 253.342C270.912 233.166 265.716 215.734 268.6 214.407C271.485 213.081 281.358 228.361 290.652 248.538C299.947 268.714 305.143 286.146 302.258 287.473Z" fill="#76A379"/><path d="M181.135 244.931C178.25 246.258 168.377 230.977 159.083 210.801C149.788 190.625 144.592 173.193 147.477 171.866C150.361 170.539 160.234 185.82 169.529 205.997C178.823 226.173 184.02 243.605 181.135 244.931Z" fill="#76A379"/><path d="M211.356 222.754C212.607 221.711 215.109 220.752 215.109 225.256V237.141C215.943 239.017 218.487 241.644 221.99 237.141L231.373 224.005C232.207 222.754 233.875 221.503 233.875 226.507C234.375 227.007 234.083 231.303 233.875 233.388C234.292 237.349 237.378 243.771 246.386 237.767C249.239 235.484 255.112 230.491 257.639 227.353C257.645 245.376 243.363 259.659 225.744 259.659C213.013 259.659 202.025 252.201 196.908 241.416L211.356 222.754Z" fill="#33442C"/><path d="M225.745 195.859C241.839 195.86 255.147 207.779 257.33 223.271L247.01 232.767C239.504 238.271 238.044 233.392 238.252 230.265V220.256C236.751 214.752 232.623 216.711 230.746 218.379L218.236 232.767V218.379C215.734 212.875 211.356 216.085 209.479 218.379L195.338 237.438C194.368 234.385 193.842 231.134 193.842 227.761C193.842 210.142 208.126 195.859 225.745 195.859Z" fill="#76A379"/>
@@ -911,7 +922,6 @@
       </div>
     </div>
 
-    <!-- Core Values -->
     <div class="section-label" style="margin-bottom:0.5rem;">Core Values</div>
     <div class="section-divider" style="margin-bottom:1.5rem;"></div>
     <div class="values-grid">
@@ -952,10 +962,10 @@
         <p class="value-body">We translate the language of enterprise technology into the language of insurance outcomes — making sophisticated systems understandable, manageable, and valuable at every organizational level.</p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ═══ BRAND VOICE ═══ -->
-  <section class="brand-section section-anchor" id="brand-voice">
+  <!-- <section class="brand-section section-anchor" id="brand-voice">
     <div class="section-label">03 — Voice &amp; Tone</div>
     <h2 class="section-title">Brand Voice</h2>
     <div class="section-divider"></div>
@@ -1023,7 +1033,6 @@
       </div>
     </div>
 
-    <!-- Writing Principles -->
     <div class="section-label" style="margin-bottom:0.5rem;margin-top:0.5rem;">Writing Principles</div>
     <div class="section-divider" style="margin-bottom:1.5rem;"></div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
@@ -1043,10 +1052,10 @@
         <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Do not hyphenate words across lines in digital or print layouts. If text wraps awkwardly, adjust column width or rewrite the sentence. Widows and orphans should also be eliminated.</p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ═══ 02 COLOR PALETTE ═══ -->
-  <section class="brand-section section-anchor" id="colors">
+  <section class="brand-section section-anchor" id="colors" style="background-color: #e3e6e0;">
     <div class="section-label">02 — Visual Identity</div>
     <h2 class="section-title">Color Palette</h2>
     <div class="section-divider"></div>
@@ -1108,8 +1117,9 @@
         <tr><th>Color</th><th>Hex</th><th>CSS Variable</th><th>Usage</th></tr>
       </thead>
       <tbody>
+      <tr><td><span class="swatch-dot" style="background:#76A379;"></span>Sage</td><td class="mono-cell">#76A379</td><td class="mono-cell">--sage</td><td><span class="usage-pill">Primary · Logo · Active Nav</span></td></tr>
         <tr><td><span class="swatch-dot" style="background:#253830;"></span>Forest Green</td><td class="mono-cell">#253830</td><td class="mono-cell">--forest</td><td><span class="usage-pill">Dark Base · Sidebar · Headlines</span></td></tr>
-        <tr><td><span class="swatch-dot" style="background:#76A379;"></span>Sage</td><td class="mono-cell">#76A379</td><td class="mono-cell">--sage</td><td><span class="usage-pill">Primary · Logo · Active Nav</span></td></tr>
+
         <tr><td><span class="swatch-dot" style="background:#EEF0EC; border:1px solid #ccc;"></span>Cream</td><td class="mono-cell">#EEF0EC</td><td class="mono-cell">--cream</td><td><span class="usage-pill">Page BG · Card Surface</span></td></tr>
         <tr><td><span class="swatch-dot" style="background:#B2C7B3;"></span>Mint</td><td class="mono-cell">#B2C7B3</td><td class="mono-cell">--mint</td><td><span class="usage-pill">Labels · Borders · Support</span></td></tr>
         <tr><td><span class="swatch-dot" style="background:#B88794;"></span>Muted Pink</td><td class="mono-cell">#B88794</td><td class="mono-cell">--pink</td><td><span class="usage-pill">Highlights · Partner Accents</span></td></tr>
@@ -1119,7 +1129,7 @@
   </section>
 
   <!-- ═══ 03 TYPOGRAPHY ═══ -->
-  <section class="brand-section section-anchor" id="typography">
+  <section class="brand-section section-anchor" id="typography" >
     <div class="section-label">03 — Typography</div>
     <h2 class="section-title">Typography System</h2>
     <div class="section-divider"></div>
@@ -1138,13 +1148,13 @@
       </div>
     </div>
 
-    <!-- Atops + DM Mono -->
+    <!-- Aptos + DM Mono -->
     <div style="display:grid;  gap:1.5rem; margin-bottom:2rem;">
       <div class="type-feature-block" style="background:var(--cream2);">
         <div class="type-eyebrow" style="color:var(--sage2);">Body Typeface</div>
-        <div style="font-family:'Atops',sans-serif; font-size:2.4rem; font-weight:700; color:var(--forest); line-height:1; margin-bottom:1rem;">Atops</div>
-        <div style="font-family:'Atops',sans-serif; font-size:0.9rem; color:var(--sage2); line-height:1.75; margin-bottom:1rem;">The quick brown fox jumps over the lazy dog. Enterprise typography built for clarity and scale.</div>
-        <div style="font-family:'DM Mono',monospace; font-size:0.63rem; color:var(--sage2); letter-spacing:2px; text-transform:uppercase;">Weight: 300 / 400 / 500 / 600 / 700<br>Use: Body · UI · Subheadings · Cards (Atops)</div>
+        <div style="font-family:'Aptos',sans-serif; font-size:2.4rem; font-weight:700; color:var(--forest); line-height:1; margin-bottom:1rem;">Aptos</div>
+        <div style="font-family:'Aptos',sans-serif; font-size:0.9rem; color:var(--sage2); line-height:1.75; margin-bottom:1rem;">The quick brown fox jumps over the lazy dog. Enterprise typography built for clarity and scale.</div>
+        <div style="font-family:'DM Mono',monospace; font-size:0.63rem; color:var(--sage2); letter-spacing:2px; text-transform:uppercase;">Weight: 300 / 400 / 500 / 600 / 700<br>Use: Body · UI · Subheadings · Cards (Aptos)</div>
       </div>
     </div>
 
@@ -1154,7 +1164,7 @@
     <div class="type-scale-grid">
       <div class="type-scale-card">
         <div class="type-scale-label">Display — Hero Headline</div>
-        <div style="font-family:'Bebas Neue',sans-serif; font-size:4.5rem; line-height:0.95; letter-spacing:1px; color:var(--forest);">Enterprise<br>Grade.</div>
+        <div style="font-family:'Bebas Neue',sans-serif !important; font-size:4.5rem; line-height:0.95; letter-spacing:1px; color:var(--forest);">Enterprise<br>Grade.</div>
         <div class="type-scale-spec">Bebas Neue · 72px · ls: 1px · lh: 0.95</div>
       </div>
       <div class="type-scale-card">
@@ -1164,13 +1174,13 @@
       </div>
       <div class="type-scale-card">
         <div class="type-scale-label">H2 — Card Headline</div>
-        <div style="font-family:'Atops',sans-serif; font-size:1.45rem; font-weight:700; line-height:1.2; color:var(--forest);">Intelligent Insurance Platform</div>
-        <div class="type-scale-spec">Atops · 23px · weight: 700 · lh: 1.2</div>
+        <div style="font-family: 'Bebas Neue', sans-serif !important; font-size:1.45rem; font-weight:500; line-height:1.2; color:var(--forest);letter-spacing: 1.2px;">Intelligent Insurance Platform</div>
+        <div class="type-scale-spec">Aptos · 23px · weight: 700 · lh: 1.2</div>
       </div>
       <div class="type-scale-card">
         <div class="type-scale-label">Body — Standard Copy</div>
-        <div style="font-family:'Atops',sans-serif; font-size:0.92rem; font-weight:400; line-height:1.78; color:var(--sage2);">Enterprise-grade typography creates the foundation for clear communication. Every word carries weight in insurance technology.</div>
-        <div class="type-scale-spec">Atops · 15px · weight: 400 · lh: 1.78</div>
+        <div style="font-family:'Aptos',sans-serif; font-size:0.92rem; font-weight:400; line-height:1.78; color:var(--sage2);">Enterprise-grade typography creates the foundation for clear communication. Every word carries weight in insurance technology.</div>
+        <div class="type-scale-spec">Aptos · 15px · weight: 400 · lh: 1.78</div>
       </div>
     </div>
 
@@ -1185,23 +1195,148 @@
         <div style="font-family:'DM Mono',monospace; font-size:0.6rem; color:var(--mint); letter-spacing:1px; margin-top:1rem; text-transform:uppercase;">Hero · Section Titles · Feature · Print</div>
       </div>
       <div class="type-pair-card">
-        <div class="type-pair-name">Body — Atops</div>
+        <div class="type-pair-name">Body — Aptos</div>
         <div class="type-pair-role">Content &amp; UI Text</div>
-        <div class="type-pair-sample-dm">Precise, clear communication built for enterprise audiences. Atops delivers readability at every scale — from mobile UI to large-format print and executive presentations.</div>
+        <div class="type-pair-sample-dm">Precise, clear communication built for enterprise audiences. Aptos delivers readability at every scale — from mobile UI to large-format print and executive presentations.</div>
         <div style="font-family:'DM Mono',monospace; font-size:0.6rem; color:var(--mint); letter-spacing:1px; margin-top:1rem; text-transform:uppercase;">Body · UI · Subheads · Captions</div>
       </div>
-      <div class="type-pair-card">
+      <!-- <div class="type-pair-card">
         <div class="type-pair-name">Metadata — DM Mono</div>
         <div class="type-pair-role">Labels &amp; Technical</div>
         <div class="type-pair-sample-mono">01 — BRAND OVERVIEW<br>VERSION: 2.0<br>CATEGORY: INSUR-TECH<br>#76A379 / SAGE</div>
         <div style="font-family:'DM Mono',monospace; font-size:0.6rem; color:var(--mint); letter-spacing:1px; margin-top:1rem; text-transform:uppercase;">Tags · Codes · Badges · Data</div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- ═══ TYPE RULES ═══ -->
+  <section class="brand-section section-anchor" id="type-rules" style="background-color: #e3e6e0;">
+    <div class="section-label">— Typography Rules</div>
+    <h2 class="section-title">Type Rules &amp; Do's / Don'ts</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">Typography is the voice of the brand made visible. These rules govern how type behaves across all Mahathi communications — from digital interfaces to enterprise presentations. Consistency here is non-negotiable.</p>
+
+    <!-- Core Rules Grid -->
+    <div class="type-rules-grid">
+      <div class="type-rule-card">
+        <div class="type-rule-label">Hierarchy Rule</div>
+        <div style="margin-bottom:1rem;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--forest);line-height:1;margin-bottom:0.2rem;">Section Title</div>
+          <div style="font-family:'Aptos',sans-serif;font-size:1.1rem;font-weight:600;color:var(--forest);margin-bottom:0.4rem;">Card Headline — Aptos Bold</div>
+          <div style="font-family:'Aptos',sans-serif;font-size:0.875rem;color:var(--sage2);line-height:1.75;margin-bottom:0.4rem;">Body copy is always Aptos Regular at 15–16px. Line height should be generous — never below 1.65 in digital. Allow text to breathe.</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--sage);letter-spacing:2px;text-transform:uppercase;">Metadata Label — DM Mono</div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Never skip hierarchy levels. Each typographic step must be visually distinct from the one above and below it.</p>
+      </div>
+      <div class="type-rule-card">
+        <div class="type-rule-label">Spacing & Leading</div>
+        <div style="margin-bottom:1rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div style="background:var(--cream);border-radius:6px;padding:0.75rem;">
+              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.35rem;">Line Height</div>
+              <div style="font-size:1.1rem;font-weight:700;color:var(--forest);">1.65 – 1.8</div>
+              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--sage2);">Body text</div>
+            </div>
+            <div style="background:var(--cream);border-radius:6px;padding:0.75rem;">
+              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.35rem;">Display LH</div>
+              <div style="font-size:1.1rem;font-weight:700;color:var(--forest);">0.9 – 1.0</div>
+              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--sage2);">Bebas Neue</div>
+            </div>
+            <div style="background:var(--cream);border-radius:6px;padding:0.75rem;">
+              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.35rem;">Letter Spacing</div>
+              <div style="font-size:1.1rem;font-weight:700;color:var(--forest);">0 – 3px</div>
+              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--sage2);">Headlines</div>
+            </div>
+            <div style="background:var(--cream);border-radius:6px;padding:0.75rem;">
+              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.35rem;">Mono Tracking</div>
+              <div style="font-size:1.1rem;font-weight:700;color:var(--forest);">1 – 5px</div>
+              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--sage2);">Labels only</div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Leading is set at approximately 120% for headlines, 165–180% for body text. Never compress leading in digital to "save space" — it destroys readability.</p>
+      </div>
+      <div class="type-rule-card">
+        <div class="type-rule-label">Case Rules</div>
+        <div style="margin-bottom:1rem;">
+          <div style="margin-bottom:0.75rem;">
+            <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:0.25rem;">✓ Sentence Case — Body</div>
+            <div style="font-size:0.88rem;color:var(--forest);">Mahathi processes claims efficiently across enterprise platforms.</div>
+          </div>
+          <div style="margin-bottom:0.75rem;">
+            <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:0.25rem;">✓ All Caps — DM Mono Labels</div>
+            <div style="font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--forest);">SECTION LABEL · METADATA</div>
+          </div>
+          <div>
+            <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--pink);margin-bottom:0.25rem;">✗ Title Case — Avoid in body</div>
+            <div style="font-size:0.88rem;color:var(--sage2);text-decoration:line-through;opacity:0.6;">Mahathi Processes Claims Efficiently Across Enterprise Platforms.</div>
+          </div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Body text and headlines use sentence case. All-caps is exclusively reserved for DM Mono metadata labels, section eyebrows, and badge text.</p>
+      </div>
+      <div class="type-rule-card">
+        <div class="type-rule-label">Type on Color</div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1rem;">
+          <div style="background:var(--forest);border-radius:6px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--cream);">✓ Cream on Forest Green — Maximum legibility</div>
+          <div style="background:var(--cream);border-radius:6px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--forest);border:1px solid var(--cream2);">✓ Forest Green on Cream — Primary reading surface</div>
+          <div style="background:var(--sage);border-radius:6px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--forest);">✓ Forest text on Sage — Accent use only</div>
+          <div style="background:var(--gold);border-radius:6px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--forest);">✓ Forest text on Gold — Premium callouts</div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">All text combinations must pass WCAG AA contrast (4.5:1 ratio for body, 3:1 for large display text). Never place body text on Mint, Pink, or Sage as backgrounds.</p>
+      </div>
+    </div>
+
+    <!-- Do's & Don'ts -->
+    <div class="section-label" style="margin-bottom:0.5rem;margin-top:0.5rem;">Typography Do's &amp; Don'ts</div>
+    <div class="section-divider" style="margin-bottom:1.5rem;"></div>
+    <div class="type-do-dont">
+      <div class="type-do-card">
+        <div class="type-verdict verdict-do">✓ Do</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Clean, purposeful hierarchy</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--forest);line-height:1;margin-bottom:0.5rem;">Enterprise Clarity</div>
+        <div style="font-size:0.85rem;color:var(--forest);line-height:1.72;margin-bottom:0.5rem;">A single, clean typeface hierarchy communicates precision and confidence. Use Bebas Neue for impact, Aptos for readability.</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--sage);letter-spacing:2px;text-transform:uppercase;">Consistent • Clean • Hierarchical</div>
+      </div>
+      <div class="type-dont-card">
+        <div class="type-verdict verdict-dont">✗ Don't</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Too many type styles</div>
+        <div style="font-size:1.1rem;font-weight:900;color:var(--forest);margin-bottom:0.3rem;font-style:italic;text-shadow:2px 2px 4px rgba(0,0,0,0.2);">Multiple Fonts</div>
+        <div style="font-size:0.8rem;color:var(--sage2);line-height:1.65;margin-bottom:0.4rem;letter-spacing:-0.5px;font-weight:300;">Using three different fonts, tight tracking, and text shadows on the same page creates visual noise and brand inconsistency.</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--pink);letter-spacing:3px;text-transform:uppercase;font-weight:700;">TOO MANY STYLES</div>
+      </div>
+      <div class="type-do-card">
+        <div class="type-verdict verdict-do">✓ Do</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Generous leading</div>
+        <div style="font-size:0.88rem;color:var(--forest);line-height:1.78;border-left:3px solid var(--sage);padding-left:1rem;">"Enterprise insurance technology requires precision at every level — from the architecture of our systems to the clarity of our communication. Generous line spacing signals confidence."</div>
+      </div>
+      <div class="type-dont-card">
+        <div class="type-verdict verdict-dont">✗ Don't</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Tight or compressed text</div>
+        <div style="font-size:0.88rem;color:var(--sage2);line-height:1.1;opacity:0.7;border-left:3px solid var(--pink);padding-left:1rem;">"Never compress line height to make more text fit on a page. Tight leading is difficult to read and communicates carelessness in enterprise contexts where precision matters."</div>
+      </div>
+      <div class="type-do-card">
+        <div class="type-verdict verdict-do">✓ Do</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Clean labels with DM Mono</div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:0.5rem;">
+          <span style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);">01 — SECTION LABEL</span>
+          <span style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:2px;color:var(--sage2);">VERSION 2.0 · 2026</span>
+          <span style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:1.5px;color:var(--mint);">#76A379 · SAGE · PRIMARY</span>
+        </div>
+        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">DM Mono is reserved exclusively for labels, metadata, version numbers, and technical codes.</p>
+      </div>
+      <div class="type-dont-card">
+        <div class="type-verdict verdict-dont">✗ Don't</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Text shadows or effects</div>
+        <div style="margin-bottom:0.75rem;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--forest);text-shadow:3px 3px 8px rgba(0,0,0,0.4);filter:drop-shadow(2px 4px 6px rgba(0,0,0,0.3));opacity:0.75;line-height:1;">Never Add Effects</div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Never apply drop shadows, text strokes, emboss effects, or gradients to type. Typography must be clean and unmodified.</p>
       </div>
     </div>
   </section>
 
-
   <!-- ═══ 04 LOGO SYSTEM ═══ -->
-  <section class="brand-section section-anchor" id="logo">
+  <section class="brand-section section-anchor" id="logo" style="background-color: #ffffff;">
     <div class="section-label">04 — Identity</div>
     <h2 class="section-title">Logo System</h2>
     <div class="section-divider"></div>
@@ -1254,7 +1389,7 @@
       </div>
       <!-- Icon mark only -->
       <div class="logo-variant-card">
-        <div class="logo-variant-preview" style="background:var(--cream2);    border-top: 0.1px solid #dfdfdf;">
+        <div class="logo-variant-preview" style="background:#EEF0EC;    border-top: 0.1px solid #dfdfdf;">
           <img
           src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTAiIGhlaWdodD0iMjUwIiB2aWV3Qm94PSIwIDAgMjUwIDI1MCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTIxMy42NDMgOTEuNTU3N0MyMTMuMzUyIDk0LjcxNzQgMTk1LjE3MiA5NS42Mjk2IDE3My4wMzcgOTMuNTk1MkMxNTAuOTAxIDkxLjU2MDggMTMzLjE5MyA4Ny4zNTAxIDEzMy40ODQgODQuMTkwNEMxMzMuNzc0IDgxLjAzMDcgMTUxLjk1NCA4MC4xMTg1IDE3NC4wOSA4Mi4xNTI5QzE5Ni4yMjUgODQuMTg3NCAyMTMuOTM0IDg4LjM5OCAyMTMuNjQzIDkxLjU1NzdaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTExNi4yNTIgMTc1LjE0OEMxMTUuOTYxIDE3OC4zMDggOTcuNzgwNiAxNzkuMjIgNzUuNjQ1MyAxNzcuMTg2QzUzLjUwOTkgMTc1LjE1MSAzNS44MDE0IDE3MC45NDEgMzYuMDkyMyAxNjcuNzgxQzM2LjM4MzEgMTY0LjYyMSA1NC41NjMyIDE2My43MDkgNzYuNjk4NiAxNjUuNzQzQzk4LjgzMzkgMTY3Ljc3OCAxMTYuNTQyIDE3MS45ODkgMTE2LjI1MiAxNzUuMTQ4WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yMjAuNzQ2IDE0MS42MjNDMjE4Ljg5NyAxNDQuMjAyIDIwMi43NDkgMTM1LjgwNyAxODQuNjc5IDEyMi44NzJDMTY2LjYwOCAxMDkuOTM3IDE1My40NTkgOTcuMzU5MyAxNTUuMzA4IDk0Ljc3OTlDMTU3LjE1OCA5Mi4yMDA1IDE3My4zMDYgMTAwLjU5NiAxOTEuMzc2IDExMy41MzFDMjA5LjQ0NiAxMjYuNDY2IDIyMi41OTYgMTM5LjA0NCAyMjAuNzQ2IDE0MS42MjNaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTk0LjQyNjggMTY0LjU1OUM5Mi41Nzc0IDE2Ny4xMzggNzYuNDI5NCAxNTguNzQzIDU4LjM1OTIgMTQ1LjgwOEM0MC4yODkgMTMyLjg3MiAyNy4xMzk0IDEyMC4yOTUgMjguOTg4OCAxMTcuNzE2QzMwLjgzODIgMTE1LjEzNiA0Ni45ODYyIDEyMy41MzEgNjUuMDU2NCAxMzYuNDY3QzgzLjEyNjYgMTQ5LjQwMiA5Ni4yNzYxIDE2MS45NzkgOTQuNDI2OCAxNjQuNTU5WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yMDIuMjU4IDE4Ny40NzNDMTk5LjM3NCAxODguNzk5IDE4OS41MDEgMTczLjUxOSAxODAuMjA2IDE1My4zNDJDMTcwLjkxMiAxMzMuMTY2IDE2NS43MTYgMTE1LjczNCAxNjguNiAxMTQuNDA3QzE3MS40ODUgMTEzLjA4MSAxODEuMzU4IDEyOC4zNjEgMTkwLjY1MiAxNDguNTM4QzE5OS45NDcgMTY4LjcxNCAyMDUuMTQzIDE4Ni4xNDYgMjAyLjI1OCAxODcuNDczWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik04MS4xMzQ5IDE0NC45MzFDNzguMjUwMyAxNDYuMjU4IDY4LjM3NzIgMTMwLjk3NyA1OS4wODI4IDExMC44MDFDNDkuNzg4MyA5MC42MjQ2IDQ0LjU5MjEgNzMuMTkyOCA0Ny40NzY3IDcxLjg2NjFDNTAuMzYxNCA3MC41MzkzIDYwLjIzNDUgODUuODIwMSA2OS41Mjg5IDEwNS45OTdDNzguODIzNCAxMjYuMTczIDg0LjAxOTYgMTQzLjYwNSA4MS4xMzQ5IDE0NC45MzFaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTE2Mi40MDMgMjE4LjYzMkMxNTkuMjQyIDIxOC4zMiAxNTguNDU0IDIwMC4xNDkgMTYwLjY0MSAxNzguMDQ1QzE2Mi44MjggMTU1Ljk0MiAxNjcuMTYyIDEzOC4yNzcgMTcwLjMyMyAxMzguNTg5QzE3My40ODMgMTM4LjkwMSAxNzQuMjcyIDE1Ny4wNzIgMTcyLjA4NCAxNzkuMTc2QzE2OS44OTcgMjAxLjI3OSAxNjUuNTYzIDIxOC45NDUgMTYyLjQwMyAyMTguNjMyWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik03OS40MTI1IDEyMC43NUM3Ni4yNTI0IDEyMC40MzggNzUuNDYzNSAxMDIuMjY2IDc3LjY1MDYgODAuMTYyOEM3OS44Mzc2IDU4LjA1OTMgODQuMTcyNCA0MC4zOTQgODcuMzMyNSA0MC43MDYyQzkwLjQ5MjYgNDEuMDE4NCA5MS4yODE1IDU5LjE4OTkgODkuMDk0NCA4MS4yOTM0Qzg2LjkwNzQgMTAzLjM5NyA4Mi41NzI2IDEyMS4wNjIgNzkuNDEyNSAxMjAuNzVaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTExMy41NjUgMjI1LjU1MkMxMTAuOTcxIDIyMy43MjIgMTE5LjI2MSAyMDcuNTMgMTMyLjA4MiAxODkuMzg1QzE0NC45MDMgMTcxLjI0IDE1Ny4zOTkgMTU4LjAxNSAxNTkuOTkzIDE1OS44NDVDMTYyLjU4OCAxNjEuNjc1IDE1NC4yOTcgMTc3Ljg2OCAxNDEuNDc2IDE5Ni4wMTJDMTI4LjY1NSAyMTQuMTU3IDExNi4xNTkgMjI3LjM4MiAxMTMuNTY1IDIyNS41NTJaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTg5Ljc0MTcgOTkuNDkzN0M4Ny4xNDc1IDk3LjY2MzYgOTUuNDM3OSA4MS40NzA5IDEwOC4yNTkgNjMuMzI2M0MxMjEuMDggNDUuMTgxOCAxMzMuNTc2IDMxLjk1NjMgMTM2LjE3IDMzLjc4NjRDMTM4Ljc2NCAzNS42MTY1IDEzMC40NzQgNTEuODA5MiAxMTcuNjUzIDY5Ljk1MzdDMTA0LjgzMiA4OC4wOTgzIDkyLjMzNTggMTAxLjMyNCA4OS43NDE3IDk5LjQ5MzdaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTY2LjYxMDcgMjA2LjY5M0M2NS4yOTgyIDIwMy44MDMgODAuNjQyOSAxOTQuMDE5IDEwMC44ODQgMTg0LjgzOEMxMjEuMTI1IDE3NS42NTggMTM4LjU5OCAxNzAuNTU4IDEzOS45MTEgMTczLjQ0N0MxNDEuMjIzIDE3Ni4zMzcgMTI1Ljg3OCAxODYuMTIxIDEwNS42MzcgMTk1LjMwMkM4NS4zOTYgMjA0LjQ4MiA2Ny45MjMzIDIwOS41ODIgNjYuNjEwNyAyMDYuNjkzWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xMDkuODI0IDg1Ljg5MTRDMTA4LjUxMiA4My4wMDIgMTIzLjg1NyA3My4yMTc2IDE0NC4wOTggNjQuMDM3MUMxNjQuMzM5IDU0Ljg1NjYgMTgxLjgxMiA0OS43NTY3IDE4My4xMjQgNTIuNjQ2QzE4NC40MzcgNTUuNTM1MyAxNjkuMDkyIDY1LjMxOTggMTQ4Ljg1MSA3NC41MDAyQzEyOC42MSA4My42ODA3IDExMS4xMzcgODguNzgwNyAxMDkuODI0IDg1Ljg5MTRaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTEwMS45NjggNDMuODEwOEMxMDAuMjUxIDQyLjU5MzcgMTA1Ljc0IDMxLjgyNDkgMTE0LjIyOSAxOS43NTc5QzEyMi43MTggNy42OTA5NyAxMzAuOTkyIC0xLjEwNDU4IDEzMi43MSAwLjExMjUyMUMxMzQuNDI3IDEuMzI5NjIgMTI4LjkzOCAxMi4wOTg1IDEyMC40NDkgMjQuMTY1NEMxMTEuOTYgMzYuMjMyNCAxMDMuNjg2IDQ1LjAyNzkgMTAxLjk2OCA0My44MTA4WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xMTcuMDI2IDI0OS42MjNDMTE1LjMwOCAyNDguNDA2IDEyMC43OTggMjM3LjYzNyAxMjkuMjg3IDIyNS41N0MxMzcuNzc2IDIxMy41MDMgMTQ2LjA1IDIwNC43MDggMTQ3Ljc2NyAyMDUuOTI1QzE0OS40ODUgMjA3LjE0MiAxNDMuOTk2IDIxNy45MTEgMTM1LjUwNyAyMjkuOTc4QzEyNy4wMTggMjQyLjA0NSAxMTguNzQ0IDI1MC44NCAxMTcuMDI2IDI0OS42MjNaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTE0NC45NzggNDMuMDczOUMxNDQuMDg1IDQxLjE2NzMgMTU0LjE3NiAzNC41MTQgMTY3LjUxNSAyOC4yMTM0QzE4MC44NTUgMjEuOTEyOCAxOTIuMzkzIDE4LjM1MDcgMTkzLjI4NiAyMC4yNTc0QzE5NC4xNzggMjIuMTY0IDE4NC4wODggMjguODE3MyAxNzAuNzQ4IDM1LjExNzlDMTU3LjQwOCA0MS40MTg1IDE0NS44NyA0NC45ODA2IDE0NC45NzggNDMuMDczOVoiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNNTYuNDQ5NyAyMjkuNDc4QzU1LjU1NzEgMjI3LjU3MiA2NS42NDc2IDIyMC45MTggNzguOTg3NSAyMTQuNjE4QzkyLjMyNzQgMjA4LjMxNyAxMDMuODY1IDIwNC43NTUgMTA0Ljc1OCAyMDYuNjYyQzEwNS42NSAyMDguNTY4IDk1LjU2IDIxNS4yMjIgODIuMjIgMjIxLjUyMkM2OC44ODAxIDIyNy44MjMgNTcuMzQyNCAyMzEuMzg1IDU2LjQ0OTcgMjI5LjQ3OFoiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTgzLjg3NiA2NC43Njc4QzE4NC4wOCA2Mi42NzI0IDE5Ni4xNTMgNjIuMDk2MSAyMTAuODQgNjMuNDgwNkMyMjUuNTI4IDY0Ljg2NSAyMzcuMjY5IDY3LjY4NTkgMjM3LjA2NSA2OS43ODEyQzIzNi44NiA3MS44NzY2IDIyNC43ODggNzIuNDUyOSAyMTAuMSA3MS4wNjg0QzE5NS40MTMgNjkuNjg0IDE4My42NzIgNjYuODYzMSAxODMuODc2IDY0Ljc2NzhaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTEyLjY3MSAxNzkuOTU0QzEyLjg3NTQgMTc3Ljg1OSAyNC45NDc4IDE3Ny4yODMgMzkuNjM1NCAxNzguNjY3QzU0LjMyMzEgMTgwLjA1MiA2Ni4wNjQgMTgyLjg3MyA2NS44NTk2IDE4NC45NjhDNjUuNjU1MSAxODcuMDYzIDUzLjU4MjcgMTg3LjY0IDM4Ljg5NTEgMTg2LjI1NUMyNC4yMDc1IDE4NC44NzEgMTIuNDY2NSAxODIuMDUgMTIuNjcxIDE3OS45NTRaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTIwNS44NzQgMTAxLjgxNkMyMDcuMDg3IDEwMC4wOTYgMjE3Ljg2NSAxMDUuNTY2IDIyOS45NDYgMTE0LjAzNEMyNDIuMDI4IDEyMi41MDEgMjUwLjgzOCAxMzAuNzYgMjQ5LjYyNCAxMzIuNDhDMjQ4LjQxIDEzNC4yIDIzNy42MzIgMTI4LjczIDIyNS41NTEgMTIwLjI2MkMyMTMuNDcgMTExLjc5NSAyMDQuNjYgMTAzLjUzNiAyMDUuODc0IDEwMS44MTZaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTAuMTExNzgyIDExNy4yNTZDMS4zMjU1NyAxMTUuNTM2IDEyLjEwMzQgMTIxLjAwNiAyNC4xODQ3IDEyOS40NzNDMzYuMjY2IDEzNy45NDEgNDUuMDc1OSAxNDYuMiA0My44NjIxIDE0Ny45MkM0Mi42NDgzIDE0OS42NCAzMS44NzA1IDE0NC4xNyAxOS43ODkyIDEzNS43MDJDNy43MDc4NiAxMjcuMjM1IC0xLjEwMjAxIDExOC45NzYgMC4xMTE3ODIgMTE3LjI1NloiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNMjA2LjY5IDE0NC44MjlDMjA4LjU5NSAxNDMuOTMyIDIxNS4yNjYgMTU0LjAxMiAyMjEuNTkgMTY3LjM0MkMyMjcuOTE1IDE4MC42NzEgMjMxLjQ5OCAxOTIuMjA0IDIyOS41OTMgMTkzLjFDMjI3LjY4OCAxOTMuOTk2IDIyMS4wMTcgMTgzLjkxNyAyMTQuNjkzIDE3MC41ODdDMjA4LjM2OCAxNTcuMjU3IDIwNC43ODUgMTQ1LjcyNSAyMDYuNjkgMTQ0LjgyOVoiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNMjAuMTQyNSA1Ni42MzU3QzIyLjA0NzMgNTUuNzM5NSAyOC43MTg1IDY1LjgxODcgMzUuMDQzIDc5LjE0ODVDNDEuMzY3NiA5Mi40NzgyIDQ0Ljk1MDYgMTA0LjAxMSA0My4wNDU4IDEwNC45MDdDNDEuMTQxIDEwNS44MDMgMzQuNDY5OCA5NS43MjM4IDI4LjE0NTIgODIuMzk0MUMyMS44MjA3IDY5LjA2NDQgMTguMjM3NyA1Ny41MzIgMjAuMTQyNSA1Ni42MzU3WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xODUuMDcgMTgzLjc3MUMxODcuMTY2IDE4My45NzIgMTg3Ljc2NCAxOTYuMDQ1IDE4Ni40MDcgMjEwLjczNkMxODUuMDUgMjI1LjQyOCAxODIuMjUxIDIzNy4xNzUgMTgwLjE1NiAyMzYuOTc1QzE3OC4wNiAyMzYuNzc0IDE3Ny40NjIgMjI0LjcwMiAxNzguODE5IDIxMC4wMUMxODAuMTc2IDE5NS4zMTggMTgyLjk3NSAxODMuNTcxIDE4NS4wNyAxODMuNzcxWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik02OS41OCAxMi43NjA4QzcxLjY3NTUgMTIuOTYxNCA3Mi4yNzQxIDI1LjAzNCA3MC45MTY5IDM5LjcyNThDNjkuNTU5OCA1NC40MTc1IDY2Ljc2MDkgNjYuMTY1IDY0LjY2NTQgNjUuOTY0NEM2Mi41Njk5IDY1Ljc2MzggNjEuOTcxNCA1My42OTEyIDYzLjMyODUgMzguOTk5NEM2NC42ODU2IDI0LjMwNzYgNjcuNDg0NSAxMi41NjAyIDY5LjU4IDEyLjc2MDhaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMTEuMzU2IDEyMi43NTRDMTEyLjYwNyAxMjEuNzExIDExNS4xMDkgMTIwLjc1MiAxMTUuMTA5IDEyNS4yNTZWMTM3LjE0MUMxMTUuOTQzIDEzOS4wMTcgMTE4LjQ4NyAxNDEuNjQ0IDEyMS45OSAxMzcuMTQxTDEzMS4zNzMgMTI0LjAwNUMxMzIuMjA3IDEyMi43NTQgMTMzLjg3NSAxMjEuNTAzIDEzMy44NzUgMTI2LjUwN0MxMzQuMzc1IDEyNy4wMDcgMTM0LjA4MyAxMzEuMzAzIDEzMy44NzUgMTMzLjM4OEMxMzQuMjkyIDEzNy4zNDkgMTM3LjM3OCAxNDMuNzcxIDE0Ni4zODYgMTM3Ljc2N0MxNDkuMjM5IDEzNS40ODQgMTU1LjExMiAxMzAuNDkxIDE1Ny42MzkgMTI3LjM1M0MxNTcuNjQxIDEyNy40ODggMTU3LjY0NSAxMjcuNjIzIDE1Ny42NDUgMTI3Ljc1OEMxNTcuNjQ1IDE0NS4zNzYgMTQzLjM2MyAxNTkuNjU5IDEyNS43NDQgMTU5LjY1OUMxMTMuMDEzIDE1OS42NTkgMTAyLjAyNSAxNTIuMjAxIDk2LjkwOCAxNDEuNDE2TDExMS4zNTYgMTIyLjc1NFoiIGZpbGw9IiMzMzQ0MkMiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTI1Ljc0NSA5NS44NTk0QzE0MS44MzkgOTUuODU5NiAxNTUuMTQ3IDEwNy43NzkgMTU3LjMzIDEyMy4yNzFMMTQ3LjAxIDEzMi43NjdDMTM5LjUwNCAxMzguMjcxIDEzOC4wNDQgMTMzLjM5MiAxMzguMjUyIDEzMC4yNjVWMTIwLjI1NkMxMzYuNzUxIDExNC43NTIgMTMyLjYyMyAxMTYuNzExIDEzMC43NDYgMTE4LjM3OUwxMTguMjM2IDEzMi43NjdWMTE4LjM3OUMxMTUuNzM0IDExMi44NzUgMTExLjM1NiAxMTYuMDg1IDEwOS40NzkgMTE4LjM3OUw5NS4zMzgzIDEzNy40MzhDOTQuMzY3OCAxMzQuMzg1IDkzLjg0MjIgMTMxLjEzNCA5My44NDIyIDEyNy43NjFDOTMuODQyMiAxMTAuMTQyIDEwOC4xMjYgOTUuODU5NCAxMjUuNzQ1IDk1Ljg1OTRaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+Cjwvc3ZnPgo="
           alt="Mahathi logo"
@@ -1271,7 +1406,7 @@
   </section>
 
   <!-- ═══ LOGO CLEARSPACE ═══ -->
-  <section class="brand-section section-anchor" id="logo-clearspace">
+  <section class="brand-section section-anchor" id="logo-clearspace" style="background-color: #e3e6e0;">
     <div class="section-label">— Logo Integrity</div>
     <h2 class="section-title">Clearspace &amp; Sizing</h2>
     <div class="section-divider"></div>
@@ -1344,7 +1479,7 @@
                 <path d="M225.745 195.859C241.839 195.86 255.147 207.779 257.33 223.271L247.01 232.767C239.504 238.271 238.044 233.392 238.252 230.265V220.256C236.751 214.752 232.623 216.711 230.746 218.379L218.236 232.767V218.379C215.734 212.875 211.356 216.085 209.479 218.379L195.338 237.438C194.368 234.385 193.842 231.134 193.842 227.761C193.842 210.142 208.126 195.859 225.745 195.859Z" fill="#76A379"/>
               </svg>
             </div>
-            <span style="font-family:'Atops',sans-serif;font-size:0.72rem;color:rgba(238,240,236,0.7);font-weight:500;">mahathi</span>
+            <span style="font-family:'Aptos',sans-serif;font-size:0.72rem;color:rgba(238,240,236,0.7);font-weight:500;">mahathi</span>
           </div>
         </div>
         <div class="sizing-label">Navbar / Header</div>
@@ -1465,7 +1600,7 @@
         <div class="rule-preview" style="background: #273321;">
           <span class="rule-badge badge-do">✓ Do</span>
           <img
-          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjMzIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDEyMzMgNDUwIiBmaWxsPSJub25lIj4KICA8cmVjdCB3aWR0aD0iMTIzMi41NiIgaGVpZ2h0PSI0NDkuNzM2IiBmaWxsPSIjMjczMzIxIj48L3JlY3Q+CiAgPHBhdGggZD0iTTMxMy42NDMgMTkxLjU1OEMzMTMuMzUyIDE5NC43MTcgMjk1LjE3MiAxOTUuNjMgMjczLjAzNyAxOTMuNTk1QzI1MC45MDEgMTkxLjU2MSAyMzMuMTkzIDE4Ny4zNSAyMzMuNDg0IDE4NC4xOUMyMzMuNzc0IDE4MS4wMzEgMjUxLjk1NSAxODAuMTE5IDI3NC4wOSAxODIuMTUzQzI5Ni4yMjUgMTg0LjE4NyAzMTMuOTM0IDE4OC4zOTggMzEzLjY0MyAxOTEuNTU4WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yMTYuMjUyIDI3NS4xNDhDMjE1Ljk2MSAyNzguMzA4IDE5Ny43ODEgMjc5LjIyIDE3NS42NDUgMjc3LjE4NkMxNTMuNTEgMjc1LjE1MSAxMzUuODAxIDI3MC45NDEgMTM2LjA5MiAyNjcuNzgxQzEzNi4zODMgMjY0LjYyMSAxNTQuNTYzIDI2My43MDkgMTc2LjY5OSAyNjUuNzQzQzE5OC44MzQgMjY3Ljc3OCAyMTYuNTQyIDI3MS45ODkgMjE2LjI1MiAyNzUuMTQ4WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0zMjAuNzQ2IDI0MS42MjNDMzE4Ljg5NyAyNDQuMjAyIDMwMi43NDkgMjM1LjgwNyAyODQuNjc5IDIyMi44NzJDMjY2LjYwOSAyMDkuOTM3IDI1My40NTkgMTk3LjM1OSAyNTUuMzA4IDE5NC43OEMyNTcuMTU4IDE5Mi4yIDI3My4zMDYgMjAwLjU5NiAyOTEuMzc2IDIxMy41MzFDMzA5LjQ0NiAyMjYuNDY2IDMyMi41OTYgMjM5LjA0NCAzMjAuNzQ2IDI0MS42MjNaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTE5NC40MjcgMjY0LjU1OUMxOTIuNTc3IDI2Ny4xMzggMTc2LjQyOSAyNTguNzQzIDE1OC4zNTkgMjQ1LjgwOEMxNDAuMjg5IDIzMi44NzIgMTI3LjE0IDIyMC4yOTUgMTI4Ljk4OSAyMTcuNzE2QzEzMC44MzggMjE1LjEzNiAxNDYuOTg2IDIyMy41MzEgMTY1LjA1NiAyMzYuNDY3QzE4My4xMjcgMjQ5LjQwMiAxOTYuMjc2IDI2MS45NzkgMTk0LjQyNyAyNjQuNTU5WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0zMDIuMjU4IDI4Ny40NzNDMjk5LjM3NCAyODguNzk5IDI4OS41MDEgMjczLjUxOSAyODAuMjA2IDI1My4zNDJDMjcwLjkxMiAyMzMuMTY2IDI2NS43MTYgMjE1LjczNCAyNjguNiAyMTQuNDA3QzI3MS40ODUgMjEzLjA4MSAyODEuMzU4IDIyOC4zNjEgMjkwLjY1MiAyNDguNTM4QzI5OS45NDcgMjY4LjcxNCAzMDUuMTQzIDI4Ni4xNDYgMzAyLjI1OCAyODcuNDczWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xODEuMTM1IDI0NC45MzFDMTc4LjI1IDI0Ni4yNTggMTY4LjM3NyAyMzAuOTc3IDE1OS4wODMgMjEwLjgwMUMxNDkuNzg4IDE5MC42MjUgMTQ0LjU5MiAxNzMuMTkzIDE0Ny40NzcgMTcxLjg2NkMxNTAuMzYxIDE3MC41MzkgMTYwLjIzNSAxODUuODIgMTY5LjUyOSAyMDUuOTk3QzE3OC44MjMgMjI2LjE3MyAxODQuMDIgMjQzLjYwNSAxODEuMTM1IDI0NC45MzFaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTI2Mi40MDMgMzE4LjYzMkMyNTkuMjQzIDMxOC4zMiAyNTguNDU0IDMwMC4xNDkgMjYwLjY0MSAyNzguMDQ1QzI2Mi44MjggMjU1Ljk0MiAyNjcuMTYzIDIzOC4yNzcgMjcwLjMyMyAyMzguNTg5QzI3My40ODMgMjM4LjkwMSAyNzQuMjcyIDI1Ny4wNzIgMjcyLjA4NSAyNzkuMTc2QzI2OS44OTggMzAxLjI3OSAyNjUuNTYzIDMxOC45NDUgMjYyLjQwMyAzMTguNjMyWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNzkuNDEzIDIyMC43NUMxNzYuMjUyIDIyMC40MzggMTc1LjQ2NCAyMDIuMjY2IDE3Ny42NTEgMTgwLjE2M0MxNzkuODM4IDE1OC4wNTkgMTg0LjE3MiAxNDAuMzk0IDE4Ny4zMzMgMTQwLjcwNkMxOTAuNDkzIDE0MS4wMTggMTkxLjI4MiAxNTkuMTkgMTg5LjA5NSAxODEuMjkzQzE4Ni45MDcgMjAzLjM5NyAxODIuNTczIDIyMS4wNjIgMTc5LjQxMyAyMjAuNzVaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTIxMy41NjUgMzI1LjU1MkMyMTAuOTcxIDMyMy43MjIgMjE5LjI2MSAzMDcuNTMgMjMyLjA4MiAyODkuMzg1QzI0NC45MDMgMjcxLjI0IDI1Ny4zOTkgMjU4LjAxNSAyNTkuOTkzIDI1OS44NDVDMjYyLjU4OCAyNjEuNjc1IDI1NC4yOTcgMjc3Ljg2OCAyNDEuNDc2IDI5Ni4wMTJDMjI4LjY1NiAzMTQuMTU3IDIxNi4xNTkgMzI3LjM4MiAyMTMuNTY1IDMyNS41NTJaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTE4OS43NDIgMTk5LjQ5NEMxODcuMTQ4IDE5Ny42NjQgMTk1LjQzOCAxODEuNDcxIDIwOC4yNTkgMTYzLjMyNkMyMjEuMDggMTQ1LjE4MiAyMzMuNTc2IDEzMS45NTYgMjM2LjE3IDEzMy43ODZDMjM4Ljc2NCAxMzUuNjE2IDIzMC40NzQgMTUxLjgwOSAyMTcuNjUzIDE2OS45NTRDMjA0LjgzMiAxODguMDk4IDE5Mi4zMzYgMjAxLjMyNCAxODkuNzQyIDE5OS40OTRaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTE2Ni42MTEgMzA2LjY5M0MxNjUuMjk4IDMwMy44MDMgMTgwLjY0MyAyOTQuMDE5IDIwMC44ODQgMjg0LjgzOEMyMjEuMTI1IDI3NS42NTggMjM4LjU5OCAyNzAuNTU4IDIzOS45MTEgMjczLjQ0N0MyNDEuMjIzIDI3Ni4zMzcgMjI1Ljg3OSAyODYuMTIxIDIwNS42MzcgMjk1LjMwMkMxODUuMzk2IDMwNC40ODIgMTY3LjkyMyAzMDkuNTgyIDE2Ni42MTEgMzA2LjY5M1oiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNMjA5LjgyNSAxODUuODkxQzIwOC41MTIgMTgzLjAwMiAyMjMuODU3IDE3My4yMTggMjQ0LjA5OCAxNjQuMDM3QzI2NC4zMzkgMTU0Ljg1NyAyODEuODEyIDE0OS43NTcgMjgzLjEyNCAxNTIuNjQ2QzI4NC40MzcgMTU1LjUzNSAyNjkuMDkyIDE2NS4zMiAyNDguODUxIDE3NC41QzIyOC42MSAxODMuNjgxIDIxMS4xMzcgMTg4Ljc4MSAyMDkuODI1IDE4NS44OTFaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTIwMS45NjggMTQzLjgxMUMyMDAuMjUxIDE0Mi41OTQgMjA1Ljc0IDEzMS44MjUgMjE0LjIyOSAxMTkuNzU4QzIyMi43MTggMTA3LjY5MSAyMzAuOTkyIDk4Ljg5NTQgMjMyLjcxIDEwMC4xMTNDMjM0LjQyNyAxMDEuMzMgMjI4LjkzOCAxMTIuMDk4IDIyMC40NDkgMTI0LjE2NUMyMTEuOTYgMTM2LjIzMiAyMDMuNjg2IDE0NS4wMjggMjAxLjk2OCAxNDMuODExWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yMTcuMDI2IDM0OS42MjNDMjE1LjMwOCAzNDguNDA2IDIyMC43OTggMzM3LjYzNyAyMjkuMjg3IDMyNS41N0MyMzcuNzc2IDMxMy41MDMgMjQ2LjA1IDMwNC43MDggMjQ3Ljc2NyAzMDUuOTI1QzI0OS40ODUgMzA3LjE0MiAyNDMuOTk2IDMxNy45MTEgMjM1LjUwNyAzMjkuOTc4QzIyNy4wMTggMzQyLjA0NSAyMTguNzQ0IDM1MC44NCAyMTcuMDI2IDM0OS42MjNaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTI0NC45NzggMTQzLjA3NEMyNDQuMDg1IDE0MS4xNjcgMjU0LjE3NiAxMzQuNTE0IDI2Ny41MTUgMTI4LjIxM0MyODAuODU1IDEyMS45MTMgMjkyLjM5MyAxMTguMzUxIDI5My4yODYgMTIwLjI1N0MyOTQuMTc4IDEyMi4xNjQgMjg0LjA4OCAxMjguODE3IDI3MC43NDggMTM1LjExOEMyNTcuNDA4IDE0MS40MTkgMjQ1Ljg3IDE0NC45ODEgMjQ0Ljk3OCAxNDMuMDc0WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNTYuNDUgMzI5LjQ3OEMxNTUuNTU3IDMyNy41NzIgMTY1LjY0OCAzMjAuOTE4IDE3OC45ODcgMzE0LjYxOEMxOTIuMzI3IDMwOC4zMTcgMjAzLjg2NSAzMDQuNzU1IDIwNC43NTggMzA2LjY2MkMyMDUuNjUgMzA4LjU2OCAxOTUuNTYgMzE1LjIyMiAxODIuMjIgMzIxLjUyMkMxNjguODggMzI3LjgyMyAxNTcuMzQyIDMzMS4zODUgMTU2LjQ1IDMyOS40NzhaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTI4My44NzYgMTY0Ljc2OEMyODQuMDggMTYyLjY3MiAyOTYuMTUzIDE2Mi4wOTYgMzEwLjg0IDE2My40ODFDMzI1LjUyOCAxNjQuODY1IDMzNy4yNjkgMTY3LjY4NiAzMzcuMDY1IDE2OS43ODFDMzM2Ljg2IDE3MS44NzcgMzI0Ljc4OCAxNzIuNDUzIDMxMC4xIDE3MS4wNjhDMjk1LjQxMyAxNjkuNjg0IDI4My42NzIgMTY2Ljg2MyAyODMuODc2IDE2NC43NjhaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTExMi42NzEgMjc5Ljk1NEMxMTIuODc1IDI3Ny44NTkgMTI0Ljk0OCAyNzcuMjgzIDEzOS42MzUgMjc4LjY2N0MxNTQuMzIzIDI4MC4wNTIgMTY2LjA2NCAyODIuODczIDE2NS44NiAyODQuOTY4QzE2NS42NTUgMjg3LjA2MyAxNTMuNTgzIDI4Ny42NCAxMzguODk1IDI4Ni4yNTVDMTI0LjIwNyAyODQuODcxIDExMi40NjcgMjgyLjA1IDExMi42NzEgMjc5Ljk1NFoiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNMzA1Ljg3NCAyMDEuODE2QzMwNy4wODcgMjAwLjA5NiAzMTcuODY1IDIwNS41NjYgMzI5Ljk0NiAyMTQuMDM0QzM0Mi4wMjggMjIyLjUwMSAzNTAuODM4IDIzMC43NiAzNDkuNjI0IDIzMi40OEMzNDguNDEgMjM0LjIgMzM3LjYzMiAyMjguNzMgMzI1LjU1MSAyMjAuMjYyQzMxMy40NyAyMTEuNzk1IDMwNC42NiAyMDMuNTM2IDMwNS44NzQgMjAxLjgxNloiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTAwLjExMiAyMTcuMjU2QzEwMS4zMjYgMjE1LjUzNiAxMTIuMTAzIDIyMS4wMDYgMTI0LjE4NSAyMjkuNDczQzEzNi4yNjYgMjM3Ljk0MSAxNDUuMDc2IDI0Ni4yIDE0My44NjIgMjQ3LjkyQzE0Mi42NDggMjQ5LjY0IDEzMS44NyAyNDQuMTcgMTE5Ljc4OSAyMzUuNzAyQzEwNy43MDggMjI3LjIzNSA5OC44OTggMjE4Ljk3NiAxMDAuMTEyIDIxNy4yNTZaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTMwNi42OSAyNDQuODI5QzMwOC41OTUgMjQzLjkzMiAzMTUuMjY2IDI1NC4wMTIgMzIxLjU5IDI2Ny4zNDJDMzI3LjkxNSAyODAuNjcxIDMzMS40OTggMjkyLjIwNCAzMjkuNTkzIDI5My4xQzMyNy42ODggMjkzLjk5NiAzMjEuMDE3IDI4My45MTcgMzE0LjY5MyAyNzAuNTg3QzMwOC4zNjggMjU3LjI1NyAzMDQuNzg1IDI0NS43MjUgMzA2LjY5IDI0NC44MjlaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTEyMC4xNDMgMTU2LjYzNkMxMjIuMDQ3IDE1NS43MzkgMTI4LjcxOCAxNjUuODE5IDEzNS4wNDMgMTc5LjE0OEMxNDEuMzY4IDE5Mi40NzggMTQ0Ljk1MSAyMDQuMDExIDE0My4wNDYgMjA0LjkwN0MxNDEuMTQxIDIwNS44MDMgMTM0LjQ3IDE5NS43MjQgMTI4LjE0NSAxODIuMzk0QzEyMS44MjEgMTY5LjA2NCAxMTguMjM4IDE1Ny41MzIgMTIwLjE0MyAxNTYuNjM2WiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yODUuMDcgMjgzLjc3MUMyODcuMTY2IDI4My45NzIgMjg3Ljc2NCAyOTYuMDQ1IDI4Ni40MDcgMzEwLjczNkMyODUuMDUgMzI1LjQyOCAyODIuMjUxIDMzNy4xNzUgMjgwLjE1NiAzMzYuOTc1QzI3OC4wNiAzMzYuNzc0IDI3Ny40NjIgMzI0LjcwMiAyNzguODE5IDMxMC4wMUMyODAuMTc2IDI5NS4zMTggMjgyLjk3NSAyODMuNTcxIDI4NS4wNyAyODMuNzcxWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNjkuNTggMTEyLjc2MUMxNzEuNjc2IDExMi45NjEgMTcyLjI3NCAxMjUuMDM0IDE3MC45MTcgMTM5LjcyNkMxNjkuNTYgMTU0LjQxOCAxNjYuNzYxIDE2Ni4xNjUgMTY0LjY2NSAxNjUuOTY0QzE2Mi41NyAxNjUuNzY0IDE2MS45NzEgMTUzLjY5MSAxNjMuMzI4IDEzOC45OTlDMTY0LjY4NiAxMjQuMzA4IDE2Ny40ODUgMTEyLjU2IDE2OS41OCAxMTIuNzYxWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yMTEuMzU2IDIyMi43NTRDMjEyLjYwNyAyMjEuNzExIDIxNS4xMDkgMjIwLjc1MiAyMTUuMTA5IDIyNS4yNTZWMjM3LjE0MUMyMTUuOTQzIDIzOS4wMTcgMjE4LjQ4NyAyNDEuNjQ0IDIyMS45OSAyMzcuMTQxTDIzMS4zNzMgMjI0LjAwNUMyMzIuMjA3IDIyMi43NTQgMjMzLjg3NSAyMjEuNTAzIDIzMy44NzUgMjI2LjUwN0MyMzQuMzc1IDIyNy4wMDcgMjM0LjA4NCAyMzEuMzAzIDIzMy44NzUgMjMzLjM4OEMyMzQuMjkyIDIzNy4zNDkgMjM3LjM3OCAyNDMuNzcxIDI0Ni4zODYgMjM3Ljc2N0MyNDkuMjQgMjM1LjQ4NCAyNTUuMTEyIDIzMC40OTEgMjU3LjY0IDIyNy4zNTNDMjU3LjY0MSAyMjcuNDg4IDI1Ny42NDYgMjI3LjYyMyAyNTcuNjQ2IDIyNy43NThDMjU3LjY0NiAyNDUuMzc2IDI0My4zNjMgMjU5LjY1OSAyMjUuNzQ0IDI1OS42NTlDMjEzLjAxMyAyNTkuNjU5IDIwMi4wMjYgMjUyLjIwMSAxOTYuOTA4IDI0MS40MTZMMjExLjM1NiAyMjIuNzU0WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMjI1Ljc0NCAxOTUuODU5QzI0MS44MzkgMTk1Ljg2IDI1NS4xNDcgMjA3Ljc3OSAyNTcuMzI5IDIyMy4yNzFMMjQ3LjAxIDIzMi43NjdDMjM5LjUwNCAyMzguMjcxIDIzOC4wNDQgMjMzLjM5MiAyMzguMjUyIDIzMC4yNjVWMjIwLjI1NkMyMzYuNzUxIDIxNC43NTIgMjMyLjYyMyAyMTYuNzExIDIzMC43NDYgMjE4LjM3OUwyMTguMjM1IDIzMi43NjdWMjE4LjM3OUMyMTUuNzMzIDIxMi44NzUgMjExLjM1NSAyMTYuMDg1IDIwOS40NzkgMjE4LjM3OUwxOTUuMzM4IDIzNy40MzhDMTk0LjM2NyAyMzQuMzg1IDE5My44NDIgMjMxLjEzNCAxOTMuODQyIDIyNy43NjFDMTkzLjg0MiAyMTAuMTQyIDIwOC4xMjUgMTk1Ljg1OSAyMjUuNzQ0IDE5NS44NTlaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTUxMC41NDMgMTg5LjA4MUM1MTguMTgyIDE4OS4wODEgNTI0Ljk5OCAxOTAuNjM0IDUzMC45OTIgMTkzLjc0MkM1MzcuMTAzIDE5Ni44NDkgNTQxLjg2MyAyMDEuNDUyIDU0NS4yNzEgMjA3LjU1MUM1NDguNzk3IDIxMy42NTEgNTUwLjU2IDIyMS4wMTYgNTUwLjU2IDIyOS42NDdWMjg1Ljc1SDUzMC42NFYyMzIuNTgyQzUzMC42NCAyMjQuMDY2IDUyOC40NjUgMjE3LjU2NCA1MjQuMTE3IDIxMy4wNzVDNTE5Ljc2OCAyMDguNDcyIDUxMy44MzMgMjA2LjE3IDUwNi4zMTIgMjA2LjE3QzQ5OC43OSAyMDYuMTcgNDkyLjc5NiAyMDguNDcyIDQ4OC4zMzEgMjEzLjA3NUM0ODMuOTgyIDIxNy41NjQgNDgxLjgwOCAyMjQuMDY2IDQ4MS44MDggMjMyLjU4MlYyODUuNzVINDYxLjg4N1YyMzIuNTgyQzQ2MS44ODcgMjI0LjA2NiA0NTkuNzEzIDIxNy41NjQgNDU1LjM2NSAyMTMuMDc1QzQ1MS4wMTYgMjA4LjQ3MiA0NDUuMDgxIDIwNi4xNyA0MzcuNTYgMjA2LjE3QzQzMC4wMzggMjA2LjE3IDQyNC4wNDQgMjA4LjQ3MiA0MTkuNTc4IDIxMy4wNzVDNDE1LjIzIDIxNy41NjQgNDEzLjA1NiAyMjQuMDY2IDQxMy4wNTYgMjMyLjU4MlYyODUuNzVIMzkyLjk1OVYxOTAuNjM0SDQxMy4wNTZWMjAxLjUxQzQxNi4zNDYgMTk3LjU5NyA0MjAuNTE5IDE5NC41NDcgNDI1LjU3MiAxOTIuMzYxQzQzMC42MjYgMTkwLjE3NCA0MzYuMDMyIDE4OS4wODEgNDQxLjc5MSAxODkuMDgxQzQ0OS41NDcgMTg5LjA4MSA0NTYuNDgxIDE5MC42OTIgNDYyLjU5MyAxOTMuOTE0QzQ2OC43MDQgMTk3LjEzNyA0NzMuNDA1IDIwMS43OTcgNDc2LjY5NiAyMDcuODk3QzQ3OS42MzQgMjAyLjE0MyA0ODQuMjE3IDE5Ny41OTcgNDkwLjQ0NiAxOTQuMjZDNDk2LjY3NSAxOTAuODA3IDUwMy4zNzQgMTg5LjA4MSA1MTAuNTQzIDE4OS4wODFaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTU2OS40MzQgMjM3Ljc2QzU2OS40MzQgMjI4LjIwOSA1NzEuNDMyIDIxOS43NSA1NzUuNDI4IDIxMi4zODVDNTc5LjU0MSAyMDUuMDIgNTg1LjA2NSAxOTkuMzIzIDU5MS45OTkgMTk1LjI5NUM1OTkuMDUgMTkxLjE1MiA2MDYuODA3IDE4OS4wODEgNjE1LjI2OSAxODkuMDgxQzYyMi45MDggMTg5LjA4MSA2MjkuNTQ4IDE5MC41NzcgNjM1LjE4OSAxOTMuNTY5QzY0MC45NDggMTk2LjQ0NiA2NDUuNTMxIDIwMC4wNzEgNjQ4LjkzOSAyMDQuNDQ0VjE5MC42MzRINjY5LjIxMlYyODUuNzVINjQ4LjkzOVYyNzEuNTk0QzY0NS41MzEgMjc2LjA4MyA2NDAuODg5IDI3OS44MjMgNjM1LjAxMyAyODIuODE1QzYyOS4xMzYgMjg1LjgwNyA2MjIuNDM4IDI4Ny4zMDMgNjE0LjkxNiAyODcuMzAzQzYwNi41NzIgMjg3LjMwMyA1OTguOTMzIDI4NS4yMzIgNTkxLjk5OSAyODEuMDg5QzU4NS4wNjUgMjc2LjgzMSA1NzkuNTQxIDI3MC45NjIgNTc1LjQyOCAyNjMuNDgxQzU3MS40MzIgMjU1Ljg4NiA1NjkuNDM0IDI0Ny4zMTIgNTY5LjQzNCAyMzcuNzZaTTY0OC45MzkgMjM4LjEwNkM2NDguOTM5IDIzMS41NDYgNjQ3LjUyOSAyMjUuODQ5IDY0NC43MDkgMjIxLjAxNkM2NDIuMDA1IDIxNi4xODMgNjM4LjQyMSAyMTIuNSA2MzMuOTU1IDIwOS45NjhDNjI5LjQ4OSAyMDcuNDM2IDYyNC42NzEgMjA2LjE3IDYxOS40OTkgMjA2LjE3QzYxNC4zMjggMjA2LjE3IDYwOS41MSAyMDcuNDM2IDYwNS4wNDQgMjA5Ljk2OEM2MDAuNTc4IDIxMi4zODUgNTk2LjkzNSAyMTYuMDEgNTk0LjExNCAyMjAuODQzQzU5MS40MTEgMjI1LjU2MiA1OTAuMDU5IDIzMS4yMDEgNTkwLjA1OSAyMzcuNzZDNTkwLjA1OSAyNDQuMzIgNTkxLjQxMSAyNTAuMDc0IDU5NC4xMTQgMjU1LjAyM0M1OTYuOTM1IDI1OS45NzEgNjAwLjU3OCAyNjMuNzY5IDYwNS4wNDQgMjY2LjQxNkM2MDkuNjI3IDI2OC45NDggNjE0LjQ0NiAyNzAuMjEzIDYxOS40OTkgMjcwLjIxM0M2MjQuNjcxIDI3MC4yMTMgNjI5LjQ4OSAyNjguOTQ4IDYzMy45NTUgMjY2LjQxNkM2MzguNDIxIDI2My44ODQgNjQyLjAwNSAyNjAuMjAxIDY0NC43MDkgMjU1LjM2OEM2NDcuNTI5IDI1MC40MTkgNjQ4LjkzOSAyNDQuNjY1IDY0OC45MzkgMjM4LjEwNloiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNNzQ1Ljg1MSAxODkuMDgxQzc1My4yNTUgMTg5LjA4MSA3NTkuODM2IDE5MC42MzQgNzY1LjU5NSAxOTMuNzQyQzc3MS40NzEgMTk2Ljg0OSA3NzYuMDU1IDIwMS40NTIgNzc5LjM0NSAyMDcuNTUxQzc4Mi43NTQgMjEzLjY1MSA3ODQuNDU4IDIyMS4wMTYgNzg0LjQ1OCAyMjkuNjQ3VjI4NS43NUg3NjQuNTM3VjIzMi41ODJDNzY0LjUzNyAyMjQuMDY2IDc2Mi4zNjMgMjE3LjU2NCA3NTguMDE1IDIxMy4wNzVDNzUzLjY2NiAyMDguNDcyIDc0Ny43MzEgMjA2LjE3IDc0MC4yMSAyMDYuMTdDNzMyLjY4OCAyMDYuMTcgNzI2LjY5NCAyMDguNDcyIDcyMi4yMjggMjEzLjA3NUM3MTcuODggMjE3LjU2NCA3MTUuNzA2IDIyNC4wNjYgNzE1LjcwNiAyMzIuNTgyVjI4NS43NUg2OTUuNjA5VjE1OC4wMDlINzE1LjcwNlYyMDEuNjgyQzcxOS4xMTQgMTk3LjY1NCA3MjMuNDAzIDE5NC41NDcgNzI4LjU3NSAxOTIuMzYxQzczMy44NjMgMTkwLjE3NCA3MzkuNjIyIDE4OS4wODEgNzQ1Ljg1MSAxODkuMDgxWiIgZmlsbD0iIzc2QTM3OSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik04MDMuMzkzIDIzNy43NkM4MDMuMzkzIDIyOC4yMDkgODA1LjM5MSAyMTkuNzUgODA5LjM4NyAyMTIuMzg1QzgxMy41MDEgMjA1LjAyIDgxOS4wMjQgMTk5LjMyMyA4MjUuOTU4IDE5NS4yOTVDODMzLjAxIDE5MS4xNTIgODQwLjc2NiAxODkuMDgxIDg0OS4yMjggMTg5LjA4MUM4NTYuODY3IDE4OS4wODEgODYzLjUwNyAxOTAuNTc3IDg2OS4xNDkgMTkzLjU2OUM4NzQuOTA3IDE5Ni40NDYgODc5LjQ5MSAyMDAuMDcxIDg4Mi44OTkgMjA0LjQ0NFYxOTAuNjM0SDkwMy4xNzJWMjg1Ljc1SDg4Mi44OTlWMjcxLjU5NEM4NzkuNDkxIDI3Ni4wODMgODc0Ljg0OSAyNzkuODIzIDg2OC45NzIgMjgyLjgxNUM4NjMuMDk2IDI4NS44MDcgODU2LjM5NyAyODcuMzAzIDg0OC44NzYgMjg3LjMwM0M4NDAuNTMxIDI4Ny4zMDMgODMyLjg5MiAyODUuMjMyIDgyNS45NTggMjgxLjA4OUM4MTkuMDI0IDI3Ni44MzEgODEzLjUwMSAyNzAuOTYyIDgwOS4zODcgMjYzLjQ4MUM4MDUuMzkxIDI1NS44ODYgODAzLjM5MyAyNDcuMzEyIDgwMy4zOTMgMjM3Ljc2Wk04ODIuODk5IDIzOC4xMDZDODgyLjg5OSAyMzEuNTQ2IDg4MS40ODkgMjI1Ljg0OSA4NzguNjY4IDIyMS4wMTZDODc1Ljk2NSAyMTYuMTgzIDg3Mi4zODEgMjEyLjUgODY3LjkxNSAyMDkuOTY4Qzg2My40NDkgMjA3LjQzNiA4NTguNjMgMjA2LjE3IDg1My40NTkgMjA2LjE3Qzg0OC4yODggMjA2LjE3IDg0My40NjkgMjA3LjQzNiA4MzkuMDAzIDIwOS45NjhDODM0LjUzOCAyMTIuMzg1IDgzMC44OTQgMjE2LjAxIDgyOC4wNzQgMjIwLjg0M0M4MjUuMzcxIDIyNS41NjIgODI0LjAxOSAyMzEuMjAxIDgyNC4wMTkgMjM3Ljc2QzgyNC4wMTkgMjQ0LjMyIDgyNS4zNzEgMjUwLjA3NCA4MjguMDc0IDI1NS4wMjNDODMwLjg5NCAyNTkuOTcxIDgzNC41MzggMjYzLjc2OSA4MzkuMDAzIDI2Ni40MTZDODQzLjU4NyAyNjguOTQ4IDg0OC40MDYgMjcwLjIxMyA4NTMuNDU5IDI3MC4yMTNDODU4LjYzIDI3MC4yMTMgODYzLjQ0OSAyNjguOTQ4IDg2Ny45MTUgMjY2LjQxNkM4NzIuMzgxIDI2My44ODQgODc1Ljk2NSAyNjAuMjAxIDg3OC42NjggMjU1LjM2OEM4ODEuNDg5IDI1MC40MTkgODgyLjg5OSAyNDQuNjY1IDg4Mi44OTkgMjM4LjEwNloiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNOTUzLjAxNSAyMDYuNjg4VjI1OS4zMzhDOTUzLjAxNSAyNjIuOTA2IDk1My44MzcgMjY1LjQ5NSA5NTUuNDgzIDI2Ny4xMDZDOTU3LjI0NiAyNjguNjAyIDk2MC4xODQgMjY5LjM1IDk2NC4yOTcgMjY5LjM1SDk3Ni42MzdWMjg1Ljc1SDk2MC43NzFDOTUxLjcyMiAyODUuNzUgOTQ0Ljc4OCAyODMuNjc4IDkzOS45NjkgMjc5LjUzNUM5MzUuMTUxIDI3NS4zOTIgOTMyLjc0MiAyNjguNjYgOTMyLjc0MiAyNTkuMzM4VjIwNi42ODhIOTIxLjI4M1YxOTAuNjM0SDkzMi43NDJWMTY2Ljk4NUg5NTMuMDE1VjE5MC42MzRIOTc2LjYzN1YyMDYuNjg4SDk1My4wMTVaIiBmaWxsPSIjNzZBMzc5Ij48L3BhdGg+CiAgPHBhdGggZD0iTTEwNDUuNCAxODkuMDgxQzEwNTIuODEgMTg5LjA4MSAxMDU5LjM5IDE5MC42MzQgMTA2NS4xNSAxOTMuNzQyQzEwNzEuMDIgMTk2Ljg0OSAxMDc1LjYxIDIwMS40NTIgMTA3OC45IDIwNy41NTFDMTA4Mi4zIDIxMy42NTEgMTA4NC4wMSAyMjEuMDE2IDEwODQuMDEgMjI5LjY0N1YyODUuNzVIMTA2NC4wOVYyMzIuNTgyQzEwNjQuMDkgMjI0LjA2NiAxMDYxLjkxIDIxNy41NjQgMTA1Ny41NyAyMTMuMDc1QzEwNTMuMjIgMjA4LjQ3MiAxMDQ3LjI4IDIwNi4xNyAxMDM5Ljc2IDIwNi4xN0MxMDMyLjI0IDIwNi4xNyAxMDI2LjI1IDIwOC40NzIgMTAyMS43OCAyMTMuMDc1QzEwMTcuNDMgMjE3LjU2NCAxMDE1LjI2IDIyNC4wNjYgMTAxNS4yNiAyMzIuNTgyVjI4NS43NUg5OTUuMTZWMTU4LjAwOUgxMDE1LjI2VjIwMS42ODJDMTAxOC42NiAxOTcuNjU0IDEwMjIuOTUgMTk0LjU0NyAxMDI4LjEzIDE5Mi4zNjFDMTAzMy40MSAxOTAuMTc0IDEwMzkuMTcgMTg5LjA4MSAxMDQ1LjQgMTg5LjA4MVoiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTExOS44NyAxNzguMDMzQzExMTYuMjIgMTc4LjAzMyAxMTEzLjE3IDE3Ni44MjUgMTExMC43IDE3NC40MDhDMTEwOC4yMyAxNzEuOTkxIDExMDcgMTY4Ljk5OSAxMTA3IDE2NS40MzJDMTEwNyAxNjEuODY0IDExMDguMjMgMTU4Ljg3MiAxMTEwLjcgMTU2LjQ1NUMxMTEzLjE3IDE1NC4wMzggMTExNi4yMiAxNTIuODMgMTExOS44NyAxNTIuODNDMTEyMy4zOSAxNTIuODMgMTEyNi4zOSAxNTQuMDM4IDExMjguODYgMTU2LjQ1NUMxMTMxLjMzIDE1OC44NzIgMTEzMi41NiAxNjEuODY0IDExMzIuNTYgMTY1LjQzMkMxMTMyLjU2IDE2OC45OTkgMTEzMS4zMyAxNzEuOTkxIDExMjguODYgMTc0LjQwOEMxMTI2LjM5IDE3Ni44MjUgMTEyMy4zOSAxNzguMDMzIDExMTkuODcgMTc4LjAzM1pNMTEyOS43NCAxOTAuNjM0VjI4NS43NUgxMTA5LjY0VjE5MC42MzRIMTEyOS43NFoiIGZpbGw9IiM3NkEzNzkiPjwvcGF0aD4KPC9zdmc+Cg=="
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjMzIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDEyMzMgNDUwIiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMzEzLjY0MyAxOTEuNTU4QzMxMy4zNTIgMTk0LjcxNyAyOTUuMTcyIDE5NS42MyAyNzMuMDM3IDE5My41OTVDMjUwLjkwMSAxOTEuNTYxIDIzMy4xOTMgMTg3LjM1IDIzMy40ODQgMTg0LjE5QzIzMy43NzUgMTgxLjAzMSAyNTEuOTU1IDE4MC4xMTkgMjc0LjA5IDE4Mi4xNTNDMjk2LjIyNiAxODQuMTg3IDMxMy45MzQgMTg4LjM5OCAzMTMuNjQzIDE5MS41NThaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yMTYuMjUyIDI3NS4xNDhDMjE1Ljk2MSAyNzguMzA4IDE5Ny43ODEgMjc5LjIyIDE3NS42NDYgMjc3LjE4NkMxNTMuNTEgMjc1LjE1MSAxMzUuODAyIDI3MC45NDEgMTM2LjA5MyAyNjcuNzgxQzEzNi4zODMgMjY0LjYyMSAxNTQuNTY0IDI2My43MDkgMTc2LjY5OSAyNjUuNzQzQzE5OC44MzQgMjY3Ljc3OCAyMTYuNTQzIDI3MS45ODkgMjE2LjI1MiAyNzUuMTQ4WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMzIwLjc0NyAyNDEuNjIzQzMxOC44OTcgMjQ0LjIwMiAzMDIuNzQ5IDIzNS44MDcgMjg0LjY3OSAyMjIuODcyQzI2Ni42MDkgMjA5LjkzNyAyNTMuNDU5IDE5Ny4zNTkgMjU1LjMwOSAxOTQuNzhDMjU3LjE1OCAxOTIuMiAyNzMuMzA2IDIwMC41OTYgMjkxLjM3NiAyMTMuNTMxQzMwOS40NDYgMjI2LjQ2NiAzMjIuNTk2IDIzOS4wNDQgMzIwLjc0NyAyNDEuNjIzWiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTk0LjQyNyAyNjQuNTU5QzE5Mi41NzggMjY3LjEzOCAxNzYuNDMgMjU4Ljc0MyAxNTguMzYgMjQ1LjgwOEMxNDAuMjg5IDIzMi44NzIgMTI3LjE0IDIyMC4yOTUgMTI4Ljk4OSAyMTcuNzE2QzEzMC44MzkgMjE1LjEzNiAxNDYuOTg3IDIyMy41MzEgMTY1LjA1NyAyMzYuNDY3QzE4My4xMjcgMjQ5LjQwMiAxOTYuMjc2IDI2MS45NzkgMTk0LjQyNyAyNjQuNTU5WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMzAyLjI1OSAyODcuNDczQzI5OS4zNzQgMjg4Ljc5OSAyODkuNTAxIDI3My41MTkgMjgwLjIwNiAyNTMuMzQyQzI3MC45MTIgMjMzLjE2NiAyNjUuNzE2IDIxNS43MzQgMjY4LjYgMjE0LjQwN0MyNzEuNDg1IDIxMy4wODEgMjgxLjM1OCAyMjguMzYxIDI5MC42NTMgMjQ4LjUzOEMyOTkuOTQ3IDI2OC43MTQgMzA1LjE0MyAyODYuMTQ2IDMwMi4yNTkgMjg3LjQ3M1oiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTE4MS4xMzUgMjQ0LjkzMUMxNzguMjUxIDI0Ni4yNTggMTY4LjM3OCAyMzAuOTc3IDE1OS4wODMgMjEwLjgwMUMxNDkuNzg5IDE5MC42MjUgMTQ0LjU5MiAxNzMuMTkzIDE0Ny40NzcgMTcxLjg2NkMxNTAuMzYyIDE3MC41MzkgMTYwLjIzNSAxODUuODIgMTY5LjUyOSAyMDUuOTk3QzE3OC44MjQgMjI2LjE3MyAxODQuMDIgMjQzLjYwNSAxODEuMTM1IDI0NC45MzFaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yNjIuNDAzIDMxOC42MzJDMjU5LjI0MyAzMTguMzIgMjU4LjQ1NCAzMDAuMTQ5IDI2MC42NDEgMjc4LjA0NUMyNjIuODI4IDI1NS45NDIgMjY3LjE2MyAyMzguMjc3IDI3MC4zMjMgMjM4LjU4OUMyNzMuNDgzIDIzOC45MDEgMjc0LjI3MiAyNTcuMDcyIDI3Mi4wODUgMjc5LjE3NkMyNjkuODk4IDMwMS4yNzkgMjY1LjU2MyAzMTguOTQ1IDI2Mi40MDMgMzE4LjYzMloiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTE3OS40MTMgMjIwLjc1QzE3Ni4yNTMgMjIwLjQzOCAxNzUuNDY0IDIwMi4yNjYgMTc3LjY1MSAxODAuMTYzQzE3OS44MzggMTU4LjA1OSAxODQuMTczIDE0MC4zOTQgMTg3LjMzMyAxNDAuNzA2QzE5MC40OTMgMTQxLjAxOCAxOTEuMjgyIDE1OS4xOSAxODkuMDk1IDE4MS4yOTNDMTg2LjkwOCAyMDMuMzk3IDE4Mi41NzMgMjIxLjA2MiAxNzkuNDEzIDIyMC43NVoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTIxMy41NjUgMzI1LjU1MkMyMTAuOTcxIDMyMy43MjIgMjE5LjI2MiAzMDcuNTMgMjMyLjA4MiAyODkuMzg1QzI0NC45MDMgMjcxLjI0IDI1Ny40IDI1OC4wMTUgMjU5Ljk5NCAyNTkuODQ1QzI2Mi41ODggMjYxLjY3NSAyNTQuMjk3IDI3Ny44NjggMjQxLjQ3NyAyOTYuMDEyQzIyOC42NTYgMzE0LjE1NyAyMTYuMTYgMzI3LjM4MiAyMTMuNTY1IDMyNS41NTJaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xODkuNzQyIDE5OS40OTRDMTg3LjE0OCAxOTcuNjY0IDE5NS40MzggMTgxLjQ3MSAyMDguMjU5IDE2My4zMjZDMjIxLjA4IDE0NS4xODIgMjMzLjU3NiAxMzEuOTU2IDIzNi4xNyAxMzMuNzg2QzIzOC43NjQgMTM1LjYxNiAyMzAuNDc0IDE1MS44MDkgMjE3LjY1MyAxNjkuOTU0QzIwNC44MzIgMTg4LjA5OCAxOTIuMzM2IDIwMS4zMjQgMTg5Ljc0MiAxOTkuNDk0WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTY2LjYxMSAzMDYuNjkzQzE2NS4yOTkgMzAzLjgwMyAxODAuNjQzIDI5NC4wMTkgMjAwLjg4NCAyODQuODM4QzIyMS4xMjYgMjc1LjY1OCAyMzguNTk4IDI3MC41NTggMjM5LjkxMSAyNzMuNDQ3QzI0MS4yMjMgMjc2LjMzNyAyMjUuODc5IDI4Ni4xMjEgMjA1LjYzOCAyOTUuMzAyQzE4NS4zOTYgMzA0LjQ4MiAxNjcuOTI0IDMwOS41ODIgMTY2LjYxMSAzMDYuNjkzWiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMjA5LjgyNSAxODUuODkxQzIwOC41MTIgMTgzLjAwMiAyMjMuODU3IDE3My4yMTggMjQ0LjA5OCAxNjQuMDM3QzI2NC4zMzkgMTU0Ljg1NyAyODEuODEyIDE0OS43NTcgMjgzLjEyNSAxNTIuNjQ2QzI4NC40MzcgMTU1LjUzNSAyNjkuMDkyIDE2NS4zMiAyNDguODUxIDE3NC41QzIyOC42MSAxODMuNjgxIDIxMS4xMzcgMTg4Ljc4MSAyMDkuODI1IDE4NS44OTFaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yMDEuOTY4IDE0My44MTFDMjAwLjI1MSAxNDIuNTk0IDIwNS43NCAxMzEuODI1IDIxNC4yMjkgMTE5Ljc1OEMyMjIuNzE4IDEwNy42OTEgMjMwLjk5MiA5OC44OTU0IDIzMi43MSAxMDAuMTEzQzIzNC40MjcgMTAxLjMzIDIyOC45MzggMTEyLjA5OCAyMjAuNDQ5IDEyNC4xNjVDMjExLjk2IDEzNi4yMzIgMjAzLjY4NiAxNDUuMDI4IDIwMS45NjggMTQzLjgxMVoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTIxNy4wMjYgMzQ5LjYyM0MyMTUuMzA5IDM0OC40MDYgMjIwLjc5OCAzMzcuNjM3IDIyOS4yODcgMzI1LjU3QzIzNy43NzYgMzEzLjUwMyAyNDYuMDUgMzA0LjcwOCAyNDcuNzY4IDMwNS45MjVDMjQ5LjQ4NSAzMDcuMTQyIDI0My45OTYgMzE3LjkxMSAyMzUuNTA3IDMyOS45NzhDMjI3LjAxOCAzNDIuMDQ1IDIxOC43NDQgMzUwLjg0IDIxNy4wMjYgMzQ5LjYyM1oiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTI0NC45NzggMTQzLjA3NEMyNDQuMDg1IDE0MS4xNjcgMjU0LjE3NiAxMzQuNTE0IDI2Ny41MTYgMTI4LjIxM0MyODAuODU2IDEyMS45MTMgMjkyLjM5MyAxMTguMzUxIDI5My4yODYgMTIwLjI1N0MyOTQuMTc5IDEyMi4xNjQgMjg0LjA4OCAxMjguODE3IDI3MC43NDggMTM1LjExOEMyNTcuNDA4IDE0MS40MTkgMjQ1Ljg3MSAxNDQuOTgxIDI0NC45NzggMTQzLjA3NFoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTE1Ni40NSAzMjkuNDc4QzE1NS41NTcgMzI3LjU3MiAxNjUuNjQ4IDMyMC45MTggMTc4Ljk4OCAzMTQuNjE4QzE5Mi4zMjggMzA4LjMxNyAyMDMuODY1IDMwNC43NTUgMjA0Ljc1OCAzMDYuNjYyQzIwNS42NTEgMzA4LjU2OCAxOTUuNTYgMzE1LjIyMiAxODIuMjIgMzIxLjUyMkMxNjguODggMzI3LjgyMyAxNTcuMzQzIDMzMS4zODUgMTU2LjQ1IDMyOS40NzhaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yODMuODc2IDE2NC43NjhDMjg0LjA4MSAxNjIuNjcyIDI5Ni4xNTMgMTYyLjA5NiAzMTAuODQxIDE2My40ODFDMzI1LjUyOCAxNjQuODY1IDMzNy4yNjkgMTY3LjY4NiAzMzcuMDY1IDE2OS43ODFDMzM2Ljg2IDE3MS44NzcgMzI0Ljc4OCAxNzIuNDUzIDMxMC4xIDE3MS4wNjhDMjk1LjQxMyAxNjkuNjg0IDI4My42NzIgMTY2Ljg2MyAyODMuODc2IDE2NC43NjhaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xMTIuNjcxIDI3OS45NTRDMTEyLjg3NiAyNzcuODU5IDEyNC45NDggMjc3LjI4MyAxMzkuNjM2IDI3OC42NjdDMTU0LjMyMyAyODAuMDUyIDE2Ni4wNjQgMjgyLjg3MyAxNjUuODYgMjg0Ljk2OEMxNjUuNjU1IDI4Ny4wNjMgMTUzLjU4MyAyODcuNjQgMTM4Ljg5NSAyODYuMjU1QzEyNC4yMDggMjg0Ljg3MSAxMTIuNDY3IDI4Mi4wNSAxMTIuNjcxIDI3OS45NTRaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0zMDUuODc0IDIwMS44MTZDMzA3LjA4OCAyMDAuMDk2IDMxNy44NjUgMjA1LjU2NiAzMjkuOTQ3IDIxNC4wMzRDMzQyLjAyOCAyMjIuNTAxIDM1MC44MzggMjMwLjc2IDM0OS42MjQgMjMyLjQ4QzM0OC40MSAyMzQuMiAzMzcuNjMzIDIyOC43MyAzMjUuNTUxIDIyMC4yNjJDMzEzLjQ3IDIxMS43OTUgMzA0LjY2IDIwMy41MzYgMzA1Ljg3NCAyMDEuODE2WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTAwLjExMiAyMTcuMjU2QzEwMS4zMjYgMjE1LjUzNiAxMTIuMTA0IDIyMS4wMDYgMTI0LjE4NSAyMjkuNDczQzEzNi4yNjYgMjM3Ljk0MSAxNDUuMDc2IDI0Ni4yIDE0My44NjIgMjQ3LjkyQzE0Mi42NDkgMjQ5LjY0IDEzMS44NzEgMjQ0LjE3IDExOS43ODkgMjM1LjcwMkMxMDcuNzA4IDIyNy4yMzUgOTguODk4MiAyMTguOTc2IDEwMC4xMTIgMjE3LjI1NloiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTMwNi42OSAyNDQuODI5QzMwOC41OTUgMjQzLjkzMiAzMTUuMjY2IDI1NC4wMTIgMzIxLjU5MSAyNjcuMzQyQzMyNy45MTUgMjgwLjY3MSAzMzEuNDk4IDI5Mi4yMDQgMzI5LjU5MyAyOTMuMUMzMjcuNjg5IDI5My45OTYgMzIxLjAxNyAyODMuOTE3IDMxNC42OTMgMjcwLjU4N0MzMDguMzY4IDI1Ny4yNTcgMzA0Ljc4NSAyNDUuNzI1IDMwNi42OSAyNDQuODI5WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTIwLjE0MyAxNTYuNjM2QzEyMi4wNDggMTU1LjczOSAxMjguNzE5IDE2NS44MTkgMTM1LjA0MyAxNzkuMTQ4QzE0MS4zNjggMTkyLjQ3OCAxNDQuOTUxIDIwNC4wMTEgMTQzLjA0NiAyMDQuOTA3QzE0MS4xNDEgMjA1LjgwMyAxMzQuNDcgMTk1LjcyNCAxMjguMTQ1IDE4Mi4zOTRDMTIxLjgyMSAxNjkuMDY0IDExOC4yMzggMTU3LjUzMiAxMjAuMTQzIDE1Ni42MzZaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yODUuMDcxIDI4My43NzFDMjg3LjE2NiAyODMuOTcyIDI4Ny43NjUgMjk2LjA0NSAyODYuNDA3IDMxMC43MzZDMjg1LjA1IDMyNS40MjggMjgyLjI1MSAzMzcuMTc1IDI4MC4xNTYgMzM2Ljk3NUMyNzguMDYgMzM2Ljc3NCAyNzcuNDYyIDMyNC43MDIgMjc4LjgxOSAzMTAuMDFDMjgwLjE3NiAyOTUuMzE4IDI4Mi45NzUgMjgzLjU3MSAyODUuMDcxIDI4My43NzFaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNjkuNTggMTEyLjc2MUMxNzEuNjc2IDExMi45NjEgMTcyLjI3NCAxMjUuMDM0IDE3MC45MTcgMTM5LjcyNkMxNjkuNTYgMTU0LjQxOCAxNjYuNzYxIDE2Ni4xNjUgMTY0LjY2NiAxNjUuOTY0QzE2Mi41NyAxNjUuNzY0IDE2MS45NzIgMTUzLjY5MSAxNjMuMzI5IDEzOC45OTlDMTY0LjY4NiAxMjQuMzA4IDE2Ny40ODUgMTEyLjU2IDE2OS41OCAxMTIuNzYxWiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMjExLjM1NyAyMjIuNzU0QzIxMi42MDggMjIxLjcxMSAyMTUuMTEgMjIwLjc1MiAyMTUuMTEgMjI1LjI1NlYyMzcuMTQxQzIxNS45NDQgMjM5LjAxNyAyMTguNDg4IDI0MS42NDQgMjIxLjk5IDIzNy4xNDFMMjMxLjM3MyAyMjQuMDA1QzIzMi4yMDcgMjIyLjc1NCAyMzMuODc1IDIyMS41MDMgMjMzLjg3NSAyMjYuNTA3QzIzNC4zNzYgMjI3LjAwNyAyMzQuMDg0IDIzMS4zMDMgMjMzLjg3NSAyMzMuMzg4QzIzNC4yOTIgMjM3LjM0OSAyMzcuMzc5IDI0My43NzEgMjQ2LjM4NiAyMzcuNzY3QzI0OS4yNCAyMzUuNDg0IDI1NS4xMTMgMjMwLjQ5MSAyNTcuNjQgMjI3LjM1M0MyNTcuNjQyIDIyNy40ODggMjU3LjY0NiAyMjcuNjIzIDI1Ny42NDYgMjI3Ljc1OEMyNTcuNjQ2IDI0NS4zNzYgMjQzLjM2MyAyNTkuNjU5IDIyNS43NDQgMjU5LjY1OUMyMTMuMDEzIDI1OS42NTkgMjAyLjAyNiAyNTIuMjAxIDE5Ni45MDggMjQxLjQxNkwyMTEuMzU3IDIyMi43NTRaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yMjUuNzQ1IDE5NS44NTlDMjQxLjg0IDE5NS44NiAyNTUuMTQ4IDIwNy43NzkgMjU3LjMzIDIyMy4yNzFMMjQ3LjAxIDIzMi43NjdDMjM5LjUwNSAyMzguMjcxIDIzOC4wNDQgMjMzLjM5MiAyMzguMjUzIDIzMC4yNjVWMjIwLjI1NkMyMzYuNzUxIDIxNC43NTIgMjMyLjYyMyAyMTYuNzExIDIzMC43NDcgMjE4LjM3OUwyMTguMjM2IDIzMi43NjdWMjE4LjM3OUMyMTUuNzM0IDIxMi44NzUgMjExLjM1NiAyMTYuMDg1IDIwOS40NzkgMjE4LjM3OUwxOTUuMzM5IDIzNy40MzhDMTk0LjM2OCAyMzQuMzg1IDE5My44NDMgMjMxLjEzNCAxOTMuODQzIDIyNy43NjFDMTkzLjg0MyAyMTAuMTQyIDIwOC4xMjYgMTk1Ljg1OSAyMjUuNzQ1IDE5NS44NTlaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik01MTAuNTQzIDE4OS4wODFDNTE4LjE4MyAxODkuMDgxIDUyNC45OTkgMTkwLjYzNCA1MzAuOTkzIDE5My43NDJDNTM3LjEwNCAxOTYuODQ5IDU0MS44NjQgMjAxLjQ1MiA1NDUuMjcyIDIwNy41NTFDNTQ4Ljc5OCAyMTMuNjUxIDU1MC41NjEgMjIxLjAxNiA1NTAuNTYxIDIyOS42NDdWMjg1Ljc1SDUzMC42NFYyMzIuNTgyQzUzMC42NCAyMjQuMDY2IDUyOC40NjYgMjE3LjU2NCA1MjQuMTE4IDIxMy4wNzVDNTE5Ljc2OSAyMDguNDcyIDUxMy44MzQgMjA2LjE3IDUwNi4zMTMgMjA2LjE3QzQ5OC43OTEgMjA2LjE3IDQ5Mi43OTcgMjA4LjQ3MiA0ODguMzMxIDIxMy4wNzVDNDgzLjk4MyAyMTcuNTY0IDQ4MS44MDkgMjI0LjA2NiA0ODEuODA5IDIzMi41ODJWMjg1Ljc1SDQ2MS44ODhWMjMyLjU4MkM0NjEuODg4IDIyNC4wNjYgNDU5LjcxNCAyMTcuNTY0IDQ1NS4zNjUgMjEzLjA3NUM0NTEuMDE3IDIwOC40NzIgNDQ1LjA4MiAyMDYuMTcgNDM3LjU2IDIwNi4xN0M0MzAuMDM5IDIwNi4xNyA0MjQuMDQ1IDIwOC40NzIgNDE5LjU3OSAyMTMuMDc1QzQxNS4yMzEgMjE3LjU2NCA0MTMuMDU2IDIyNC4wNjYgNDEzLjA1NiAyMzIuNTgyVjI4NS43NUgzOTIuOTZWMTkwLjYzNEg0MTMuMDU2VjIwMS41MUM0MTYuMzQ3IDE5Ny41OTcgNDIwLjUxOSAxOTQuNTQ3IDQyNS41NzMgMTkyLjM2MUM0MzAuNjI2IDE5MC4xNzQgNDM2LjAzMyAxODkuMDgxIDQ0MS43OTEgMTg5LjA4MUM0NDkuNTQ4IDE4OS4wODEgNDU2LjQ4MiAxOTAuNjkyIDQ2Mi41OTMgMTkzLjkxNEM0NjguNzA1IDE5Ny4xMzcgNDczLjQwNiAyMDEuNzk3IDQ3Ni42OTYgMjA3Ljg5N0M0NzkuNjM0IDIwMi4xNDMgNDg0LjIxOCAxOTcuNTk3IDQ5MC40NDcgMTk0LjI2QzQ5Ni42NzYgMTkwLjgwNyA1MDMuMzc0IDE4OS4wODEgNTEwLjU0MyAxODkuMDgxWiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNNTY5LjQzNSAyMzcuNzZDNTY5LjQzNSAyMjguMjA5IDU3MS40MzIgMjE5Ljc1IDU3NS40MjggMjEyLjM4NUM1NzkuNTQyIDIwNS4wMiA1ODUuMDY1IDE5OS4zMjMgNTkxLjk5OSAxOTUuMjk1QzU5OS4wNTEgMTkxLjE1MiA2MDYuODA3IDE4OS4wODEgNjE1LjI2OSAxODkuMDgxQzYyMi45MDggMTg5LjA4MSA2MjkuNTQ5IDE5MC41NzcgNjM1LjE5IDE5My41NjlDNjQwLjk0OCAxOTYuNDQ2IDY0NS41MzIgMjAwLjA3MSA2NDguOTQgMjA0LjQ0NFYxOTAuNjM0SDY2OS4yMTNWMjg1Ljc1SDY0OC45NFYyNzEuNTk0QzY0NS41MzIgMjc2LjA4MyA2NDAuODkgMjc5LjgyMyA2MzUuMDEzIDI4Mi44MTVDNjI5LjEzNyAyODUuODA3IDYyMi40MzggMjg3LjMwMyA2MTQuOTE3IDI4Ny4zMDNDNjA2LjU3MiAyODcuMzAzIDU5OC45MzMgMjg1LjIzMiA1OTEuOTk5IDI4MS4wODlDNTg1LjA2NSAyNzYuODMxIDU3OS41NDIgMjcwLjk2MiA1NzUuNDI4IDI2My40ODFDNTcxLjQzMiAyNTUuODg2IDU2OS40MzUgMjQ3LjMxMiA1NjkuNDM1IDIzNy43NlpNNjQ4Ljk0IDIzOC4xMDZDNjQ4Ljk0IDIzMS41NDYgNjQ3LjUzIDIyNS44NDkgNjQ0LjcwOSAyMjEuMDE2QzY0Mi4wMDYgMjE2LjE4MyA2MzguNDIyIDIxMi41IDYzMy45NTYgMjA5Ljk2OEM2MjkuNDkgMjA3LjQzNiA2MjQuNjcxIDIwNi4xNyA2MTkuNSAyMDYuMTdDNjE0LjMyOSAyMDYuMTcgNjA5LjUxMSAyMDcuNDM2IDYwNS4wNDUgMjA5Ljk2OEM2MDAuNTc5IDIxMi4zODUgNTk2LjkzNSAyMTYuMDEgNTk0LjExNSAyMjAuODQzQzU5MS40MTIgMjI1LjU2MiA1OTAuMDYgMjMxLjIwMSA1OTAuMDYgMjM3Ljc2QzU5MC4wNiAyNDQuMzIgNTkxLjQxMiAyNTAuMDc0IDU5NC4xMTUgMjU1LjAyM0M1OTYuOTM1IDI1OS45NzEgNjAwLjU3OSAyNjMuNzY5IDYwNS4wNDUgMjY2LjQxNkM2MDkuNjI4IDI2OC45NDggNjE0LjQ0NyAyNzAuMjEzIDYxOS41IDI3MC4yMTNDNjI0LjY3MSAyNzAuMjEzIDYyOS40OSAyNjguOTQ4IDYzMy45NTYgMjY2LjQxNkM2MzguNDIyIDI2My44ODQgNjQyLjAwNiAyNjAuMjAxIDY0NC43MDkgMjU1LjM2OEM2NDcuNTMgMjUwLjQxOSA2NDguOTQgMjQ0LjY2NSA2NDguOTQgMjM4LjEwNloiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTc0NS44NTEgMTg5LjA4MUM3NTMuMjU2IDE4OS4wODEgNzU5LjgzNyAxOTAuNjM0IDc2NS41OTYgMTkzLjc0MkM3NzEuNDcyIDE5Ni44NDkgNzc2LjA1NSAyMDEuNDUyIDc3OS4zNDYgMjA3LjU1MUM3ODIuNzU0IDIxMy42NTEgNzg0LjQ1OCAyMjEuMDE2IDc4NC40NTggMjI5LjY0N1YyODUuNzVINzY0LjUzOFYyMzIuNTgyQzc2NC41MzggMjI0LjA2NiA3NjIuMzY0IDIxNy41NjQgNzU4LjAxNSAyMTMuMDc1Qzc1My42NjcgMjA4LjQ3MiA3NDcuNzMyIDIwNi4xNyA3NDAuMjEgMjA2LjE3QzczMi42ODkgMjA2LjE3IDcyNi42OTUgMjA4LjQ3MiA3MjIuMjI5IDIxMy4wNzVDNzE3Ljg4MSAyMTcuNTY0IDcxNS43MDYgMjI0LjA2NiA3MTUuNzA2IDIzMi41ODJWMjg1Ljc1SDY5NS42MVYxNTguMDA5SDcxNS43MDZWMjAxLjY4MkM3MTkuMTE1IDE5Ny42NTQgNzIzLjQwNCAxOTQuNTQ3IDcyOC41NzUgMTkyLjM2MUM3MzMuODY0IDE5MC4xNzQgNzM5LjYyMyAxODkuMDgxIDc0NS44NTEgMTg5LjA4MVoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTgwMy4zOTQgMjM3Ljc2QzgwMy4zOTQgMjI4LjIwOSA4MDUuMzkyIDIxOS43NSA4MDkuMzg4IDIxMi4zODVDODEzLjUwMSAyMDUuMDIgODE5LjAyNSAxOTkuMzIzIDgyNS45NTkgMTk1LjI5NUM4MzMuMDEgMTkxLjE1MiA4NDAuNzY3IDE4OS4wODEgODQ5LjIyOSAxODkuMDgxQzg1Ni44NjggMTg5LjA4MSA4NjMuNTA4IDE5MC41NzcgODY5LjE0OSAxOTMuNTY5Qzg3NC45MDggMTk2LjQ0NiA4NzkuNDkyIDIwMC4wNzEgODgyLjkgMjA0LjQ0NFYxOTAuNjM0SDkwMy4xNzNWMjg1Ljc1SDg4Mi45VjI3MS41OTRDODc5LjQ5MiAyNzYuMDgzIDg3NC44NDkgMjc5LjgyMyA4NjguOTczIDI4Mi44MTVDODYzLjA5NyAyODUuODA3IDg1Ni4zOTggMjg3LjMwMyA4NDguODc2IDI4Ny4zMDNDODQwLjUzMiAyODcuMzAzIDgzMi44OTMgMjg1LjIzMiA4MjUuOTU5IDI4MS4wODlDODE5LjAyNSAyNzYuODMxIDgxMy41MDEgMjcwLjk2MiA4MDkuMzg4IDI2My40ODFDODA1LjM5MiAyNTUuODg2IDgwMy4zOTQgMjQ3LjMxMiA4MDMuMzk0IDIzNy43NlpNODgyLjkgMjM4LjEwNkM4ODIuOSAyMzEuNTQ2IDg4MS40OSAyMjUuODQ5IDg3OC42NjkgMjIxLjAxNkM4NzUuOTY2IDIxNi4xODMgODcyLjM4MSAyMTIuNSA4NjcuOTE1IDIwOS45NjhDODYzLjQ0OSAyMDcuNDM2IDg1OC42MzEgMjA2LjE3IDg1My40NiAyMDYuMTdDODQ4LjI4OSAyMDYuMTcgODQzLjQ3IDIwNy40MzYgODM5LjAwNCAyMDkuOTY4QzgzNC41MzggMjEyLjM4NSA4MzAuODk1IDIxNi4wMSA4MjguMDc0IDIyMC44NDNDODI1LjM3MSAyMjUuNTYyIDgyNC4wMiAyMzEuMjAxIDgyNC4wMiAyMzcuNzZDODI0LjAyIDI0NC4zMiA4MjUuMzcxIDI1MC4wNzQgODI4LjA3NCAyNTUuMDIzQzgzMC44OTUgMjU5Ljk3MSA4MzQuNTM4IDI2My43NjkgODM5LjAwNCAyNjYuNDE2Qzg0My41ODggMjY4Ljk0OCA4NDguNDA2IDI3MC4yMTMgODUzLjQ2IDI3MC4yMTNDODU4LjYzMSAyNzAuMjEzIDg2My40NDkgMjY4Ljk0OCA4NjcuOTE1IDI2Ni40MTZDODcyLjM4MSAyNjMuODg0IDg3NS45NjYgMjYwLjIwMSA4NzguNjY5IDI1NS4zNjhDODgxLjQ5IDI1MC40MTkgODgyLjkgMjQ0LjY2NSA4ODIuOSAyMzguMTA2WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNOTUzLjAxNSAyMDYuNjg4VjI1OS4zMzhDOTUzLjAxNSAyNjIuOTA2IDk1My44MzggMjY1LjQ5NSA5NTUuNDgzIDI2Ny4xMDZDOTU3LjI0NiAyNjguNjAyIDk2MC4xODQgMjY5LjM1IDk2NC4yOTggMjY5LjM1SDk3Ni42MzhWMjg1Ljc1SDk2MC43NzJDOTUxLjcyMyAyODUuNzUgOTQ0Ljc4OSAyODMuNjc4IDkzOS45NyAyNzkuNTM1QzkzNS4xNTIgMjc1LjM5MiA5MzIuNzQyIDI2OC42NiA5MzIuNzQyIDI1OS4zMzhWMjA2LjY4OEg5MjEuMjg0VjE5MC42MzRIOTMyLjc0MlYxNjYuOTg1SDk1My4wMTVWMTkwLjYzNEg5NzYuNjM4VjIwNi42ODhIOTUzLjAxNVoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTEwNDUuNCAxODkuMDgxQzEwNTIuODEgMTg5LjA4MSAxMDU5LjM5IDE5MC42MzQgMTA2NS4xNSAxOTMuNzQyQzEwNzEuMDIgMTk2Ljg0OSAxMDc1LjYxIDIwMS40NTIgMTA3OC45IDIwNy41NTFDMTA4Mi4zMSAyMTMuNjUxIDEwODQuMDEgMjIxLjAxNiAxMDg0LjAxIDIyOS42NDdWMjg1Ljc1SDEwNjQuMDlWMjMyLjU4MkMxMDY0LjA5IDIyNC4wNjYgMTA2MS45MSAyMTcuNTY0IDEwNTcuNTcgMjEzLjA3NUMxMDUzLjIyIDIwOC40NzIgMTA0Ny4yOCAyMDYuMTcgMTAzOS43NiAyMDYuMTdDMTAzMi4yNCAyMDYuMTcgMTAyNi4yNSAyMDguNDcyIDEwMjEuNzggMjEzLjA3NUMxMDE3LjQzIDIxNy41NjQgMTAxNS4yNiAyMjQuMDY2IDEwMTUuMjYgMjMyLjU4MlYyODUuNzVIOTk1LjE2MVYxNTguMDA5SDEwMTUuMjZWMjAxLjY4MkMxMDE4LjY3IDE5Ny42NTQgMTAyMi45NiAxOTQuNTQ3IDEwMjguMTMgMTkyLjM2MUMxMDMzLjQxIDE5MC4xNzQgMTAzOS4xNyAxODkuMDgxIDEwNDUuNCAxODkuMDgxWiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTExOS44NyAxNzguMDMzQzExMTYuMjMgMTc4LjAzMyAxMTEzLjE3IDE3Ni44MjUgMTExMC43IDE3NC40MDhDMTEwOC4yMyAxNzEuOTkxIDExMDcgMTY4Ljk5OSAxMTA3IDE2NS40MzJDMTEwNyAxNjEuODY0IDExMDguMjMgMTU4Ljg3MiAxMTEwLjcgMTU2LjQ1NUMxMTEzLjE3IDE1NC4wMzggMTExNi4yMyAxNTIuODMgMTExOS44NyAxNTIuODNDMTEyMy4zOSAxNTIuODMgMTEyNi4zOSAxNTQuMDM4IDExMjguODYgMTU2LjQ1NUMxMTMxLjMzIDE1OC44NzIgMTEzMi41NiAxNjEuODY0IDExMzIuNTYgMTY1LjQzMkMxMTMyLjU2IDE2OC45OTkgMTEzMS4zMyAxNzEuOTkxIDExMjguODYgMTc0LjQwOEMxMTI2LjM5IDE3Ni44MjUgMTEyMy4zOSAxNzguMDMzIDExMTkuODcgMTc4LjAzM1pNMTEyOS43NCAxOTAuNjM0VjI4NS43NUgxMTA5LjY0VjE5MC42MzRIMTEyOS43NFoiIGZpbGw9IndoaXRlIj48L3BhdGg+Cjwvc3ZnPgo="
           alt="Mahathi logo"
           class="img-fluid"
           style="max-width:540px;width:100%;height:auto;"
@@ -1612,134 +1747,10 @@
     </div>
   </section>
 
-  <!-- ═══ TYPE RULES ═══ -->
-  <section class="brand-section section-anchor" id="type-rules">
-    <div class="section-label">— Typography Rules</div>
-    <h2 class="section-title">Type Rules &amp; Do's / Don'ts</h2>
-    <div class="section-divider"></div>
-    <p class="section-intro">Typography is the voice of the brand made visible. These rules govern how type behaves across all Mahathi communications — from digital interfaces to enterprise presentations. Consistency here is non-negotiable.</p>
 
-    <!-- Core Rules Grid -->
-    <div class="type-rules-grid">
-      <div class="type-rule-card">
-        <div class="type-rule-label">Hierarchy Rule</div>
-        <div style="margin-bottom:1rem;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--forest);line-height:1;margin-bottom:0.2rem;">Section Title</div>
-          <div style="font-family:'Atops',sans-serif;font-size:1.1rem;font-weight:600;color:var(--forest);margin-bottom:0.4rem;">Card Headline — Atops Bold</div>
-          <div style="font-family:'Atops',sans-serif;font-size:0.875rem;color:var(--sage2);line-height:1.75;margin-bottom:0.4rem;">Body copy is always Atops Regular at 15–16px. Line height should be generous — never below 1.65 in digital. Allow text to breathe.</div>
-          <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--sage);letter-spacing:2px;text-transform:uppercase;">Metadata Label — DM Mono</div>
-        </div>
-        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Never skip hierarchy levels. Each typographic step must be visually distinct from the one above and below it.</p>
-      </div>
-      <div class="type-rule-card">
-        <div class="type-rule-label">Spacing & Leading</div>
-        <div style="margin-bottom:1rem;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
-            <div style="background:var(--cream);border-radius:6px;padding:0.75rem;">
-              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.35rem;">Line Height</div>
-              <div style="font-size:1.1rem;font-weight:700;color:var(--forest);">1.65 – 1.8</div>
-              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--sage2);">Body text</div>
-            </div>
-            <div style="background:var(--cream);border-radius:6px;padding:0.75rem;">
-              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.35rem;">Display LH</div>
-              <div style="font-size:1.1rem;font-weight:700;color:var(--forest);">0.9 – 1.0</div>
-              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--sage2);">Bebas Neue</div>
-            </div>
-            <div style="background:var(--cream);border-radius:6px;padding:0.75rem;">
-              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.35rem;">Letter Spacing</div>
-              <div style="font-size:1.1rem;font-weight:700;color:var(--forest);">0 – 3px</div>
-              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--sage2);">Headlines</div>
-            </div>
-            <div style="background:var(--cream);border-radius:6px;padding:0.75rem;">
-              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.35rem;">Mono Tracking</div>
-              <div style="font-size:1.1rem;font-weight:700;color:var(--forest);">1 – 5px</div>
-              <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--sage2);">Labels only</div>
-            </div>
-          </div>
-        </div>
-        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Leading is set at approximately 120% for headlines, 165–180% for body text. Never compress leading in digital to "save space" — it destroys readability.</p>
-      </div>
-      <div class="type-rule-card">
-        <div class="type-rule-label">Case Rules</div>
-        <div style="margin-bottom:1rem;">
-          <div style="margin-bottom:0.75rem;">
-            <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:0.25rem;">✓ Sentence Case — Body</div>
-            <div style="font-size:0.88rem;color:var(--forest);">Mahathi processes claims efficiently across enterprise platforms.</div>
-          </div>
-          <div style="margin-bottom:0.75rem;">
-            <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:0.25rem;">✓ All Caps — DM Mono Labels</div>
-            <div style="font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--forest);">SECTION LABEL · METADATA</div>
-          </div>
-          <div>
-            <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--pink);margin-bottom:0.25rem;">✗ Title Case — Avoid in body</div>
-            <div style="font-size:0.88rem;color:var(--sage2);text-decoration:line-through;opacity:0.6;">Mahathi Processes Claims Efficiently Across Enterprise Platforms.</div>
-          </div>
-        </div>
-        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Body text and headlines use sentence case. All-caps is exclusively reserved for DM Mono metadata labels, section eyebrows, and badge text.</p>
-      </div>
-      <div class="type-rule-card">
-        <div class="type-rule-label">Type on Color</div>
-        <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1rem;">
-          <div style="background:var(--forest);border-radius:6px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--cream);">✓ Cream on Forest Green — Maximum legibility</div>
-          <div style="background:var(--cream);border-radius:6px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--forest);border:1px solid var(--cream2);">✓ Forest Green on Cream — Primary reading surface</div>
-          <div style="background:var(--sage);border-radius:6px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--forest);">✓ Forest text on Sage — Accent use only</div>
-          <div style="background:var(--gold);border-radius:6px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--forest);">✓ Forest text on Gold — Premium callouts</div>
-        </div>
-        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">All text combinations must pass WCAG AA contrast (4.5:1 ratio for body, 3:1 for large display text). Never place body text on Mint, Pink, or Sage as backgrounds.</p>
-      </div>
-    </div>
-
-    <!-- Do's & Don'ts -->
-    <div class="section-label" style="margin-bottom:0.5rem;margin-top:0.5rem;">Typography Do's &amp; Don'ts</div>
-    <div class="section-divider" style="margin-bottom:1.5rem;"></div>
-    <div class="type-do-dont">
-      <div class="type-do-card">
-        <div class="type-verdict verdict-do">✓ Do</div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Clean, purposeful hierarchy</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--forest);line-height:1;margin-bottom:0.5rem;">Enterprise Clarity</div>
-        <div style="font-size:0.85rem;color:var(--forest);line-height:1.72;margin-bottom:0.5rem;">A single, clean typeface hierarchy communicates precision and confidence. Use Bebas Neue for impact, Atops for readability.</div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--sage);letter-spacing:2px;text-transform:uppercase;">Consistent • Clean • Hierarchical</div>
-      </div>
-      <div class="type-dont-card">
-        <div class="type-verdict verdict-dont">✗ Don't</div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Too many type styles</div>
-        <div style="font-size:1.1rem;font-weight:900;color:var(--forest);margin-bottom:0.3rem;font-style:italic;text-shadow:2px 2px 4px rgba(0,0,0,0.2);">Multiple Fonts</div>
-        <div style="font-size:0.8rem;color:var(--sage2);line-height:1.65;margin-bottom:0.4rem;letter-spacing:-0.5px;font-weight:300;">Using three different fonts, tight tracking, and text shadows on the same page creates visual noise and brand inconsistency.</div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--pink);letter-spacing:3px;text-transform:uppercase;font-weight:700;">TOO MANY STYLES</div>
-      </div>
-      <div class="type-do-card">
-        <div class="type-verdict verdict-do">✓ Do</div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Generous leading</div>
-        <div style="font-size:0.88rem;color:var(--forest);line-height:1.78;border-left:3px solid var(--sage);padding-left:1rem;">"Enterprise insurance technology requires precision at every level — from the architecture of our systems to the clarity of our communication. Generous line spacing signals confidence."</div>
-      </div>
-      <div class="type-dont-card">
-        <div class="type-verdict verdict-dont">✗ Don't</div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Tight or compressed text</div>
-        <div style="font-size:0.88rem;color:var(--sage2);line-height:1.1;opacity:0.7;border-left:3px solid var(--pink);padding-left:1rem;">"Never compress line height to make more text fit on a page. Tight leading is difficult to read and communicates carelessness in enterprise contexts where precision matters."</div>
-      </div>
-      <div class="type-do-card">
-        <div class="type-verdict verdict-do">✓ Do</div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Clean labels with DM Mono</div>
-        <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:0.5rem;">
-          <span style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);">01 — SECTION LABEL</span>
-          <span style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:2px;color:var(--sage2);">VERSION 2.0 · 2025</span>
-          <span style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:1.5px;color:var(--mint);">#76A379 · SAGE · PRIMARY</span>
-        </div>
-        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">DM Mono is reserved exclusively for labels, metadata, version numbers, and technical codes.</p>
-      </div>
-      <div class="type-dont-card">
-        <div class="type-verdict verdict-dont">✗ Don't</div>
-        <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.75rem;">Text shadows or effects</div>
-        <div style="margin-bottom:0.75rem;">
-          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--forest);text-shadow:3px 3px 8px rgba(0,0,0,0.4);filter:drop-shadow(2px 4px 6px rgba(0,0,0,0.3));opacity:0.75;line-height:1;">Never Add Effects</div>
-        </div>
-        <p style="font-size:0.82rem;color:var(--sage2);line-height:1.65;">Never apply drop shadows, text strokes, emboss effects, or gradients to type. Typography must be clean and unmodified.</p>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══ 06 FAVICON & APP ICON ═══ -->
-  <section class="brand-section section-anchor" id="visual-language">
+  <section class="brand-section section-anchor" id="visual-language" style="background-color: #e3e6e0;">
     <div class="section-label">06 — Digital Identity</div>
     <h2 class="section-title">Favicon &amp; App Icon</h2>
     <div class="section-divider"></div>
@@ -1830,7 +1841,7 @@
             src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNTEiIGhlaWdodD0iMzUxIiB2aWV3Qm94PSIwIDAgMzUxIDM1MSIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjM1MSIgaGVpZ2h0PSIzNTEiIGZpbGw9IiM3NkEzNzkiPjwvcmVjdD4KICA8cGF0aCBkPSJNMjY0LjI3NSAxNDIuMTlDMjYzLjk4NCAxNDUuMzUgMjQ1LjgwNCAxNDYuMjYyIDIyMy42NjkgMTQ0LjIyOEMyMDEuNTMzIDE0Mi4xOTMgMTgzLjgyNSAxMzcuOTgyIDE4NC4xMTYgMTM0LjgyM0MxODQuNDA3IDEzMS42NjMgMjAyLjU4NyAxMzAuNzUxIDIyNC43MjIgMTMyLjc4NUMyNDYuODU3IDEzNC44MiAyNjQuNTY2IDEzOS4wMyAyNjQuMjc1IDE0Mi4xOVoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTE2Ni44ODQgMjI1Ljc4MUMxNjYuNTkzIDIyOC45NCAxNDguNDEzIDIyOS44NTIgMTI2LjI3NyAyMjcuODE4QzEwNC4xNDIgMjI1Ljc4NCA4Ni40MzM2IDIyMS41NzMgODYuNzI0NCAyMTguNDEzQzg3LjAxNTMgMjE1LjI1NCAxMDUuMTk1IDIxNC4zNDEgMTI3LjMzMSAyMTYuMzc2QzE0OS40NjYgMjE4LjQxIDE2Ny4xNzUgMjIyLjYyMSAxNjYuODg0IDIyNS43ODFaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yNzEuMzc4IDE5Mi4yNTVDMjY5LjUyOSAxOTQuODM1IDI1My4zODEgMTg2LjQ0IDIzNS4zMTEgMTczLjUwNEMyMTcuMjQxIDE2MC41NjkgMjA0LjA5MSAxNDcuOTkyIDIwNS45NCAxNDUuNDEyQzIwNy43OSAxNDIuODMzIDIyMy45MzggMTUxLjIyOCAyNDIuMDA4IDE2NC4xNjNDMjYwLjA3OCAxNzcuMDk5IDI3My4yMjggMTg5LjY3NiAyNzEuMzc4IDE5Mi4yNTVaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNDUuMDU5IDIxNS4xOTFDMTQzLjIxIDIxNy43NzEgMTI3LjA2MiAyMDkuMzc1IDEwOC45OTEgMTk2LjQ0QzkwLjkyMTIgMTgzLjUwNSA3Ny43NzE2IDE3MC45MjcgNzkuNjIxIDE2OC4zNDhDODEuNDcwMyAxNjUuNzY5IDk3LjYxODMgMTc0LjE2NCAxMTUuNjg5IDE4Ny4wOTlDMTMzLjc1OSAyMDAuMDM0IDE0Ni45MDggMjEyLjYxMiAxNDUuMDU5IDIxNS4xOTFaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0yNTIuODkgMjM4LjEwNUMyNTAuMDA2IDIzOS40MzIgMjQwLjEzMyAyMjQuMTUxIDIzMC44MzggMjAzLjk3NUMyMjEuNTQ0IDE4My43OTggMjE2LjM0OCAxNjYuMzY2IDIxOS4yMzIgMTY1LjA0QzIyMi4xMTcgMTYzLjcxMyAyMzEuOTkgMTc4Ljk5NCAyNDEuMjg0IDE5OS4xN0MyNTAuNTc5IDIxOS4zNDYgMjU1Ljc3NSAyMzYuNzc4IDI1Mi44OSAyMzguMTA1WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTMxLjc2NyAxOTUuNTY0QzEyOC44ODIgMTk2Ljg5MSAxMTkuMDA5IDE4MS42MSAxMDkuNzE1IDE2MS40MzNDMTAwLjQyIDE0MS4yNTcgOTUuMjI0MyAxMjMuODI1IDk4LjEwODkgMTIyLjQ5OEMxMDAuOTk0IDEyMS4xNzIgMTEwLjg2NyAxMzYuNDUyIDEyMC4xNjEgMTU2LjYyOUMxMjkuNDU2IDE3Ni44MDUgMTM0LjY1MiAxOTQuMjM3IDEzMS43NjcgMTk1LjU2NFoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTIxMy4wMzUgMjY5LjI2NUMyMDkuODc1IDI2OC45NTMgMjA5LjA4NiAyNTAuNzgxIDIxMS4yNzMgMjI4LjY3OEMyMTMuNDYgMjA2LjU3NCAyMTcuNzk1IDE4OC45MDkgMjIwLjk1NSAxODkuMjIxQzIyNC4xMTUgMTg5LjUzMyAyMjQuOTA0IDIwNy43MDUgMjIyLjcxNyAyMjkuODA4QzIyMC41MyAyNTEuOTEyIDIxNi4xOTUgMjY5LjU3NyAyMTMuMDM1IDI2OS4yNjVaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xMzAuMDQ1IDE3MS4zODJDMTI2Ljg4NSAxNzEuMDcgMTI2LjA5NiAxNTIuODk5IDEyOC4yODMgMTMwLjc5NUMxMzAuNDcgMTA4LjY5MiAxMzQuODA1IDkxLjAyNjMgMTM3Ljk2NSA5MS4zMzg1QzE0MS4xMjUgOTEuNjUwNyAxNDEuOTE0IDEwOS44MjIgMTM5LjcyNyAxMzEuOTI2QzEzNy41NCAxNTQuMDI5IDEzMy4yMDUgMTcxLjY5NCAxMzAuMDQ1IDE3MS4zODJaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNjQuMTk3IDI3Ni4xODVDMTYxLjYwMyAyNzQuMzU1IDE2OS44OTMgMjU4LjE2MiAxODIuNzE0IDI0MC4wMTdDMTk1LjUzNSAyMjEuODczIDIwOC4wMzEgMjA4LjY0NyAyMTAuNjI2IDIxMC40NzdDMjEzLjIyIDIxMi4zMDcgMjA0LjkyOSAyMjguNSAxOTIuMTA4IDI0Ni42NDVDMTc5LjI4OCAyNjQuNzg5IDE2Ni43OTEgMjc4LjAxNSAxNjQuMTk3IDI3Ni4xODVaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNDAuMzc0IDE1MC4xMjZDMTM3Ljc4IDE0OC4yOTYgMTQ2LjA3IDEzMi4xMDMgMTU4Ljg5MSAxMTMuOTU5QzE3MS43MTIgOTUuODE0MSAxODQuMjA4IDgyLjU4ODYgMTg2LjgwMiA4NC40MTg3QzE4OS4zOTYgODYuMjQ4OCAxODEuMTA2IDEwMi40NDEgMTY4LjI4NSAxMjAuNTg2QzE1NS40NjQgMTM4LjczMSAxNDIuOTY4IDE1MS45NTYgMTQwLjM3NCAxNTAuMTI2WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMTE3LjI0MyAyNTcuMzI1QzExNS45MyAyNTQuNDM2IDEzMS4yNzUgMjQ0LjY1MSAxNTEuNTE2IDIzNS40NzFDMTcxLjc1OCAyMjYuMjkgMTg5LjIzIDIyMS4xOSAxOTAuNTQzIDIyNC4wOEMxOTEuODU1IDIyNi45NjkgMTc2LjUxMSAyMzYuNzUzIDE1Ni4yNjkgMjQ1LjkzNEMxMzYuMDI4IDI1NS4xMTQgMTE4LjU1NSAyNjAuMjE0IDExNy4yNDMgMjU3LjMyNVoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTE2MC40NTcgMTM2LjUyNEMxNTkuMTQ0IDEzMy42MzQgMTc0LjQ4OSAxMjMuODUgMTk0LjczIDExNC42NjlDMjE0Ljk3MSAxMDUuNDg5IDIzMi40NDQgMTAwLjM4OSAyMzMuNzU2IDEwMy4yNzhDMjM1LjA2OSAxMDYuMTY4IDIxOS43MjQgMTE1Ljk1MiAxOTkuNDgzIDEyNS4xMzNDMTc5LjI0MiAxMzQuMzEzIDE2MS43NjkgMTM5LjQxMyAxNjAuNDU3IDEzNi41MjRaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNTIuNiA5NC40NDMyQzE1MC44ODMgOTMuMjI2MSAxNTYuMzcyIDgyLjQ1NzIgMTY0Ljg2MSA3MC4zOTAzQzE3My4zNSA1OC4zMjMzIDE4MS42MjQgNDkuNTI3NyAxODMuMzQyIDUwLjc0NDhDMTg1LjA1OSA1MS45NjE5IDE3OS41NyA2Mi43MzA4IDE3MS4wODEgNzQuNzk3OEMxNjIuNTkyIDg2Ljg2NDcgMTU0LjMxOCA5NS42NjAzIDE1Mi42IDk0LjQ0MzJaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNjcuNjU4IDMwMC4yNTVDMTY1Ljk0MSAyOTkuMDM4IDE3MS40MyAyODguMjcgMTc5LjkxOSAyNzYuMjAzQzE4OC40MDggMjY0LjEzNiAxOTYuNjgyIDI1NS4zNCAxOTguNCAyNTYuNTU3QzIwMC4xMTcgMjU3Ljc3NCAxOTQuNjI4IDI2OC41NDMgMTg2LjEzOSAyODAuNjFDMTc3LjY1IDI5Mi42NzcgMTY5LjM3NiAzMDEuNDczIDE2Ny42NTggMzAwLjI1NVoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTE5NS42MSA5My43MDYzQzE5NC43MTcgOTEuNzk5NiAyMDQuODA4IDg1LjE0NjMgMjE4LjE0OCA3OC44NDU3QzIzMS40ODggNzIuNTQ1MSAyNDMuMDI1IDY4Ljk4MzEgMjQzLjkxOCA3MC44ODk3QzI0NC44MTEgNzIuNzk2MyAyMzQuNzIgNzkuNDQ5NiAyMjEuMzggODUuNzUwM0MyMDguMDQgOTIuMDUwOSAxOTYuNTAzIDk1LjYxMjkgMTk1LjYxIDkzLjcwNjNaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xMDcuMDgyIDI4MC4xMTFDMTA2LjE4OSAyNzguMjA0IDExNi4yOCAyNzEuNTUxIDEyOS42MiAyNjUuMjVDMTQyLjk2IDI1OC45NDkgMTU0LjQ5NyAyNTUuMzg3IDE1NS4zOSAyNTcuMjk0QzE1Ni4yODMgMjU5LjIwMSAxNDYuMTkyIDI2NS44NTQgMTMyLjg1MiAyNzIuMTU1QzExOS41MTIgMjc4LjQ1NSAxMDcuOTc1IDI4Mi4wMTcgMTA3LjA4MiAyODAuMTExWiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMjM0LjUwOCAxMTUuNEMyMzQuNzEzIDExMy4zMDUgMjQ2Ljc4NSAxMTIuNzI4IDI2MS40NzMgMTE0LjExM0MyNzYuMTYgMTE1LjQ5NyAyODcuOTAxIDExOC4zMTggMjg3LjY5NyAxMjAuNDE0QzI4Ny40OTIgMTIyLjUwOSAyNzUuNDIgMTIzLjA4NSAyNjAuNzMyIDEyMS43MDFDMjQ2LjA0NSAxMjAuMzE2IDIzNC4zMDQgMTE3LjQ5NSAyMzQuNTA4IDExNS40WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNNjMuMzAzMiAyMzAuNTg3QzYzLjUwNzYgMjI4LjQ5MSA3NS41OCAyMjcuOTE1IDkwLjI2NzYgMjI5LjNDMTA0Ljk1NSAyMzAuNjg0IDExNi42OTYgMjMzLjUwNSAxMTYuNDkyIDIzNS42QzExNi4yODcgMjM3LjY5NiAxMDQuMjE1IDIzOC4yNzIgODkuNTI3MyAyMzYuODg3Qzc0LjgzOTcgMjM1LjUwMyA2My4wOTg3IDIzMi42ODIgNjMuMzAzMiAyMzAuNTg3WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNMjU2LjUwNiAxNTIuNDQ4QzI1Ny43MiAxNTAuNzI4IDI2OC40OTcgMTU2LjE5OCAyODAuNTc5IDE2NC42NjZDMjkyLjY2IDE3My4xMzMgMzAxLjQ3IDE4MS4zOTIgMzAwLjI1NiAxODMuMTEyQzI5OS4wNDIgMTg0LjgzMiAyODguMjY0IDE3OS4zNjIgMjc2LjE4MyAxNzAuODk1QzI2NC4xMDIgMTYyLjQyNyAyNTUuMjkyIDE1NC4xNjggMjU2LjUwNiAxNTIuNDQ4WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8cGF0aCBkPSJNNTAuNzQ0IDE2Ny44ODhDNTEuOTU3OCAxNjYuMTY4IDYyLjczNTYgMTcxLjYzOCA3NC44MTY5IDE4MC4xMDZDODYuODk4MiAxODguNTczIDk1LjcwODEgMTk2LjgzMiA5NC40OTQzIDE5OC41NTJDOTMuMjgwNSAyMDAuMjcyIDgyLjUwMjcgMTk0LjgwMiA3MC40MjE0IDE4Ni4zMzRDNTguMzQwMSAxNzcuODY3IDQ5LjUzMDIgMTY5LjYwOCA1MC43NDQgMTY3Ljg4OFoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTI1Ny4zMjIgMTk1LjQ2MUMyNTkuMjI3IDE5NC41NjUgMjY1Ljg5OCAyMDQuNjQ0IDI3Mi4yMjMgMjE3Ljk3NEMyNzguNTQ3IDIzMS4zMDQgMjgyLjEzIDI0Mi44MzYgMjgwLjIyNSAyNDMuNzMyQzI3OC4zMjEgMjQ0LjYyOCAyNzEuNjQ5IDIzNC41NDkgMjY1LjMyNSAyMjEuMjE5QzI1OSAyMDcuODkgMjU1LjQxNyAxOTYuMzU3IDI1Ny4zMjIgMTk1LjQ2MVoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTcwLjc3NDcgMTA3LjI2OEM3Mi42Nzk1IDEwNi4zNzIgNzkuMzUwNyAxMTYuNDUxIDg1LjY3NTIgMTI5Ljc4MUM5MS45OTk4IDE0My4xMSA5NS41ODI4IDE1NC42NDMgOTMuNjc4IDE1NS41MzlDOTEuNzczMiAxNTYuNDM1IDg1LjEwMiAxNDYuMzU2IDc4Ljc3NzQgMTMzLjAyNkM3Mi40NTI5IDExOS42OTcgNjguODY5OSAxMDguMTY0IDcwLjc3NDcgMTA3LjI2OFoiIGZpbGw9IndoaXRlIj48L3BhdGg+CiAgPHBhdGggZD0iTTIzNS43MDIgMjM0LjQwNEMyMzcuNzk4IDIzNC42MDQgMjM4LjM5NyAyNDYuNjc3IDIzNy4wMzkgMjYxLjM2OUMyMzUuNjgyIDI3Ni4wNiAyMzIuODgzIDI4Ny44MDggMjMwLjc4OCAyODcuNjA3QzIyOC42OTIgMjg3LjQwNyAyMjguMDk0IDI3NS4zMzQgMjI5LjQ1MSAyNjAuNjQyQzIzMC44MDggMjQ1Ljk1IDIzMy42MDcgMjM0LjIwMyAyMzUuNzAyIDIzNC40MDRaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xMjAuMjEyIDYzLjM5MzFDMTIyLjMwOCA2My41OTM3IDEyMi45MDYgNzUuNjY2NCAxMjEuNTQ5IDkwLjM1ODFDMTIwLjE5MiAxMDUuMDUgMTE3LjM5MyAxMTYuNzk3IDExNS4yOTggMTE2LjU5N0MxMTMuMjAyIDExNi4zOTYgMTEyLjYwNCAxMDQuMzIzIDExMy45NjEgODkuNjMxN0MxMTUuMzE4IDc0Ljk0IDExOC4xMTcgNjMuMTkyNSAxMjAuMjEyIDYzLjM5MzFaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNjEuOTg5IDE3My4zODZDMTYzLjI0IDE3Mi4zNDQgMTY1Ljc0MSAxNzEuMzg1IDE2NS43NDEgMTc1Ljg4OFYxODcuNzczQzE2Ni41NzUgMTg5LjY0OSAxNjkuMTE5IDE5Mi4yNzcgMTcyLjYyMiAxODcuNzczTDE4Mi4wMDUgMTc0LjYzN0MxODIuODM5IDE3My4zODYgMTg0LjUwNyAxNzIuMTM1IDE4NC41MDcgMTc3LjEzOUMxODUuMDA3IDE3Ny42NCAxODQuNzE2IDE4MS45MzUgMTg0LjUwNyAxODQuMDJDMTg0LjkyNCAxODcuOTgyIDE4OC4wMSAxOTQuNDA0IDE5Ny4wMTggMTg4LjM5OUMxOTkuODcyIDE4Ni4xMTYgMjA1Ljc0NCAxODEuMTIzIDIwOC4yNzIgMTc3Ljk4NkMyMDguMjczIDE3OC4xMiAyMDguMjc4IDE3OC4yNTUgMjA4LjI3OCAxNzguMzlDMjA4LjI3OCAxOTYuMDA5IDE5My45OTUgMjEwLjI5MSAxNzYuMzc2IDIxMC4yOTFDMTYzLjY0NSAyMTAuMjkxIDE1Mi42NTggMjAyLjgzMyAxNDcuNTQgMTkyLjA0OEwxNjEuOTg5IDE3My4zODZaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgogIDxwYXRoIGQ9Ik0xNzYuMzc3IDE0Ni40OTJDMTkyLjQ3MSAxNDYuNDkyIDIwNS43OCAxNTguNDExIDIwNy45NjIgMTczLjkwNEwxOTcuNjQyIDE4My4zOTlDMTkwLjEzNyAxODguOTAzIDE4OC42NzYgMTg0LjAyNSAxODguODg1IDE4MC44OTdWMTcwLjg4OEMxODcuMzgzIDE2NS4zODQgMTgzLjI1NSAxNjcuMzQzIDE4MS4zNzkgMTY5LjAxMUwxNjguODY4IDE4My4zOTlWMTY5LjAxMUMxNjYuMzY2IDE2My41MDggMTYxLjk4OCAxNjYuNzE4IDE2MC4xMTEgMTY5LjAxMUwxNDUuOTcgMTg4LjA3QzE0NSAxODUuMDE4IDE0NC40NzQgMTgxLjc2NyAxNDQuNDc0IDE3OC4zOTNDMTQ0LjQ3NCAxNjAuNzc0IDE1OC43NTggMTQ2LjQ5MiAxNzYuMzc3IDE0Ni40OTJaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgo8L3N2Zz4K"
             alt="Mahathi logo"
             class="img-fluid"
-            style="max-width:16px;width:100%;height:auto;"
+            style="max-width:18px;width:100%;height:auto;"
           >
           </div>
         </div>
@@ -2007,10 +2018,52 @@
         <div class="icon-item"><i class="bi bi-check-circle"></i><span class="icon-item-label">Status</span></div>
         <div class="icon-item"><i class="bi bi-globe2"></i><span class="icon-item-label">Global</span></div>
         <div class="icon-item"><i class="bi bi-lightning-charge"></i><span class="icon-item-label">Speed</span></div>
+        <div class="icon-item"><i class="bi bi-shield-lock"></i><span class="icon-item-label">Compliance</span></div>
+        <div class="icon-item"><i class="bi bi-briefcase"></i><span class="icon-item-label">Business</span></div>
+        <div class="icon-item"><i class="bi bi-building"></i><span class="icon-item-label">Enterprise</span></div>
+        <div class="icon-item"><i class="bi bi-kanban"></i><span class="icon-item-label">Delivery</span></div>
+        <div class="icon-item"><i class="bi bi-sliders"></i><span class="icon-item-label">Control</span></div>
+        <div class="icon-item"><i class="bi bi-gear"></i><span class="icon-item-label">Process</span></div>
+        <div class="icon-item"><i class="bi bi-chat-dots"></i><span class="icon-item-label">Support</span></div>
+        <div class="icon-item"><i class="bi bi-headset"></i><span class="icon-item-label">Service</span></div>
+        <div class="icon-item"><i class="bi bi-person-check"></i><span class="icon-item-label">Verified</span></div>
+        <div class="icon-item"><i class="bi bi-clipboard-check"></i><span class="icon-item-label">Audit</span></div>
+        <div class="icon-item"><i class="bi bi-folder-check"></i><span class="icon-item-label">Records</span></div>
+        <div class="icon-item"><i class="bi bi-file-earmark-bar-graph"></i><span class="icon-item-label">Reports</span></div>
+        <div class="icon-item"><i class="bi bi-database"></i><span class="icon-item-label">Data</span></div>
+        <div class="icon-item"><i class="bi bi-diagram-2"></i><span class="icon-item-label">Systems</span></div>
+        <div class="icon-item"><i class="bi bi-pie-chart"></i><span class="icon-item-label">Insights</span></div>
+        <div class="icon-item"><i class="bi bi-bullseye"></i><span class="icon-item-label">Target</span></div>
+        <div class="icon-item"><i class="bi bi-hdd-network"></i><span class="icon-item-label">Infra</span></div>
+        <div class="icon-item"><i class="bi bi-arrow-repeat"></i><span class="icon-item-label">Sync</span></div>
+        <div class="icon-item"><i class="bi bi-shield-exclamation"></i><span class="icon-item-label">Risk</span></div>
+        <div class="icon-item"><i class="bi bi-file-earmark-lock"></i><span class="icon-item-label">Confidential</span></div>
+        <!-- <div class="icon-item"><i class="bi bi-person-badge"></i><span class="icon-item-label">Identity</span></div> -->
+        <div class="icon-item"><i class="bi bi-person-gear"></i><span class="icon-item-label">Admin</span></div>
+        <div class="icon-item"><i class="bi bi-journal-check"></i><span class="icon-item-label">Standards</span></div>
+        <div class="icon-item"><i class="bi bi-clipboard-data"></i><span class="icon-item-label">Metrics</span></div>
+        <!-- <div class="icon-item"><i class="bi bi-hourglass-split"></i><span class="icon-item-label">Timeline</span></div> -->
+        <div class="icon-item"><i class="bi bi-stopwatch"></i><span class="icon-item-label">Efficiency</span></div>
+        <div class="icon-item"><i class="bi bi-broadcast"></i><span class="icon-item-label">Signal</span></div>
+        <div class="icon-item"><i class="bi bi-router"></i><span class="icon-item-label">Network</span></div>
+        <div class="icon-item"><i class="bi bi-hdd-rack"></i><span class="icon-item-label">Hosting</span></div>
+        <!-- <div class="icon-item"><i class="bi bi-server"></i><span class="icon-item-label">Backend</span></div> -->
+        <div class="icon-item"><i class="bi bi-terminal"></i><span class="icon-item-label">Ops</span></div>
+        <div class="icon-item"><i class="bi bi-code-slash"></i><span class="icon-item-label">Code</span></div>
+        <div class="icon-item"><i class="bi bi-bug"></i><span class="icon-item-label">Testing</span></div>
+        <div class="icon-item"><i class="bi bi-search"></i><span class="icon-item-label">Discovery</span></div>
+        <div class="icon-item"><i class="bi bi-funnel"></i><span class="icon-item-label">Pipeline</span></div>
+        <div class="icon-item"><i class="bi bi-geo-alt"></i><span class="icon-item-label">Location</span></div>
+        <div class="icon-item"><i class="bi bi-map"></i><span class="icon-item-label">Coverage</span></div>
+        <div class="icon-item"><i class="bi bi-telephone"></i><span class="icon-item-label">Contact</span></div>
+        <div class="icon-item"><i class="bi bi-envelope"></i><span class="icon-item-label">Message</span></div>
+        <div class="icon-item"><i class="bi bi-bell"></i><span class="icon-item-label">Alerts</span></div>
+        <div class="icon-item"><i class="bi bi-award"></i><span class="icon-item-label">Quality</span></div>
+        <div class="icon-item"><i class="bi bi-link-45deg"></i><span class="icon-item-label">Integrations</span></div>
       </div>
     </div>
 
-    <div class="icon-rule-grid">
+    <!-- <div class="icon-rule-grid">
       <div class="icon-rule-card">
         <div class="icon-rule-icon"><i class="bi bi-check2-all"></i></div>
         <div class="icon-rule-title">Use the Approved Library</div>
@@ -2029,7 +2082,7 @@
       <div class="icon-rule-card">
         <div class="icon-rule-icon"><i class="bi bi-tag"></i></div>
         <div class="icon-rule-title">Always Label at Small Sizes</div>
-        <p class="icon-rule-body">Icons below 24px must always be accompanied by a text label in DM Mono or Atops. Never rely solely on icon recognition at small scales in enterprise contexts — clarity trumps minimalism.</p>
+        <p class="icon-rule-body">Icons below 24px must always be accompanied by a text label in DM Mono or Aptos. Never rely solely on icon recognition at small scales in enterprise contexts — clarity trumps minimalism.</p>
       </div>
       <div class="icon-rule-card">
         <div class="icon-rule-icon"><i class="bi bi-slash-circle"></i></div>
@@ -2041,7 +2094,7 @@
         <div class="icon-rule-title">Icon Library Access</div>
         <p class="icon-rule-body">The full Mahathi icon library — including custom insurance-domain icons — is available to design and development teams. Contact the brand team at <strong>info@mahathi.com</strong> to access the approved SVG icon set.</p>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <!-- ═══ PHOTOGRAPHY ═══ -->
@@ -2129,7 +2182,7 @@
     </div>
   </section> -->
 
-  <section class="brand-section section-anchor" id="ui-system">
+  <section class="brand-section section-anchor" id="ui-system" style="background-color: #e3e6e0;">
     <div class="section-label">07 — UI System</div>
     <h2 class="section-title">UI Components</h2>
     <div class="section-divider"></div>
@@ -2194,27 +2247,187 @@
   </section>
 
   <!-- ═══ SHOWCASE ═══ -->
-  <!-- <section class="brand-section section-anchor" id="showcase">
+  <section class="brand-section section-anchor" id="showcase">
     <div class="section-label">— Brand Applications</div>
     <h2 class="section-title">Brand Showcase</h2>
     <div class="section-divider"></div>
     <p class="section-intro">The Mahathi brand system comes to life across digital surfaces, enterprise communications, and partner channels. These showcase applications demonstrate how the visual identity, voice, and design language work together — creating a coherent, premium enterprise presence.</p>
 
-    <div class="perception-block">
-      <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;position:relative;z-index:1;">What We Want People To Think</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:0.5px;color:var(--cream);line-height:1.05;margin-bottom:0.5rem;position:relative;z-index:1;max-width:600px;">The intelligent, trustworthy partner that understands insurance better than anyone.</div>
-      <div class="perception-grid" style="position:relative;z-index:1;">
-        <div class="perception-item">
-          <div class="perception-quote">"They understand the complexity of insurance at the same level we do."</div>
-          <div class="perception-source">Carrier CTO · Enterprise Client</div>
+    <style>
+      .riskworld-poster-wrap {
+        margin: 1.5rem 0 2.5rem;
+        display: flex;
+        justify-content: center;
+      }
+      .riskworld-poster {
+        width: min(100%, 660px);
+        background: #F2F4F0;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .riskworld-poster::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(circle at 85% 15%, rgba(178, 199, 179, 0.35) 0%, transparent 50%),
+          radial-gradient(circle at 15% 80%, rgba(184, 135, 148, 0.18) 0%, transparent 45%);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .riskworld-top {
+        padding: 44px 48px 36px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+      }
+      .riskworld-logo-row {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 34px;
+        font-family: 'DM Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #3D5248;
+      }
+      .riskworld-headline {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(44px, 8vw, 70px);
+        line-height: 0.93;
+        color: #3D5248;
+        letter-spacing: 1px;
+        margin-bottom: 32px;
+      }
+      .riskworld-headline .pink {
+        color: #B88794;
+      }
+      .riskworld-meet-block {
+        padding: 18px 22px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(184, 135, 148, 0.15) 100%);
+        border-left: 4px solid #B88794;
+        border-radius: 2px;
+      }
+      .riskworld-meet-label {
+        font-family: 'DM Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #B88794;
+        margin-bottom: 6px;
+      }
+      .riskworld-meet-event {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 22px;
+        color: #3D5248;
+        letter-spacing: 2px;
+        line-height: 1;
+      }
+      .riskworld-meet-details {
+        margin-top: 5px;
+        font-size: 13px;
+        color: #6F8077;
+        font-weight: 400;
+      }
+      .riskworld-divider {
+        height: 8px;
+        background: linear-gradient(90deg, #3D5248 0%, #76A379 40%, #B88794 70%, #D2A974 100%);
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+      }
+      .riskworld-stats {
+        background: #3D5248;
+        display: flex;
+        position: relative;
+        z-index: 1;
+      }
+      .riskworld-stat-box {
+        flex: 1;
+        padding: 24px 16px 26px;
+        text-align: center;
+        position: relative;
+      }
+      .riskworld-stat-box:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 20%;
+        bottom: 20%;
+        width: 1px;
+        background: rgba(178, 199, 179, 0.25);
+      }
+      .riskworld-stat-num {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 56px;
+        line-height: 1;
+        color: #B88794;
+        letter-spacing: 1px;
+      }
+      .riskworld-stat-box:nth-child(2) .riskworld-stat-num {
+        color: #D2A974;
+      }
+      .riskworld-stat-box:nth-child(3) .riskworld-stat-num {
+        color: #B2C7B3;
+      }
+      .riskworld-stat-label {
+        margin-top: 5px;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 500;
+        line-height: 1.35;
+      }
+      @media (max-width: 640px) {
+        .riskworld-top {
+          padding: 30px 22px 24px;
+        }
+        .riskworld-logo-row {
+          margin-bottom: 24px;
+          font-size: 10px;
+        }
+        .riskworld-stats {
+          flex-direction: column;
+        }
+        .riskworld-stat-box:not(:last-child)::after {
+          display: none;
+        }
+      }
+    </style>
+
+    <div class="riskworld-poster-wrap">
+      <div class="riskworld-poster">
+        <div class="riskworld-top">
+          <div class="riskworld-logo-row">Mahathi - RIMS RiskWorld 2026</div>
+          <div class="riskworld-headline">
+            Risk Meets<br>
+            <span class="pink">Opportunity.</span><br>
+            See You There.
+          </div>
+          <div class="riskworld-meet-block">
+            <div class="riskworld-meet-label">Meet us at</div>
+            <div class="riskworld-meet-event">RIMS RiskWorld 2026</div>
+            <div class="riskworld-meet-details">May 3-6, 2026 - Philadelphia, PA</div>
+          </div>
         </div>
-        <div class="perception-item">
-          <div class="perception-quote">"Mahathi doesn't feel like a vendor. They feel like a partner with skin in the game."</div>
-          <div class="perception-source">Head of Operations · Broker Network</div>
-        </div>
-        <div class="perception-item">
-          <div class="perception-quote">"The data is cleaner, the reporting is faster, and the team actually delivers."</div>
-          <div class="perception-source">CFO · Regional Insurer</div>
+        <div class="riskworld-divider"></div>
+        <div class="riskworld-stats">
+          <div class="riskworld-stat-box">
+            <div class="riskworld-stat-num">360+</div>
+            <div class="riskworld-stat-label">Insurance<br>Experts</div>
+          </div>
+          <div class="riskworld-stat-box">
+            <div class="riskworld-stat-num">11+</div>
+            <div class="riskworld-stat-label">Years P&amp;C<br>Experience</div>
+          </div>
+          <div class="riskworld-stat-box">
+            <div class="riskworld-stat-num">36+</div>
+            <div class="riskworld-stat-label">Carrier<br>Clients</div>
+          </div>
         </div>
       </div>
     </div>
@@ -2222,50 +2435,145 @@
     <div class="showcase-grid">
       <div class="showcase-card">
         <div class="showcase-mock">
-          <div style="background:var(--forest);padding:2.5rem 2rem;min-height:200px;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold) 0%,var(--pink) 35%,var(--sage) 70%,var(--forest) 100%);"></div>
-            <div style="position:absolute;top:-40px;right:-40px;width:140px;height:140px;background:radial-gradient(circle,rgba(118,163,121,0.1) 0%,transparent 65%);border-radius:50%;"></div>
-            <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:3px;text-transform:uppercase;color:var(--sage);margin-bottom:0.75rem;position:relative;z-index:1;">Mahathi Infotech · Insurance-Tech</div>
-            <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--cream);line-height:1.05;margin-bottom:0.75rem;position:relative;z-index:1;">Insurance Decisions.<br><span style="color:var(--sage);">Made Intelligent.</span></div>
-            <div style="font-size:0.78rem;color:rgba(238,240,236,0.6);line-height:1.65;max-width:300px;position:relative;z-index:1;">Enterprise-grade insurance intelligence for carriers, brokers, and administrators who demand precision at scale.</div>
-            <div style="position:relative;z-index:1;margin-top:1.25rem;">
-              <svg viewBox="50 130 1100 220" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:auto;opacity:0.85;">
-                <path d="M313.643 191.558C313.352 194.717 295.172 195.63 273.037 193.595C250.901 191.561 233.193 187.35 233.484 184.19C233.774 181.031 251.954 180.119 274.09 182.153C296.225 184.187 313.934 188.398 313.643 191.558Z" fill="#76A379"/><path d="M211.356 222.754C212.607 221.711 215.109 220.752 215.109 225.256V237.141C215.943 239.017 218.487 241.644 221.99 237.141L231.373 224.005C232.207 222.754 233.875 221.503 233.875 226.507C234.375 227.007 234.083 231.303 233.875 233.388C234.292 237.349 237.378 243.771 246.386 237.767C249.239 235.484 255.112 230.491 257.639 227.353C257.645 245.376 243.363 259.659 225.744 259.659C213.013 259.659 202.025 252.201 196.908 241.416L211.356 222.754Z" fill="#33442C"/><path d="M225.745 195.859C241.839 195.86 255.147 207.779 257.33 223.271L247.01 232.767C239.504 238.271 238.044 233.392 238.252 230.265V220.256C236.751 214.752 232.623 216.711 230.746 218.379L218.236 232.767V218.379C215.734 212.875 211.356 216.085 209.479 218.379L195.338 237.438C194.368 234.385 193.842 231.134 193.842 227.761C193.842 210.142 208.126 195.859 225.745 195.859Z" fill="#76A379"/>
-                <path d="M510.543 189.081C518.182 189.081 524.999 190.634 530.992 193.742C537.104 196.849 541.864 201.452 545.272 207.551C548.797 213.651 550.56 221.016 550.56 229.647V285.75H530.64V190.634H413.056V201.51C416.347 197.597 420.519 194.547 425.573 192.361C430.626 190.174 436.032 189.081 441.791 189.081Z" fill="#EEF0EC"/><path d="M1119.87 178.033C1116.23 178.033 1113.17 176.825 1110.7 174.408C1108.23 171.991 1107 168.999 1107 165.432C1107 161.864 1108.23 158.872 1110.7 156.455C1113.17 154.038 1116.23 152.83 1119.87 152.83C1123.39 152.83 1126.39 154.038 1128.86 156.455C1131.33 158.872 1132.56 161.864 1132.56 165.432C1132.56 168.999 1131.33 171.991 1128.86 174.408C1126.39 176.825 1123.39 178.033 1119.87 178.033ZM1129.74 190.634V285.75H1109.64V190.634H1129.74Z" fill="#EEF0EC"/>
-              </svg>
+          <style>
+            .showcase-grid .showcase-mock { padding: 1.25rem;  display: flex; justify-content: center; align-items: stretch; }
+            .partner-poster-mini { width: min(100%, 660px); min-height: 620px; margin: 0 auto; background: #EEF0EC; border-radius: 8px; overflow: hidden; border: 1px solid rgba(111,128,119,.18); display: flex; flex-direction: column; }
+            .partner-poster-mini .pp-stripe-top { height: 7px; background: linear-gradient(90deg, #D2A974 0%, #B88794 35%, #76A379 70%, #253830 100%); }
+            .partner-poster-mini .pp-header { padding: 22px 24px 18px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(111,128,119,0.2); }
+            .partner-poster-mini .pp-header-label { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: 2.5px; text-transform: uppercase; color: #6F8077; }
+            .partner-poster-mini .pp-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: .8px; color: #253830; }
+            .partner-poster-mini .pp-body { padding: 22px 24px; flex: 1; display: flex; flex-direction: column; }
+            .partner-poster-mini .pp-eyebrow { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: 2.8px; text-transform: uppercase; color: #76A379; margin-bottom: 8px; }
+            .partner-poster-mini .pp-headline { font-family: 'Bebas Neue', sans-serif; font-size: 2.3rem; line-height: .95; letter-spacing: .7px; color: #253830; margin-bottom: 10px; }
+            .partner-poster-mini .pp-headline .pink { color: #B88794; }
+            .partner-poster-mini .pp-sub { font-size: .95rem; font-weight: 700; color: #76A379; line-height: 1.35; margin-bottom: 14px; }
+            .partner-poster-mini .pp-quote { border-left: 4px solid #B2C7B3; padding: 10px 12px 10px 14px; background: rgba(178,199,179,0.1); border-radius: 0 5px 5px 0; font-size: .85rem; color: #6F8077; line-height: 1.55; margin-bottom: 14px; }
+            .partner-poster-mini .pp-grid { display: grid; grid-template-columns: 1fr 28px 1fr; gap: 12px; align-items: center; }
+            .partner-poster-mini .pp-card { background: #fff; border-radius: 8px; padding: 12px; border: 1px solid rgba(178,199,179,0.45); box-shadow: 0 1px 6px rgba(37,56,48,.05); }
+            .partner-poster-mini .pp-card.mi { border-top: 2px solid #76A379; }
+            .partner-poster-mini .pp-card.ir { border-top: 2px solid #B88794; }
+            .partner-poster-mini .pp-title { font-size: .9rem; font-weight: 700; color: #253830; margin-bottom: 6px; }
+            .partner-poster-mini .pp-list { list-style: none; margin: 0; padding: 0; }
+            .partner-poster-mini .pp-list li { font-size: .76rem; color: #3D5248; line-height: 1.45; margin-bottom: 3px; }
+            .partner-poster-mini .pp-plus { width: 26px; height: 26px; border-radius: 50%; border: 1px solid #B2C7B3; color: #6F8077; display: flex; align-items: center; justify-content: center; font-size: 1rem; background: #EEF0EC; }
+            /* .partner-poster-mini .pp-stripe-bottom { height: 5px; background: linear-gradient(90deg, #253830 0%, #76A379 30%, #B88794 68%, #D2A974 100%); margin-top: 14px; } */
+            .partner-poster-mini .pp-footer { background: #253830; color: rgba(255,255,255,.88); font-size: .78rem; line-height: 1.55; padding: 14px 16px 16px; margin-top: auto; border-top: 5px solid transparent; border-image: linear-gradient(90deg, #253830 0%, #76A379 30%, #B88794 68%, #D2A974 100%) 1; }
+            .partner-poster-mini .pp-footer-label { display: block; margin-bottom: 8px; font-family: 'DM Mono', monospace; font-size: .52rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(178,199,179,.82); }
+            .partner-poster-mini .pp-footer strong { color: #fff; }
+          </style>
+          <div class="partner-poster-mini">
+            <div class="pp-stripe-top"></div>
+            <div class="pp-header">
+              <div class="pp-header-label">Partnership Announcement</div>
+              <div class="pp-logo">Mahathi x Intrepid Risk</div>
             </div>
+            <div class="pp-body">
+              <div class="pp-eyebrow">Strategic Partnership</div>
+              <div class="pp-headline">Mahathi &amp; <span class="pink">Intrepid Risk</span></div>
+              <div class="pp-sub">Integrated Technology &amp; Business Services for P&amp;C Insurance</div>
+              <div class="pp-quote">Combining deep insurance technology expertise with a carrier-focused consulting model and curated service ecosystem.</div>
+              <div class="pp-grid">
+                <div class="pp-card mi">
+                  <div class="pp-title">Mahathi</div>
+                  <ul class="pp-list">
+                    <li>Guidewire cloud modernization</li>
+                    <li>Claims, policy &amp; billing solutions</li>
+                    <li>Agentic AI business solutions</li>
+                  </ul>
+                </div>
+                <div class="pp-plus">+</div>
+                <div class="pp-card ir">
+                  <div class="pp-title">Intrepid Risk</div>
+                  <ul class="pp-list">
+                    <li>Managed care programs</li>
+                    <li>Investigations &amp; SIU</li>
+                    <li>Litigation support</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="pp-stripe-bottom"></div>
+            </div>
+            <div class="pp-footer"><span class="pp-footer-label">Together, we help</span><strong>P&amp;C carriers, workers' compensation insurers, MGAs, TPAs, and claims organizations</strong> move beyond point solutions toward a more integrated, outcome-driven operating model — where technology and operational services work as one.</div>
           </div>
         </div>
-        <div class="showcase-meta">
-          <span class="showcase-tag">LinkedIn Creative</span>
-          <div class="showcase-title">Thought Leadership Post</div>
-          <div class="showcase-desc">Dark Forest background with Spectrum gradient stripe. Bebas Neue headline with Sage accent. Logo in reverse (cream) at base. DM Mono eyebrow label in Sage.</div>
-        </div>
+        <!-- <div class="showcase-meta">
+          <span class="showcase-tag">Partnership Creative</span>
+          <div class="showcase-title">Mahathi x Intrepid Partnership Poster</div>
+          <div class="showcase-desc">Cream base with spectrum stripe system, dual partner capability cards, and strategic partnership message adapted from the provided Partnership Page design.</div>
+        </div> -->
       </div>
       <div class="showcase-card">
         <div class="showcase-mock">
-          <div style="background:var(--cream);padding:2rem;min-height:200px;display:flex;align-items:center;justify-content:center;">
-            <div style="width:280px;height:160px;background:var(--forest);border-radius:8px;padding:1.5rem;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(37,56,48,0.25);">
-              <div style="position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--gold) 0%,var(--pink) 35%,var(--sage) 70%,var(--forest) 100%);"></div>
-              <svg viewBox="50 130 1100 220" xmlns="http://www.w3.org/2000/svg" style="width:60px;height:auto;margin-bottom:0.75rem;">
-                <path d="M313.643 191.558C313.352 194.717 295.172 195.63 273.037 193.595C250.901 191.561 233.193 187.35 233.484 184.19C233.774 181.031 251.954 180.119 274.09 182.153C296.225 184.187 313.934 188.398 313.643 191.558Z" fill="#76A379"/><path d="M211.356 222.754C212.607 221.711 215.109 220.752 215.109 225.256V237.141C215.943 239.017 218.487 241.644 221.99 237.141L231.373 224.005C232.207 222.754 233.875 221.503 233.875 226.507C234.375 227.007 234.083 231.303 233.875 233.388C234.292 237.349 237.378 243.771 246.386 237.767C249.239 235.484 255.112 230.491 257.639 227.353C257.645 245.376 243.363 259.659 225.744 259.659C213.013 259.659 202.025 252.201 196.908 241.416L211.356 222.754Z" fill="#33442C"/><path d="M225.745 195.859C241.839 195.86 255.147 207.779 257.33 223.271L247.01 232.767C239.504 238.271 238.044 233.392 238.252 230.265V220.256C236.751 214.752 232.623 216.711 230.746 218.379L218.236 232.767V218.379C215.734 212.875 211.356 216.085 209.479 218.379L195.338 237.438C194.368 234.385 193.842 231.134 193.842 227.761C193.842 210.142 208.126 195.859 225.745 195.859Z" fill="#76A379"/>
-                <path d="M510.543 189.081C518.182 189.081 524.999 190.634 530.992 193.742C537.104 196.849 541.864 201.452 545.272 207.551C548.797 213.651 550.56 221.016 550.56 229.647V285.75H530.64V190.634H413.056V201.51C416.347 197.597 420.519 194.547 425.573 192.361C430.626 190.174 436.032 189.081 441.791 189.081Z" fill="#EEF0EC"/><path d="M1119.87 178.033C1116.23 178.033 1113.17 176.825 1110.7 174.408C1108.23 171.991 1107 168.999 1107 165.432C1107 161.864 1108.23 158.872 1110.7 156.455C1113.17 154.038 1116.23 152.83 1119.87 152.83C1123.39 152.83 1126.39 154.038 1128.86 156.455C1131.33 158.872 1132.56 161.864 1132.56 165.432C1132.56 168.999 1131.33 171.991 1128.86 174.408C1126.39 176.825 1123.39 178.033 1119.87 178.033ZM1129.74 190.634V285.75H1109.64V190.634H1129.74Z" fill="#EEF0EC"/>
-              </svg>
-              <div style="position:absolute;bottom:1.25rem;right:1.5rem;text-align:right;">
-                <div style="font-family:'Atops',sans-serif;font-size:0.72rem;font-weight:600;color:var(--cream);margin-bottom:1px;">Executive Name</div>
-                <div style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin-bottom:4px;">Director, Enterprise Solutions</div>
-                <div style="font-family:'DM Mono',monospace;font-size:0.55rem;color:rgba(238,240,236,0.45);">info@mahathi.com</div>
-              </div>
+          <style>
+            .partner-poster2-mini { width: min(100%, 660px); min-height: 620px; margin: 0 auto; background: #EEF0EC; border-radius: 8px; overflow: hidden; border: 1px solid rgba(111,128,119,.18); display: flex; flex-direction: column; }
+            .partner-poster2-mini .p2-top { height: 7px; background: linear-gradient(90deg, #D2A974 0%, #B88794 35%, #76A379 70%, #253830 100%); }
+            .partner-poster2-mini .p2-header { padding: 22px 24px 18px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(111,128,119,.2); }
+            .partner-poster2-mini .p2-label { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: 2.5px; text-transform: uppercase; color: #6F8077; }
+            .partner-poster2-mini .p2-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; color: #253830; letter-spacing: .6px; }
+            .partner-poster2-mini .p2-body { padding: 22px 24px 18px; flex: 1; display: flex; flex-direction: column; }
+            .partner-poster2-mini .p2-eyebrow { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: 2.8px; text-transform: uppercase; color: #76A379; margin-bottom: 8px; }
+            .partner-poster2-mini .p2-headline { font-family: 'Bebas Neue', sans-serif; font-size: 2.15rem; line-height: .95; color: #253830; letter-spacing: .6px; margin-bottom: 8px; }
+            .partner-poster2-mini .p2-headline .pink { color: #B88794; }
+            .partner-poster2-mini .p2-sub { font-size: .92rem; font-weight: 700; color: #76A379; line-height: 1.35; margin-bottom: 14px; }
+            .partner-poster2-mini .p2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+            .partner-poster2-mini .p2-card { background: #fff; border-radius: 8px; padding: 12px; border: 1px solid rgba(178,199,179,.35); box-shadow: 0 1px 6px rgba(37,56,48,.05); position: relative; overflow: hidden; }
+            .partner-poster2-mini .p2-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+            .partner-poster2-mini .p2-card:nth-child(1)::before { background: #B2C7B3; }
+            .partner-poster2-mini .p2-card:nth-child(2)::before { background: #B88794; }
+            .partner-poster2-mini .p2-card:nth-child(3)::before { background: #D2A974; }
+            .partner-poster2-mini .p2-card:nth-child(4)::before { background: #76A379; }
+            .partner-poster2-mini .p2-no { font-family: 'DM Mono', monospace; font-size: .6rem; color: #B2C7B3; letter-spacing: 1.8px; margin-bottom: 4px; }
+            .partner-poster2-mini .p2-title { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; line-height: 1.05; color: #253830; letter-spacing: .3px; margin-bottom: 5px; }
+            .partner-poster2-mini .p2-desc { font-size: .73rem; color: #6F8077; line-height: 1.45; }
+            /* .partner-poster2-mini .p2-bottom { height: 5px; background: linear-gradient(90deg, #253830 0%, #76A379 30%, #B88794 68%, #D2A974 100%); margin-top: 14px; } */
+            .partner-poster2-mini .p2-footer { background: #253830; color: rgba(255,255,255,.9); font-size: .78rem; line-height: 1.55; padding: 50px 16px 50px; font-style: italic; margin-top: auto; border-top: 5px solid transparent; border-image: linear-gradient(90deg, #253830 0%, #76A379 30%, #B88794 68%, #D2A974 100%) 1; }
+            .partner-poster2-mini .p2-footer strong { color: #fff; font-style: normal; }
+            .partner-poster2-mini .p2-footer-attr { display: block; margin-top: 10px; font-family: 'DM Mono', monospace; font-size: .54rem; letter-spacing: 1.2px; color: rgba(178,199,179,.82); font-style: normal; }
+          </style>
+          <div class="partner-poster2-mini">
+            <div class="p2-top"></div>
+            <div class="p2-header">
+              <div class="p2-label">Partnership Announcement 02 / 02</div>
+              <div class="p2-logo">Mahathi x Intrepid</div>
             </div>
+            <div class="p2-body">
+              <div class="p2-eyebrow">Together, We Deliver</div>
+              <div class="p2-headline">Integrated <span class="pink">Outcomes</span><br>for P&amp;C Insurance</div>
+              <div class="p2-sub">Four ways Mahathi + Intrepid change how carriers operate</div>
+              <div class="p2-grid">
+                <div class="p2-card">
+                  <div class="p2-no">01</div>
+                  <div class="p2-title">Single-Source Access</div>
+                  <div class="p2-desc">One trusted relationship for both tech platform and claims vendor selection.</div>
+                </div>
+                <div class="p2-card">
+                  <div class="p2-no">02</div>
+                  <div class="p2-title">Pre-Vetted Services</div>
+                  <div class="p2-desc">Credentialed, compliant, carrier-grade service providers with no unknowns.</div>
+                </div>
+                <div class="p2-card">
+                  <div class="p2-no">03</div>
+                  <div class="p2-title">Workflow-Embedded Delivery</div>
+                  <div class="p2-desc">Services surface directly in Guidewire and core claims systems.</div>
+                </div>
+                <div class="p2-card">
+                  <div class="p2-no">04</div>
+                  <div class="p2-title">Measurable Outcomes</div>
+                  <div class="p2-desc">Combined analytics with transparent ROI at claim and program level.</div>
+                </div>
+              </div>
+              <div class="p2-bottom"></div>
+            </div>
+            <div class="p2-footer">"<strong>Technology is an important part of insurance transformation,</strong> but it is only one part of the equation. Carriers need the right mix of technology, AI capabilities, and business services working in tandem to deliver true value."<span class="p2-footer-attr">- Steven Mazefsky, President · Intrepid Risk Associates</span></div>
           </div>
         </div>
-        <div class="showcase-meta">
-          <span class="showcase-tag">Business Card</span>
-          <div class="showcase-title">Executive Card — Dark Version</div>
-          <div class="showcase-desc">Forest Green card with Spectrum gradient top stripe. Reverse logo (cream). DM Mono for title and contact. Name in Atops Semi-Bold.</div>
-        </div>
+        <!-- <div class="showcase-meta">
+          <span class="showcase-tag">Partnership Creative</span>
+          <div class="showcase-title">Together We Deliver Poster</div>
+          <div class="showcase-desc">Partnership Page 2 adaptation with integrated outcomes headline, four delivery value cards, and quote-led footer in Mahathi-Intrepid visual style.</div>
+        </div> -->
       </div>
-      <div class="showcase-card">
+      <!-- <div class="showcase-card">
         <div class="showcase-mock">
           <div style="background:var(--white);padding:2rem;min-height:200px;border-bottom:3px solid var(--cream2);">
             <div style="border-top:3px solid var(--cream2);padding-top:1.5rem;">
@@ -2276,7 +2584,7 @@
                   </svg>
                 </div>
                 <div>
-                  <div style="font-family:'Atops',sans-serif;font-size:0.88rem;font-weight:700;color:var(--forest);">Executive Name</div>
+                  <div style="font-family:'Aptos',sans-serif;font-size:0.88rem;font-weight:700;color:var(--forest);">Executive Name</div>
                   <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.5rem;">Director, Enterprise Solutions · Mahathi Infotech</div>
                   <div style="font-family:'DM Mono',monospace;font-size:0.6rem;color:rgba(37,56,48,0.45);">info@mahathi.com · +91 00000 00000 · mahathi.com</div>
                   <div style="margin-top:0.6rem;padding-top:0.6rem;border-top:1px solid var(--cream2);">
@@ -2290,7 +2598,7 @@
         <div class="showcase-meta">
           <span class="showcase-tag">Email Signature</span>
           <div class="showcase-title">Professional Email Signature</div>
-          <div class="showcase-desc">Icon mark in Forest Green rounded container. Atops for name. DM Mono for title, contact, and tag line. Clean separator with Cream border.</div>
+          <div class="showcase-desc">Icon mark in Forest Green rounded container. Aptos for name. DM Mono for title, contact, and tag line. Clean separator with Cream border.</div>
         </div>
       </div>
       <div class="showcase-card">
@@ -2318,17 +2626,17 @@
           <div class="showcase-title">Partnership Announcement</div>
           <div class="showcase-desc">Dark Forest background. Gold DM Mono label. Bebas Neue partner announcement headline. Dual logo lockup with Spectrum gradient stripe. Clean, executive announcement format.</div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div style="background:var(--cream);border:1px solid var(--cream2);border-radius:10px;padding:2rem;margin-top:0.5rem;">
       <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.5rem;">Brand Application Note</div>
       <p style="font-size:0.875rem;color:var(--forest);line-height:1.72;max-width:720px;">All brand applications — digital ads, social posts, presentations, email templates, event materials, and partnership communications — must be developed in accordance with these guidelines. When in doubt about whether a design is on-brand, contact the Mahathi brand team at <a href="mailto:info@mahathi.com" style="color:var(--sage);text-decoration:none;font-weight:600;">info@mahathi.com</a> before publishing or distributing.</p>
     </div>
-  </section> -->
+  </section>
 
   <!-- ═══ 08 QUICK REFERENCE ═══ -->
-  <section class="brand-section section-anchor" id="applications">
+  <section class="brand-section section-anchor" id="applications" style="background-color: #e3e6e0;">
     <div class="section-label">08 — Reference</div>
     <h2 class="section-title">Quick Reference</h2>
     <div class="section-divider"></div>
@@ -2355,10 +2663,10 @@
       <tbody>
         <tr><td>Display</td><td class="mono-cell">Bebas Neue</td><td class="mono-cell">72–96px</td><td class="mono-cell">400</td><td><span class="usage-pill">Hero · Cover</span></td></tr>
         <tr><td>Section Title</td><td class="mono-cell">Bebas Neue</td><td class="mono-cell">48–56px</td><td class="mono-cell">400</td><td><span class="usage-pill">Section Heads</span></td></tr>
-        <tr><td>Card Headline</td><td class="mono-cell">Atops</td><td class="mono-cell">20–24px</td><td class="mono-cell">700</td><td><span class="usage-pill">Cards · Callouts</span></td></tr>
-        <tr><td>Body</td><td class="mono-cell">Atops</td><td class="mono-cell">15–16px</td><td class="mono-cell">400</td><td><span class="usage-pill">Paragraphs · Descriptions</span></td></tr>
+        <tr><td>Card Headline</td><td class="mono-cell">Aptos</td><td class="mono-cell">20–24px</td><td class="mono-cell">700</td><td><span class="usage-pill">Cards · Callouts</span></td></tr>
+        <tr><td>Body</td><td class="mono-cell">Aptos</td><td class="mono-cell">15–16px</td><td class="mono-cell">400</td><td><span class="usage-pill">Paragraphs · Descriptions</span></td></tr>
         <tr><td>Label / Meta</td><td class="mono-cell">DM Mono</td><td class="mono-cell">10–11px</td><td class="mono-cell">400–500</td><td><span class="usage-pill">Tags · Codes · Metadata</span></td></tr>
-        <tr><td>Caption</td><td class="mono-cell">Atops</td><td class="mono-cell">12–13px</td><td class="mono-cell">400</td><td><span class="usage-pill">Footnotes · Alt text</span></td></tr>
+        <tr><td>Caption</td><td class="mono-cell">Aptos</td><td class="mono-cell">12–13px</td><td class="mono-cell">400</td><td><span class="usage-pill">Footnotes · Alt text</span></td></tr>
       </tbody>
     </table>
 
