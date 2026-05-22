@@ -9,6 +9,10 @@ $word_count = str_word_count( strip_tags( get_post_field( 'post_content', get_th
 $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
 ?>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
     <style>
         /* --- CSS Variables / Design System --- */
         :root {
@@ -22,7 +26,7 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
             --border-color: #e5e7eb;
             --white: #ffffff;
             --custom-gradient: linear-gradient(135deg, #7a0f1c, #c31432, #240b36);
-            --font-main: 'Inter', sans-serif;
+            --font-main: 'Poppins', sans-serif;
         }
 
         /* --- Reset & Base Styles --- */
@@ -37,14 +41,14 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: all 0.3s ease; gap: 0.5rem; border: none; cursor: pointer;}
         .btn svg { width: 18px; height: 18px; transition: transform 0.3s ease; }
         .btn:hover svg { transform: translateX(4px); }
-        .btn-primary { background-color: var(--primary); color: var(--white); box-shadow: 0 4px 6px -1px rgba(230, 46, 45, 0.2); }
-        .btn-primary:hover { background-color: var(--primary-hover); box-shadow: 0 10px 15px -3px rgba(230, 46, 45, 0.3); }
+        .btn-primary { background-color: #75A778; color: var(--white); box-shadow: 0 4px 6px -1px rgba(230, 46, 45, 0.2); }
+        .btn-primary:hover { background-color: #618E67; box-shadow: 0 10px 15px -3px rgba(230, 46, 45, 0.3); }
         .btn-dark { background-color: var(--dark); color: var(--white); }
         .btn-dark:hover { background-color: #000; }
 
         /* --- Hero Section (Section 1) --- */
         .single-hero {
-            position: relative; background: var(--custom-gradient);
+            position: relative; background: #75A778;
             padding: 8rem 0 10rem 0; overflow: hidden; color: var(--white);
         }
         
@@ -69,7 +73,7 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
             margin-bottom: 2rem;
         }
         .breadcrumbs a:hover { color: var(--white); }
-        .breadcrumbs .separator { color: var(--primary); font-weight: bold; }
+        .breadcrumbs .separator { color: #000000; font-weight: bold; }
         .breadcrumbs .current { color: var(--white); }
 
         .single-title  {
@@ -85,7 +89,7 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
             font-size: 2.35rem;
             line-height: 1.15;
             font-weight: 800;
-            background: linear-gradient(90deg, #f5c542, #ffea8a);
+            background: #ffffff;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-top: 0.25rem;
@@ -100,7 +104,7 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
         .author-info span { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
         
         .meta-date { display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.8); font-size: 0.9375rem; font-weight: 500; }
-        .meta-date svg { width: 18px; height: 18px; color: var(--primary); }
+        .meta-date svg { width: 18px; height: 18px; color: #000000; }
 
         /* Hero Right: Featured Image */
         .hero-image-wrapper {
@@ -121,7 +125,7 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
         .hero-curve path { fill: var(--gray-bg); }
 
         /* --- Main Content Area (Section 2) --- */
-        .content-section { padding: 4rem 0 8rem; position: relative; z-index: 20; }
+        .content-section { padding: 4rem 0 1rem; position: relative; z-index: 20; }
         .content-layout {
             display: grid; grid-template-columns: 1fr; gap: 4rem;
         }
@@ -138,8 +142,8 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
         .article-content h2 { font-size: 2rem; font-weight: 700; color: var(--dark); margin: 3rem 0 1.25rem; line-height: 1.3; }
         .article-content h2:first-child { margin-top: 0; }
         .article-content h3 { font-size: 1.5rem; font-weight: 600; color: var(--dark); margin: 2rem 0 1rem; }
-        .article-content p { font-size: 1.125rem; color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.8; }
-        .article-content a { color: var(--primary); font-weight: 500; text-decoration: underline; text-decoration-color: transparent; transition: all 0.2s; }
+        .article-content p { font-size: 1.125rem; color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.8; text-align: justify;}
+        .article-content a { color: #75A778; font-weight: 500; text-decoration: underline; text-decoration-color: transparent; transition: all 0.2s; }
         .article-content a:hover { text-decoration-color: var(--primary); }
         .article-content ul, .article-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.125rem; line-height: 1.8; color: var(--text-gray); }
         .article-content li { margin-bottom: 0.5rem; }
@@ -160,22 +164,67 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
         .cta-banner {
             background: var(--dark); border-radius: 1.5rem; padding: 2.5rem 2rem;
             color: var(--white); text-align: center; overflow: hidden; position: relative;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-bottom: 4px solid var(--primary);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border-bottom: 4px solid #75A778;
         }
-        .cta-banner::before {
+        /* .cta-banner::before {
             content: ''; position: absolute; top: -50px; right: -50px; width: 150px; height: 150px;
             background: radial-gradient(circle, rgba(230,46,45,0.2) 0%, transparent 70%); z-index: 1;
-        }
+        } */
         .cta-banner-content { position: relative; z-index: 2; }
         .cta-banner h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.3; }
         .cta-banner h3 span { color: var(--primary); }
-        .cta-banner p { color: rgba(255,255,255,0.7); font-size: 0.9375rem; margin-bottom: 2rem; }
+        .cta-banner p { color: #fff; font-size: 0.9375rem; margin-bottom: 2rem; }
         .cta-banner .btn { width: 100%; justify-content: center; }
 
-        .recent-posts { background-color: var(--white); padding: 6rem 0; border-top: 1px solid var(--border-color); }
+        .author-details-section { padding: 1rem 0 1rem; }
+        .author-details-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 8px 20px -12px rgba(0,0,0,0.25);
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+        .author-details-avatar img {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(117,167,120,0.35);
+        }
+        .author-details-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        .author-details-content h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+        .author-details-content p {
+            color: var(--text-gray);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .author-details-link { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; color: var(--dark); }
+        .author-details-link:hover { color: #75A778; }
+        @media (max-width: 767px) {
+            .author-details-card { flex-direction: column; padding: 1.5rem; }
+            .author-details-avatar img { width: 72px; height: 72px; }
+        }
+
+        .recent-posts { background-color: var(--white); padding: 2rem 0 2rem; border-top: 1px solid var(--border-color); }
         .section-header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; margin-bottom: 3rem; }
         .section-header h2 { font-size: 2.25rem; font-weight: 800; color: var(--dark); }
-        .section-header h2 span { color: var(--primary); }
+        .section-header h2 span { color: #000; }
         .view-all { font-weight: 600; color: var(--dark); display: inline-flex; align-items: center; gap: 0.5rem; }
         .view-all:hover { color: var(--primary); }
 
@@ -186,17 +235,17 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
             overflow: hidden; display: flex; flex-direction: column; cursor: pointer;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: box-shadow 0.3s ease;
         }
-        .post-card:hover { box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1); }
+        .post-card:hover { box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1); color: #75A778; }
         .card-img { position: relative; height: 220px; overflow: hidden; }
         .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .post-card:hover .card-img img { transform: scale(1.05); }
         .card-content { padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; }
-        .card-tag { color: var(--primary); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; }
-        .post-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 1rem; transition: color 0.3s ease; }
-        .post-card:hover h3 { color: var(--primary); }
+        .card-tag { color: #75A778; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; }
+        .post-card h3 { font-size: 1.25rem; font-weight: 500; color: var(--dark); line-height: 1.4; margin-bottom: 1rem; transition: color 0.3s ease; }
+        .post-card:hover h3 { color: #75A778; }
         .read-more { display: inline-flex; align-items: center; color: var(--dark); font-weight: 700; font-size: 0.875rem; text-transform: uppercase; gap: 0.25rem; margin-top: auto; transition: color 0.3s ease; }
         .read-more svg { width: 16px; height: 16px; transition: transform 0.3s ease; }
-        .post-card:hover .read-more { color: var(--primary); }
+        .post-card:hover .read-more { color: #75A778; }
         .post-card:hover .read-more svg { transform: translateX(4px); }
     </style>
 
@@ -210,7 +259,7 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
         <section class="single-hero">
         <div class="background-wrapper">
         <div class="pattern-wrap"> <svg class="pattern-lines" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" stroke="#FF6B00" stroke-width="1">
+          <g fill="none" stroke="#ffffff" stroke-width="1">
               <path d="M-50,350 C50,320 150,200 300,180 C450,160 500,100 650,80"></path>
               <path d="M-50,360 C50,330 150,215 300,195 C450,175 500,115 650,95"></path>
               <path d="M-50,370 C50,340 150,230 300,210 C450,190 500,130 650,110"></path>
@@ -219,7 +268,7 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
               <path d="M-50,400 C50,370 150,275 300,255 C450,235 500,175 650,155"></path>
           </g>
       </svg> <svg class="star-svg" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid meet">
-          <path id="logoPath1" d="M-50,370 C50,340 150,230 300,210 C450,190 500,130 650,110" fill="none" stroke="none"></path> <text id="logoStar1" font-family="Inter,sans-serif" font-size="14" fill="#fff" text-anchor="middle" dominant-baseline="central" opacity="1" x="645.7842407226562" y="110.57681274414062">✦</text>
+          <path id="logoPath1" d="M-50,370 C50,340 150,230 300,210 C450,190 500,130 650,110" fill="none" stroke="none"></path> <text id="logoStar1" font-family="Poppins,sans-serif" font-size="14" fill="#fff" text-anchor="middle" dominant-baseline="central" opacity="1" x="645.7842407226562" y="110.57681274414062">✦</text>
       </svg> </div>
   
 
@@ -414,7 +463,7 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
                     <div class="sticky-wrapper">
                         <div class="cta-banner">
                             <div class="cta-banner-content">
-                                <h3>Stop Reacting. <br><span>Start Predicting.</span></h3>
+                                <h3>Stop Reacting. <br><span style="color: #75A778;">Start Predicting.</span></h3>
                                 <p>See how Fleeta's AI can reduce your vehicle downtime by up to 35%.</p>
                                 <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-primary">
                                     Book a Demo
@@ -425,6 +474,37 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
                     </div>
                 </aside>
 
+            </div>
+        </section>
+
+        <section class="author-details-section">
+            <div class="container">
+                <?php
+                $author_id = get_the_author_meta('ID');
+                $author_name = get_the_author();
+                $author_bio = get_the_author_meta('description');
+                $author_archive_url = get_author_posts_url($author_id);
+                ?>
+                <div class="author-details-card">
+                    <div class="author-details-avatar">
+                        <?php echo get_avatar($author_id, 120, '', $author_name, array('class' => 'author-avatar')); ?>
+                    </div>
+                    <div class="author-details-content">
+                        <p class="author-details-label">Written by</p>
+                        <h3><?php echo esc_html($author_name); ?></h3>
+                        <p>
+                            <?php
+                            echo $author_bio
+                                ? esc_html($author_bio)
+                                : 'Our team shares practical insights to help you make better logistics and freight decisions.';
+                            ?>
+                        </p>
+                        <a href="<?php echo esc_url($author_archive_url); ?>" class="author-details-link">
+                            View all posts by <?php echo esc_html($author_name); ?>
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
         
