@@ -156,7 +156,7 @@
         if (is_single() && has_post_thumbnail()) {
             echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full'));
         } else {
-            echo get_template_directory_uri() . '/assets/salesnanny-logo-og.png';
+            echo get_template_directory_uri() . '/assets/salesnanny-logo-og.svg';
         }
     ?>">
     <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/inter_5.2.6_latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -176,7 +176,7 @@
       "@type": "Organization",
       "name": "Global Top Digital Marketing Agency | SalesNanny",
       "url": "<?php echo home_url(); ?>",
-      "logo": "<?php echo get_template_directory_uri(); ?>/assets/salesnanny-logo-og.png",
+      "logo": "<?php echo get_template_directory_uri(); ?>/assets/salesnanny-logo-og.svg",
       "description": "Boost your leads and sales with SalesNanny, a digital marketing agency providing effective online solutions. Grow your online presence now!",
       "sameAs": [
         "https://www.linkedin.com/company/sales-nanny-solutions-private-limited/",
@@ -343,7 +343,6 @@ svg {
    Global Typography
 ================================ */
 
-body,
 label,
 input,
 textarea,
@@ -419,8 +418,8 @@ body {
 }
 
     .header-logo-link img {
-        height: 35px;
-        width: auto;
+        height: auto;
+        width: 245px;
     }
 
     .header-logo-img {
@@ -923,7 +922,7 @@ body {
         <div class="header-container">
             <!-- Brand Logo -->
             <a class="header-logo-link" href="/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/salesnanny-logo-og.png" alt="Logo" width="245" height="40" fetchpriority="high">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/salesnanny-logo-og.svg" alt="Logo" width="245" height="40" fetchpriority="high">
             </a>
 
             <!-- Desktop Navigation Menu -->

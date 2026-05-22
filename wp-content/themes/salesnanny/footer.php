@@ -37,8 +37,8 @@ background: #fff;
     }
 
     .footer-logo-img {
-        height: 32px; /* Adjusted to match scale in image */
-        width: auto;
+        height: auto; /* Adjusted to match scale in image */
+        width: 245px;
         display: block;
     }
 
@@ -147,7 +147,7 @@ background: #fff;
         <div class="footer-row-top">
             <!-- Logo Left -->
             <a href="/" class="footer-logo-link" aria-label="Home">
-                <img class="footer-logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/salesnanny-logo-og.png" alt="Integration Go">
+                <img class="footer-logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/salesnanny-logo-og.svg" alt="Integration Go">
             </a>
 
             <!-- Socials Right -->

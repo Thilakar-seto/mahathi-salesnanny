@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<!-- Mahathi Brand Fonts: Bebas Neue (display) · DM Sans (body) · DM Mono (labels) -->
+<!-- Mahathi Brand Fonts: Bebas Neue (titles) · Aptos (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <style>
   :root {
@@ -27,26 +27,30 @@
   .related-card-date,
   .related-card-link,
   .hero-meta {
-    font-family: 'DM Sans', sans-serif;
+    font-family: Aptos, sans-serif;
   }
 
   .hero-title,
   .section-header h2,
   .related-card-title,
-  h1, h2, h3, h4 {
-    font-family: 'DM Sans', sans-serif;
+  .faq-title-group,
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
   }
 
   .hero-breadcrumb,
   .audio-details p,
   .author-role,
   .related-card-date {
-    font-family: 'DM Mono', monospace;
+    font-family: Aptos, sans-serif;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
+    font-family: Aptos, sans-serif;
     background: #ffffff;
     color: var(--text-main);
     line-height: 1.7;
@@ -62,7 +66,8 @@
   p strong {
     font-weight: bolder;
     word-spacing: 2px;
-    color: #253830;
+    color: #75A778;
+    text-decoration: none !important; 
   }
 
   .wp-block-separator {
@@ -75,7 +80,7 @@
   .hero-immersive {
     position: relative;
     padding: 200px 5% 60px;
-    background: #253830;
+    background: #76A379;
     text-align: center;
   }
 
@@ -107,18 +112,18 @@
   }
 
   .hero-breadcrumb span {
-    color: rgba(238,240,236,0.4);
+    color: #ffffff;
     text-align: left;
-    max-width: 20ch;
+    /* max-width: 20ch; */
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    letter-spacing: 1px;
   }
 
   .hero-title {
     font-size: 30px;
-    font-weight: 700;
     color: #EEF0EC;
     line-height: 1.4;
     margin-bottom: 24px;
@@ -226,7 +231,7 @@
   }
 
   .toolbar-item:hover {
-    background: #253830;
+    background: #75A778;
     color: #EEF0EC;
     transform: translateY(-2px);
   }
@@ -262,7 +267,7 @@
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: #253830;
+    background: #75A778;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -280,7 +285,7 @@
 
   .audio-details h4 {
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 500;
     color: #253830;
     margin-bottom: 4px;
   }
@@ -296,7 +301,7 @@
     font-size: 17px;
     font-weight: 400;
     line-height: 1.8;
-    color: #222222;
+    color: #000000;
     letter-spacing: 0.6px;
   }
 
@@ -309,8 +314,8 @@
   .article-content h2 {
     font-size: 24px;
     line-height: 35px;
-    font-weight: 700;
-    color: #253830;
+    font-weight: 500;
+    color: #75A778;
     margin: 40px 0 10px;
     position: relative;
     padding-bottom: 10px;
@@ -319,8 +324,8 @@
   /* ===== H3 — subsection ===== */
   .article-content h3 {
     font-size: 20px;
-    font-weight: 600;
-    color: #1e2e27;
+    font-weight: 500;
+    color: #75A778;
     margin: 30px 0 10px;
     line-height: 1.3;
     position: relative;
@@ -375,7 +380,7 @@
   .article-content a {
     color: #1e2e27;
     font-weight: 600;
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: #1e2e27;
     text-underline-offset: 3px;
     transition: all 0.3s;
@@ -411,9 +416,10 @@
 
   .author-details h3 {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
     color: #1e2e27;
     margin-bottom: 6px;
+    letter-spacing: 2px;
   }
 
   .author-role {
@@ -438,13 +444,12 @@
   =========================================*/
   .related-section {
     background: var(--bg-light);
-    padding: 0px 0 60px;
   }
 
   .related-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0px auto 0;
+    padding: 5% 5%;
   }
 
   .section-header {
@@ -454,7 +459,6 @@
 
   .section-header h2 {
     font-size: 36px;
-    font-weight: 700;
     color: #1e2e27;
     margin-bottom: 12px;
   }
@@ -517,7 +521,6 @@
 
   .related-card-title {
     font-size: 20px;
-    font-weight: 700;
     color: #1e2e27;
     margin-bottom: 12px;
     line-height: 1.4;
@@ -681,7 +684,7 @@
 
 <!-- 2. FLOATING TOOLBAR -->
 <div class="floating-toolbar">
-  <button class="toolbar-item" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top" style="background: #253830;padding: 0 50px;border-radius: 16px;margin: 0 -12px 0 0;
+  <button class="toolbar-item" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top" style="background: #75A778;padding: 0 50px;border-radius: 16px;margin: 0 -12px 0 0;
 color: #EEF0EC;">
     <i class="fas fa-arrow-up"></i>
   </button>
@@ -768,7 +771,7 @@ if (!empty($faqs) && is_array($faqs)) :
 
     .faq-header-wrapper {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 20px !important;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -780,9 +783,8 @@ if (!empty($faqs) && is_array($faqs)) :
         justify-content: center;
         gap: 12px;
         font-size: 25px;
-        font-weight: 700;
         color: #253830;
-        font-family: 'DM Sans', sans-serif;
+        font-family: "Bebas Neue", sans-serif;
         margin: 0;
     }
 
@@ -829,7 +831,7 @@ if (!empty($faqs) && is_array($faqs)) :
         font-size: 24px;
         font-weight: 700;
         color: #253830;
-        font-family: 'DM Sans', sans-serif;
+        font-family: Aptos, sans-serif;
         line-height: 1.4;
     }
 
@@ -837,7 +839,7 @@ if (!empty($faqs) && is_array($faqs)) :
         font-size: 19px;
         font-weight: 600;
         color: #1f2937;
-        font-family: 'DM Sans', sans-serif;
+        font-family: Aptos, sans-serif;
         line-height: 1.4;
         padding-top: 4px;
     }
@@ -879,7 +881,7 @@ if (!empty($faqs) && is_array($faqs)) :
         padding: 24px 64px 0 64px; 
         margin: 0;
         font-size: 17px;
-        font-family: 'DM Sans', sans-serif;
+        font-family: Aptos, sans-serif;
         color: #4b5563;
         line-height: 1.7;
     }
@@ -982,7 +984,7 @@ if (!empty($faqs) && is_array($faqs)) :
 <section class="related-section">
   <div class="related-container">
   <div class="faq-header-wrapper">
-            <h2 class="faq-title-group">
+            <h2 class="faq-title-group" style="color: #75A778;">
                 Continue Reading
             </h2>
             <div class="faq-title-underline"></div>
