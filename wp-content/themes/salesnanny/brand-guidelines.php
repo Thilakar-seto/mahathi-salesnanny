@@ -368,11 +368,11 @@
   }
   .do-card:hover { box-shadow: 0 8px 24px rgba(37,56,48,0.08); }
   .dont-card {
-    border-radius: 10px; border: 1px solid rgba(184,135,148,0.35);
+    border-radius: 10px; 
     overflow: hidden; background: var(--white);
     transition: box-shadow 0.2s;
   }
-  .dont-card:hover { box-shadow: 0 8px 24px rgba(184,135,148,0.1); }
+  /* .dont-card:hover { box-shadow: 0 8px 24px rgba(184,135,148,0.1); } */
   .rule-preview {
     display: flex; align-items: center; justify-content: center;
     padding: 2rem;
@@ -393,7 +393,7 @@
     background: rgb(246 5 68 / 68%);
     color: #f9f9f9;
 }
-  .rule-meta { padding: 1rem 1.25rem; border-top: 1px solid var(--cream2); }
+  .rule-meta { padding: 1rem 1.25rem; border-top: 1px solid var(--cream2);display:none; }
   .rule-title { font-weight: 500; font-size: 18px; color: var(--forest); margin-bottom: 3px; letter-spacing: 1.2px;}
   .rule-desc { font-size: 0.8rem; color: var(--sage2); line-height: 1.6; }
 
@@ -770,14 +770,15 @@
     <div class="sidebar-tagline">2026 Edition</div>
   </div>
 
-  <div class="sidebar-section-label">Foundation</div>
+  <!-- <div class="sidebar-section-label">Foundation</div> -->
   <ul class="sidebar-nav">
-    <li><a href="#overview"><i class="bi bi-house"></i> Brand Overview</a></li>
+    <!-- <li><a href="#overview"><i class="bi bi-house"></i> Brand Overview</a></li> -->
     <!-- <li><a href="#brand-story"><i class="bi bi-book"></i> Brand Story</a></li>
     <li><a href="#brand-voice"><i class="bi bi-chat-quote"></i> Brand Voice</a></li> -->
   </ul>
   <div class="sidebar-section-label">Identity</div>
   <ul class="sidebar-nav">
+  <li><a href="#overview"><i class="bi bi-house"></i> Brand Overview</a></li>
     <li><a href="#colors"><i class="bi bi-palette"></i> Color Palette</a></li>
     <li><a href="#typography"><i class="bi bi-type"></i> Typography</a></li>
     <li><a href="#type-rules"><i class="bi bi-text-paragraph"></i> Type Rules</a></li>
@@ -809,7 +810,7 @@
     <div class="hero-top-stripe"></div>
     <div class="hero-eyebrow">Mahathi Infotech — Brand Identity System</div>
     <h1 class="hero-headline">
-      Built For <span>Enterprise.</span> Designed For Trust.
+      Built For <span style="    font-family: 'Bebas Neue', sans-serif !important;">Enterprise.</span> Designed For Trust.
     </h1>
     <p class="hero-desc">A premium visual identity system for the future of insurance technology. Every element is designed to communicate precision, trust, and modern enterprise leadership.</p>
     <div class="hero-meta-row">
@@ -2397,38 +2398,20 @@
           display: none;
         }
       }
+      .riskworld-poster-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     </style>
 
     <div class="riskworld-poster-wrap">
       <div class="riskworld-poster">
-        <div class="riskworld-top">
-          <div class="riskworld-logo-row">Mahathi - RIMS RiskWorld 2026</div>
-          <div class="riskworld-headline">
-            Risk Meets<br>
-            <span class="pink">Opportunity.</span><br>
-            See You There.
-          </div>
-          <div class="riskworld-meet-block">
-            <div class="riskworld-meet-label">Meet us at</div>
-            <div class="riskworld-meet-event">RIMS RiskWorld 2026</div>
-            <div class="riskworld-meet-details">May 3-6, 2026 - Philadelphia, PA</div>
-          </div>
-        </div>
-        <div class="riskworld-divider"></div>
-        <div class="riskworld-stats">
-          <div class="riskworld-stat-box">
-            <div class="riskworld-stat-num">360+</div>
-            <div class="riskworld-stat-label">Insurance<br>Experts</div>
-          </div>
-          <div class="riskworld-stat-box">
-            <div class="riskworld-stat-num">11+</div>
-            <div class="riskworld-stat-label">Years P&amp;C<br>Experience</div>
-          </div>
-          <div class="riskworld-stat-box">
-            <div class="riskworld-stat-num">36+</div>
-            <div class="riskworld-stat-label">Carrier<br>Clients</div>
-          </div>
-        </div>
+        <img
+          class="riskworld-poster-image"
+          src="<?php echo get_template_directory_uri(); ?>/assets/brand-poster-1.jpg"
+          alt="Mahathi RIMS RiskWorld 2026 Poster"
+        >
       </div>
     </div>
 
@@ -2460,40 +2443,14 @@
             .partner-poster-mini .pp-footer { background: #253830; color: rgba(255,255,255,.88); font-size: .78rem; line-height: 1.55; padding: 14px 16px 16px; margin-top: auto; border-top: 5px solid transparent; border-image: linear-gradient(90deg, #253830 0%, #76A379 30%, #B88794 68%, #D2A974 100%) 1; }
             .partner-poster-mini .pp-footer-label { display: block; margin-bottom: 8px; font-family: 'DM Mono', monospace; font-size: .52rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(178,199,179,.82); }
             .partner-poster-mini .pp-footer strong { color: #fff; }
+            .partner-poster-image { width: 100%; height: auto; display: block; }
           </style>
           <div class="partner-poster-mini">
-            <div class="pp-stripe-top"></div>
-            <div class="pp-header">
-              <div class="pp-header-label">Partnership Announcement</div>
-              <div class="pp-logo">Mahathi x Intrepid Risk</div>
-            </div>
-            <div class="pp-body">
-              <div class="pp-eyebrow">Strategic Partnership</div>
-              <div class="pp-headline">Mahathi &amp; <span class="pink">Intrepid Risk</span></div>
-              <div class="pp-sub">Integrated Technology &amp; Business Services for P&amp;C Insurance</div>
-              <div class="pp-quote">Combining deep insurance technology expertise with a carrier-focused consulting model and curated service ecosystem.</div>
-              <div class="pp-grid">
-                <div class="pp-card mi">
-                  <div class="pp-title">Mahathi</div>
-                  <ul class="pp-list">
-                    <li>Guidewire cloud modernization</li>
-                    <li>Claims, policy &amp; billing solutions</li>
-                    <li>Agentic AI business solutions</li>
-                  </ul>
-                </div>
-                <div class="pp-plus">+</div>
-                <div class="pp-card ir">
-                  <div class="pp-title">Intrepid Risk</div>
-                  <ul class="pp-list">
-                    <li>Managed care programs</li>
-                    <li>Investigations &amp; SIU</li>
-                    <li>Litigation support</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="pp-stripe-bottom"></div>
-            </div>
-            <div class="pp-footer"><span class="pp-footer-label">Together, we help</span><strong>P&amp;C carriers, workers' compensation insurers, MGAs, TPAs, and claims organizations</strong> move beyond point solutions toward a more integrated, outcome-driven operating model — where technology and operational services work as one.</div>
+            <img
+              class="partner-poster-image"
+              src="<?php echo get_template_directory_uri(); ?>/assets/brand-poster-2.jpg"
+              alt="Mahathi and Intrepid partnership poster"
+            >
           </div>
         </div>
         <!-- <div class="showcase-meta">
@@ -2502,77 +2459,7 @@
           <div class="showcase-desc">Cream base with spectrum stripe system, dual partner capability cards, and strategic partnership message adapted from the provided Partnership Page design.</div>
         </div> -->
       </div>
-      <div class="showcase-card">
-        <div class="showcase-mock">
-          <style>
-            .partner-poster2-mini { width: min(100%, 660px); min-height: 620px; margin: 0 auto; background: #EEF0EC; border-radius: 8px; overflow: hidden; border: 1px solid rgba(111,128,119,.18); display: flex; flex-direction: column; }
-            .partner-poster2-mini .p2-top { height: 7px; background: linear-gradient(90deg, #D2A974 0%, #B88794 35%, #76A379 70%, #253830 100%); }
-            .partner-poster2-mini .p2-header { padding: 22px 24px 18px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(111,128,119,.2); }
-            .partner-poster2-mini .p2-label { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: 2.5px; text-transform: uppercase; color: #6F8077; }
-            .partner-poster2-mini .p2-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; color: #253830; letter-spacing: .6px; }
-            .partner-poster2-mini .p2-body { padding: 22px 24px 18px; flex: 1; display: flex; flex-direction: column; }
-            .partner-poster2-mini .p2-eyebrow { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: 2.8px; text-transform: uppercase; color: #76A379; margin-bottom: 8px; }
-            .partner-poster2-mini .p2-headline { font-family: 'Bebas Neue', sans-serif; font-size: 2.15rem; line-height: .95; color: #253830; letter-spacing: .6px; margin-bottom: 8px; }
-            .partner-poster2-mini .p2-headline .pink { color: #B88794; }
-            .partner-poster2-mini .p2-sub { font-size: .92rem; font-weight: 700; color: #76A379; line-height: 1.35; margin-bottom: 14px; }
-            .partner-poster2-mini .p2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-            .partner-poster2-mini .p2-card { background: #fff; border-radius: 8px; padding: 12px; border: 1px solid rgba(178,199,179,.35); box-shadow: 0 1px 6px rgba(37,56,48,.05); position: relative; overflow: hidden; }
-            .partner-poster2-mini .p2-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
-            .partner-poster2-mini .p2-card:nth-child(1)::before { background: #B2C7B3; }
-            .partner-poster2-mini .p2-card:nth-child(2)::before { background: #B88794; }
-            .partner-poster2-mini .p2-card:nth-child(3)::before { background: #D2A974; }
-            .partner-poster2-mini .p2-card:nth-child(4)::before { background: #76A379; }
-            .partner-poster2-mini .p2-no { font-family: 'DM Mono', monospace; font-size: .6rem; color: #B2C7B3; letter-spacing: 1.8px; margin-bottom: 4px; }
-            .partner-poster2-mini .p2-title { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; line-height: 1.05; color: #253830; letter-spacing: .3px; margin-bottom: 5px; }
-            .partner-poster2-mini .p2-desc { font-size: .73rem; color: #6F8077; line-height: 1.45; }
-            /* .partner-poster2-mini .p2-bottom { height: 5px; background: linear-gradient(90deg, #253830 0%, #76A379 30%, #B88794 68%, #D2A974 100%); margin-top: 14px; } */
-            .partner-poster2-mini .p2-footer { background: #253830; color: rgba(255,255,255,.9); font-size: .78rem; line-height: 1.55; padding: 50px 16px 50px; font-style: italic; margin-top: auto; border-top: 5px solid transparent; border-image: linear-gradient(90deg, #253830 0%, #76A379 30%, #B88794 68%, #D2A974 100%) 1; }
-            .partner-poster2-mini .p2-footer strong { color: #fff; font-style: normal; }
-            .partner-poster2-mini .p2-footer-attr { display: block; margin-top: 10px; font-family: 'DM Mono', monospace; font-size: .54rem; letter-spacing: 1.2px; color: rgba(178,199,179,.82); font-style: normal; }
-          </style>
-          <div class="partner-poster2-mini">
-            <div class="p2-top"></div>
-            <div class="p2-header">
-              <div class="p2-label">Partnership Announcement 02 / 02</div>
-              <div class="p2-logo">Mahathi x Intrepid</div>
-            </div>
-            <div class="p2-body">
-              <div class="p2-eyebrow">Together, We Deliver</div>
-              <div class="p2-headline">Integrated <span class="pink">Outcomes</span><br>for P&amp;C Insurance</div>
-              <div class="p2-sub">Four ways Mahathi + Intrepid change how carriers operate</div>
-              <div class="p2-grid">
-                <div class="p2-card">
-                  <div class="p2-no">01</div>
-                  <div class="p2-title">Single-Source Access</div>
-                  <div class="p2-desc">One trusted relationship for both tech platform and claims vendor selection.</div>
-                </div>
-                <div class="p2-card">
-                  <div class="p2-no">02</div>
-                  <div class="p2-title">Pre-Vetted Services</div>
-                  <div class="p2-desc">Credentialed, compliant, carrier-grade service providers with no unknowns.</div>
-                </div>
-                <div class="p2-card">
-                  <div class="p2-no">03</div>
-                  <div class="p2-title">Workflow-Embedded Delivery</div>
-                  <div class="p2-desc">Services surface directly in Guidewire and core claims systems.</div>
-                </div>
-                <div class="p2-card">
-                  <div class="p2-no">04</div>
-                  <div class="p2-title">Measurable Outcomes</div>
-                  <div class="p2-desc">Combined analytics with transparent ROI at claim and program level.</div>
-                </div>
-              </div>
-              <div class="p2-bottom"></div>
-            </div>
-            <div class="p2-footer">"<strong>Technology is an important part of insurance transformation,</strong> but it is only one part of the equation. Carriers need the right mix of technology, AI capabilities, and business services working in tandem to deliver true value."<span class="p2-footer-attr">- Steven Mazefsky, President · Intrepid Risk Associates</span></div>
-          </div>
-        </div>
-        <!-- <div class="showcase-meta">
-          <span class="showcase-tag">Partnership Creative</span>
-          <div class="showcase-title">Together We Deliver Poster</div>
-          <div class="showcase-desc">Partnership Page 2 adaptation with integrated outcomes headline, four delivery value cards, and quote-led footer in Mahathi-Intrepid visual style.</div>
-        </div> -->
-      </div>
+
       <!-- <div class="showcase-card">
         <div class="showcase-mock">
           <div style="background:var(--white);padding:2rem;min-height:200px;border-bottom:3px solid var(--cream2);">
@@ -2631,7 +2518,7 @@
 
     <div style="background:var(--cream);border:1px solid var(--cream2);border-radius:10px;padding:2rem;margin-top:0.5rem;">
       <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--sage2);margin-bottom:0.5rem;">Brand Application Note</div>
-      <p style="font-size:0.875rem;color:var(--forest);line-height:1.72;max-width:720px;">All brand applications — digital ads, social posts, presentations, email templates, event materials, and partnership communications — must be developed in accordance with these guidelines. When in doubt about whether a design is on-brand, contact the Mahathi brand team at <a href="mailto:info@mahathi.com" style="color:var(--sage);text-decoration:none;font-weight:600;">info@mahathi.com</a> before publishing or distributing.</p>
+      <p style="font-size:0.875rem;color:var(--forest);line-height:1.72;max-width:720px;">All brand applications — digital ads, social posts, presentations, email templates, event materials, and partnership communications — must be developed in accordance with these guidelines. When in doubt about whether a design is on-brand, contact the Mahathi brand team at <a href="mailto:mahathiinfotech.com" style="color:var(--sage);text-decoration:none;font-weight:600;">mahathiinfotech.com</a> before publishing or distributing.</p>
     </div>
   </section>
 
