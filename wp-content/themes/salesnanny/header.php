@@ -472,8 +472,13 @@ body {
         cursor: pointer;
     }
 
+    .services-arrow {
+        color: #74AB77;
+        margin-left: 4px;
+    }
+
     .btn-primary {
-        background-color: #c22034;
+        background-color: #74AB77;
         color: #ffffff;
         text-decoration: none;
         padding: 16px 32px;
@@ -610,7 +615,7 @@ body {
     }
 
     .dropdown-link:hover .dropdown-item-heading {
-        color: #c22034;
+        color: #74AB77;
     }
 
     .dropdown-link:hover .dropdown-item-heading::before {
@@ -620,7 +625,7 @@ body {
         top: 0;
         bottom: 0;
         width: 3px;
-        background: #c22034;
+        background: #74AB77;
     }
 
     /* -----------------------------------------------------------
@@ -930,7 +935,7 @@ body {
                 <ul class="nav-list">
                     <!-- Product Dropdown -->
                     <li class="nav-item">
-                    <span class="nav-link">Services🔻</span>
+                    <span class="nav-link">Services<span class="services-arrow">▼</span></span>
                         <div class="dropdown-container">
                             <div class="dropdown-content-main">
                                 <!-- <h2 class="dropdown-section-title">Solutions</h2> -->
@@ -976,7 +981,7 @@ body {
 
                     <!-- Company Dropdown -->
                     <li class="nav-item">
-                        <span class="nav-link">Resources🔻</span>
+                       <span class="nav-link">Resources<span class="services-arrow">▼</span></span>
                         <div class="dropdown-container">
                             <div class="dropdown-content-main">
                                 <ul class="dropdown-items-list">

@@ -228,8 +228,8 @@ button.sblog-voted{background:var(--sage-muted) !important;color:var(--brand-600
 .sblog-content blockquote{margin:1.4em 0;padding:14px 18px;border-left:4px solid var(--brand);background:var(--soft);border-radius:10px;color:#333}
 
 /* Gutenberg blocks and widget-like content (BlogXpress look) */
-.sblog-content h2{font-family:var(--font-secondary, inherit);font-weight:600;font-size:2rem;line-height:1.35;margin:1.2em 0 .6em;color:#000}
-.sblog-content h3{font-family:var(--font-secondary, inherit);font-weight:600;font-size:1.4rem;line-height:1.45;margin:1.1em 0 .6em;color:#000}
+.sblog-content h2{font-family:var(--font-secondary, inherit);font-weight:600;font-size:2rem;line-height:1.35;margin:1.2em 0 .6em;color:#74AB77;}
+.sblog-content h3{font-family:var(--font-secondary, inherit);font-weight:600;font-size:1.4rem;line-height:1.45;margin:1.1em 0 .6em;color:#74AB77;}
 .sblog-content h4{font-family:var(--font-secondary, inherit);font-weight:600;font-size:1.15rem;margin:1em 0 .5em;color:#000}
 .sblog-content a{color:var(--brand);text-decoration:none}
 .sblog-content a:hover{color:var(--color-primary)}
@@ -610,6 +610,7 @@ button.sblog-voted{background:var(--sage-muted) !important;color:var(--brand-600
     font-size: clamp(1.8rem, 3.2vw, 2.45rem);
     line-height: 1.3;
     margin-bottom: 16px;
+    color: #74AB77;
 }
 
 .sblog-meta {
@@ -986,7 +987,7 @@ button.sblog-voted{background:var(--sage-muted) !important;color:var(--brand-600
 <section class="sblog-outer-section sblog-related-section">
     <div class="section-heading"><h2 class="title">Recent Articles</h2></div>
     <div class="position-relative">
-        <div class="post-slider" style="display: flex; gap: 30px;">
+        <div class="post-slider" style="display: flex; gap: 30px; grid-template-columns: repeat(2, 1fr);">
             <?php
             $colors = ['bg-color-scandal', 'bg-color-old-lace', 'bg-color-selago'];
             $color_index = 0;

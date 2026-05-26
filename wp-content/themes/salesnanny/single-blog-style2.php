@@ -139,15 +139,15 @@ $reading_time = ceil( $word_count / 200 ); // Average 200 words per minute
         }
         @media (min-width: 768px) { .article-content { padding: 4rem; } }
 
-        .article-content h2 { font-size: 2rem; font-weight: 700; color: var(--dark); margin: 3rem 0 1.25rem; line-height: 1.3; }
+        .article-content h2 { font-size: 2rem; font-weight: 700; color: #74AB77; margin: 3rem 0 1.25rem; line-height: 1.3; }
         .article-content h2:first-child { margin-top: 0; }
-        .article-content h3 { font-size: 1.5rem; font-weight: 600; color: var(--dark); margin: 2rem 0 1rem; }
+        .article-content h3 { font-size: 1.5rem; font-weight: 600; color: #74AB77; margin: 2rem 0 1rem; }
         .article-content p { font-size: 1.125rem; color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.8; text-align: justify;}
         .article-content a { color: #75A778; font-weight: 500; text-decoration: underline; text-decoration-color: transparent; transition: all 0.2s; }
         .article-content a:hover { text-decoration-color: var(--primary); }
         .article-content ul, .article-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.125rem; line-height: 1.8; color: var(--text-gray); }
         .article-content li { margin-bottom: 0.5rem; }
-        .article-content li::marker { color: var(--primary); font-weight: bold; }
+        .article-content li::marker { color: #74AB77; font-weight: bold; }
         .article-content blockquote {
             background-color: var(--gray-bg); border-left: 4px solid var(--primary);
             padding: 2rem; margin: 2.5rem 0; border-radius: 0 1rem 1rem 0;
