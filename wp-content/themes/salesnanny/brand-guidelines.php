@@ -279,6 +279,55 @@
     padding: 3px 10px; border-radius: 20px; background: var(--cream); color: var(--sage2);
   }
 
+  /* ── EXTENDED COLOR PREVIEW (APPENDED IN #colors) ── */
+  .extended-color-block-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sage2);
+    margin: 2rem 0 1rem;
+  }
+  .extended-color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.95rem;
+    margin-bottom: 1.75rem;
+  }
+  .extended-color-tile {
+    border-radius: 8px;
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(37,56,48,0.06);
+    font-family: 'DM Mono', monospace;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .extended-color-tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37,56,48,0.08);
+  }
+  .extended-color-tile.light-text { color: #f2f4f1; }
+  .extended-color-tile.dark-text { color: #1f2522; }
+
+  .extended-composition-preview {
+    border-radius: 10px;
+    border: 1px solid var(--cream2);
+    background: #fff;
+    min-height: 420px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 12% 18% 1fr;
+    margin-bottom: 0.5rem;
+  }
+  .extended-composition-band-a { background: #78917E; }
+  .extended-composition-band-b { background: #A1B5A1; }
+  .extended-composition-main { background: #BFBFBF; }
+
   /* ── TYPOGRAPHY ── */
   .type-feature-block {
     background: #76A379; border-radius: 12px;
@@ -731,6 +780,17 @@
     .story-split, .voice-grid, .type-rules-grid, .type-do-dont, .illus-do-dont,
     .photo-grid, .showcase-grid, .values-grid, .icon-rule-grid, .illustration-grid,
     .photo-rules-grid, .perception-grid, .sizing-grid { grid-template-columns: 1fr; }
+    .extended-color-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; }
+    .extended-color-tile { min-height: 58px; font-size: 1rem; }
+    .extended-composition-preview { min-height: 300px; grid-template-columns: 14% 18% 1fr; }
+  }
+  @media (max-width: 640px) {
+    .extended-color-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .extended-composition-preview { min-height: 230px; }
+  }
+  @media (max-width: 420px) {
+    .extended-color-grid { grid-template-columns: 1fr; }
+    .extended-composition-preview { min-height: 180px; grid-template-columns: 17% 19% 1fr; }
   }
 </style>
 </head>
@@ -1137,6 +1197,41 @@
         <tr><td><span class="swatch-dot" style="background:#D2A974;"></span>Gold</td><td class="mono-cell">#D2A974</td><td class="mono-cell">--gold</td><td><span class="usage-pill">Premium Callouts · Nav Active</span></td></tr>
       </tbody>
     </table>
+
+    <div class="extended-color-block-title">Extended Palette Reference</div>
+    <div class="extended-color-grid">
+      <div class="extended-color-tile light-text" style="background:#F0CDD9;">F0CDD9</div>
+      <div class="extended-color-tile light-text" style="background:#B88794;">#B88794</div>
+      <div class="extended-color-tile light-text" style="background:#C1A5BB;">C1A5BB</div>
+      <div class="extended-color-tile light-text" style="background:#B55A6B;">B55A6B</div>
+
+      <div class="extended-color-tile dark-text" style="background:#BFBFBF;">BFBFBF</div>
+      <div class="extended-color-tile dark-text" style="background:#D2A974;">D2A974</div>
+      <div class="extended-color-tile light-text" style="background:#98887E;">98887E</div>
+      <div class="extended-color-tile light-text" style="background:#8B664A;">8B664A</div>
+
+      <div class="extended-color-tile dark-text" style="background:#F4F4F2;">#F4F4F2</div>
+      <div class="extended-color-tile light-text" style="background:#749486;">749486</div>
+      <div class="extended-color-tile light-text" style="background:#6F8077;">6F8077</div>
+      <div class="extended-color-tile light-text" style="background:#6F7F59;">6F7F59</div>
+
+      <div class="extended-color-tile light-text" style="background:#78917E;">78917E</div>
+      <div class="extended-color-tile light-text" style="background:#A1B5A1;">A1B5A1</div>
+      <div class="extended-color-tile light-text" style="background:#83766D;">83766D</div>
+      <div class="extended-color-tile light-text" style="background:#AE5E33;">AE5E33</div>
+
+      <div class="extended-color-tile dark-text" style="background:#AECFDD;">AECFDD</div>
+      <div class="extended-color-tile light-text" style="background:#2F5D46;">2F5D46</div>
+      <div class="extended-color-tile light-text" style="background:#A8D0D9;">A8D0D9</div>
+      <div class="extended-color-tile dark-text" style="background:#E9BCB6;">E9BCB6</div>
+    </div>
+
+    <div class="extended-color-block-title">Color Composition Preview</div>
+    <div class="extended-composition-preview" aria-hidden="true">
+      <div class="extended-composition-band-a"></div>
+      <div class="extended-composition-band-b"></div>
+      <div class="extended-composition-main"></div>
+    </div>
   </section>
 
   <!-- ═══ 03 TYPOGRAPHY ═══ -->
