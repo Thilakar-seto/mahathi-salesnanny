@@ -238,119 +238,112 @@
             max-width: 700px;
         }
 
-        /* CHALLENGES SECTION - PREMIUM */
+        /* CHALLENGES SECTION */
         .challenges-section {
-            background: linear-gradient(135deg, #f8faf7 0%, var(--cream) 100%);
-            min-height: 75svh;
-            max-height: 100svh;
-            display: flex;
-            align-items: center;
-            padding: clamp(20px, 3.5vh, 40px) 0;
-            overflow: hidden;
-            box-sizing: border-box;
+            background: var(--cream);
+            padding: 80px 0;
         }
 
         .challenges-section::before {
             display: none;
         }
 
-        .challenges-section .container {
-            width: 100%;
-            max-height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: clamp(20px, 3vh, 32px);
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-
         .challenges-section .section-header {
-            margin-bottom: 0;
+            margin-bottom: 40px;
             display: grid;
-            grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-            gap: clamp(16px, 3vw, 40px);
-            align-items: start;
-            margin-bottom: 30px;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
 
         .challenges-section .section-header h2 {
-            font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-            margin-bottom: 12px;
-            padding-bottom: 12px;
-        }
-
-        .challenges-section .section-header p {
-            font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
-            line-height: 1.55;
-            max-width: none;
-        }
-
-        .challenges-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: clamp(20px, 2.8vh, 28px) clamp(22px, 2.8vw, 32px);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 42px;
+            color: var(--forest);
             margin: 0;
-            flex: 1;
-            min-height: 0;
-            align-content: center;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+            line-height: 1.2;
+            padding-bottom: 0;
         }
 
-        .challenges-list li {
-            padding: clamp(16px, 2.2vh, 22px) clamp(18px, 2vw, 24px);
+        .challenges-section .section-header h2::after {
+            display: none;
+        }
+
+        .section-intro {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .challenge-card {
+            padding: 28px;
             background: var(--white);
-            border-radius: 8px;
+            border-radius: 6px;
             border-left: 4px solid var(--sage);
-            font-size: clamp(0.75rem, 1vw, 0.875rem);
-            line-height: 1.5;
-            transition: box-shadow 0.3s ease, border-color 0.3s ease;
-            box-shadow: var(--shadow-sm);
-            position: relative;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
-
-        .challenges-list li:hover {
-            box-shadow: var(--shadow-md);
-            transform: none;
+        .challenge-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
         }
 
-        .challenges-list li:hover::before {
-            opacity: 0.7;
+        .challenge-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--forest);
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
         }
 
-        @media (max-width: 1100px) {
+        .challenge-description {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .challenges-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
             .challenges-section .section-header {
                 grid-template-columns: 1fr;
-                gap: 10px;
+                gap: 30px;
             }
-
-            .challenges-list {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: clamp(18px, 2.5vh, 26px) clamp(20px, 3vw, 28px);
+            .challenges-section .section-header h2 {
+                font-size: 36px;
             }
         }
 
-        @media (max-width: 900px) {
-            .challenges-section {
-                min-height: auto;
-                max-height: none;
-                overflow: visible;
-                padding: clamp(40px, 6vh, 56px) 0;
+        @media (max-width: 768px) {
+            .challenges-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
             }
-
-            .challenges-section .container {
-                gap: clamp(16px, 3vh, 28px);
+            .challenges-section .section-header {
+                grid-template-columns: 1fr;
+                gap: 24px;
             }
-
-            .challenges-list {
-                gap: clamp(16px, 2.5vh, 24px) clamp(18px, 4vw, 24px);
+            .challenges-section .section-header h2 {
+                font-size: 28px;
             }
-
-            .challenges-list li {
-                font-size: clamp(0.8125rem, 2.8vw, 0.875rem);
-                line-height: 1.55;
-                padding: clamp(16px, 2.5vh, 20px) clamp(18px, 3vw, 22px);
+            .section-intro {
+                font-size: 14px;
             }
         }
 
@@ -363,7 +356,7 @@
         }
 
         .service-card {
-            padding: 20px;
+            padding: 40px;
             border: 1px solid var(--border-light);
             border-radius: 8px;
             transition: all 0.3s ease;
@@ -379,7 +372,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 5px;
             background: linear-gradient(to right, var(--sage), var(--sage-light));
             transform: translateX(-100%);
             transition: transform 0.3s ease;
@@ -391,44 +384,194 @@
 
         .service-card:hover {
             border-color: var(--sage);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 8px 32px rgba(118, 163, 121, 0.15);
             transform: translateY(-8px);
         }
 
         .service-icon {
-            margin: -40px -40px 24px;
-            padding: 36px 24px;
+            width: 56px;
+            height: 56px;
+            margin-bottom: 24px;
             background: linear-gradient(180deg, #7d9478 0%, #4f6554 100%);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #ffffff;
-            border-radius: 7px 7px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
         }
 
         .service-icon svg {
-            width: 52px;
-            height: 52px;
+            width: 28px;
+            height: 28px;
             display: block;
             flex-shrink: 0;
         }
 
-        .service-card:hover .service-icon {
-            transform: none;
-        }
-
         .service-card h3 {
-            font-size: 18px;
+            font-size: 19px;
             margin-bottom: 16px;
             color: var(--forest);
             font-weight: 700;
             letter-spacing: -0.3px;
+            line-height: 1.4;
         }
 
         .service-card p {
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.8;
             color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .service-metric {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .service-metric + .service-metric {
+            border-top: none;
+            margin-top: 6px;
+            padding-top: 0;
+        }
+
+        .metric-icon {
+            color: var(--sage);
+            font-weight: 700;
+            font-size: 16px;
+            min-width: 18px;
+            line-height: 1.6;
+        }
+
+        .metric-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* WHY CHOOSE MAHATHI SECTION */
+        section.why-mahathi-section {
+            background: #fff;
+        }
+
+        section.why-mahathi-section::before {
+            display: none;
+        }
+
+        .why-mahathi-section .mahathi-section-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: flex-start;
+            padding: 20px 0 40px;
+        }
+
+        .why-mahathi-section .mahathi-left-column h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 42px;
+            color: var(--forest);
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+            line-height: 1.2;
+            padding-bottom: 0;
+        }
+
+        .why-mahathi-section .mahathi-left-column h2::after {
+            display: none;
+        }
+
+        .why-mahathi-section .bronze-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--sage) 0%, #659970 100%);
+            color: var(--white);
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(118, 163, 121, 0.2);
+            margin-bottom: 16px;
+        }
+
+        .why-mahathi-section .intro-text {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        .why-mahathi-section .reasons-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .why-mahathi-section .reason-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .why-mahathi-section .reason-icon {
+            font-size: 28px;
+            min-width: 40px;
+            line-height: 1;
+            color: var(--sage);
+            font-weight: 700;
+        }
+
+        .why-mahathi-section .reason-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--forest);
+            letter-spacing: -0.3px;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .why-mahathi-section .reason-description {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .why-mahathi-section .mahathi-section-content {
+                gap: 60px;
+            }
+            .why-mahathi-section .mahathi-left-column h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-mahathi-section .mahathi-section-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 20px 0;
+            }
+            .why-mahathi-section .mahathi-left-column h2 {
+                font-size: 32px;
+            }
+            .why-mahathi-section .reasons-list {
+                gap: 24px;
+            }
         }
 
         /* OUTCOMES SECTION - PREMIUM */
@@ -476,256 +619,135 @@
             color: var(--text-light);
         }
 
-        /* BRONZE PARTNER SECTION - reference stats band */
-        section.bronze-section {
-            background: #0F1A2A;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-            padding: clamp(56px, 8vw, 50px) 0;
-        }
-
-        section.bronze-section::before {
-            display: none;
-        }
-
-        section.bronze-section::after {
-            display: none;
-        }
-
-        .bronze-section .container {
-            max-width: none;
-            padding: 0;
-        }
-
-        .bronze-content {
-            margin-top: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .bronze-highlights {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 0;
-            max-width: 1320px;
-            margin: 0 auto;
-            padding: 0 clamp(24px, 5vw, 60px);
-        }
-
-        .bronze-stat {
-            position: relative;
-            padding: clamp(8px, 2vw, 16px) clamp(20px, 4vw, 48px);
-            text-align: center;
-            background: none;
-            border: none;
-            border-radius: 0;
-            backdrop-filter: none;
-        }
-
-        .bronze-stat:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 10%;
-            right: 0;
-            width: 1px;
-            height: 80%;
-            background: rgba(255, 255, 255, 0.18);
-        }
-
-        .bronze-stat-number {
-            font-family: 'Aptos', 'Segoe UI', system-ui, sans-serif;
-            font-size: clamp(2.75rem, 6vw, 50px);
-            line-height: 1;
-            font-weight: 600;
-            color: var(--white);
-            margin-bottom: clamp(14px, 2vw, 20px);
-            letter-spacing: -0.03em;
-        }
-
-        .bronze-stat-value {
-            color: var(--white);
-        }
-
-        .bronze-stat-suffix {
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .bronze-stat-label {
-            font-family: 'Aptos', 'Segoe UI', system-ui, sans-serif;
-            font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
-            line-height: 1.45;
-            color: var(--white);
-            opacity: 1;
-            font-weight: 700;
-            max-width: 16rem;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 900px) {
-            .bronze-highlights {
-                grid-template-columns: 1fr;
-                gap: 0;
-                padding: 0 clamp(20px, 5vw, 32px);
-            }
-
-            .bronze-stat:not(:last-child)::after {
-                display: none;
-            }
-
-            .bronze-stat:not(:last-child) {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-                padding-bottom: clamp(32px, 6vw, 44px);
-                margin-bottom: clamp(32px, 6vw, 44px);
-            }
-
-            .bronze-stat:last-child {
-                padding-bottom: 0;
-            }
-        }
-
         /* WHY DATABRICKS SECTION */
         section.why-section {
-            background: linear-gradient(160deg, #f8faf7 0%, var(--cream) 45%, #f3f6f1 100%);
+            background: var(--cream);
             position: relative;
             overflow: hidden;
         }
 
-        section.why-section::before {
-            content: '';
-            position: absolute;
-            width: min(520px, 55vw);
-            height: min(520px, 55vw);
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(118, 163, 121, 0.12) 0%, transparent 70%);
-            top: -120px;
-            left: -80px;
-            pointer-events: none;
-        }
-
+        section.why-section::before,
         section.why-section::after {
-            content: '';
-            position: absolute;
-            width: min(400px, 40vw);
-            height: min(400px, 40vw);
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(26, 43, 60, 0.04) 0%, transparent 70%);
-            bottom: -100px;
-            right: -60px;
-            pointer-events: none;
+            display: none;
         }
 
-        section.why-section .container {
-            position: relative;
-            z-index: 1;
+        .why-section .section-header {
+            margin-bottom: 50px;
         }
 
-        .why-layout {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(28px, 4vw, 44px);
-            align-items: stretch;
-            margin-top: clamp(8px, 2vw, 16px);
-        }
-
-        .why-intro {
-            position: static;
-            max-width: 42rem;
-        }
-
-        .why-intro h2 {
-            font-family: 'Aptos', 'Segoe UI', system-ui, sans-serif;
-            font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+        .why-section .section-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 42px;
             color: var(--forest);
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
             font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            margin-bottom: clamp(16px, 2vw, 20px);
-            padding-bottom: 16px;
-            position: relative;
-        }
-        .why-intro p {
-            font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
-            line-height: 1.7;
-            color: var(--text-light);
-            max-width: none;
+            line-height: 1.2;
+            padding-bottom: 0;
         }
 
-        .why-benefits-rows {
+        .why-section .section-header h2::after {
+            display: none;
+        }
+
+        .why-section .section-intro {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        .why-section .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .why-section .feature-card {
+            padding: 28px;
+            background: var(--white);
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            gap: clamp(14px, 2vw, 20px);
-            width: 100%;
+            gap: 12px;
         }
 
-        .why-benefits-row {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: clamp(14px, 2vw, 20px);
-            margin: 0;
-            padding: 0;
+        .why-section .feature-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
         }
 
-        .why-benefits-row li {
-            margin: 0;
-            padding: clamp(18px, 2.5vw, 22px) clamp(18px, 2.5vw, 22px) clamp(18px, 2.5vw, 22px) clamp(52px, 6vw, 58px);
-            position: relative;
-            font-size: clamp(0.8125rem, 1.05vw, 0.9375rem);
-            line-height: 1.65;
-            color: var(--text-light);
-            background: rgba(255, 255, 255, 0.92);
-            border: 1px solid rgba(118, 163, 121, 0.15);
-            border-radius: 10px;
-            box-shadow: var(--shadow-sm);
-            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+        .why-section .feature-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
         }
 
-        .why-benefits-row li::before {
-            content: '✓';
-            position: absolute;
-            left: clamp(14px, 2vw, 18px);
-            top: clamp(16px, 2.2vw, 20px);
-            width: 28px;
-            height: 28px;
+        .why-section .feature-checkmark {
+            width: 32px;
+            height: 32px;
+            background: var(--sage);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 1;
             color: var(--white);
-            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
-            box-shadow: 0 4px 12px rgba(118, 163, 121, 0.25);
-        }
-
-        .why-benefits-row li:hover {
-            border-color: rgba(118, 163, 121, 0.35);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-            color: var(--text-dark);
-        }
-
-        .why-benefits-row li strong {
-            display: block;
-            color: var(--forest);
             font-weight: 700;
-            font-size: clamp(0.875rem, 1.1vw, 0.96875rem);
-            line-height: 1.35;
-            margin-bottom: 8px;
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            line-height: 1;
         }
 
-        @media (max-width: 1100px) {
-            .why-benefits-row {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+        .why-section .feature-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--forest);
+            letter-spacing: -0.3px;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .why-section .feature-description {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .why-section .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
             }
         }
 
-        @media (max-width: 640px) {
-            .why-benefits-row {
+        @media (max-width: 768px) {
+            .why-section .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            .why-section .section-header h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-section .features-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .why-section .feature-card {
+                padding: 24px;
+            }
+            .why-section .section-header h2 {
+                font-size: 26px;
+            }
+            .why-section .section-intro {
+                font-size: 14px;
             }
         }
 
@@ -888,67 +910,120 @@
         .footer-cta-card {
             max-width: 1320px;
             margin: 0 auto;
-            background: linear-gradient(135deg, #1a2834 0%, #141d26 100%);
+            background: linear-gradient(135deg, #0F1A2A 0%, #142540 100%);
             color: var(--white);
-            border-radius: 16px;
-            padding: clamp(28px, 4vw, 44px) clamp(32px, 4.5vw, 56px);
+            border-radius: 14px;
+            padding: clamp(36px, 4vw, 44px) clamp(32px, 4.5vw, 52px);
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            gap: clamp(24px, 3vw, 40px);
-            box-shadow: 0 16px 48px rgba(26, 40, 52, 0.18);
+            gap: clamp(24px, 3vw, 36px);
+            box-shadow: 0 24px 60px rgba(15, 26, 42, 0.22);
             position: relative;
+            overflow: hidden;
             z-index: 1;
+        }
+
+        .footer-cta-card::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            right: -15%;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(118, 163, 121, 0.22) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .footer-cta-card::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: 30%;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(240, 116, 61, 0.1) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         .footer-cta-text {
             flex: 1 1 280px;
             min-width: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-cta-eyebrow {
+            font-size: 12px;
+            color: var(--sage);
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: block;
         }
 
         .footer-cta h2 {
-            font-family: 'Aptos', 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Aptos', 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
             color: var(--white);
-            font-size: clamp(1.375rem, 2.4vw, 1.875rem);
+            font-size: clamp(1.5rem, 2.6vw, 1.75rem);
             font-weight: 700;
-            line-height: 1.25;
-            margin-bottom: clamp(10px, 1.5vw, 14px);
+            line-height: 1.2;
+            margin-bottom: 10px;
             letter-spacing: -0.02em;
         }
 
         .footer-cta p {
-            font-size: clamp(0.875rem, 1.15vw, 1rem);
+            font-size: clamp(0.9375rem, 1.15vw, 1rem);
             line-height: 1.6;
             margin-bottom: 0;
-            color: rgba(255, 255, 255, 0.72);
+            color: rgba(255, 255, 255, 0.78);
             max-width: 36rem;
         }
 
         .footer-cta-action {
             flex-shrink: 0;
-            background: #b8c9b0 !important;
-            color: #1a2834 !important;
+            position: relative;
+            z-index: 1;
+            background: var(--sage) !important;
+            color: var(--forest) !important;
             box-shadow: none !important;
-            border-radius: 6px;
-            padding: 14px 28px;
-            font-size: 12px;
+            border-radius: 4px;
+            padding: 18px 38px;
+            font-size: 14px;
             font-weight: 700;
-            letter-spacing: 0.08em;
+            letter-spacing: 1px;
             text-transform: uppercase;
             white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            line-height: 1;
         }
 
         .footer-cta-action::after {
-            content: ' →';
-            font-weight: 700;
+            content: none;
+        }
+
+        .footer-cta-action svg {
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
         }
 
         .footer-cta-action:hover {
-            background: #c8d8c0 !important;
-            color: #141d26 !important;
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+            background: #91B896 !important;
+            color: var(--forest) !important;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 32px rgba(118, 163, 121, 0.35) !important;
+        }
+
+        .footer-cta-action:hover svg {
+            transform: translateX(4px);
         }
 
         @media (max-width: 640px) {
@@ -958,13 +1033,20 @@
 
             .footer-cta-card {
                 flex-direction: column;
-                align-items: stretch;
-                padding: 28px 24px;
+                align-items: center;
+                text-align: center;
+                padding: 36px 28px;
+                gap: 24px;
+            }
+
+            .footer-cta-text p {
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .footer-cta-action {
                 width: 100%;
-                text-align: center;
+                justify-content: center;
                 white-space: normal;
             }
         }
@@ -996,7 +1078,7 @@
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .outcomes-cards { grid-template-columns: repeat(2, 1fr); }
             .faq-grid { gap: 8px; }
-            .challenges-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .challenges-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -1019,40 +1101,8 @@
             .section-header h2 { font-size: 32px; }
             .services-grid { grid-template-columns: 1fr; }
             .outcomes-cards { grid-template-columns: 1fr; }
-            .challenges-list { grid-template-columns: 1fr; }
-            section.challenges-section {
-                min-height: auto;
-                max-height: none;
-                overflow: visible;
-                padding: 48px 0;
-            }
+            .challenges-grid { grid-template-columns: 1fr; }
             section { padding: 50px 0; }
-        }
-
-        @media (min-width: 901px) and (max-height: 820px) {
-            .challenges-section {
-                padding: 16px 0;
-            }
-
-            .challenges-section .container {
-                gap: 10px;
-            }
-
-            .challenges-section .section-header h2 {
-                font-size: 1.5rem;
-                margin-bottom: 8px;
-                padding-bottom: 8px;
-            }
-
-            .challenges-list {
-                gap: 16px 18px;
-            }
-
-            .challenges-list li {
-                padding: 14px 18px;
-                font-size: 0.8125rem;
-                line-height: 1.5;
-            }
         }
 
         /* ====== SITE HEADER / FOOTER (shared chrome) ====== */
@@ -1280,7 +1330,7 @@
         <div class="hero-content">
             <span class="hero-badge">🏆 Databricks Bronze Partner</span>
             <h1>Enterprise Databricks Implementation & Migration Services</h1>
-            <p>Transform fragmented legacy data infrastructure into a unified, AI-ready Lakehouse. Mahathi delivers zero-downtime migrations, real-time analytics, and AI-powered intelligence for insurance carriers, healthcare payers, MGAs, and TPAs. 100+ successful Databricks implementations. 2.5B+ records migrated. 35% faster queries. Zero incidents.</p>
+            <p>Transform fragmented legacy data infrastructure into a unified, AI-ready Lakehouse. Mahathi delivers zero-downtime migrations, real-time analytics, and AI-powered intelligence for insurance carriers, healthcare payers, MGAs, and TPAs. 100+ successful Databricks implementations.</p>
         </div>
         <div class="hero-image">📊</div>
     </section>
@@ -1288,91 +1338,144 @@
     <!-- SECTION 2: INDUSTRY CHALLENGES & DATABRICKS SOLUTION -->
     <section class="challenges-section">
         <div class="container">
+            <!-- SECTION HEADER -->
             <div class="section-header">
                 <h2>Industry Challenges That Databricks Solves</h2>
-                <p>Insurance carriers and healthcare payers face critical data infrastructure gaps. Legacy warehouses create operational silos, slow decision-making, and escalate costs. Databricks transforms these challenges into competitive advantage through a unified Lakehouse architecture.</p>
+                <p class="section-intro">Insurance carriers and healthcare payers face critical data infrastructure gaps. Legacy warehouses create operational silos, slow decision-making, and escalate costs. Databricks transforms these challenges into competitive advantage through a unified Lakehouse architecture.</p>
             </div>
-            <ul class="challenges-list">
-                <li><strong>Fragmented Data Silos:</strong> Claims, eligibility, underwriting data scattered across incompatible systems. No unified source of truth. Manual data reconciliation.</li>
-                <li><strong>Slow Claims Processing:</strong> Average 15-30 day cycle times. Fraud detection remains manual. STP rates stuck below 40%. Manual workflows cost millions annually.</li>
-                <li><strong>Underwriting Blindness:</strong> Decisions made on stale data. Real-time risk assessment impossible. Competitive disadvantage against faster competitors using AI.</li>
-                <li><strong>Rising Data Costs:</strong> Separate tools for analytics, engineering, and AI. Infrastructure sprawl. Data duplication. Cloud spend 3-4x industry benchmark.</li>
-                <li><strong>Compliance & Governance Gaps:</strong> Audit trails insufficient for HIPAA/SOC 2. PII masking manual. Row/column-level access control non-existent. Regulatory risk.</li>
-                <li><strong>AI Capability Gap:</strong> No in-platform AI/ML. Manual fraud detection. Predictive pricing impossible. Competitor's chatbots outpacing internal capabilities.</li>
-            </ul>
+
+            <!-- 6 CHALLENGE CARDS -->
+            <div class="challenges-grid">
+                <article class="challenge-card">
+                    <div class="challenge-title">Fragmented Data Silos:</div>
+                    <p class="challenge-description">Claims, eligibility, underwriting data scattered across incompatible systems. No unified source of truth. Manual data reconciliation wastes time and creates inconsistencies.</p>
+                </article>
+                <article class="challenge-card">
+                    <div class="challenge-title">Slow Claims Processing:</div>
+                    <p class="challenge-description">Average 15-30 day cycle times. Fraud detection remains manual. STP rates stuck below 40%. Manual workflows cost millions annually in operational overhead.</p>
+                </article>
+                <article class="challenge-card">
+                    <div class="challenge-title">Underwriting Blindness:</div>
+                    <p class="challenge-description">Decisions made on stale data updated daily. Real-time risk assessment impossible. Competitive disadvantage against faster competitors using AI-driven pricing.</p>
+                </article>
+                <article class="challenge-card">
+                    <div class="challenge-title">Rising Data Costs:</div>
+                    <p class="challenge-description">Separate tools for analytics, engineering, and AI. Infrastructure sprawl. Data duplication across systems. Cloud spend 3-4x industry benchmark.</p>
+                </article>
+                <article class="challenge-card">
+                    <div class="challenge-title">Compliance &amp; Governance Gaps:</div>
+                    <p class="challenge-description">Audit trails insufficient for HIPAA/SOC 2. PII masking manual. Row/column-level access control non-existent. Regulatory risk from exam findings on data governance.</p>
+                </article>
+                <article class="challenge-card">
+                    <div class="challenge-title">AI Capability Gap:</div>
+                    <p class="challenge-description">No in-platform AI/ML. Manual fraud detection. Predictive pricing impossible. Generative AI for documentation non-existent. Competitors' chatbots outpacing internal capabilities.</p>
+                </article>
+            </div>
         </div>
     </section>
 
-    <!-- SECTION 4: DATABRICKS IMPLEMENTATION SERVICES -->
+    <!-- SECTION 4: MAHATHI CORE DATABRICKS CAPABILITIES -->
     <section id="services">
         <div class="container">
             <div class="section-header">
-                <h2>End-to-End Databricks Service Offering</h2>
-                <p>Complete Databricks implementation services covering discovery, architecture, migration, governance, and ongoing optimization. From warehouse-to-lakehouse transformation to AI-powered analytics.</p>
+                <h2>Mahathi Core Databricks Capabilities</h2>
+                <!-- <p>Six proven competencies built on 100+ implementations, 15+ certified consultants, and a relentless focus on transforming insurance and healthcare data operations into competitive advantage.</p> -->
             </div>
             <div class="services-grid">
+                <!-- Card 1: Zero-Downtime Migration -->
                 <div class="service-card">
                     <div class="service-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
                     </div>
                     <h3>Zero-Downtime Data Migration</h3>
-                    <p>Warehouse-to-lakehouse transformation using CDC (Change Data Capture). 2.5+ billion records migrated without business interruption. 8-12 week implementation. Bi-directional sync during cutover. Automated validation. Zero data loss.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    <p>Enterprise-scale warehouse-to-lakehouse migrations without business interruption. We've migrated 2.5B+ records using Change Data Capture (CDC) with bi-directional sync during cutover, ensuring claims processing continues uninterrupted while you transition to Databricks.</p>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">8-12 week implementation timeline</span>
                     </div>
-                    <h3>Enterprise Data Ingestion & ETL</h3>
-                    <p>Ingest APIs, databases, SaaS platforms (Salesforce, Epic, Workday). Claims data, eligibility records, underwriting information. Unlimited throughput. Quality validation. Real-time and batch modes. Change tracking. Automated error handling.</p>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">Zero data loss, zero incidents</span>
+                    </div>
                 </div>
+                <!-- Card 2: Real-Time Analytics -->
                 <div class="service-card">
                     <div class="service-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-6"/><path d="M22 20V8"/></svg>
                     </div>
-                    <h3>Real-Time Analytics & BI</h3>
-                    <p>Sub-second dashboards on terabyte-scale data. Claims adjusters access live KPIs. Underwriters make real-time decisions. Executive dashboards refresh every minute. SQL query performance 10x faster than legacy systems.</p>
+                    <h3>Real-Time Analytics &amp; Intelligence</h3>
+                    <p>Sub-second dashboards on terabyte-scale data. Claims adjusters access live KPIs instantly. Underwriters make real-time decisions. Our implementation enables executive dashboards refreshing every minute, transforming raw data into actionable intelligence for your entire organization.</p>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">10x faster query performance</span>
+                    </div>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">Sub-second dashboard refresh</span>
+                    </div>
                 </div>
+                <!-- Card 3: AI & Predictive Intelligence -->
                 <div class="service-card">
                     <div class="service-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 15a3 3 0 0 0 6 0"/></svg>
                     </div>
-                    <h3>AI & Machine Learning at Scale</h3>
-                    <p>Fraud detection models, claims triage, predictive pricing, risk adjustment. Generative AI for documentation. Built-in AI features. Claims copilots. Underwriting assistants. Real-time predictions on millions of records.</p>
+                    <h3>AI &amp; Predictive Intelligence</h3>
+                    <p>Fraud detection models, claims triage automation, predictive pricing, and risk adjustment—all built on Databricks Foundation Models. We implement generative AI for documentation, create claims copilots, and build underwriting assistants that learn from your historical data to predict outcomes with 92%+ accuracy.</p>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">92% fraud detection accuracy</span>
+                    </div>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">Real-time predictions on millions of records</span>
+                    </div>
                 </div>
+                <!-- Card 4: Enterprise Governance -->
                 <div class="service-card">
                     <div class="service-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
                     </div>
-                    <h3>Governance, Compliance & Security</h3>
-                    <p>Unity Catalog for data governance. PII masking. Column/row-level access control. HIPAA/SOC 2/GDPR compliance built-in. Encryption in transit and at rest. Comprehensive audit trails. Identity federation with your SSO.</p>
+                    <h3>Enterprise Governance &amp; Compliance</h3>
+                    <p>Unity Catalog provides unified data governance across workspaces. We implement PII masking, column/row-level access control, and comprehensive audit trails. HIPAA, SOC 2, and GDPR compliance built-in from day one. Your data remains secure while enabling democratized analytics access across teams.</p>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">Automated PII detection &amp; masking</span>
+                    </div>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">Complete audit trails for compliance</span>
+                    </div>
                 </div>
+                <!-- Card 5: Data Integration & ETL -->
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3>Enterprise-Scale Data Integration</h3>
+                    <p>Seamless ingestion from APIs, databases, and SaaS platforms (Salesforce, Epic, Workday). Claims data, eligibility records, underwriting information—all flowing in real-time with quality validation. We architect unlimited throughput pipelines with automated error handling and change tracking that adapt to your growing data volume.</p>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">Real-time &amp; batch ingestion modes</span>
+                    </div>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">Automated quality validation</span>
+                    </div>
+                </div>
+                <!-- Card 6: Managed Operations -->
                 <div class="service-card">
                     <div class="service-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
                     </div>
-                    <h3>Managed Databricks Services</h3>
-                    <p>End-to-end platform management. 24/7 monitoring and support. Performance tuning. Security patches. Cluster optimization. Cost management. We manage infrastructure—you focus on business value. SLA-backed.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 8: BRONZE PARTNER -->
-    <section id="bronze" class="bronze-section">
-        <div class="container">
-            <div class="bronze-content">
-                <div class="bronze-highlights">
-                    <div class="bronze-stat">
-                        <div class="bronze-stat-number"><span class="bronze-stat-value">15</span><span class="bronze-stat-suffix">+</span></div>
-                        <div class="bronze-stat-label">Certified Databricks Consultants</div>
+                    <h3>Managed Databricks Operations</h3>
+                    <p>End-to-end platform management so you focus on business value. 24/7 monitoring, performance tuning, security patches, cluster optimization, cost management. We handle infrastructure upgrades without service interruption, conduct quarterly health checks, and proactively optimize based on usage patterns. SLA-backed support with dedicated Mahathi engineers.</p>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">24/7 proactive monitoring &amp; support</span>
                     </div>
-                    <div class="bronze-stat">
-                        <div class="bronze-stat-number"><span class="bronze-stat-value">100</span><span class="bronze-stat-suffix">+</span></div>
-                        <div class="bronze-stat-label">Successful Implementations</div>
-                    </div>
-                    <div class="bronze-stat">
-                        <div class="bronze-stat-number"><span class="bronze-stat-value">2.5B</span><span class="bronze-stat-suffix">+</span></div>
-                        <div class="bronze-stat-label">Records Migrated</div>
+                    <div class="service-metric">
+                        <span class="metric-icon">✓</span>
+                        <span class="metric-text">60-70% cost savings vs. legacy warehouses</span>
                     </div>
                 </div>
             </div>
@@ -1382,23 +1485,110 @@
     <!-- SECTION 5: WHY DATABRICKS -->
     <section id="why" class="why-section">
         <div class="container">
-            <div class="why-layout">
-                <div class="why-intro">
-                    <h2>Why Databricks for Insurance & Healthcare</h2>
-                    <p>Databricks Lakehouse Platform uniquely addresses the data infrastructure needs of insurers and healthcare payers.</p>
+            <div class="section-header">
+                <h2>Why Databricks for Insurance &amp; Healthcare</h2>
+                <p class="section-intro">Databricks Lakehouse Platform uniquely addresses the data infrastructure needs of insurers and healthcare payers—delivering unified architecture, real-time intelligence, and enterprise compliance at a fraction of legacy warehouse costs.</p>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-checkmark">✓</div>
+                        <h3 class="feature-title">Unified Architecture</h3>
+                    </div>
+                    <p class="feature-description">Single platform for BI, ML, and data engineering eliminates tool sprawl. Consolidate from 5-7 separate systems into one. Reduce infrastructure complexity and operational overhead.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-checkmark">✓</div>
+                        <h3 class="feature-title">Enterprise Scale</h3>
+                    </div>
+                    <p class="feature-description">Handle 2.5B+ records with sub-second query response. Process terabyte-scale datasets instantly. Scale from millions to billions of records without performance degradation.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-checkmark">✓</div>
+                        <h3 class="feature-title">Real-Time Intelligence</h3>
+                    </div>
+                    <p class="feature-description">Live dashboards refresh every minute. Streaming data ingestion from claims, eligibility, and underwriting systems. Real-time fraud detection and instant underwriting decisions.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-checkmark">✓</div>
+                        <h3 class="feature-title">Built-In AI/ML</h3>
+                    </div>
+                    <p class="feature-description">Databricks Foundation Models pre-installed. LLMOps, prompt engineering, model versioning native. No separate ML platform needed. Fraud detection and predictive pricing out-of-box.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-checkmark">✓</div>
+                        <h3 class="feature-title">Cost Efficiency</h3>
+                    </div>
+                    <p class="feature-description">3-5x cheaper than legacy data warehouses (Redshift, Snowflake). Shared compute across BI and analytics. Automatic scaling means pay only for what you use. Average $400K annual savings.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-checkmark">✓</div>
+                        <h3 class="feature-title">Compliance by Design</h3>
+                    </div>
+                    <p class="feature-description">Unity Catalog provides governance across workspaces. Built-in PII detection and masking. Row/column-level security controls. Complete audit trails for HIPAA, SOC 2, GDPR compliance.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-checkmark">✓</div>
+                        <h3 class="feature-title">Zero-Downtime Upgrades</h3>
+                    </div>
+                    <p class="feature-description">Platform updates without service interruption. Disaster recovery built-in. Multi-region failover. Your claims processing and analytics run 24/7 with no manual intervention.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-checkmark">✓</div>
+                        <h3 class="feature-title">Certified Partnership</h3>
+                    </div>
+                    <p class="feature-description">Mahathi is an official Databricks Bronze Partner. 100+ implementations, 15+ certified consultants, 2.5B+ records migrated, 0 production incidents. Deep insurance and healthcare expertise.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE MAHATHI -->
+    <section class="why-mahathi-section" id="why-mahathi">
+        <div class="container">
+            <div class="mahathi-section-content">
+                <div class="mahathi-left-column">
+                    <h2>Why Choose Mahathi for Databricks Implementation</h2>
+                    <!-- <p class="intro-text">Mahathi is an official Databricks Bronze Partner with 100+ successful implementations. We've migrated 2.5B+ records with zero production incidents. Our 15+ certified consultants specialize in insurance and healthcare data operations—we understand your business, not just the technology.</p> -->
                 </div>
-                <div class="why-benefits-rows">
-                    <ul class="why-benefits-row">
-                        <li><strong>Unified Architecture:</strong> Single platform for BI, ML, and data engineering eliminates tool sprawl and reduces infrastructure costs</li>
-                        <li><strong>Enterprise Scale:</strong> Handle 2.5B+ records with sub-second query response. Terabyte-scale analytics instantly</li>
-                        <li><strong>Real-Time Intelligence:</strong> Live dashboards. Streaming data ingestion. Real-time fraud detection and underwriting decisions</li>
-                        <li><strong>Built-In AI/ML:</strong> Databricks Foundation Models. LLMOps. Prompt engineering. No need for separate ML platform</li>
-                    </ul>
-                    <ul class="why-benefits-row">
-                        <li><strong>Cost Efficiency:</strong> 3-5x cheaper than legacy data warehouses. Shared compute across BI and analytics. Automatic scaling</li>
-                        <li><strong>Compliance by Design:</strong> Unity Catalog for governance. Built-in PII protection. Row/column-level security. Full audit trails</li>
-                        <li><strong>Zero-Downtime Upgrades:</strong> Platform updates without service interruption. Disaster recovery built-in</li>
-                        <li><strong>Certified Partnership:</strong> Mahathi is an official Databricks Bronze Partner with deep implementation expertise</li>
+                <div class="mahathi-right-column">
+                    <ul class="reasons-list">
+                        <li class="reason-item">
+                            <div class="reason-icon">✓</div>
+                            <div class="reason-content">
+                                <div class="reason-title">Certified Bronze Partner</div>
+                                <p class="reason-description">Official Databricks partnership. Recognized expertise and ongoing commitment to latest innovations.</p>
+                            </div>
+                        </li>
+                        <li class="reason-item">
+                            <div class="reason-icon">✓</div>
+                            <div class="reason-content">
+                                <div class="reason-title">100+ Proven Implementations</div>
+                                <p class="reason-description">Successful deployments across insurance, healthcare, finance. 2.5B+ records migrated. Zero-downtime, zero-incident track record.</p>
+                            </div>
+                        </li>
+                        <li class="reason-item">
+                            <div class="reason-icon">✓</div>
+                            <div class="reason-content">
+                                <div class="reason-title">Industry Deep Expertise</div>
+                                <p class="reason-description">15+ certified Databricks consultants. Specialists in claims processing, compliance, underwriting, and regulatory requirements.</p>
+                            </div>
+                        </li>
+                        <li class="reason-item">
+                            <div class="reason-icon">✓</div>
+                            <div class="reason-content">
+                                <div class="reason-title">Managed Services &amp; Support</div>
+                                <p class="reason-description">24/7 monitoring, performance optimization, security patches. We manage infrastructure—you focus on business outcomes.</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1410,7 +1600,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Proven Customer Outcomes</h2>
-                <p>Real results from Databricks implementations in insurance, healthcare, and related industries.</p>
+                <!-- <p>Real results from Databricks implementations in insurance, healthcare, and related industries.</p> -->
             </div>
             <div class="outcomes-cards">
                 <div class="outcome-card">
@@ -1428,6 +1618,21 @@
             </div>
         </div>
     </section>
+    <!-- SECTION 11: FOOTER CTA -->
+    <section class="footer-cta">
+        <div class="footer-cta-card">
+            <div class="footer-cta-text">
+                <span class="footer-cta-eyebrow">Get in Touch</span>
+                <h2>Speak to our team</h2>
+                <p>Interested in learning more about our offerings? Our solutions specialists are ready to help.</p>
+            </div>
+            <a href="/contact-us/" class="footer-cta-action">
+                Get in Touch
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </section>
+
 
     <!-- SECTION 10: FAQ -->
     <section id="faq" class="faq-section">
@@ -1497,16 +1702,7 @@
         </div>
     </section>
 
-    <!-- SECTION 11: FOOTER CTA -->
-    <section class="footer-cta">
-        <div class="footer-cta-card">
-            <div class="footer-cta-text">
-                <h2>Ready to Modernize Your Data Platform?</h2>
-                <p>Schedule a 30-minute consultation with a Databricks specialist. We'll assess your current infrastructure, identify quick wins, and outline a phased implementation roadmap with cost projections.</p>
-            </div>
-            <a href="mailto:databricks@mahathiinfotech.com?subject=Databricks%20Implementation%20Consultation" class="btn btn-primary footer-cta-action">Schedule Consultation</a>
-        </div>
-    </section>
+
 
 <!-- ====== FOOTER ====== -->
 <footer class="site-footer">
