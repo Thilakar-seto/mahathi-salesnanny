@@ -3,6 +3,14 @@
  * <app-header> — converted from src/app/sharedComponents/header/header.component.html
  */
 if (!defined('ABSPATH')) { exit; }
+
+// "Resources" menu (desktop dropdown + mobile accordion). Blog is the company blog the site already links to
+// (the articles are listed on our own /blog page); Tools is the PAS Migration Problem Finder, the site's first tool.
+$mh_resources = array(
+    array('label' => 'News',  'url' => mh_url('/news'),                          'desc' => 'Company announcements, awards and milestones.',                                   'external' => false, 'active' => mh_active('/news', true)),
+    array('label' => 'Blog',  'url' => mh_url('/blog'),                          'desc' => 'Insights and perspectives on insurance, healthcare and technology.',               'external' => false, 'active' => mh_active('/blog', true)),
+    array('label' => 'Tools', 'url' => mh_url('/pas-migration-problem-finder'),  'desc' => 'Interactive assessments, starting with the PAS Migration Problem Finder.',        'external' => false, 'active' => mh_active('/pas-migration-problem-finder', true)),
+);
 ?>
 <section class="page-block-section page-header<?= mh_cls($headerClass) ?>" id="page-block-header">
   <div class="mobile-header-top d-lg-none">
@@ -331,9 +339,35 @@ if (!defined('ABSPATH')) { exit; }
                       </div>
                     </div>
                   </div></li>
-                <li class="nav-item"><a href="<?= esc_url(mh_url('/news')) ?>" class="nav-link<?= mh_active('/news', true) ? ' active' : '' ?>">
-                    <p>News</p>
-                  </a></li>
+                <li class="nav-item ct-mega-dropdown" style="cursor:pointer;opacity: 0.95;" id="megaMenuToggler" data-toggle="collapse" data-target="#ResourcesMenu"><a class="nav-link">
+                    <p>Resources</p>
+                  </a><div class="dropdown-menu ct-mega-menu px-0 py-0 py-lg-0 smart-mega-animate" id="ResourcesMenu">
+                    <div class="container mb-5 smart-mega-inner" style="min-height: auto;">
+                      <div class="row">
+                        <div class="col-md-8 col-lg-8 text-left py-0 border-right">
+                          <div class="row">
+                            <div class="col-md-8 col-lg-8 py-3">
+                              <h2 class="text-left"><strong>Resources:</strong></h2>
+                              <p class="text-left">News, insights and tools from Mahathi to help you plan with confidence.</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <?php foreach ($mh_resources as $item) : ?>
+                              <div data-href="<?= esc_url($item['url']) ?>"<?= $item['external'] ? ' data-target="_blank"' : '' ?> class="col-md-6 col-lg-6 py-3 our_solution_box">
+                                <h4 class="text-left" style="color: #76A379;"><b><a href="<?= esc_url($item['url']) ?>"<?= $item['external'] ? ' target="_blank" rel="noopener noreferrer"' : '' ?> style="color: inherit; text-decoration: none;"><?= esc_html($item['label']) ?><?php if ($item['external']) : ?><span class="mh-res-sr"> (opens in a new tab)</span><?php endif; ?></a></b></h4>
+                                <p class="text-left"><?= esc_html($item['desc']) ?></p>
+                              </div>
+                            <?php endforeach; ?>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 py-3 text-left">
+                          <div class="row">
+                            <div class="col-lg-12 py-0"><img class="mb-4" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;" src="<?= mh_asset_url('images/news_Banner.jpg') ?>" alt="Mahathi team at work"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div></li>
                 <li class="nav-item"><a href="<?= esc_url(mh_url('/about-us')) ?>" class="nav-link<?= mh_active('/about-us', false) ? ' active' : '' ?>">
                     <p>About us</p>
                   </a></li>
@@ -371,8 +405,10 @@ if (!defined('ABSPATH')) { exit; }
             <li class="nav-item level-1-nav">
               <div class="container"><a href="<?= esc_url(mh_url('/digital-services')) ?>" class="nav-link"> DIGITAL SERVICES </a></div>
             </li>
+            <?php /* No "active" class here: the site's active style is green text, which is invisible on the green mobile menu. */ ?>
             <li class="nav-item level-1-nav">
-              <div class="container"><a href="<?= esc_url(mh_url('/news')) ?>" class="nav-link"> News </a></div>
+              <div class="container mobile-main" data-mh-action="toggleMobileSub" data-mh-args="<?= esc_attr(wp_json_encode(['resources'])) ?>"><a class="nav-link">Resources</a><i class="fas fa-chevron-down"></i></div>
+              <div class="mobile-submenu" data-mh-submenu="resources" hidden><?php foreach ($mh_resources as $item) : ?><a href="<?= esc_url($item['url']) ?>"<?= $item['external'] ? ' target="_blank" rel="noopener noreferrer"' : '' ?>><?= esc_html($item['label']) ?></a><?php endforeach; ?></div>
             </li>
             <li class="nav-item level-1-nav">
               <div class="container"><a href="<?= esc_url(mh_url('/about-us')) ?>" class="nav-link"> About us </a></div>

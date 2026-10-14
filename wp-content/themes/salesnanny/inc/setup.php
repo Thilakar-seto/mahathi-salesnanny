@@ -133,6 +133,11 @@ add_action(
 			)
 		);
 
+		// Blog page: filter / search / load-more / newsletter script.
+		if ( '/blog' === mh_current_route() ) {
+			wp_enqueue_script( 'mh-blog', $uri . 'js/blog.js', array(), mh_asset_ver( 'js/blog.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+		}
+
 		// PAS Migration Problem Finder: the tool's scripts (footer, after #app exists). It uses the site's own
 		// Poppins (css/fonts.css: 400/600/700) — no extra font files.
 		if ( '/pas-migration-problem-finder' === mh_current_route() ) {

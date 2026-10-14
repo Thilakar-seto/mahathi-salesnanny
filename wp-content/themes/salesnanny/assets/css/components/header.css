@@ -661,3 +661,8 @@
         display: block;
     }
 }
+
+/* ---- "Resources" menu ------------------------------------------------------------------------
+ * Uses the site's own mega-menu markup and styles (li.ct-mega-dropdown > .ct-mega-menu.smart-mega-animate),
+ * so opening, animation, closing and mobile behaviour all come from the existing header code. */
+#page-block-header .mh-res-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

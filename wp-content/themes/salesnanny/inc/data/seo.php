@@ -728,6 +728,13 @@ return [
         'rawTitle' => true,
         'schemas' => [],
     ],
+    '/blog' => [
+        'title' => 'Insurance & Healthcare Tech Insights | Mahathi',
+        'description' => 'Expert insights on Guidewire migration, P&C, Workers’ Comp, healthcare claims, and AI-driven automation for insurance and healthcare enterprises.',
+        'image' => null,
+        'rawTitle' => true,
+        'schemas' => [],
+    ],
     '/pas-migration-problem-finder' => [
         'title' => 'PAS Migration Problem Finder | Mahathi',
         'description' => 'Find where your policy administration system (PAS) migration is most at risk. Select the problems you face and get a ranked plan across seven core migration areas in about two minutes.',

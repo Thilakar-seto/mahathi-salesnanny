@@ -38,6 +38,7 @@ return [
         '/resources' => 'resources-list',
         '/faq-insurance-healthcare-guidewire-ai-modernization' => 'faq-page',
         '/pas-migration-problem-finder' => 'pas-finder',
+        '/blog' => 'blog',
     ],
     'redirects' => [
         '/header' => '/',
@@ -81,5 +82,6 @@ return [
         'resources-list' => 'app-resources-list',
         'faq-page' => 'app-faq-page',
         'pas-finder' => 'app-pas-finder',
+        'blog' => 'app-blog',
     ],
 ];

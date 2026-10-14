@@ -49,4 +49,5 @@ return [
     '/resources' => ['resources-list'],
     '/faq-insurance-healthcare-guidewire-ai-modernization' => ['faq-page', 'faq-accordion', 'contact-popup'],
     '/pas-migration-problem-finder' => ['pas-finder'],
+    '/blog' => ['blog'],
 ];

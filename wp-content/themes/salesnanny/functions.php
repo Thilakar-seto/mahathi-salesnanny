@@ -13,6 +13,7 @@
  *   inc/leads.php    lead dashboard back end: submissions table, notes, access, AJAX, CSV export
  *   inc/whatsapp.php new leads posted to a WhatsApp group (Green API; credentials in wp-config-secrets.php)
  *   inc/pas-finder.php  PAS Migration Problem Finder tool: scoring, results e-mail, lead capture
+ *   inc/blog.php     /blog page: articles read from the company blog (cached) + newsletter sign-up
  *   inc/routes.php, inc/styles.php, inc/data/*.php   route, CSS and content data
  *
  * Everything below the includes is the pre-existing back end that is kept as
@@ -33,6 +34,7 @@ require_once MH_THEME_DIR . '/inc/contact.php';
 require_once MH_THEME_DIR . '/inc/leads.php';
 require_once MH_THEME_DIR . '/inc/whatsapp.php';
 require_once MH_THEME_DIR . '/inc/pas-finder.php';
+require_once MH_THEME_DIR . '/inc/blog.php';
 
 
 // ─────────────────────────────────────────────
