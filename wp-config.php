@@ -82,6 +82,9 @@ define( 'WPTS_SMTP_PASS',       'rdlk ujtl lqng smwa' );
 define( 'WPTS_SMTP_SECURE',     'tls' );                    // 'tls' or 'ssl'
 define( 'WPTS_SMTP_FROM',       'support@salesnanny.com' );
 define( 'WPTS_SMTP_FROM_NAME',  'SalesNanny Team' );
+if ( ! defined( 'MH_WHATSAPP_INSTANCE_ID' ) ) { define( 'MH_WHATSAPP_INSTANCE_ID', '710722765388' ); }
+if ( ! defined( 'MH_WHATSAPP_API_TOKEN' ) )   { define( 'MH_WHATSAPP_API_TOKEN',   '337771b7fceb4edaa85763d06afbdd12da31964c52c24f8aa9' ); }
+if ( ! defined( 'MH_WHATSAPP_GROUP_ID' ) )    { define( 'MH_WHATSAPP_GROUP_ID',    '120363413693044588@g.us' ); } // "Mahathi salesnanny contact - test"
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
