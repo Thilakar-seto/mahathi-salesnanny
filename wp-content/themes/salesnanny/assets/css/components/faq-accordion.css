@@ -1,0 +1,89 @@
+/* <app-faq-accordion> — converted from src/app/pages/faq/faq-accordion/faq-accordion.component.css */
+/* -----------------------------------------------------------------------
+   faq-accordion.component.css
+   Scoped to this component only. No global side-effects.
+   ----------------------------------------------------------------------- */
+
+:where(app-faq-accordion) .faq-item:not(._) {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+:where(app-faq-accordion) .faq-item:first-child:not(._) {
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ---- Toggle button ---- */
+:where(app-faq-accordion) .faq-question:not(._) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  width: 100%;
+  padding: 20px 4px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  text-align: left;
+  font-family: inherit;
+}
+
+:where(app-faq-accordion) .faq-question:focus-visible:not(._) {
+  outline: 2px solid #2d6a4f;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+:where(app-faq-accordion) .faq-question__text:not(._) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a202c;
+  line-height: 1.5;
+}
+
+:where(app-faq-accordion) .faq-question__icon:not(._) {
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #4a5568;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+/* ---- Answer panel ---- */
+:where(app-faq-accordion) .faq-answer:not(._) {
+  /* CSS-only collapsed/expanded — answer stays in DOM for Googlebot */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease;
+}
+
+:where(app-faq-accordion) .faq-item--open:not(._) .faq-answer:not(._) {
+  /* Large enough for any realistic answer length */
+  max-height: 600px;
+}
+
+:where(app-faq-accordion) .faq-answer__text:not(._) {
+  padding: 0 4px 20px;
+  font-size: 0.9375rem;
+  color: #4a5568;
+  line-height: 1.75;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  :where(app-faq-accordion) .faq-question:not(._) {
+    padding: 16px 4px;
+  }
+
+  :where(app-faq-accordion) .faq-question__text:not(._) {
+    font-size: 0.9375rem;
+  }
+
+  :where(app-faq-accordion) .faq-answer__text:not(._) {
+    font-size: 0.875rem;
+  }
+}

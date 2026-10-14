@@ -1,31 +1,26 @@
 <?php
 /**
- * Main template file
+ * Fallback template for WordPress-managed content (pages / posts that are not
+ * part of the Mahathi route table). Rendered inside the regular site chrome.
+ *
+ * @package Mahathi
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+get_header();
 ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title('|', true, 'right'); ?></title>
-    <?php wp_enqueue_scripts(); ?>
-</head>
-<body>
-    <main>
-        <?php
-        if (have_posts()) :
-            while (have_posts()) :
-                the_post();
-                ?>
-                <article>
-                    <h1><?php the_title(); ?></h1>
-                    <?php the_content(); ?>
-                </article>
-                <?php
-            endwhile;
-        endif;
-        ?>
-    </main>
-</body>
-</html>
+<main class="mh-content container py-5" style="min-height: 50vh;">
+	<?php if ( have_posts() ) : ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<article <?php post_class(); ?>>
+				<h1><?php the_title(); ?></h1>
+				<?php the_content(); ?>
+			</article>
+		<?php endwhile; ?>
+	<?php endif; ?>
+</main>
+<?php
+get_footer();

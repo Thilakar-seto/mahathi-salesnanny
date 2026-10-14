@@ -443,4 +443,3 @@ class WPTS_Google_Meet_API {
         return true;
     }
 }
-?> 

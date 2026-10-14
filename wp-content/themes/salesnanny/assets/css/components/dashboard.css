@@ -1,0 +1,1075 @@
+/* <app-dashboard> — converted from src/app/dashboard/dashboard.component.css */
+:where(app-dashboard) .wedeliver:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+:where(app-dashboard) .drive:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  margin-top: 5rem !important;
+  margin-bottom: 6rem !important;
+}
+
+:where(app-dashboard) h2.celebration-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-size: 36px !important;
+  font-weight: 100 !important;
+  line-height: 3.5rem !important;
+  color: #333333 !important;
+}
+
+:where(app-dashboard) .margins_mahathi:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  margin: 4rem 0 3.6rem 0 !important;
+}
+
+:where(app-dashboard) .highlight-pop:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: inline-block;
+  padding: 0px 14px;
+  margin: 0 6px;
+  letter-spacing: 0.5px;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+:where(app-dashboard) .slick-slider__category-menu-container__category-menu-item__text-item:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  text-align: center;
+  line-height: 1.3;
+}
+
+:where(app-dashboard) .text-begonia:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-size: 30px;
+}
+
+:where(app-dashboard) .slick-slider__category-menu-container__category-menu-item__menu_seperator:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-weight: bolder;
+  font-size: 29px;
+}
+
+:where(app-dashboard) .intro-test-right:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  border-radius: 12px 0px 0px 12px;
+}
+
+:where(app-dashboard) .impact-outer:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: #bfbfbf8e !important;
+}
+
+:where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: #FFF !important;
+  border: 1px solid #eceaea;
+  border-radius: 0px 30% 0px 30%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+}
+
+
+:where(app-dashboard) .bigsection-heading:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-size: 30px;
+}
+
+:where(app-dashboard) .font-weight-light:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-size: 20px;
+}
+
+:where(app-dashboard) .intro-test-right:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  border-radius: 12px 0px 0px 12px;
+}
+
+:where(app-dashboard) .davies-service-grid:not(._) .intro-test-right:not(._) .test-overlay-content:not(._) .test-overlay-div:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  height: 4.5rem;
+}
+
+:where(app-dashboard) .intro-test-right:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+:where(app-dashboard) .dg-home-intro:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) #home-intro:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  min-height: 100vh;
+}
+
+:where(app-dashboard) .intro-test-right:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  min-height: 100vh;
+}
+
+:where(app-dashboard) .test-overlay-content:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+:where(app-dashboard) .dashboard-grid-layout:not(._) .solution-grid-cards:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  max-width: 100%;
+}
+
+:where(app-dashboard) .dashboard-tab-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  padding: 13px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+:where(app-dashboard) .arrow-button:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 12px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:where(app-dashboard) .arrow-button:not(._) svg:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  width: 38px;
+  height: 38px;
+  transition: transform 0.2s ease;
+}
+
+:where(app-dashboard) .arrow-button:hover:not(._) svg:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  transform: scale(1.1);
+}
+
+:where(app-dashboard) .arrow-button:disabled:not(._) svg:not(._) path:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  fill: #ccc;
+}
+
+:where(app-dashboard) .solution-grid-container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+:where(app-dashboard) .dashboard-grid-layout:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  justify-content: center;
+  gap: 16px;
+}
+
+:where(app-dashboard) .slick-slider__category-menu-container__list:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+:where(app-dashboard) .menu-item-hover:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+:where(app-dashboard) .menu-item-hover:hover:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: rgba(118, 163, 121, 0.15);
+  color: #B55A6B;
+  font-weight: 500;
+  transform: scale(1.05);
+}
+
+:where(app-dashboard) .menu-item-hover:hover:not(._) svg:not(._) path:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  fill: #f1bae3;
+  filter: brightness(0.9);
+}
+
+:where(app-dashboard) .menu-separator:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  cursor: default;
+  padding: 0 8px;
+  color: #fff;
+}
+
+:where(app-dashboard) .menu-separator:hover:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: transparent !important;
+  color: #999 !important;
+  transform: none !important;
+}
+
+:where(app-dashboard) .intro-test-right:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  border-radius: 12px 0px 0px 12px;
+}
+
+:where(app-dashboard) .davies-service-grid:not(._) .intro-test-right:not(._) .test-overlay-content:not(._) .test-overlay-div:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  height: 4.5rem;
+}
+
+:where(app-dashboard) .intro-test-right:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+:where(app-dashboard) .dg-home-intro:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) #home-intro:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  min-height: 100vh;
+}
+
+:where(app-dashboard) .intro-test-right:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  min-height: 100vh;
+}
+
+:where(app-dashboard) .test-overlay-content:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+:where(app-dashboard) .dashboard-grid-layout:not(._) .solution-grid-cards:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  max-width: 100%;
+}
+
+:where(app-dashboard) .dashboard-tab-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  padding: 13px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+:where(app-dashboard) .solution-grid-container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+:where(app-dashboard) .dashboard-grid-layout:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: #76A379;
+}
+
+:where(app-dashboard) .arrow-icon-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: #76A379;
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:where(app-dashboard) .arrow-button:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 12px;
+  padding: 0;
+}
+
+:where(app-dashboard) .arrow-icon-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: #76A379;
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:where(app-dashboard) .arrow-button:not(._) svg:not(._) path:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  fill: #B55A6B;
+}
+
+:where(app-dashboard) .arrow-button:hover:not(._) .arrow-icon-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: #fff;
+}
+
+:where(app-dashboard) .arrow-button:hover:not(._) svg:not(._) path:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  fill: #B55A6B;
+}
+
+:where(app-dashboard) .underline_cls1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: inline-block;
+  background-image: url("../../images/Underline_img.png");
+  background-repeat: repeat-x;
+  background-position: 0 1.1em;
+  background-size: auto 6px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+}
+
+/* old colour #C1A5BB48 */
+:where(app-dashboard) .menu-item-hover:hover:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  color: #fff;
+  background-color: #8F3E4F48 !important;
+  opacity: 0.8;
+}
+
+/* old colour #ffcbf2  */
+:where(app-dashboard) .slick-slider__category-menu-container__category-menu-item__text-item:hover:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  cursor: pointer;
+  color: #ffffff !important;
+  border-top: 4px solid #8F3E4F !important;
+  transition: 0.1s;
+}
+
+:where(app-dashboard) .dg-home-intro:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) #home-intro:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  min-height: 0vh !important;
+}
+
+:where(app-dashboard) .banner_h1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 28px !important;
+  line-height: 1.25;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  max-width: 100%;
+}
+
+:where(app-dashboard) .banner_h4:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-size: 16px !important;
+}
+
+:where(app-dashboard) .slick-slide:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .slick-slide:not(._) > div:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .slide:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .banner-carousel-item-inner-content:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+:where(app-dashboard) .banner-carousel-item-inner:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  flex-wrap: wrap !important;
+}
+
+:where(app-dashboard) #page-block-ec-panel:not(._) img:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  max-width: 100%;
+  height: auto;
+}
+
+:where(app-dashboard) .editor-col:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  justify-content: center;
+}
+
+:where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  width: 100%;
+}
+
+:where(app-dashboard) h2:not(._) .weare:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  text-align: center !important;
+  line-height: 3.5rem !important;
+}
+
+:where(app-dashboard) .dashboard-white-section:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: #ffffff;
+  min-height: 0 !important;
+}
+
+:where(app-dashboard) .dashboard-green-section:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  background-color: #76A379;
+}
+
+:where(app-dashboard) .dashboard-heading:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+:where(app-dashboard) .dashboard-bottom-spacing:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  margin: 5rem 0 6.7rem 0;
+}
+
+:where(app-dashboard) h2.celebration-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 3.5rem;
+  color: #333333;
+}
+
+:where(app-dashboard) .impact-card-container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-row:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+:where(app-dashboard) .impact-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-size: 1.6rem;
+  padding-top: 10px;
+}
+
+:where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  min-height: 300px;
+}
+
+:where(app-dashboard) .impact-subtitle:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+:where(app-dashboard) .Guidewire:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  padding-top: 42px;
+}
+
+:where(app-dashboard) .impact-mobile-carousel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  scroll-snap-type: x mandatory;
+}
+
+:where(app-dashboard) .impact-mobile-carousel.no-snap:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+  scroll-snap-type: none !important;
+  scroll-behavior: auto !important;
+}
+
+@media (max-width: 500px) {
+  :where(app-dashboard) .banner_h1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 11px !important;
+  }
+
+  :where(app-dashboard) .banner_h4:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 10px !important;
+  }
+
+  :where(app-dashboard) .dashboard-tab-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    display: flex;
+    padding: 3px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  :where(app-dashboard) .arrow-icon-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    background-color: #76A379;
+    border-radius: 50%;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :where(app-dashboard) .arrow-button:not(._) svg:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    width: 24px;
+    height: 38px;
+    transition: transform 0.2s ease;
+    display: none;
+  }
+
+  :where(app-dashboard) .margins_mahathi:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: 0rem 0 0rem 0 !important;
+  }
+
+  :where(app-dashboard) h2:not(._) .big:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 0.8rem !important;
+  }
+
+  :where(app-dashboard) .drive:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  :where(app-dashboard) .row.no-gutters:not(._) .underline_cls1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    background-image: none !important;
+    padding-bottom: 0 !important;
+    font-size: 0.8rem !important;
+    border-bottom: none !important;
+  }
+
+  :where(app-dashboard) .underline_cls1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1rem !important;
+    padding: 0px !important;
+  }
+
+  :where(app-dashboard) .dashboard-grid-layout:not(._) .solution-grid-cards:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  :where(app-dashboard) .wedeliver:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+
+  :where(app-dashboard) h2:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .big:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  :where(app-dashboard) .celebration-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 20px !important;
+    line-height: 1.8rem !important;
+  }
+
+  :where(app-dashboard) p:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 0.85rem;
+  }
+
+  :where(app-dashboard) .tall-banner#page-block-banner-carousel:not(._) .banner-carousel-item:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    height: 43vh;
+    max-height: 880px;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    min-height: 240px;
+    padding: 0px;
+  }
+
+  :where(app-dashboard) .Guidewire:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-top: -31px !important;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._) > .impact-card-col:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    flex: 0 0 70%;
+    max-width: 70%;
+    scroll-snap-align: center;
+    display: flex;
+  }
+
+  :where(app-dashboard) #page-block-ec-panel:not(._) img:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    max-width: 43% !important;
+    height: auto;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 10px !important;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 8px 10px !important;
+  }
+
+  :where(app-dashboard) .impact-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1rem !important;
+    line-height: 1.2rem !important;
+    margin: 4px 0 !important;
+    padding: 0 !important;
+  }
+
+  :where(app-dashboard) .impact-subtitle:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 0.95rem !important;
+    line-height: 1.2rem !important;
+    margin: 4px 0 !important;
+  }
+
+  :where(app-dashboard) #page-block-ec-panel:not(._) img:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    max-width: 38% !important;
+    margin: 6px auto !important;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._) .mt-4:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-wrapper:not(._) .mb-5:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-wrapper:not(._) .py-3:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-wrapper:not(._) .my-3:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._) > .impact-card-col:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    display: flex;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    flex: 1;
+    min-height: 160px !important;
+    max-height: 160px !important;
+    height: 160px !important;
+    width: 160px !important;
+    max-width: 200px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :where(app-dashboard) .impact-card-container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-row:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :where(app-dashboard) .impact-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-subtitle:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  :where(app-dashboard) .solution-grid-container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  :where(app-dashboard) .slick-slider__category-menu-container__list:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0 !important;
+  }
+
+  :where(app-dashboard) .menu-item-hover:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 10px 6px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  :where(app-dashboard) .sec-1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0 !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  :where(app-dashboard) .impact-mobile-carousel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    scroll-behavior: smooth;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *))::-webkit-scrollbar {
+    display: none;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._) > .impact-card-col:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    flex: 0 0 45%;
+    max-width: 60%;
+    scroll-snap-align: center;
+    display: flex;
+  }
+
+  @keyframes dashboard__impactScrollNative {
+    0% {
+      scroll-left: 0;
+    }
+
+    33% {
+      scroll-left: 85%;
+    }
+
+    66% {
+      scroll-left: 170%;
+    }
+
+    100% {
+      scroll-left: 0;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  :where(app-dashboard) .impact-mobile-carousel:not(._) > .impact-card-col:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    display: flex;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    min-height: 200px !important;
+    max-height: 200px !important;
+    height: 200px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :where(app-dashboard) .impact-card-container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-row:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  :where(app-dashboard) .impact-mobile-carousel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    overflow-x: hidden;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._) > .impact-card-col:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    flex: 0 0 50%;
+    max-width: 50%;
+    align-items: center !important;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 1200px) {
+  :where(app-dashboard) .dashboard-grid-layout:not(._) .solution-grid-cards:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  :where(app-dashboard) h2:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .big:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+
+  :where(app-dashboard) .celebration-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 30px !important;
+    line-height: 2.6rem !important;
+  }
+
+  :where(app-dashboard) p:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1rem;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  :where(app-dashboard) .dashboard-grid-layout:not(._) .solution-grid-cards:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-bottom: 30px;
+  }
+
+  :where(app-dashboard) h1:not(._) .big:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.4rem !important;
+    line-height: 2rem;
+  }
+
+  :where(app-dashboard) .celebration-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 26px !important;
+    line-height: 2.3rem !important;
+  }
+
+  :where(app-dashboard) p:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :where(app-dashboard) .banner_h1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 20px !important;
+  }
+
+  :where(app-dashboard) .banner_h4:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 14px !important;
+  }
+
+  :where(app-dashboard) .solution-grid-container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0 16px;
+  }
+
+  :where(app-dashboard) .slick-slider__category-menu-container__list:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  :where(app-dashboard) .menu-item-hover:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    width: 100%;
+    text-align: center;
+    padding: 12px 8px;
+  }
+
+  :where(app-dashboard) .menu-separator:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    display: none;
+  }
+
+  :where(app-dashboard) #page-block-fs-panel:not(._) ol:not(._) li:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 41px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  :where(app-dashboard) #page-block-fs-panel:not(._) ol:not(._) li:not(._) > div:first-child:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: 0 auto 16px auto !important;
+    width: 160px !important;
+  }
+
+  :where(app-dashboard) #page-block-fs-panel:not(._) ol:not(._) li:not(._) > div:last-child:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    width: 100%;
+  }
+
+  :where(app-dashboard) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:first-child:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  :where(app-dashboard) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:last-child:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  :where(app-dashboard) #page-block-fs-panel:not(._) .focus:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    display: none !important;
+  }
+
+  :where(app-dashboard) h2:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .big:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+
+  :where(app-dashboard) .celebration-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 22px !important;
+    line-height: 2rem !important;
+    text-align: center;
+  }
+
+  :where(app-dashboard) p:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  :where(app-dashboard) .editor-text:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .container-fluid:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    text-align: center;
+  }
+
+  :where(app-dashboard) h1:not(._) .big:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.2rem !important;
+    line-height: 1.8rem;
+  }
+
+  :where(app-dashboard) .container-fluid.mt-5:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-top: 20px !important;
+  }
+
+  :where(app-dashboard) .row.no-gutters:not(._) .underline_cls1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    background-image: none !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+    padding: 0px;
+  }
+
+  :where(app-dashboard) .row.no-gutters:not(._) .margins_mahathi:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: -1rem 0 -0.5rem 0 !important;
+  }
+
+  :where(app-dashboard) .sec-1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  :where(app-dashboard) #page-block-ec-panel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+    min-height: auto !important;
+  }
+
+  :where(app-dashboard) .row.no-gutters:not(._) .dg-home-intro:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) #home-intro:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    min-height: auto !important;
+  }
+
+  :where(app-dashboard) .row.no-gutters:not(._) .editor-text:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .editor-text:not(._) p:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    text-align: center;
+  }
+
+  :where(app-dashboard) .dashboard-heading:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    text-align: center;
+    line-height: 1rem;
+  }
+
+  :where(app-dashboard) .row.no-gutters:not(._) .underline_cls1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    background-image: none !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+
+  :where(app-dashboard) .margins_mahathi:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: -1rem 0 -0.5rem 0 !important;
+  }
+
+  :where(app-dashboard) .dashboard-bottom-spacing:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: 0rem 0 !important;
+    padding-bottom: 33px;
+  }
+
+  :where(app-dashboard) .sec-1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0 !important;
+  }
+
+  :where(app-dashboard) #page-block-ec-panel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  :where(app-dashboard) h2:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .big:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+  }
+
+  :where(app-dashboard) .impact-card-container:not(._) .impact-card-row:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -4rem !important;
+    margin-right: -4rem !important;
+  }
+
+  :where(app-dashboard) .Guidewire:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding-top: 42px;
+  }
+
+  :where(app-dashboard) .impact-card-col:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    display: flex;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    width: 100%;
+    min-height: 291px;
+    display: flex;
+  }
+
+  :where(app-dashboard) .impact-card-container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    flex: 1;
+    justify-content: center;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper.mt-4:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-wrapper.mb-5:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0px !important;
+  }
+
+  :where(app-dashboard) #page-block-ec-panel:not(._) img:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    max-width: 50%;
+    height: auto;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._) .container:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-wrapper:not(._) .container-fluid:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._) .editor-text:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: 0 !important;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._) h1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  :where(app-dashboard) .impact-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-bottom: 8px !important;
+    line-height: 1.35rem;
+  }
+
+  :where(app-dashboard) .impact-subtitle:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-top: 8px !important;
+    line-height: 1.35rem;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._) .container-fluid.mt-5:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-wrapper:not(._) .py-3:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)), :where(app-dashboard) .impact-card-wrapper:not(._) .my-3:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._) img:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin: 10px auto !important;
+    display: block;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    min-height: auto !important;
+    padding: 12px !important;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._) .container-fluid.mt-5:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    margin-top: 0 !important;
+  }
+
+  :where(app-dashboard) .impact-title:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.15rem !important;
+    line-height: 1.35rem;
+    text-align: center;
+  }
+
+  :where(app-dashboard) .impact-subtitle:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 1.15rem !important;
+    line-height: 1.35rem;
+    text-align: center;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    justify-content: flex-start !important;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *))::-webkit-scrollbar {
+    display: none;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel:not(._) > .impact-card-col:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  :where(app-dashboard) .impact-card-wrapper:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    width: 92%;
+    max-width: 310px;
+    margin: 0 auto;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :where(app-dashboard) .impact-mobile-carousel.no-snap:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    scroll-snap-type: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  :where(app-dashboard) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:first-child:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 13px !important;
+    line-height: 1.3;
+  }
+
+  :where(app-dashboard) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:last-child:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 10px !important;
+    line-height: 1.6;
+  }
+
+  :where(app-dashboard) .banner_h1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 11px !important;
+  }
+
+  :where(app-dashboard) .banner_h4:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 10px !important;
+  }
+
+  :where(app-dashboard) h1:not(._) .big:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+    font-size: 0.8rem !important;
+  }
+
+  @media (max-width: 376px) {
+
+    :where(app-dashboard) .banner_h1:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+      font-size: 8px !important;
+    }
+
+    :where(app-dashboard) .banner_h4:not(._):not(:where(app-dashboard-our-solutions *, app-solution-grid *)) {
+      font-size: 7px !important;
+    }
+  }
+}

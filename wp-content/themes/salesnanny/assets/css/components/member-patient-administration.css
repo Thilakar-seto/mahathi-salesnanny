@@ -1,0 +1,164 @@
+/* <app-member-patient-administration> — converted from src/app/pages/healthcare/member-patient-administration/member-patient-administration.component.css */
+:where(app-member-patient-administration) .eligibility:not(._) {
+    font-size: 2rem !important;
+}
+:where(app-member-patient-administration) .patient:not(._) {
+    font-size: 1.5rem !important;
+}
+:where(app-member-patient-administration) .integrate:not(._) {
+    font-size: 1.5rem !important;
+}
+:where(app-member-patient-administration) .outcome:not(._) {
+    font-size: 1.5rem !important;
+}
+:where(app-member-patient-administration) .hero-section:not(._) {
+    background: #AECFDD;
+    padding: 40px 0;
+    padding-top: 170px;
+}
+:where(app-member-patient-administration) .hero-img-left-curve:not(._) {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 220px;
+    border-bottom-left-radius: 220px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: auto;
+    display: block;
+}
+@media (max-width: 1200px) {
+    :where(app-member-patient-administration) .hero-img-left-curve:not(._) {
+        max-width: 82%;
+        margin: 0 auto;
+        border-radius: 57px;
+    }
+}
+@media (max-width: 992px) {
+    :where(app-member-patient-administration) .editor-text:not(._) {
+        padding-left: 14px;
+    }
+}
+@media (max-width:450px) {
+    :where(app-member-patient-administration) .custom-divider:not(._) {
+        width: 60px;
+        height: 4px;
+        background-color: #ff8c00;
+        border-radius: 2px;
+        margin: 0.5rem 0;
+    }
+    :where(app-member-patient-administration) .eligibility:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-member-patient-administration) .member:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-member-patient-administration) .hero-section:not(._) {
+        padding: 50px 0;
+        text-align: center;
+    }
+    :where(app-member-patient-administration) .hero-img-left-curve:not(._) {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 24px;
+    }
+}
+:where(app-member-patient-administration) #page-block-ec-panel:not(._) {
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+:where(app-member-patient-administration) #page-block-ec-panel:not(._) h2:not(._) {
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+:where(app-member-patient-administration) #page-block-ec-panel:not(._) h4:not(._) {
+    color: #2c3e50;
+    margin-top: 2rem;
+}
+:where(app-member-patient-administration) .custom-divider:not(._) {
+    width: 60px;
+    height: 4px;
+    background-color: #ff8c00;
+    border-radius: 2px;
+    margin: 1.5rem 0;
+}
+:where(app-member-patient-administration) .outcomes-box:not(._) {
+    background-color: #F4F4F2;
+    border-left: 5px solid #76A379;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+:where(app-member-patient-administration) .custom-list:not(._) {
+    padding-left: 12px;
+}
+:where(app-member-patient-administration) .custom-list:not(._) li:not(._) {
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+:where(app-member-patient-administration) .cta-button:not(._) {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #76A379;
+    color: white !important;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(83, 116, 80, 0.3);
+}
+:where(app-member-patient-administration) .cta-button:hover:not(._) {
+    background-color: #435e41;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(83, 116, 80, 0.4);
+}
+:where(app-member-patient-administration) .cta-button:not(._) svg:not(._) {
+    transition: transform 0.3s ease;
+}
+:where(app-member-patient-administration) .cta-button:hover:not(._) svg:not(._) {
+    transform: translateX(5px);
+}
+@media (max-width: 767px) {
+    :where(app-member-patient-administration) .editor-text:not(._) {
+        padding-left: 14px;
+    }
+    :where(app-member-patient-administration) .outcome:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-member-patient-administration) .integrate:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-member-patient-administration) .custom-list:not(._) li:not(._) {
+        font-size: 0.7rem !important;
+    }
+    :where(app-member-patient-administration) .eligibility:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-member-patient-administration) .member:not(._) {
+        font-size: 0.9rem !important;
+    }
+    :where(app-member-patient-administration) .patient:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-member-patient-administration) #page-block-ec-panel:not(._) {
+        text-align: left;
+    }
+    :where(app-member-patient-administration) .cta-button:not(._) {
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media(max-width: 768px) {
+    :where(app-member-patient-administration) .custom-divider:not(._) {
+        width: 60px;
+        height: 4px;
+        background-color: #ff8c00;
+        border-radius: 2px;
+        margin: 0.5rem 0;
+    }
+    :where(app-member-patient-administration) .hero-section:not(._) {
+        padding: 50px 0;
+        text-align: center;
+    }
+}

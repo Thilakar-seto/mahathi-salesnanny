@@ -1,0 +1,234 @@
+/* <app-pas-finder> PAS Migration Problem Finder — /pas-migration-problem-finder
+ * The tool's own stylesheet, scoped to app-pas-finder so it cannot affect the rest of the site.
+ * Its header/footer replica was removed: the page uses the site's real header and footer.
+ * Site-wide heading rules that use !important are countered at the end of this file. */
+html { scroll-padding-top: 140px; scroll-padding-bottom: 110px; }
+app-pas-finder { display: block; }
+app-pas-finder{--white:#FFFFFF; --tint:#EEF2EC; --tint-2:#F4F4F2; --line:#DEE2E6; --line-2:#DDDDDD; --ink:#222222; --ink-2:#444444; --ink-3:#595959; --title:#302D42; --sage:#76A379; --sage-dk:#547852; --sage-txt:#4F6149; --sage-bg:#EEF2EC; --orange:#C45A36; --orange-txt:#8F3E4F; --orange-bg:rgba(181,90,107,.12); --hi:#8F3E4F; --hi-bg:rgba(181,90,107,.12); --md:#3E4655; --md-bg:#E5E5F0; --lo:#4F6149; --lo-bg:#EEF2EC; --shadow:0 4px 15px rgba(0,0,0,.06); --shadow-lg:0 12px 30px rgba(0,0,0,.12); --font:'Poppins','Segoe UI',Helvetica,Arial,sans-serif; color-scheme:light;}
+app-pas-finder *{box-sizing:border-box}
+app-pas-finder [hidden]{display:none!important}
+app-pas-finder{margin:0;color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+app-pas-finder button, app-pas-finder input, app-pas-finder select{font:inherit;color:inherit}
+app-pas-finder :focus-visible{outline:2px solid var(--sage-dk);outline-offset:3px}
+app-pas-finder [tabindex="-1"]:focus{outline:none}
+app-pas-finder p{margin:0}
+app-pas-finder h1, app-pas-finder h2, app-pas-finder h3{margin:0;text-wrap:balance}
+app-pas-finder .tnum{font-variant-numeric:tabular-nums}
+app-pas-finder .wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+app-pas-finder .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 28px;border-radius:9999px;border:0;background:var(--sage-dk);color:#FFFFFF;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;white-space:nowrap;transition:background .15s}
+app-pas-finder .btn:hover{background:#4F6149}
+app-pas-finder .btn:disabled{background:#B2C7B3;color:#FFFFFF;cursor:not-allowed}
+app-pas-finder .btn.ghost{background:transparent;color:var(--sage-txt);box-shadow:inset 0 0 0 1.5px var(--sage)}
+app-pas-finder .btn.ghost:hover{background:var(--sage-bg)}
+app-pas-finder .btn.sm{min-height:38px;padding:0 18px;font-size:14px}
+app-pas-finder .btn svg{width:18px;height:18px;flex:none}
+app-pas-finder .link{background:none;border:0;padding:6px 0;color:var(--sage-txt);font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+app-pas-finder .hero{background:var(--tint);padding-block:48px 40px}
+app-pas-finder .hero .wrap{display:grid;gap:14px}
+app-pas-finder .eyebrow{color:var(--sage-txt);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+app-pas-finder .hero h1{font-weight:400;text-transform:uppercase;color:var(--title);font-size:clamp(28px,3.6vw,40px);line-height:1.2;max-width:24ch}
+app-pas-finder .hero p{color:var(--ink-2);font-size:16px;max-width:70ch}
+app-pas-finder .steps{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+app-pas-finder .steps li{display:flex;align-items:center;gap:10px;background:#FFFFFF;border-radius:9999px;padding:6px 16px 6px 6px;font-size:14px;color:var(--ink-3);box-shadow:var(--shadow)}
+app-pas-finder .steps .n{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:600;font-size:13px;background:var(--tint-2);color:var(--ink-3)}
+app-pas-finder .steps li[aria-current="step"]{color:var(--ink);font-weight:600}
+app-pas-finder .steps li[aria-current="step"] .n{background:var(--sage-dk);color:#FFFFFF}
+app-pas-finder .steps li.done .n{background:var(--sage-bg);color:var(--sage-txt)}
+app-pas-finder .steps svg{width:14px;height:14px}
+app-pas-finder .sec{padding-block:40px 56px}
+app-pas-finder .sec-t{font-weight:400;text-transform:uppercase;color:var(--title);font-size:clamp(24px,2.8vw,32px);line-height:1.25}
+app-pas-finder .sec-s{color:var(--ink-3);margin-top:6px;max-width:72ch}
+app-pas-finder .sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+app-pas-finder .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+@media (max-width:860px) {
+  app-pas-finder .grid{grid-template-columns:minmax(0,1fr)}
+}
+app-pas-finder .card{background:#FFFFFF;border-radius:12px;box-shadow:var(--shadow);border:1px solid var(--line)}
+app-pas-finder .area{display:flex;flex-direction:column;overflow:hidden}
+app-pas-finder .area-h{display:flex;gap:14px;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+app-pas-finder .leaf{flex:none;width:44px;height:44px;border-radius:0 30%;background:var(--sage-bg);color:var(--sage-txt);display:grid;place-items:center;font-weight:600;font-size:16px}
+app-pas-finder .area-h h2{color:var(--sage-txt);font-weight:600;font-size:17px;line-height:1.3}
+app-pas-finder .area-h small{display:block;color:var(--ink-3);font-size:13px}
+app-pas-finder .area-h .cnt{margin-left:auto;font-size:12px;font-weight:600;color:var(--sage-txt);background:var(--sage-bg);border-radius:9999px;padding:2px 10px;white-space:nowrap}
+app-pas-finder .prob{padding:14px 20px;display:grid;gap:10px;border-top:1px solid var(--line)}
+app-pas-finder .area-h + .prob{border-top:0}
+app-pas-finder .prob.on{background:#F0F4F0}
+app-pas-finder .chk{display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;align-items:start;cursor:pointer;font-size:15px;color:var(--ink)}
+app-pas-finder .chk input{appearance:none;-webkit-appearance:none;width:22px;height:22px;margin:1px 0 0;border:1.5px solid #7A8E73;border-radius:5px;background:#FFFFFF;cursor:pointer;display:grid;place-items:center}
+app-pas-finder .chk input::after{content:"";width:6px;height:11px;border:solid #FFFFFF;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px);opacity:0}
+app-pas-finder .chk input:checked{background:var(--sage-dk);border-color:var(--sage-dk)}
+app-pas-finder .chk input:checked::after{opacity:1}
+app-pas-finder .chk input:focus-visible{outline:2px solid var(--sage-dk);outline-offset:2px}
+app-pas-finder .imp{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-left:36px}
+app-pas-finder .imp .lbl{font-size:13px;color:var(--ink-3)}
+app-pas-finder .seg{display:inline-flex;border:1px solid #7A8E73;border-radius:9999px;overflow:hidden;background:#FFFFFF}
+app-pas-finder .seg label{position:relative;cursor:pointer}
+app-pas-finder .seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+app-pas-finder .seg span{display:block;padding:5px 16px;font-size:13px;font-weight:600;color:var(--ink-3);border-left:1px solid var(--line-2)}
+app-pas-finder .seg label:first-child span{border-left:0}
+app-pas-finder .seg input:checked + span{color:#FFFFFF}
+app-pas-finder .seg input[value="low"]:checked + span{background:var(--sage-dk)}
+app-pas-finder .seg input[value="medium"]:checked + span{background:var(--md)}
+app-pas-finder .seg input[value="high"]:checked + span{background:var(--hi)}
+app-pas-finder .seg input:focus-visible + span{outline:2px solid var(--title);outline-offset:-3px}
+app-pas-finder .actbar{position:sticky;bottom:0;z-index:4;background:#FFFFFF;box-shadow:0 -6px 20px rgba(0,0,0,.08);padding-bottom:env(safe-area-inset-bottom,0px)}
+app-pas-finder .actbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px;flex-wrap:wrap;padding-block:12px}
+app-pas-finder .actbar .sum{font-size:15px;color:var(--ink-2)}
+app-pas-finder .actbar .sum b{color:var(--ink)}
+app-pas-finder .actbar .r{display:flex;align-items:center;gap:16px}
+@media (max-width:560px) {
+  app-pas-finder .actbar .wrap{flex-wrap:nowrap;min-height:68px}
+  app-pas-finder .actbar .sum{font-size:13px;line-height:1.35}
+  app-pas-finder .actbar .link{display:none}
+  app-pas-finder .actbar .btn{padding:0 20px}
+}
+app-pas-finder .form-wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:900px) {
+  app-pas-finder .form-wrap{grid-template-columns:minmax(0,1fr)}
+}
+app-pas-finder .form{padding:28px;display:grid;gap:18px}
+app-pas-finder .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:560px) {
+  app-pas-finder .g2{grid-template-columns:minmax(0,1fr)}
+}
+app-pas-finder .fld{display:grid;gap:6px;min-width:0;align-content:start}
+app-pas-finder .fld label{font-size:14px;font-weight:600;color:var(--ink)}
+app-pas-finder .fld label .req{color:var(--hi)}
+app-pas-finder .inp{height:48px;padding:0 14px;border:1px solid #7A8E73;border-radius:8px;background:#FFFFFF;width:100%;font-size:15px}
+app-pas-finder .inp:focus{outline:2px solid var(--sage);outline-offset:0;border-color:var(--sage-dk)}
+app-pas-finder .inp[aria-invalid="true"]{border-color:var(--hi);background:#FFFFFF}
+app-pas-finder .err{font-size:13px;color:var(--hi);font-weight:600}
+app-pas-finder .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-3)}
+app-pas-finder .consent input{width:18px;height:18px;margin-top:2px;accent-color:var(--sage-dk);flex:none}
+app-pas-finder .consent a{color:var(--sage-txt)}
+app-pas-finder .form .acts{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:4px}
+app-pas-finder .side{padding:24px;display:grid;gap:14px;background:var(--tint);border-radius:12px}
+app-pas-finder .side h3{font-size:16px;font-weight:600;color:var(--sage-txt)}
+app-pas-finder .side ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+app-pas-finder .side li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;font-size:14px;align-items:center}
+app-pas-finder .side p{font-size:13px;color:var(--ink-3)}
+app-pas-finder .tag{display:inline-flex;align-items:center;gap:6px;border-radius:9999px;padding:2px 10px;font-size:12px;font-weight:600;white-space:nowrap}
+app-pas-finder .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+app-pas-finder .t-high{color:var(--hi);background:var(--hi-bg)}
+app-pas-finder .t-medium{color:var(--md);background:var(--md-bg)}
+app-pas-finder .t-low{color:var(--lo);background:var(--lo-bg)}
+app-pas-finder .t-strong{color:var(--hi);background:var(--hi-bg)}
+app-pas-finder .t-good{color:var(--md);background:var(--md-bg)}
+app-pas-finder .t-partial{color:var(--lo);background:var(--lo-bg)}
+app-pas-finder .band{background:var(--sage-dk);color:#FFFFFF;padding-block:44px}
+app-pas-finder .band .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:36px;align-items:center}
+@media (max-width:760px) {
+  app-pas-finder .band .wrap{grid-template-columns:minmax(0,1fr)}
+}
+app-pas-finder .scorebox{width:220px;height:200px;border-radius:0 30%;background:#FFFFFF;color:var(--title);display:grid;place-content:center;justify-items:center;text-align:center;gap:2px;box-shadow:var(--shadow-lg)}
+app-pas-finder .scorebox .v{font-size:64px;font-weight:600;line-height:1;color:var(--title)}
+app-pas-finder .scorebox .v small{font-size:20px;font-weight:400;color:var(--ink-3)}
+app-pas-finder .scorebox .l{font-size:13px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+app-pas-finder .scorebox .tag{margin-top:8px}
+app-pas-finder .band .eyebrow{color:#FFFFFF;opacity:.92}
+app-pas-finder .band h1{font-weight:400;text-transform:uppercase;font-size:clamp(26px,3.2vw,36px);line-height:1.2;margin-top:6px}
+app-pas-finder .band p{color:#FFFFFF;font-size:16px;margin-top:10px;max-width:64ch}
+app-pas-finder .band .facts{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+app-pas-finder .band .facts span{background:rgba(0,0,0,.18);border-radius:9999px;padding:6px 14px;font-size:14px}
+app-pas-finder .band .facts b{font-weight:600}
+app-pas-finder .b-critical{color:#FFFFFF;background:var(--hi)}
+app-pas-finder .b-high{color:var(--orange-txt);background:var(--orange-bg)}
+app-pas-finder .b-moderate{color:var(--md);background:var(--md-bg)}
+app-pas-finder .b-low{color:var(--lo);background:var(--lo-bg)}
+app-pas-finder .rlist{display:grid;gap:18px}
+app-pas-finder .ra{overflow:hidden}
+app-pas-finder .ra-h{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:10px 16px;align-items:center;padding:20px 22px}
+app-pas-finder .ra-h .leaf{width:52px;height:52px;font-size:20px}
+app-pas-finder .ra.top .ra-h .leaf{background:var(--sage-dk);color:#FFFFFF}
+app-pas-finder .ra-h h3{color:var(--sage-txt);font-weight:600;font-size:18px;line-height:1.3}
+app-pas-finder .ra-h small{color:var(--ink-3);font-size:13px}
+app-pas-finder .ra-h .m{display:grid;justify-items:end;gap:6px}
+app-pas-finder .ra-h .pct{font-size:22px;font-weight:600;color:var(--title)}
+app-pas-finder .meter{grid-column:2 / -1;height:6px;border-radius:3px;background:var(--tint-2);overflow:hidden}
+app-pas-finder .meter i{display:block;height:100%;border-radius:3px;background:var(--sage)}
+app-pas-finder .more .ra-h{grid-template-columns:52px minmax(0,1fr) auto 20px}
+@media (max-width:560px) {
+  app-pas-finder .ra-h, app-pas-finder .more .ra-h{grid-template-columns:44px minmax(0,1fr)}
+  app-pas-finder .ra-h .leaf{width:44px;height:44px;font-size:17px}
+  app-pas-finder .ra-h .m{grid-column:2;justify-items:start;grid-auto-flow:column;align-items:center;justify-content:start}
+  app-pas-finder .more .ra-h .cv{display:none}
+}
+app-pas-finder .ra-b{border-top:1px solid var(--line);padding:20px 22px 22px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px}
+@media (max-width:760px) {
+  app-pas-finder .ra-b{grid-template-columns:minmax(0,1fr)}
+}
+app-pas-finder .ra-b h4{margin:0 0 8px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3)}
+app-pas-finder .ra-b ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px}
+app-pas-finder .ra-b li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+app-pas-finder .ra-b .bul li{grid-template-columns:14px minmax(0,1fr)}
+app-pas-finder .ra-b .bul li::before{content:"";width:7px;height:7px;border-radius:0 30%;background:var(--sage);margin-top:8px}
+app-pas-finder .chips{display:flex;flex-wrap:wrap;gap:8px}
+app-pas-finder .chip{border:1px solid var(--sage);color:var(--sage-txt);border-radius:9999px;padding:4px 12px;font-size:13px;font-weight:600}
+app-pas-finder .out{display:grid;gap:8px}
+app-pas-finder .out div{display:flex;gap:10px;font-size:14px;align-items:flex-start}
+app-pas-finder .out svg{width:18px;height:18px;flex:none;color:var(--orange);margin-top:2px}
+app-pas-finder .cost{font-size:14px;color:var(--ink-2);background:var(--tint-2);border-radius:8px;padding:10px 14px}
+app-pas-finder .cost b{color:var(--ink)}
+app-pas-finder .cost p + p{margin-top:6px}
+app-pas-finder .cost .why{font-size:13px}
+app-pas-finder .cost .src{font-size:12px;color:var(--ink-3)}
+app-pas-finder .t-reg{color:#FFFFFF;background:var(--title)}
+app-pas-finder .t-reg::before{background:#FFFFFF}
+app-pas-finder .ra-h .m{flex-wrap:wrap}
+app-pas-finder .more summary{list-style:none;cursor:pointer}
+app-pas-finder .more summary::-webkit-details-marker{display:none}
+app-pas-finder .more summary:hover{background:#F8F8F6}
+app-pas-finder .more .chev{width:20px;height:20px;color:var(--ink-3);transition:transform .15s}
+app-pas-finder .more[open] .chev{transform:rotate(180deg)}
+app-pas-finder .unflag{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:20px;font-size:14px;color:var(--ink-3)}
+app-pas-finder .unflag span.c{background:var(--tint-2);border-radius:9999px;padding:4px 12px;color:var(--ink-2)}
+app-pas-finder .cta{background:var(--tint)}
+app-pas-finder .cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-block:40px}
+app-pas-finder .cta h2{font-weight:400;text-transform:uppercase;color:var(--title);font-size:clamp(22px,2.6vw,30px)}
+app-pas-finder .cta p{color:var(--ink-3);margin-top:6px}
+app-pas-finder .cta .r{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+app-pas-finder .notice{display:flex;gap:12px;align-items:flex-start;background:var(--tint-2);border-radius:12px;padding:14px 18px;font-size:14px;color:var(--ink-2);margin-top:24px}
+app-pas-finder .notice svg{width:20px;height:20px;flex:none;color:var(--sage-dk);margin-top:1px}
+app-pas-finder .ov{position:fixed;inset:0;background:rgba(15,26,42,.55);z-index:40}
+app-pas-finder .modal{position:fixed;inset:24px;max-width:760px;margin:0 auto;background:#FFFFFF;border-radius:12px;z-index:41;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow-lg)}
+@media (max-width:560px) {
+  app-pas-finder .modal{inset:8px}
+}
+app-pas-finder .mh{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+app-pas-finder .mh h2{font-size:16px;font-weight:600;overflow-wrap:anywhere}
+app-pas-finder .mb{overflow:auto;flex:1;background:#EEF2EC}
+app-pas-finder .mmeta{padding:10px 16px;font-size:13px;color:var(--ink-3);background:#FFFFFF;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+app-pas-finder .x{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);background:#FFFFFF;display:grid;place-items:center;cursor:pointer;flex:none}
+app-pas-finder .x svg{width:16px;height:16px}
+app-pas-finder .fade{animation:pasf-fd .25s ease}
+@keyframes pasf-fd{from{opacity:.3}to{opacity:1}}
+@media (prefers-reduced-motion:reduce) {
+  app-pas-finder *{transition:none!important;animation:none!important}
+}
+
+/* ---- Site integration ---- */
+/* The site header is position:fixed (126px desktop, 130px at 816-991px, 60px on phones, see
+   page_header_new.css), so the first section of each step starts below it. */
+app-pas-finder { --mh-hdr: 126px; }
+@media (max-width: 991.98px) { app-pas-finder { --mh-hdr: 130px; } }
+@media (max-width: 815.98px) { app-pas-finder { --mh-hdr: 60px; } html { scroll-padding-top: 80px; } }
+app-pas-finder #app > .fade > .hero:first-child { padding-top: calc(var(--mh-hdr) + 48px); }
+app-pas-finder #app > .fade > .band:first-child { padding-top: calc(var(--mh-hdr) + 44px); }
+app-pas-finder #app { display: block; outline: none; }
+/* Sit above the site-wide .scroll-effects-layer glow (fixed, z-index 0) so it tints behind, not over, the tool. */
+app-pas-finder #app { position: relative; z-index: 1; }
+
+/* styles.css forces h1-h6 weights and some sizes with !important (e.g. `h2 { font-size: 1rem !important }`).
+   Restate the tool's own heading styles (same values as above) so they win inside the tool. */
+app-pas-finder .hero h1 { font-weight: 400 !important; font-size: clamp(28px,3.6vw,40px) !important; line-height: 1.2 !important; }
+app-pas-finder .band h1 { color: #FFFFFF; font-weight: 400 !important; font-size: clamp(26px,3.2vw,36px) !important; line-height: 1.2 !important; }
+app-pas-finder .sec-t { font-weight: 400 !important; font-size: clamp(24px,2.8vw,32px) !important; line-height: 1.25 !important; }
+app-pas-finder .cta h2 { font-weight: 400 !important; font-size: clamp(22px,2.6vw,30px) !important; }
+app-pas-finder .area-h h2 { font-weight: 600 !important; font-size: 17px !important; line-height: 1.3 !important; }
+app-pas-finder .mh h2 { color: var(--ink); font-weight: 600 !important; font-size: 16px !important; }
+app-pas-finder .ra-h h3 { font-weight: 600 !important; font-size: 18px !important; line-height: 1.3 !important; }
+app-pas-finder .side h3 { font-weight: 600 !important; font-size: 16px !important; }
+app-pas-finder .ra-b h4 { font-weight: 600 !important; font-size: 13px !important; }
+/* The tool wraps each step in .fade, which the site's Bootstrap also defines (.fade:not(.show) { opacity: 0 }).
+   Keep the tool's own fade-in animation and stop Bootstrap from hiding the step afterwards. */
+app-pas-finder #app > .fade { opacity: 1; transition: none; }

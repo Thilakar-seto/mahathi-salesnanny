@@ -1,0 +1,145 @@
+/* <app-claims-management> — converted from src/app/pages/healthcare/claims-management/claims-management.component.css */
+:where(app-claims-management) .hero-section:not(._) {
+    background: #AECFDD;
+    padding: 40px 0;
+    padding-top: 170px;
+}
+:where(app-claims-management) .Work:not(._) {
+    margin-bottom: 3rem !important;
+}
+:where(app-claims-management) .faster:not(._) {
+    font-size: 1.5rem !important;
+}
+:where(app-claims-management) .Digitalmailroom:not(._) {
+    font-size: 2rem !important;
+}
+:where(app-claims-management) .Analistics:not(._) {
+    font-size: 1.5rem !important;
+}
+:where(app-claims-management) .hero-img-left-curve:not(._) {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 220px;
+    border-bottom-left-radius: 220px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: auto;
+    display: block;
+}
+@media (max-width: 1200px) {
+    :where(app-claims-management) .hero-img-left-curve:not(._) {
+        max-width: 82%;
+        margin: 0 auto;
+        border-radius: 57px;
+    }
+}
+@media (max-width: 425px) {
+    :where(app-claims-management) .Analistics:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-claims-management) .Digitalmailroom:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-claims-management) .hero-section:not(._) {
+        padding: 50px 0;
+        text-align: center;
+    }
+    :where(app-claims-management) .claims:not(._) {
+        font-size: 0.8rem;
+    }
+    :where(app-claims-management) .hero-img-left-curve:not(._) {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 24px;
+    }
+}
+@media (max-width: 767px) {
+    :where(app-claims-management) .Work:not(._) {
+        margin-bottom: 0rem !important;
+    }
+    :where(app-claims-management) .faster:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-claims-management) .small:not(._) {
+        font-size: 0.7rem !important;
+    }
+    :where(app-claims-management) .lead:not(._) {
+        font-size: 0.7rem !important;
+    }
+    :where(app-claims-management) .Analistics:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-claims-management) .Digitalmailroom:not(._) {
+        font-size: 1rem !important;
+    }
+    :where(app-claims-management) .hero-section:not(._) {
+        padding: 50px 0;
+        text-align: center;
+    }
+    :where(app-claims-management) .claims:not(._) {
+        font-size: 1rem;
+    }
+    :where(app-claims-management) .hero-img-left-curve:not(._) {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 24px;
+    }
+}
+:where(app-claims-management) .custom-divider:not(._) {
+    width: 60px;
+    height: 4px;
+    background-color: #ff8c00;
+    border-radius: 2px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+:where(app-claims-management) .outcome-card:not(._) {
+    background: #76A379;
+    border-radius: 15px;
+    border: 1px solid #edf0f2;
+    transition: all 0.3s ease;
+}
+:where(app-claims-management) .outcome-card:hover:not(._) {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-color: #76A379;
+    color: #fff;
+}
+:where(app-claims-management) .outcome-icon:not(._) {
+    font-size: 2.5rem;
+}
+:where(app-claims-management) .analytics-highlight:not(._) {
+    border-left-color: #76A379 !important;
+}
+:where(app-claims-management) .cta-button:not(._) {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #76A379;
+    color: white !important;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(83, 116, 80, 0.3);
+}
+:where(app-claims-management) .cta-button:hover:not(._) {
+    background-color: #435e41;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(83, 116, 80, 0.4);
+}
+:where(app-claims-management) .cta-button:not(._) svg:not(._) {
+    transition: transform 0.3s ease;
+}
+:where(app-claims-management) .cta-button:hover:not(._) svg:not(._) {
+    transform: translateX(5px);
+}
+@media (max-width: 768px) {
+    :where(app-claims-management) .hero-section:not(._) {
+        background: #AECFDD;
+        padding: 40px 0;
+    }
+}

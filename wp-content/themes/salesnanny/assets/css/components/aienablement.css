@@ -1,0 +1,915 @@
+/* <app-aienablement> — converted from src/app/aienablement/aienablement.component.css */
+:where(app-aienablement) .hero-section:not(._):not(:where(app-ai-banner *)) {
+  background: #AECFDD;
+  padding: 9px 0;
+  padding-top: 170px;
+}
+:where(app-aienablement) .hero-img-left-curve:not(._):not(:where(app-ai-banner *)) {
+  width: 85%;
+  max-width: 720px;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 220px;
+  border-bottom-left-radius: 220px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-left: auto;
+  display: block;
+}
+@media (max-width: 1200px) {
+  :where(app-aienablement) .hero-img-left-curve:not(._):not(:where(app-ai-banner *)) {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 57px;
+  }
+}
+@media (max-width: 576px) {
+  :where(app-aienablement) .hero-img-left-curve:not(._):not(:where(app-ai-banner *)) {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 24px;
+  }
+}
+:where(app-aienablement) .um-section:not(._):not(:where(app-ai-banner *)) {
+  background-color: #ffffff;
+}
+:where(app-aienablement) .container:not(._):not(:where(app-ai-banner *)) {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+:where(app-aienablement) .header-content:not(._) h1:not(._):not(:where(app-ai-banner *)) {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #000;
+}
+:where(app-aienablement) .subtitle:not(._):not(:where(app-ai-banner *)) {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
+}
+:where(app-aienablement) .cards-wrapper:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+:where(app-aienablement) .um-card:not(._):not(:where(app-ai-banner *)) {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+:where(app-aienablement) .um-card:not(._) h4:not(._):not(:where(app-ai-banner *)) {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+:where(app-aienablement) .um-card:not(._) ul:not(._):not(:where(app-ai-banner *)) {
+  list-style-type: disc;
+}
+:where(app-aienablement) .um-card:not(._) li:not(._):not(:where(app-ai-banner *)) {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+:where(app-aienablement) .teal-card:not(._):not(:where(app-ai-banner *)) {
+  background-color: #52a3a3;
+  color: white;
+}
+:where(app-aienablement) .white-card:not(._):not(:where(app-ai-banner *)) {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #eee;
+}
+:where(app-aienablement) .text-gold:not(._):not(:where(app-ai-banner *)) {
+  color: #76A379;
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+@media (max-width: 768px) {
+  :where(app-aienablement) .cards-wrapper:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: column;
+  }
+}
+:where(app-aienablement) .ai-risk-section:not(._):not(:where(app-ai-banner *)) {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  color: #333;
+}
+:where(app-aienablement) .main-title:not(._):not(:where(app-ai-banner *)) {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+:where(app-aienablement) .card-container:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+:where(app-aienablement) .content-card:not(._):not(:where(app-ai-banner *)) {
+  flex: 1;
+  min-width: 300px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+:where(app-aienablement) .content-card:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: white;
+}
+
+:where(app-aienablement) .accent-line:not(._):not(:where(app-ai-banner *)) {
+  width: 100%;
+  height: 3px;
+  background-color: #a8dadc;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+:where(app-aienablement) p:not(._):not(:where(app-ai-banner *)) {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+:where(app-aienablement) .main-list:not(._):not(:where(app-ai-banner *)) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+:where(app-aienablement) .main-list:not(._) > li:not(._):not(:where(app-ai-banner *)) {
+  position: relative;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+:where(app-aienablement) .main-list:not(._) > li:not(._):not(:where(app-ai-banner *))::before {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+:where(app-aienablement) .sub-list:not(._):not(:where(app-ai-banner *)) {
+  margin-top: 8px;
+}
+:where(app-aienablement) .sub-list:not(._) li:not(._):not(:where(app-ai-banner *)) {
+  position: relative;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+  :where(app-aienablement) .card-container:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: 2fr column;
+  }
+  :where(app-aienablement) .content-card:hover:not(._):not(:where(app-ai-banner *)) {
+    transform: translateY(-5px);
+  }
+}
+:where(app-aienablement) .ai-risk-section:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .automation-section:not(._):not(:where(app-ai-banner *)) {
+  max-width: 100%;
+  margin: 0px 0px;
+}
+:where(app-aienablement) .main-title2:not(._):not(:where(app-ai-banner *)) {
+  font-size: 2.2rem;
+  margin-bottom: 3px;
+  color: #000;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 20px;
+  padding-top: 28px;
+}
+:where(app-aienablement) .subtitle2:not(._):not(:where(app-ai-banner *)) {
+  margin-bottom: 40px;
+  color: #444;
+  font-size: 1.1rem;
+}
+:where(app-aienablement) .card-container:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+:where(app-aienablement) .content-card:not(._):not(:where(app-ai-banner *)) {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+:where(app-aienablement) .content-card:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #76A379;
+}
+
+:where(app-aienablement) .accent-line:not(._):not(:where(app-ai-banner *)) {
+  height: 2px;
+  background: #a8dadc;
+  margin-bottom: 20px;
+}
+:where(app-aienablement) .main-list:not(._):not(:where(app-ai-banner *)) {
+  list-style: disc;
+}
+:where(app-aienablement) .sub-list:not(._):not(:where(app-ai-banner *)) {
+  list-style: circle;
+  margin-top: 5px;
+}
+:where(app-aienablement) .process-grid:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  gap: 15px;
+  margin: 25px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+:where(app-aienablement) .process-card:not(._):not(:where(app-ai-banner *)) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:where(app-aienablement) .step-title:not(._):not(:where(app-ai-banner *)) {
+  background-color: #76A379;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+:where(app-aienablement) .step-connector:not(._):not(:where(app-ai-banner *)) {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  margin: -12px 0;
+  z-index: 2;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+:where(app-aienablement) .step-body:not(._):not(:where(app-ai-banner *)) {
+  background: linear-gradient(180deg, #76A379, #B2C7B3);
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  width: 100%;
+  flex-grow: 1;
+}
+:where(app-aienablement) .process-card:hover:not(._) .step-title:not(._):not(:where(app-ai-banner *)) {
+  background-color: #76A379;
+}
+:where(app-aienablement) .process-card:hover:not(._) .step-body:not(._):not(:where(app-ai-banner *)) {
+  background-color: #B2C7B3;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+@media (max-width: 900px) {
+  :where(app-aienablement) .process-grid:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: column;
+    gap: 30px;
+  }
+  :where(app-aienablement) .step-connector:not(._):not(:where(app-ai-banner *)) {
+    display: none;
+  }
+  :where(app-aienablement) .card-container:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1240px) {
+  :where(app-aienablement) .ai-cards-wrapper:not(._):not(:where(app-ai-banner *)) {
+    margin: 15px;
+  }
+  :where(app-aienablement) .ai-risk-cards:not(._):not(:where(app-ai-banner *)) {
+    margin: 15px;
+  }
+  :where(app-aienablement) .ai-risk-section:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .automation-section:not(._):not(:where(app-ai-banner *)) {
+    max-width: 100%;
+    margin: 0px 0px;
+  }
+}
+:where(app-aienablement) .content-card2:not(._):not(:where(app-ai-banner *)) {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+:where(app-aienablement) .content-card2:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #34634d;
+}
+
+:where(app-aienablement) .accent-line:not(._):not(:where(app-ai-banner *)) {
+  height: 2px;
+  background: #264a39;
+  margin-bottom: 20px;
+}
+:where(app-aienablement) .main-list:not(._):not(:where(app-ai-banner *)) {
+  list-style: disc;
+}
+:where(app-aienablement) .sub-list:not(._):not(:where(app-ai-banner *)) {
+  list-style: circle;
+  margin-top: 5px;
+}
+:where(app-aienablement) .ai-dev-container:not(._):not(:where(app-ai-banner *)) {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #333;
+}
+:where(app-aienablement) .ai-dev-main-title:not(._):not(:where(app-ai-banner *)) {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+:where(app-aienablement) .ai-dev-grid:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+:where(app-aienablement) .ai-dev-card:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+  min-height: 160px;
+}
+:where(app-aienablement) .ai-dev-card:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+:where(app-aienablement) .ai-dev-sidebar:not(._):not(:where(app-ai-banner *)) {
+  background-color: #BFBFBF;
+  color: white;
+  width: 220px;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+:where(app-aienablement) .ai-dev-content:not(._):not(:where(app-ai-banner *)) {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fcfcfc;
+  flex-grow: 1;
+}
+:where(app-aienablement) .ai-dev-content:not(._) p:not(._):not(:where(app-ai-banner *)) {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+:where(app-aienablement) .ai-dev-content:not(._) strong:not(._):not(:where(app-ai-banner *)) {
+  color: #000;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  :where(app-aienablement) .process-grid:not(._):not(:where(app-ai-banner *)) {
+    display: flex;
+    gap: 15px;
+    margin: 25px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  :where(app-aienablement) .process-card:not(._):not(:where(app-ai-banner *)) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  :where(app-aienablement) .step-title:not(._):not(:where(app-ai-banner *)) {
+    background-color: #76A379;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+  }
+  :where(app-aienablement) .step-connector:not(._):not(:where(app-ai-banner *)) {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    margin: -12px 0;
+    z-index: 2;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  :where(app-aienablement) .step-body:not(._):not(:where(app-ai-banner *)) {
+    margin: 10px;
+    background: linear-gradient(180deg, #76A379, #B2C7B3);
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    width: 100%;
+    flex-grow: 1;
+  }
+  :where(app-aienablement) .ai-dev-card:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: column;
+  }
+  :where(app-aienablement) .ai-dev-sidebar:not(._):not(:where(app-ai-banner *)) {
+    width: 100%;
+    padding: 15px;
+  }
+}
+:where(app-aienablement) .cust-ai-container:not(._):not(:where(app-ai-banner *)) {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #333;
+}
+:where(app-aienablement) .cust-ai-main-title:not(._):not(:where(app-ai-banner *)) {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+:where(app-aienablement) .cust-ai-subtitle:not(._):not(:where(app-ai-banner *)) {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+  text-align: center;
+}
+/* Main Phases Grid */
+:where(app-aienablement) .cust-ai-grid:not(._):not(:where(app-ai-banner *)) {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+:where(app-aienablement) .cust-ai-column:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+:where(app-aienablement) .cust-ai-column:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-5px);
+}
+:where(app-aienablement) .cust-ai-header:not(._):not(:where(app-ai-banner *)) {
+  background-color: #76A379;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:where(app-aienablement) .cust-ai-body:not(._):not(:where(app-ai-banner *)) {
+  background: linear-gradient(180deg, #76A379, #B2C7B3);
+  color: black;
+  padding: 25px 15px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+:where(app-aienablement) .cust-ai-divider:not(._):not(:where(app-ai-banner *)) {
+  border: 0;
+  border-top: 2px solid #5cb3b3;
+  margin-bottom: 30px;
+}
+:where(app-aienablement) .cust-ai-deliverables-container:not(._):not(:where(app-ai-banner *)) {
+  align-items: flex-start;
+  gap: 40px;
+}
+:where(app-aienablement) .cust-ai-deliverables-pill:not(._):not(:where(app-ai-banner *)) {
+  color: #000;
+  padding: 15px 25px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 140px;
+  font-size: 2rem;
+}
+:where(app-aienablement) .cust-ai-deliverables-lists:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  flex-grow: 1;
+  gap: 50px;
+}
+:where(app-aienablement) .cust-ai-list:not(._):not(:where(app-ai-banner *)) {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+}
+:where(app-aienablement) .cust-ai-list:not(._) li:not(._):not(:where(app-ai-banner *)) {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+@media (max-width: 850px) {
+  :where(app-aienablement) .step-body:not(._):not(:where(app-ai-banner *)) {
+    margin: 10px;
+    background: linear-gradient(180deg, #76A379, #B2C7B3);
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    width: 100%;
+    flex-grow: 1;
+  }
+  :where(app-aienablement) .cust-ai-grid:not(._):not(:where(app-ai-banner *)) {
+    grid-template-columns: 1fr;
+  }
+  :where(app-aienablement) .cust-ai-deliverables-container:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: column;
+  }
+  :where(app-aienablement) .cust-ai-deliverables-lists:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* WRAPPER */
+:where(app-aienablement) .ai-cards-wrapper:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* CARD */
+:where(app-aienablement) .ai-info-card:not(._):not(:where(app-ai-banner *)) {
+  flex: 1;
+  min-width: 300px;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+:where(app-aienablement) .ai-info-card:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-6px);
+}
+/* CONTENT */
+:where(app-aienablement) .ai-info-content:not(._):not(:where(app-ai-banner *)) {
+  padding: 30px;
+}
+:where(app-aienablement) .ai-info-title:not(._):not(:where(app-ai-banner *)) {
+  color: #76a379;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  letter-spacing: -.25px;
+}
+:where(app-aienablement) .ai-info-content:not(._) p:not(._):not(:where(app-ai-banner *)) {
+  color: #6c757d !important;
+  font-size: 0.875em;
+  font-weight: 400;
+}
+:where(app-aienablement) .ai-info-content:not(._) ul:not(._):not(:where(app-ai-banner *)) {
+  padding-left: 18px;
+}
+:where(app-aienablement) .ai-info-content:not(._) li:not(._):not(:where(app-ai-banner *)) {
+  color: #6c757d !important;
+  font-size: 0.875em;
+  font-weight: 400;
+}
+:where(app-aienablement) .ai-info-image:not(._):not(:where(app-ai-banner *)) {
+  width: 100%;
+  text-align: center;
+  background: #f7f9fb;
+}
+:where(app-aienablement) .ai-info-image:not(._) img:not(._):not(:where(app-ai-banner *)) {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  :where(app-aienablement) .hero-section:not(._):not(:where(app-ai-banner *)) {
+    padding-top: 50px;
+  }
+  :where(app-aienablement) .ai-cards-wrapper:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: 2rf column;
+    padding: 10px;
+  }
+  :where(app-aienablement) .ai-info-card:not(._):not(:where(app-ai-banner *)) {
+    max-width: 100%;
+  }
+}
+/* CARD GRID */
+:where(app-aienablement) .ai-risk-cards:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* CARD */
+:where(app-aienablement) .ai-risk-card:not(._):not(:where(app-ai-banner *)) {
+  flex: 1;
+  min-width: 300px;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+:where(app-aienablement) .ai-risk-card:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+/* IMAGE ABOVE CONTENT */
+:where(app-aienablement) .ai-risk-image:not(._) img:not(._):not(:where(app-ai-banner *)) {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+/* CONTENT */
+:where(app-aienablement) .ai-risk-content:not(._):not(:where(app-ai-banner *)) {
+  padding: 25px;
+}
+:where(app-aienablement) .ai-risk-title:not(._):not(:where(app-ai-banner *)) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+:where(app-aienablement) .ai-risk-content:not(._) p:not(._):not(:where(app-ai-banner *)) {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+:where(app-aienablement) .main-list:not(._) li:not(._):not(:where(app-ai-banner *)) {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+:where(app-aienablement) .sub-list:not(._):not(:where(app-ai-banner *)) {
+  margin-top: 6px;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  :where(app-aienablement) .ai-risk-cards:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: 2rf column;
+    padding: 10px;
+  }
+  :where(app-aienablement) .ai-risk-card:not(._):not(:where(app-ai-banner *)) {
+    max-width: 100%;
+  }
+}
+/* GRID */
+:where(app-aienablement) .ai-risk-cards:not(._):not(:where(app-ai-banner *)) {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* CARD */
+:where(app-aienablement) .ai-risk-card:not(._):not(:where(app-ai-banner *)) {
+  flex: 1;
+  min-width: 300px;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+:where(app-aienablement) .ai-risk-card:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+/* IMAGE */
+:where(app-aienablement) .ai-risk-image:not(._) img:not(._):not(:where(app-ai-banner *)) {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+/* CONTENT */
+:where(app-aienablement) .ai-risk-content:not(._):not(:where(app-ai-banner *)) {
+  padding: 25px;
+}
+:where(app-aienablement) .ai-risk-title:not(._):not(:where(app-ai-banner *)) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+:where(app-aienablement) .main-list:not(._) li:not(._):not(:where(app-ai-banner *)) {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+:where(app-aienablement) .sub-list:not(._):not(:where(app-ai-banner *)) {
+  margin-top: 6px;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  :where(app-aienablement) .ai-risk-cards:not(._):not(:where(app-ai-banner *)) {
+    flex-direction: 2fr column;
+  }
+  :where(app-aienablement) .ai-risk-card:not(._):not(:where(app-ai-banner *)) {
+    max-width: 100%;
+  }
+}
+/* SECTION */
+:where(app-aienablement) .ai-dev-section:not(._):not(:where(app-ai-banner *)) {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+:where(app-aienablement) .ai-dev-container:not(._):not(:where(app-ai-banner *)) {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* TITLES */
+:where(app-aienablement) .ai-dev-main-title:not(._):not(:where(app-ai-banner *)) {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+:where(app-aienablement) .ai-dev-subtitle:not(._):not(:where(app-ai-banner *)) {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 40px;
+  text-align: center;
+}
+:where(app-aienablement) .ai-dev-grid:not(._):not(:where(app-ai-banner *)) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+/* CARD */
+:where(app-aienablement) .ai-dev-card:not(._):not(:where(app-ai-banner *)) {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+:where(app-aienablement) .ai-dev-card:hover:not(._):not(:where(app-ai-banner *)) {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+/* IMAGE */
+:where(app-aienablement) .ai-dev-image:not(._) img:not(._):not(:where(app-ai-banner *)) {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+/* CONTENT */
+:where(app-aienablement) .ai-dev-content:not(._):not(:where(app-ai-banner *)) {
+  padding: 22px;
+}
+:where(app-aienablement) .ai-dev-content:not(._) h3:not(._):not(:where(app-ai-banner *)) {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+:where(app-aienablement) .ai-dev-content:not(._) p:not(._):not(:where(app-ai-banner *)) {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+/* TABLET – 2 COLUMNS */
+@media (max-width: 992px) {
+  :where(app-aienablement) .hero-section:not(._):not(:where(app-ai-banner *)) {
+    padding-top: 50px;
+  }
+  :where(app-aienablement) .ai-dev-grid:not(._):not(:where(app-ai-banner *)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* MOBILE – 1 COLUMN */
+@media (max-width: 576px) {
+  :where(app-aienablement) .aiautomation:not(._):not(:where(app-ai-banner *)){
+        font-size: 20px !important;
+}
+:where(app-aienablement) p:not(._):not(:where(app-ai-banner *)){
+    font-size: 0.7rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+  :where(app-aienablement) .ai-dev-subtitle:not(._):not(:where(app-ai-banner *)) {
+    font-size: 12px;
+  }
+ :where(app-aienablement) .main-title:not(._):not(:where(app-ai-banner *)) {
+    font-size: 1.5rem;
+  }
+  :where(app-aienablement) .ai-dev-main-title:not(._):not(:where(app-ai-banner *)) {
+    font-size: 1.5rem;
+  }
+  :where(app-aienablement) .cust-ai-main-title:not(._):not(:where(app-ai-banner *)) {
+    font-size: 1.5rem;
+  }
+  :where(app-aienablement) .cust-ai-deliverables-pill:not(._):not(:where(app-ai-banner *)) {
+    font-size: 1.5rem;
+  }
+  :where(app-aienablement) .main-title2:not(._):not(:where(app-ai-banner *)) {
+    font-size: 1.5rem;
+  }
+  :where(app-aienablement) .ai-dev-grid:not(._):not(:where(app-ai-banner *)) {
+    grid-template-columns: 1fr;
+    margin: -11px;
+  }
+}
+:where(app-aienablement) .deliverables-v2:not(._):not(:where(app-ai-banner *)) {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+:where(app-aienablement) .deliverables-v2-grid:not(._):not(:where(app-ai-banner *)) {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+/* Item box */
+:where(app-aienablement) .deliverables-v2-item:not(._):not(:where(app-ai-banner *)) {
+  background: #76A379;
+  padding: 18px 22px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  text-align: left;
+  line-height: 1.4;
+  margin: 10px;
+}
+/* Mobile fallback */
+@media (max-width: 768px) {
+  :where(app-aienablement) .deliverables-v2-grid:not(._):not(:where(app-ai-banner *)) {
+    grid-template-columns: 2fr !important;
+  }
+}
+:where(app-aienablement) .bg-sec-hero:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-um:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-risk-1:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-risk-2:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-automation:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-dev:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-custom-ai:not(._):not(:where(app-ai-banner *)) {
+  padding: 30px 0px;
+}
+:where(app-aienablement) .bg-sec-hero:not(._):not(:where(app-ai-banner *)) {
+  background: linear-gradient(135deg, #eef5f0, #ffffff);
+}
+:where(app-aienablement) .bg-sec-um:not(._):not(:where(app-ai-banner *)) {
+  background-color: #BFBFBF;
+}
+:where(app-aienablement) .bg-sec-risk-1:not(._):not(:where(app-ai-banner *)) {
+  background-color: #B2C7B3;
+  max-width: 100%;
+}
+:where(app-aienablement) .bg-sec-risk-2:not(._):not(:where(app-ai-banner *)) {
+  background-color: #BFBFBF;
+  max-width: 100%;
+}
+:where(app-aienablement) .bg-sec-automation:not(._):not(:where(app-ai-banner *)) {
+  background: linear-gradient(180deg, #f8fbf9, #eef5f0);
+}
+:where(app-aienablement) .bg-sec-dev:not(._):not(:where(app-ai-banner *)) {
+  background-color: #B2C7B3;
+}
+:where(app-aienablement) .bg-sec-custom-ai:not(._):not(:where(app-ai-banner *)) {
+  background-color: #BFBFBF;
+}
+:where(app-aienablement) .bg-sec-um:not(._) .ai-info-card:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-risk-1:not(._) .ai-risk-card:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-risk-2:not(._) .ai-risk-card:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-dev:not(._) .ai-risk-card:not(._):not(:where(app-ai-banner *)), :where(app-aienablement) .bg-sec-custom-ai:not(._) .cust-ai-column:not(._):not(:where(app-ai-banner *)) {
+  background-color: #ffffff;
+  border-radius: 16px;
+}

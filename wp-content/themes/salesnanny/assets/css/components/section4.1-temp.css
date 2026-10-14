@@ -1,0 +1,61 @@
+/* <app-section41-temp> — converted from src/app/sharedComponents/section4.1-temp/section4.1-temp.component.css */
+:where(app-section41-temp) .bg-omni-grey:not(._) {
+  background-color: #f4f6f8;
+  min-height: 300px;
+}
+:where(app-section41-temp) .Sectionheadertitle:not(._){
+ padding: 50px;
+}
+:where(app-section41-temp) .section-title:not(._) {
+  color: #333;
+  font-size: 2rem !important;;
+}
+:where(app-section41-temp) .underline_cls1:not(._) {
+  font-size: 2rem;
+  display: inline-block;
+  background-repeat: repeat-x;
+  background-position: 0 1.1em;
+  background-size: auto 6px;
+  padding-bottom: 6px;
+}
+:where(app-section41-temp) .omni-card:not(._) {
+  justify-content: center;
+  background-color: #ffffff !important;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid transparent !important;
+  min-width: 200px;
+}
+:where(app-section41-temp) .omni-card:hover:not(._) {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+  border-color: #76A379 !important;
+}
+:where(app-section41-temp) .text-purple:not(._) {
+  color: #000;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+:where(app-section41-temp) .icon-purple:not(._) {
+  color: #000;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+@media (max-width: 576px) {
+  :where(app-section41-temp) .Sectionheadertitle:not(._){
+ padding: 20px;
+}
+  :where(app-section41-temp) .text-purple:not(._) {
+  color: #000;
+  font-weight: 600;
+  font-size: 12px !important;
+  
+}
+ :where(app-section41-temp) .section-title:not(._) {
+    font-size: 16px !important;
+  }
+  :where(app-section41-temp) .omni-card:not(._) {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

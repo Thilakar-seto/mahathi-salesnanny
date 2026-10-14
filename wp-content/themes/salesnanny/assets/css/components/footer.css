@@ -1,0 +1,142 @@
+/* <app-footer> — converted from src/app/sharedComponents/footer/footer.component.css */
+:where(app-footer) .footer_font_style:not(._):not(:where(app-contact-popup *)) {
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px;
+}
+:where(app-footer) .footer-single-column:not(._):not(:where(app-contact-popup *)) {
+  display: flex;
+  flex-wrap: wrap;              
+  gap: 25px;
+  justify-content: space-between;
+}
+:where(app-footer) .footer_link_12:not(._):not(:where(app-contact-popup *)) {
+  flex: 1 1 180px;              
+  min-width: 180px;
+}
+:where(app-footer) .footer_link_12:not(._) p:not(._):not(:where(app-contact-popup *)) {
+  margin-bottom: 6px;
+}
+:where(app-footer) .footer_link_12:not(._) a:not(._):not(:where(app-contact-popup *)) {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+:where(app-footer) .footer_link_12:not(._) a:hover:not(._):not(:where(app-contact-popup *)) {
+  text-decoration: underline;
+}
+@media (max-width: 991px) {
+  :where(app-footer) .footer-single-column:not(._):not(:where(app-contact-popup *)) {
+    justify-content: flex-start;
+    padding-left: 32px;
+  }
+  :where(app-footer) .footer_link_12:not(._):not(:where(app-contact-popup *)) {
+    flex: 1 1 45%;             
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 1300px) {
+  :where(app-footer) .footer-single-column:not(._):not(:where(app-contact-popup *)) {
+    justify-content: flex-start;
+    padding-left: 32px;
+  }
+}
+:where(app-footer) .footer-single-column:not(._):not(:where(app-contact-popup *)) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+:where(app-footer) .footer_link_12:not(._):not(:where(app-contact-popup *)) {
+  flex: 1 1 94px;
+  min-width: 200px;
+}
+@media (max-width: 767px) {
+  :where(app-footer) .footer-single-column:not(._):not(:where(app-contact-popup *)) {
+    flex-direction: column;   
+    gap: 24px;
+    padding-left: 0px !important;
+  }
+  :where(app-footer) .footer_link_12:not(._):not(:where(app-contact-popup *)) {
+    width: 100%;
+    text-align: left;  
+    padding-left: 13px;        
+  }
+  :where(app-footer) .footer_font_style:not(._):not(:where(app-contact-popup *)) {
+    font-size: 15px !important;
+  }
+  :where(app-footer) .footer_link_12:not(._) p:not(._):not(:where(app-contact-popup *)) {
+    margin-bottom: 10px;
+  }
+  :where(app-footer) .footer-socials:not(._):not(:where(app-contact-popup *)) {
+    display: flex;
+    justify-content: center;
+  }
+  :where(app-footer) .footer-small:not(._):not(:where(app-contact-popup *)) {
+    text-align: center;
+  }
+}
+:where(app-footer) .contact-social-mobile:not(._):not(:where(app-contact-popup *)) {
+  display: none !important;
+}
+@media (max-width: 767px) {
+
+  :where(app-footer) .contact-us-block:not(._) .contact-social-mobile:not(._):not(:where(app-contact-popup *)) {
+    display: block !important;    
+    position: static !important;   
+    float: none !important;       
+    margin-top: 12px;
+    margin-left: 0 !important;
+    margin-right: auto !important; 
+    text-align: left !important;
+  }
+  :where(app-footer) .contact-us-block:not(._) .contact-social-mobile:not(._) a:not(._):not(:where(app-contact-popup *)) {
+    display: inline-block !important;
+    float: none !important;
+    margin: 0 !important;
+  }
+  :where(app-footer) .contact-us-block:not(._) .contact-social-mobile:not(._) img:not(._):not(:where(app-contact-popup *)) {
+    display: block !important;
+    width: 26px;
+    height: 26px;
+    position: static !important;   
+  }
+    :where(app-footer) .footer-small:not(._) .footer-socials:not(._):not(:where(app-contact-popup *)) {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  :where(app-footer) .contact-social-mobile:not(._):not(:where(app-contact-popup *)) {
+    display: none !important;
+  }
+}
+:where(app-footer) .footer-single-column:not(._) p:not(._):not(:where(app-contact-popup *)) {
+  cursor: pointer;
+}
+
+:where(app-footer) .footer-contact-heading:not(._):not(:where(app-contact-popup *)) {
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+}
+
+:where(app-footer) .footer-contact-heading:hover:not(._):not(:where(app-contact-popup *)) {
+
+  opacity: 0.8;
+}
+
+:where(app-footer) .footer-get-in-touch-btn:not(._):not(:where(app-contact-popup *)) {
+
+  background: #ffffff;
+
+  appearance: none;
+
+  font-family: inherit;
+
+  font-size: inherit;
+
+  line-height: inherit;
+
+  cursor: pointer;
+}

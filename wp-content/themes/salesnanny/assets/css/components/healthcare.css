@@ -1,0 +1,826 @@
+/* <app-healthcare> — converted from src/app/pages/healthcare/healthcare.component.css */
+:where(app-healthcare) .healthcare-features:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    padding: 15px;
+}
+
+:where(app-healthcare) #page-block-ec-panel:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+:where(app-healthcare) .custom-divider:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    width: 60px;
+    height: 4px;
+    background-color: #ff8c00;
+    border-radius: 2px;
+}
+
+:where(app-healthcare) .image-wrapper:not(._) img:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    width: 100%;
+    object-fit: cover;
+    z-index: 2;
+    position: relative;
+    padding: 15px;
+}
+
+:where(app-healthcare) .accent-box:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #f0f4f0;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+:where(app-healthcare) .feature-item:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    transition: transform 0.3s ease;
+}
+
+:where(app-healthcare) .feature-icon:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    min-width: 50px;
+    height: 50px;
+    background-color: #537450;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.2rem;
+}
+
+:where(app-healthcare) .feature-content:not(._) h5:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+:where(app-healthcare) .feature-content:not(._) p:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    :where(app-healthcare) .feature-icon:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        min-width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+}
+
+:where(app-healthcare) .display-6:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    color: #1a1a1a;
+    letter-spacing: -1px;
+}
+
+:where(app-healthcare) .custom-divider:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    width: 60px;
+    height: 4px;
+    background-color: #ff8c00;
+    /* Brand Orange */
+    border-radius: 2px;
+}
+
+:where(app-healthcare) .why-item:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    align-items: flex-start;
+    transition: transform 0.2s ease;
+}
+
+:where(app-healthcare) .why-item:hover:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    transform: translateX(10px);
+}
+
+:where(app-healthcare) .why-check:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    color: #537450;
+    font-size: 1.25rem;
+    margin-right: 15px;
+    margin-top: 2px;
+    min-width: fit-content;
+}
+
+:where(app-healthcare) .why-item:not(._) p:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #4a4a4a;
+    margin-bottom: 0;
+}
+
+:where(app-healthcare) .why-item:not(._) strong:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    color: #1a1a1a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+@media (min-width: 768px) {
+    :where(app-healthcare) .arrow-button:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0 12px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    :where(app-healthcare) .arrow-button:not(._) svg:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        width: 38px;
+        height: 38px;
+        transition: transform 0.2s ease;
+    }
+
+    :where(app-healthcare) .arrow-button:hover:not(._) svg:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        transform: scale(1.1);
+    }
+
+    :where(app-healthcare) .arrow-button:disabled:not(._) svg:not(._) path:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        fill: #ccc;
+    }
+
+    :where(app-healthcare) .arrow-button:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0 12px;
+        padding: 0;
+    }
+
+    :where(app-healthcare) .arrow-icon-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        background-color: #76A379;
+        border-radius: 50%;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    :where(app-healthcare) .arrow-button:not(._) svg:not(._) path:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        fill: #B55A6B;
+    }
+
+    :where(app-healthcare) .arrow-button:hover:not(._) .arrow-icon-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        background-color: #fff;
+    }
+
+    :where(app-healthcare) .arrow-button:hover:not(._) svg:not(._) path:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        fill: #B55A6B;
+    }
+
+    :where(app-healthcare) #page-block-hi-banner:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+    }
+
+    :where(app-healthcare) .cta-heading:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        font-size: 1.25rem;
+    }
+}
+
+:where(app-healthcare) .fw-light:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-weight: 300 !important;
+}
+
+:where(app-healthcare) .brand-divider-center:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    width: 60px;
+    height: 4px;
+    background-color: #ff8c00;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+:where(app-healthcare) .lead:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 1.54rem;
+    line-height: 1.6;
+}
+
+:where(app-healthcare) .healthcare-tab-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    /* margin-bottom: 55px; */
+    padding: 16px;
+}
+
+:where(app-healthcare) .vg-section-title:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    text-align: center;
+    font-size: 2.25rem !important;
+    font-weight: 700;
+    color: #302D42;
+    margin-bottom: 40px;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    position: relative;
+}
+
+:where(app-healthcare) .vg-section-title:not(._):not(:where(app-health-top-banner *, app-solution-grid *))::after {
+    content: '';
+    display: block;
+    width: 155px;
+    height: 4px;
+    background: #76A379;
+    margin: 12px auto 0;
+    border-radius: 2px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:where(app-healthcare) .vg-section-title:hover:not(._):not(:where(app-health-top-banner *, app-solution-grid *))::after {
+    width: 270px;
+}
+
+/* Healthcare image grid (tabs replacement) */
+:where(app-healthcare) .hc-grid:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-auto-rows: 16px;
+}
+
+:where(app-healthcare) .hc-card:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    position: relative;
+    height: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #c8c8c8;
+    cursor: pointer;
+}
+
+:where(app-healthcare) .hc-card:nth-child(1):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    grid-row: span 14;
+}
+
+:where(app-healthcare) .hc-card:nth-child(2):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    grid-row: span 10;
+}
+
+:where(app-healthcare) .hc-card:nth-child(3):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    grid-row: span 14;
+}
+
+:where(app-healthcare) .hc-card:nth-child(4):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    grid-row: span 10;
+}
+
+:where(app-healthcare) .hc-card__img:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.35s ease;
+}
+
+:where(app-healthcare) .hc-card__overlay:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 30%, rgba(8, 18, 45, 0.45) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+:where(app-healthcare) .hc-card__label:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.93);
+    padding: 80px 14px 14px 14px;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+:where(app-healthcare) .hc-card__text:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+:where(app-healthcare) .hc-card__title:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 16px;
+    font-weight: 700;
+    color: #76A379;
+    line-height: 1.4;
+}
+
+:where(app-healthcare) .hc-card__desc:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #302D42;
+}
+
+:where(app-healthcare) .hc-card__btn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background: #76A379;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+:where(app-healthcare) .hc-card:hover:not(._) .hc-card__img:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    transform: scale(1.06);
+}
+
+:where(app-healthcare) .hc-card:hover:not(._) .hc-card__overlay:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    opacity: 1;
+}
+
+:where(app-healthcare) .hc-card:hover:not(._) .hc-card__btn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    :where(app-healthcare) .healthcare-tab-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        min-height: auto;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    :where(app-healthcare) .hc-grid:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-auto-rows: 20px;
+    }
+
+    :where(app-healthcare) .hc-card:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        height: auto;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(1):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: span 14;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(2):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: span 10;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(3):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: span 14;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(4):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: span 10;
+    }
+
+    :where(app-healthcare) .hc-card__btn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    :where(app-healthcare) .healthcare-tab-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        min-height: auto;
+    }
+
+    :where(app-healthcare) .hc-grid:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-auto-rows: 20px;
+    }
+
+    :where(app-healthcare) .hc-card:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        height: auto;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(1):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: span 14;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(2):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: span 10;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(3):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: span 14;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(4):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: span 10;
+    }
+}
+
+@media (max-width: 600px) {
+    :where(app-healthcare) .hc-grid:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    :where(app-healthcare) .hc-card:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        height: 230px;
+    }
+
+    :where(app-healthcare) .hc-card:nth-child(1):not(._):not(:where(app-health-top-banner *, app-solution-grid *)), :where(app-healthcare) .hc-card:nth-child(2):not(._):not(:where(app-health-top-banner *, app-solution-grid *)), :where(app-healthcare) .hc-card:nth-child(3):not(._):not(:where(app-health-top-banner *, app-solution-grid *)), :where(app-healthcare) .hc-card:nth-child(4):not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        grid-row: auto;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    :where(app-healthcare) .hc-grid:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    :where(app-healthcare) .arrow-button:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0 12px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    :where(app-healthcare) .arrow-button:not(._) svg:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        display: none;
+        width: 38px;
+        height: 38px;
+        transition: transform 0.2s ease;
+    }
+
+    :where(app-healthcare) .arrow-button:hover:not(._) svg:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        transform: scale(1.1);
+    }
+
+    :where(app-healthcare) .arrow-button:disabled:not(._) svg:not(._) path:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        fill: #ccc;
+    }
+
+    :where(app-healthcare) .arrow-button:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0 12px;
+        padding: 0;
+    }
+
+    :where(app-healthcare) .arrow-icon-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        background-color: #76A379;
+        border-radius: 50%;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    :where(app-healthcare) .arrow-button:not(._) svg:not(._) path:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        fill: #B55A6B;
+    }
+
+    :where(app-healthcare) .arrow-button:hover:not(._) .arrow-icon-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        background-color: #fff;
+    }
+
+    :where(app-healthcare) .arrow-button:hover:not(._) svg:not(._) path:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        fill: #B55A6B;
+    }
+
+    :where(app-healthcare) .healthcare-tab-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    :where(app-healthcare) .hc-card:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        height: 200px;
+    }
+
+    :where(app-healthcare) .hc-card__btn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+:where(app-healthcare) .arrow-button:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #537450;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 12px;
+}
+
+:where(app-healthcare) .arrow-button:disabled:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+:where(app-healthcare) .dg-home-intro:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    background-color: #8cc48f29;
+}
+
+/* Healthcare right-side popup */
+:where(app-healthcare) .hc-backdrop:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: rgba(80, 90, 110, 0.45);
+    animation: healthcare__hc-fade-in 0.3s ease forwards;
+}
+
+@keyframes healthcare__hc-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+:where(app-healthcare) .hc-sidebar:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.14);
+    z-index: 9999;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.36s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:where(app-healthcare) .hc-sidebar--open:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    transform: translateX(0);
+}
+
+:where(app-healthcare) .hc-sidebar__header:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e0e3ea;
+    flex-shrink: 0;
+}
+
+:where(app-healthcare) .hc-sidebar__close:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid #76A379;
+    border-radius: 3px;
+    background: #fff;
+    color: #76A379;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+:where(app-healthcare) .hc-sidebar__close:hover:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    background: #76A379;
+    color: #fff;
+}
+
+:where(app-healthcare) .hc-sidebar__list:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+:where(app-healthcare) .hc-sidebar__list-item:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1a2744;
+    line-height: 1.5;
+    padding: 18px 20px;
+    border-bottom: 1px solid #e0e3ea;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+:where(app-healthcare) .hc-sidebar__list-item:hover:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    background: rgba(118, 163, 121, 0.08);
+    color: #76A379;
+}
+
+:where(app-healthcare) .hc-sidebar__list-btn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    :where(app-healthcare) .hc-sidebar:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        height: auto;
+        max-height: 60vh;
+        transform: translateY(100%);
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.14);
+    }
+
+    :where(app-healthcare) .hc-sidebar--open:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        transform: translateY(0);
+    }
+}
+
+:where(app-healthcare) .arrow-icon-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    background-color: #76A379;
+    /* brand green */
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:where(app-healthcare) .arrow-button:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 12px;
+    padding: 0;
+}
+
+:where(app-healthcare) .arrow-icon-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    background-color: #76A379;
+    /* default pink background */
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:where(app-healthcare) .arrow-button:not(._) svg:not(._) path:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    fill: #B55A6B;
+}
+
+:where(app-healthcare) .arrow-button:hover:not(._) .arrow-icon-wrapper:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    background-color: #fff;
+}
+
+:where(app-healthcare) .arrow-button:hover:not(._) svg:not(._) path:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    fill: #B55A6B;
+}
+
+:where(app-healthcare) #healthcare-capabilities-header:not(._) .col-lg-8:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+:where(app-healthcare) #healthcare-capabilities-header:not(._) .editor-text:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+:where(app-healthcare) .editor-text:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    text-align: center !important;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 1600px) {
+    :where(app-healthcare) .txth4:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        font-size: 2.25rem !important;
+    }
+}
+
+:where(app-healthcare) .page-block-section:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    min-height: 0em !important;
+}
+
+:where(app-healthcare) *:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    overflow: hidden;
+}
+
+@media (max-width: 426px) {
+    :where(app-healthcare) .big:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        font-size: 1rem;
+    }
+
+    :where(app-healthcare) .txth4:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        font-size: 1.5rem !important;
+    }
+}
+
+:where(app-healthcare) .htxte1:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 1rem !important;
+}
+
+/* Mobile (default) */
+:where(app-healthcare) .cntctbtn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    padding: 6px 12px;
+    margin-bottom: 10px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    :where(app-healthcare) .cntctbtn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        padding: 7px 15px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    :where(app-healthcare) .cntctbtn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        padding: 8px 16px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    :where(app-healthcare) .cntctbtn:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        padding: 7px 18px;
+        margin-bottom: 0px;
+    }
+}
+
+:where(app-healthcare) .htxt23:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 1.05rem;
+}
+
+:where(app-healthcare) #page-block-hi-banner:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    margin-top: 0 !important;
+}
+
+/* Default → Mobile */
+:where(app-healthcare) .editor-column:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    margin: 1rem;
+    padding: 1.5rem 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    :where(app-healthcare) .editor-column:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        margin: 3rem;
+        padding: 3rem 3rem 3rem 0;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    :where(app-healthcare) .editor-column:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        margin: 4rem;
+        padding: 4rem 6rem 4rem 0;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    :where(app-healthcare) .editor-column:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+        margin: 6rem;
+        padding: 5rem 10rem 5rem 0;
+    }
+}
+
+:where(app-healthcare) .vg-section-title:not(._):not(:where(app-health-top-banner *, app-solution-grid *)) {
+    font-size: 28px;
+    margin-bottom: 20px;
+}

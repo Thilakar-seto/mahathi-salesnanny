@@ -1,0 +1,41 @@
+/*
+ * Theme-level rules.
+ * Page chrome and components are styled by assets/css/components/*.css (scoped per
+ * component tag); this file only holds what belongs to the page shell.
+ */
+
+/* Soft green glow that fades in while scrolling (driven by --scroll-ease in mahathi.js) */
+.scroll-effects-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.scroll-effects-layer::before {
+  content: '';
+  position: absolute;
+  inset: -20vh;
+  background: radial-gradient(
+    circle at center,
+    rgba(118, 163, 121, calc(var(--scroll-ease) * 0.35)),
+    transparent 65%
+  );
+  transition: opacity 1s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-effects-layer {
+    display: none;
+  }
+}
+
+/* Elements that navigate on click (former router links on non-anchor elements) */
+[data-href] {
+  cursor: pointer;
+}
+
+/* A <p> whose content is injected HTML (may contain block elements) is rendered as a div with p styling */
+:where([data-mh-p]) {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #595959;
+}

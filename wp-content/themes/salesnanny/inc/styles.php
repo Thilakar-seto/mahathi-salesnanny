@@ -1,0 +1,52 @@
+<?php
+/**
+ * Component stylesheets needed per route (assets/css/components/<name>.css).
+ * Shared chrome (header, footer, contact popup) is added by the theme.
+ */
+return [
+    '/' => ['dashboard', 'dashboard-our-solutions', 'solution-grid'],
+    '/healthcare' => ['healthcare', 'health-top-banner', 'solution-grid'],
+    '/healthcare/member-patient-administration' => ['member-patient-administration'],
+    '/healthcare/core-administration-platforms' => ['core-administration-platforms'],
+    '/healthcare/claims-management' => ['claims-management'],
+    '/healthcare/medical-management' => ['medical-management'],
+    '/healthcare/pharmacy-benefits-management' => ['pharmacy-benefits-management'],
+    '/healthcare/revenue-cycle-management' => ['revenue-cycle-management'],
+    '/healthcare/compliance-regulatory-services' => ['compliance-regulatory-services'],
+    '/healthcare/fraud-waste-abuse' => ['fraud-waste-abuse'],
+    '/healthcare/value-based-care-analytics' => ['value-based-care-analytics'],
+    '/healthcare/digital-ai-enablement' => ['digital-ai-enablement'],
+    '/healthcare/location' => [],
+    '/ai-enablement' => ['aienablement', 'ai-banner'],
+    '/about-us' => ['aboutus', 'aboutus-banner'],
+    '/contact-us' => ['contactus', 'contact-banner'],
+    '/news' => ['news', 'newsbanner'],
+    '/insurance/p-and-c-solution' => ['workers-compensiation', 'main-template'],
+    '/insurance' => ['modern-workers-compensation', 'main-template'],
+    '/insurance/managed-care-organization' => ['managed-care-organization', 'main-template'],
+    '/insurance/life-and-annuity' => ['lifeandannutiy', 'main-template'],
+    '/insurance/re-insurance' => ['reinsurance', 'main-template'],
+    '/insurance/guidewire' => ['guidewire'],
+    '/databricks' => ['databricks'],
+    '/digital-services' => ['digitalservices', 'main-template'],
+    '/integrated-mailroom' => ['health-top-banner', 'section2-temp', 'section4-temp'],
+    '/workbench-solution' => [
+        'health-top-banner',
+        'section2-temp',
+        'section4.1-temp',
+        'section3-temp',
+        'section4-temp',
+    ],
+    '/compliance' => [
+        'health-top-banner',
+        'section2-temp',
+        'section4.1-temp',
+        'section3-temp',
+        'section4-temp',
+    ],
+    '/siu-investigative' => ['health-top-banner', 'section2-temp', 'section4-temp'],
+    '/litigation' => ['health-top-banner', 'section2-temp', 'section4-temp'],
+    '/resources' => ['resources-list'],
+    '/faq-insurance-healthcare-guidewire-ai-modernization' => ['faq-page', 'faq-accordion', 'contact-popup'],
+    '/pas-migration-problem-finder' => ['pas-finder'],
+];

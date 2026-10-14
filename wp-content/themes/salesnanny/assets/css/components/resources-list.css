@@ -1,0 +1,120 @@
+/* <app-resources-list> — converted from src/app/pages/resources/resources-list/resources-list.component.css */
+:where(app-resources-list) .resources-hero:not(._) {
+    background: #B55A6B;
+    padding: 180px 0 100px;
+    color: #fff;
+}
+
+:where(app-resources-list) .resources-title:not(._) {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+:where(app-resources-list) .resources-subtitle:not(._) {
+    font-size: 20px;
+    max-width: 750px;
+    line-height: 1.7;
+}
+
+:where(app-resources-list) .resources-section:not(._) {
+    padding: 80px 0;
+    background: #f8f8f8;
+}
+
+:where(app-resources-list) .resources-grid:not(._) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+:where(app-resources-list) .resource-card:not(._) {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+:where(app-resources-list) .resource-card:hover:not(._) {
+    transform: translateY(-6px);
+}
+
+:where(app-resources-list) .resource-image:not(._) {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+:where(app-resources-list) .resource-content:not(._) {
+    padding: 25px;
+}
+
+:where(app-resources-list) .resource-category:not(._) {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #B55A6B;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+:where(app-resources-list) .resource-heading:not(._) {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+:where(app-resources-list) .resource-excerpt:not(._) {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+:where(app-resources-list) .resource-link:not(._) {
+    color: #B55A6B;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+:where(app-resources-list) .resource-link:hover:not(._) {
+    text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    :where(app-resources-list) .resources-grid:not(._) {
+        grid-template-columns: 1fr;
+    }
+
+    :where(app-resources-list) .resources-title:not(._) {
+        font-size: 40px;
+    }
+}
+
+:where(app-resources-list) .resources-title:not(._), :where(app-resources-list) .resources-subtitle:not(._) {
+    color: #fff;
+}
+
+:where(app-resources-list) .loading-state:not(._) {
+    text-align: center;
+    padding: 100px 0;
+    font-size: 24px;
+    color: #666;
+}
+
+:where(app-resources-list) .resources-button:not(._) {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    background: #fff;
+    color: #B55A6B;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+:where(app-resources-list) .resources-button:hover:not(._) {
+    transform: translateY(-2px);
+}

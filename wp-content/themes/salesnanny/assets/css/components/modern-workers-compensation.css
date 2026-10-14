@@ -1,0 +1,165 @@
+/* <app-modern-workers-compensation> — converted from src/app/pages/modern-workers-compensation/modern-workers-compensation.component.css */
+:where(app-modern-workers-compensation) :root:not(._):not(:where(app-main-template *)) {
+  --primary-green: #76A379;
+  --secondary-green: #76A379;
+  --light-green: #B2C7B3;
+  --muted-rose: #B88794;
+  --soft-peach: #E9BCB6;
+  --pale-blue: #AECFDD;
+  --cool-gray: #BFBFBF;
+  --off-white: #F9FAFB;
+  --navy-dark: #111827; 
+  --body-text: #4B5563;
+  --white: #F4F4F2;
+}
+:where(app-modern-workers-compensation) *:not(._):not(:where(app-main-template *)) { box-sizing: border-box; }
+:where(app-modern-workers-compensation) body:not(._):not(:where(app-main-template *)) {
+  font-family: 'Poppins', sans-serif;
+  color: var(--body-text);
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--white);
+  text-align: center;
+}
+/* --- Layout Containers --- */
+:where(app-modern-workers-compensation) .container:not(._):not(:where(app-main-template *)) {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+:where(app-modern-workers-compensation) .flex-row:not(._):not(:where(app-main-template *)) { display: flex; gap: 24px; align-items: center; }
+:where(app-modern-workers-compensation) .space-between:not(._):not(:where(app-main-template *)) { justify-content: space-between; }
+/* --- Typography --- */
+:where(app-modern-workers-compensation) h1:not(._):not(:where(app-main-template *)), :where(app-modern-workers-compensation) h2:not(._):not(:where(app-main-template *)), :where(app-modern-workers-compensation) h3:not(._):not(:where(app-main-template *)) {
+  color: var(--navy-dark);
+  font-weight: 800;
+  margin-top: 0;
+}
+:where(app-modern-workers-compensation) .section-title:not(._):not(:where(app-main-template *)) { font-size: 2.5rem; margin-bottom: 1rem; }
+:where(app-modern-workers-compensation) .section-description:not(._):not(:where(app-main-template *)) { max-width: 750px; margin: 0 auto 3rem; font-size: 1.1rem; }
+:where(app-modern-workers-compensation) .highlight-text:not(._):not(:where(app-main-template *)) { color: var(--primary-green); }
+/* --- Buttons --- */
+
+
+:where(app-modern-workers-compensation) .check-icon:not(._):not(:where(app-main-template *)) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+:where(app-modern-workers-compensation) .icon-box:not(._):not(:where(app-main-template *)) {
+  width: 15px; 
+  height: 15px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+:where(app-modern-workers-compensation) .card-icon:not(._):not(:where(app-main-template *)) {
+  width: 15px;
+  height: 15px;
+  background: rgba(109, 156, 114, 0.1);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  color: var(--primary-green);
+}
+/* --- Hero Section --- */
+:where(app-modern-workers-compensation) .hero-section:not(._):not(:where(app-main-template *)) { background: var(--off-white); text-align: left; padding: 100px 0; }
+:where(app-modern-workers-compensation) .hero-container:not(._):not(:where(app-main-template *)) { display: flex; gap: 40px; }
+:where(app-modern-workers-compensation) .hero-content:not(._):not(:where(app-main-template *)) { flex: 1; }
+:where(app-modern-workers-compensation) .hero-visual:not(._):not(:where(app-main-template *)) { flex: 1; position: relative; }
+:where(app-modern-workers-compensation) .glass-card:not(._):not(:where(app-main-template *)) {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  max-width: 320px;
+  margin-left: auto;
+}
+:where(app-modern-workers-compensation) .card-gradient-header:not(._):not(:where(app-main-template *)) {
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+:where(app-modern-workers-compensation) .grid-4:not(._):not(:where(app-main-template *)) { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+:where(app-modern-workers-compensation) .features-grid:not(._):not(:where(app-main-template *)) { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+:where(app-modern-workers-compensation) .billing-card:not(._):not(:where(app-main-template *)), :where(app-modern-workers-compensation) .feature-card:not(._):not(:where(app-main-template *)) {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+:where(app-modern-workers-compensation) .content-card.flex-row:not(._):not(:where(app-main-template *)) {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: left;
+}
+:where(app-modern-workers-compensation) .subsection-title.border-primary:not(._):not(:where(app-main-template *)) {
+  border-left: 4px solid var(--primary-green);
+  padding-left: 15px;
+  text-align: left;
+}
+:where(app-modern-workers-compensation) .footer-stats:not(._):not(:where(app-main-template *)) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 60px 0;
+  border-top: 1px solid #eee;
+}
+:where(app-modern-workers-compensation) .stat-number:not(._):not(:where(app-main-template *)) { color: var(--secondary-green); font-size: 2.5rem; font-weight: 800; }
+:where(app-modern-workers-compensation) .stat-label:not(._):not(:where(app-main-template *)) { font-weight: 700; color: var(--navy-dark); }
+:where(app-modern-workers-compensation) .section-cta:not(._):not(:where(app-main-template *)) { background: var(--primary-green); color: white; padding: 80px 0; }
+@media (max-width: 992px) {
+  :where(app-modern-workers-compensation) .grid-4:not(._):not(:where(app-main-template *)), :where(app-modern-workers-compensation) .features-grid:not(._):not(:where(app-main-template *)), :where(app-modern-workers-compensation) .footer-stats:not(._):not(:where(app-main-template *)) { grid-template-columns: repeat(2, 1fr); }
+  :where(app-modern-workers-compensation) .hero-container:not(._):not(:where(app-main-template *)) { flex-direction: column; }
+}
+:where(app-modern-workers-compensation) body:not(._):not(:where(app-main-template *)), :where(app-modern-workers-compensation) html:not(._):not(:where(app-main-template *)) {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+:where(app-modern-workers-compensation) .container:not(._):not(:where(app-main-template *)) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+:where(app-modern-workers-compensation) .site-header:not(._) .container:not(._):not(:where(app-main-template *)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; 
+}
+:where(app-modern-workers-compensation) .hero-section:not(._):not(:where(app-main-template *)) {
+    padding: 60px 0; 
+    background-color: #F9FAFB; 
+    margin-top: 0; 
+}
+:where(app-modern-workers-compensation) .hero-container:not(._):not(:where(app-main-template *)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+:where(app-modern-workers-compensation) .hero-content:not(._):not(:where(app-main-template *)) {
+    flex: 1;
+    text-align: left;
+}
+:where(app-modern-workers-compensation) .hero-visual:not(._):not(:where(app-main-template *)) {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+:where(app-modern-workers-compensation):not(._) {
+  display: block;
+  padding-top: 40px;
+}

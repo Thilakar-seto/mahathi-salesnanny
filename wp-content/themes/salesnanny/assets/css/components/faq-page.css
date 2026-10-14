@@ -1,0 +1,381 @@
+/* <app-faq-page> — converted from src/app/pages/faq/faq-page/faq-page.component.css */
+/* -----------------------------------------------------------------------
+   faq-page.component.css
+   Scoped to this component. No global side-effects.
+   ----------------------------------------------------------------------- */
+
+/* ---- Page variables ---- */
+:where(app-faq-page):not(._) {
+
+  --faq-header-offset: 120px;
+}
+
+/* ---- Layout utility ---- */
+:where(app-faq-page) .faq-container:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  padding: 0 24px;
+}
+
+/* ---- Hero ---- */
+:where(app-faq-page) .faq-hero:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  background:
+    linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+
+  padding:
+    calc(72px + var(--faq-header-offset))
+    0
+    56px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+:where(app-faq-page) .faq-hero__eyebrow:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  font-size: 0.8125rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: #95d5b2;
+
+  margin-bottom: 12px;
+}
+
+:where(app-faq-page) .faq-hero__title:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  font-size: 2.25rem;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  margin-bottom: 16px;
+
+  color: #ffffff;
+}
+
+:where(app-faq-page) .faq-hero__subtitle:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  font-size: 1.0625rem;
+
+  color: #b7e4c7;
+
+  max-width: 560px;
+
+  margin: 0 auto;
+
+  padding: 0 12px;
+
+  line-height: 1.6;
+}
+
+/* ---- Jump navigation ---- */
+:where(app-faq-page) .faq-jump-nav:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  position: sticky;
+
+  top: var(--faq-header-offset);
+
+  z-index: 1000;
+
+  background: #f7fafc;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  padding: 14px 0;
+
+  isolation: isolate;
+
+  contain: layout paint;
+
+  will-change: transform;
+
+  backface-visibility: hidden;
+
+  transform: translate3d(0, 0, 0);
+}
+
+:where(app-faq-page) .faq-jump-nav__list:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px 16px;
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+:where(app-faq-page) .faq-jump-nav__link:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  max-width: 220px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-size: 0.8125rem;
+
+  font-weight: 500;
+
+  color: #2d6a4f;
+
+  text-decoration: none;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  border: 1px solid transparent;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+:where(app-faq-page) .faq-jump-nav__link:hover:not(._):not(:where(app-faq-accordion *, app-contact-popup *)), :where(app-faq-page) .faq-jump-nav__link:focus-visible:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  background: #d8f3dc;
+
+  border-color: #2d6a4f;
+
+  outline: none;
+}
+
+/* ---- Content wrapper ---- */
+:where(app-faq-page) .faq-content:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  padding: 48px 0 64px;
+
+  background: #ffffff;
+}
+
+/* ---- Category section ---- */
+:where(app-faq-page) .faq-section:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  margin-bottom: 56px;
+
+  scroll-margin-top:
+    calc(var(--faq-header-offset) + 90px);
+}
+
+:where(app-faq-page) .faq-section__heading:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  font-size: 1.375rem;
+
+  font-weight: 700;
+
+  color: #1b4332;
+
+  margin-bottom: 24px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 2px solid #95d5b2;
+}
+
+/* ---- Section inline CTA ---- */
+:where(app-faq-page) .faq-section__cta:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  margin-top: 24px;
+}
+
+:where(app-faq-page) .faq-section__cta-link:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  color: #2d6a4f;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #95d5b2;
+
+  padding-bottom: 1px;
+
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+:where(app-faq-page) .faq-section__cta-link:hover:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  color: #1b4332;
+
+  border-color: #1b4332;
+}
+
+/* ---- Bottom CTA ---- */
+:where(app-faq-page) .faq-bottom-cta:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  background: #f0fdf4;
+
+  border-top: 3px solid #2d6a4f;
+
+  padding: 64px 0;
+
+  text-align: center;
+
+  color: #1b4332;
+}
+
+:where(app-faq-page) .faq-bottom-cta__heading:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  font-size: 1.75rem;
+
+  font-weight: 700;
+
+  color: #1b4332;
+
+  margin-bottom: 12px;
+}
+
+:where(app-faq-page) .faq-bottom-cta__text:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  font-size: 1rem;
+
+  color: #4b5563;
+
+  max-width: 520px;
+
+  margin: 0 auto 28px;
+
+  line-height: 1.7;
+}
+
+:where(app-faq-page) .faq-bottom-cta__btn:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 160px;
+
+  min-height: 48px;
+
+  padding: 14px 36px;
+
+  background: #2d6a4f;
+
+  color: #ffffff;
+
+  font-size: 0.9375rem;
+
+  font-weight: 700;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+:where(app-faq-page) .faq-bottom-cta__btn:hover:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  background: #1b4332;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+:where(app-faq-page) .faq-bottom-cta__btn:focus-visible:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+  outline: 3px solid #2d6a4f;
+
+  outline-offset: 3px;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+
+  :where(app-faq-page):not(._) {
+
+    --faq-header-offset: 88px;
+  }
+
+  :where(app-faq-page) .faq-hero:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    padding:
+      calc(48px + var(--faq-header-offset))
+      0
+      40px;
+  }
+
+  :where(app-faq-page) .faq-hero__title:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    font-size: 1.625rem;
+  }
+
+  :where(app-faq-page) .faq-jump-nav:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  :where(app-faq-page) .faq-jump-nav__list:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    flex-wrap: nowrap;
+
+    gap: 6px 10px;
+
+    width: max-content;
+
+    min-width: 100%;
+  }
+
+  :where(app-faq-page) .faq-jump-nav__link:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    max-width: 180px;
+
+    flex-shrink: 0;
+  }
+
+  :where(app-faq-page) .faq-content:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    padding: 32px 0 48px;
+  }
+
+  :where(app-faq-page) .faq-section__heading:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    font-size: 1.125rem;
+  }
+
+  :where(app-faq-page) .faq-bottom-cta:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    padding: 48px 0;
+  }
+
+  :where(app-faq-page) .faq-bottom-cta__heading:not(._):not(:where(app-faq-accordion *, app-contact-popup *)) {
+
+    font-size: 1.375rem;
+  }
+}

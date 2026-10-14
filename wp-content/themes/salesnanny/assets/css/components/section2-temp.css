@@ -1,0 +1,436 @@
+/* <app-section2-temp> — converted from src/app/pages/sharedComponents/section2-temp/section2-temp.component.css */
+:where(app-section2-temp) .section-title:not(._) {
+    font-size: 2.25rem !important;
+}
+
+:where(app-section2-temp) .sideImage:not(._) {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+:where(app-section2-temp) .page-block-section:not(._) {
+    padding-top: 1.7rem !important;
+    padding-bottom: 1.7rem !important;
+}
+
+:where(app-section2-temp) .Digital:not(._) {
+    margin-top: 35px !important;
+    margin-bottom: 69px !important;
+    font-size: 2.25rem !important;
+}
+
+:where(app-section2-temp) .bg-omni-grey:not(._) {
+    margin: 8.5rem 0 9.2rem 0 !important;
+}
+
+:where(app-section2-temp) .feature-icon:not(._) {
+    min-width: 50px;
+    height: 50px;
+    background-color: #537450;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.2rem;
+}
+
+:where(app-section2-temp) #page-block-ec-panel:not(._) {
+    overflow: hidden;
+    line-height: 1.6;
+    margin-top: -55px;
+}
+
+:where(app-section2-temp) .custom-divider:not(._) {
+    width: 60px;
+    height: 4px;
+    background-color: #ff8c00;
+    border-radius: 2px;
+}
+
+:where(app-section2-temp) .image-wrapper:not(._) img:not(._) {
+    width: 100%;
+    object-fit: cover;
+    z-index: 2;
+    position: relative;
+}
+
+:where(app-section2-temp) .accent-box:not(._) {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #f0f4f0;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+:where(app-section2-temp) .feature-item:not(._) {
+    transition: transform 0.3s ease;
+}
+
+:where(app-section2-temp) .feature-icon:not(._) {
+    min-width: 50px;
+    height: 50px;
+    background-color: #537450;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.2rem;
+}
+
+:where(app-section2-temp) .feature-content:not(._) h5:not(._) {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+:where(app-section2-temp) .feature-content:not(._) p:not(._) {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    :where(app-section2-temp) .bg-omni-grey:not(._) {
+        padding: 0px;
+    }
+
+    :where(app-section2-temp) .feature-icon:not(._) {
+        min-width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+}
+
+:where(app-section2-temp) .display-6:not(._) {
+    color: #1a1a1a;
+    letter-spacing: -1px;
+}
+
+:where(app-section2-temp) .custom-divider:not(._) {
+    width: 60px;
+    height: 4px;
+    background-color: #ff8c00;
+    border-radius: 2px;
+}
+
+:where(app-section2-temp) .why-item:not(._) {
+    align-items: flex-start;
+    transition: transform 0.2s ease;
+}
+
+:where(app-section2-temp) .why-item:hover:not(._) {
+    transform: translateX(10px);
+}
+
+:where(app-section2-temp) .why-check:not(._) {
+    color: #537450;
+    font-size: 1.25rem;
+    margin-right: 15px;
+    margin-top: 2px;
+    min-width: fit-content;
+}
+
+:where(app-section2-temp) .why-item:not(._) p:not(._) {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #4a4a4a;
+    margin-bottom: 0;
+}
+
+:where(app-section2-temp) .why-item:not(._) strong:not(._) {
+    color: #1a1a1a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+@media (min-width: 768px) {
+    :where(app-section2-temp) #page-block-hi-banner:not(._) {
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+:where(app-section2-temp) .fw-light:not(._) {
+    font-weight: 300 !important;
+}
+
+:where(app-section2-temp) .brand-divider-center:not(._) {
+    width: 60px;
+    height: 4px;
+    background-color: #ff8c00;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+:where(app-section2-temp) .lead:not(._) {
+    font-size: 1.54rem;
+    line-height: 1.6;
+}
+
+:where(app-section2-temp) .arrow-button:not(._) {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #537450;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 12px;
+}
+
+:where(app-section2-temp) .arrow-button:disabled:not(._) {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+:where(app-section2-temp) .dg-home-intro:not(._) {
+    background-color: #76A379;
+}
+
+:where(app-section2-temp) .arrow-icon-wrapper:not(._) {
+    background-color: #76A379;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:where(app-section2-temp) .arrow-button:not(._) {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 12px;
+    padding: 0;
+}
+
+:where(app-section2-temp) .arrow-icon-wrapper:not(._) {
+    background-color: #76A379;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:where(app-section2-temp) .arrow-button:not(._) svg:not(._) path:not(._) {
+    fill: #B55A6B;
+}
+
+:where(app-section2-temp) .arrow-button:hover:not(._) .arrow-icon-wrapper:not(._) {
+    background-color: #fff;
+}
+
+:where(app-section2-temp) .arrow-button:hover:not(._) svg:not(._) path:not(._) {
+    fill: #B55A6B;
+}
+
+:where(app-section2-temp) #healthcare-capabilities-header:not(._) .col-lg-8:not(._) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+:where(app-section2-temp) .editor-text:not(._) {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+:where(app-section2-temp) #healthcare-capabilities-header:not(._) .editor-text:not(._) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+@media (max-width: 1024px) {
+    :where(app-section2-temp) .healthcare-tab-wrapper:not(._) {
+        min-height: auto;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    :where(app-section2-temp) .sideImage:not(._) {
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+
+    :where(app-section2-temp) .Digital:not(._) {
+        font-size: 0.9rem !important;
+        margin-top: 10px !important;
+        margin-bottom: 31px !important;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:first-child:not(._) {
+        padding: 0 !important;
+        margin: 0 0 6px 0 !important;
+        font-size: 15px !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:last-child:not(._) {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 10px !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    :where(app-section2-temp) .why-item:not(._) p:not(._) {
+        font-size: 0.6rem;
+        line-height: 1.5;
+        color: #4a4a4a;
+        margin-bottom: 0;
+    }
+
+    :where(app-section2-temp) .big:not(._) {
+        font-size: 13px !important;
+    }
+
+    :where(app-section2-temp) .section-title:not(._) {
+        font-size: 1rem !important;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    :where(app-section2-temp) .healthcare-tab-wrapper:not(._) {
+        padding: 12px;
+        gap: 10px;
+    }
+}
+
+:where(app-section2-temp) .page-block-section:not(._) {
+    min-height: 0em !important;
+}
+
+:where(app-section2-temp) .sec-1:not(._) {
+    padding: 110px 0px !important;
+}
+
+@media (max-width: 768px) {
+    :where(app-section2-temp) .sideImage:not(._) {
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+
+    :where(app-section2-temp) .healthcare-tab-wrapper:not(._) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        min-height: auto;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) {
+        padding-left: 23px !important;
+        margin-left: 0 !important;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 0 20px 0 !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) > div:first-child:not(._) {
+        display: none !important;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:first-child:not(._) {
+        padding: 0 !important;
+        margin: 0 0 6px 0 !important;
+        font-size: 20px !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:last-child:not(._) {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 13px !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p.xl\:w-4\/5:not(._) {
+        width: 100% !important;
+    }
+
+    :where(app-section2-temp) .big:not(._) {
+        font-size: 20px;
+    }
+
+    :where(app-section2-temp) .section-title:not(._) {
+        font-size: 2rem !important;
+    }
+
+    :where(app-section2-temp) .bg-omni-grey:not(._) {
+        margin: 4rem 0 4rem 0 !important;
+    }
+
+    :where(app-section2-temp) .editor-text:not(._) {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    @media (max-width:480px) {
+        :where(app-section2-temp) .section-title:not(._) {
+            font-size: 1rem !important;
+        }
+
+        :where(app-section2-temp) .editor-text:not(._) {
+            margin-top: 0rem !important;
+            margin-bottom: 0rem !important;
+        }
+
+        :where(app-section2-temp) .bg-omni-grey:not(._) {
+            margin: 1rem 0 1rem 0 !important;
+        }
+    }
+
+}
+
+:where(app-section2-temp) .healthcare-tab-wrapper:not(._) {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 55px;
+    padding: 16px;
+}
+
+@media (max-width: 480px) {
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:first-child:not(._) {
+        font-size: 15px !important;
+        line-height: 1.4;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:last-child:not(._) {
+        font-size: 10px !important;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:first-child:not(._) {
+        font-size: 20px !important;
+        line-height: 1.4;
+    }
+
+    :where(app-section2-temp) #page-block-fs-panel:not(._) ol:not(._) li:not(._) p:last-child:not(._) {
+        font-size: 13px !important;
+        line-height: 1.6;
+    }
+}

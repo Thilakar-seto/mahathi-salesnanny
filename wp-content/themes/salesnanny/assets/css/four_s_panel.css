@@ -1,0 +1,47 @@
+#page-block-fs-panel {
+  color: white !important; }
+
+#page-block-fs-panel .fs-panel-item {
+    min-height: 25rem;
+    margin: 0rem 0.9375rem 0.9375rem 0.9375rem;
+    padding: 1.25rem 1.25rem 1.875rem 1.25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    position: relative; }
+
+#page-block-fs-panel .fs-panel-item:after {
+      content: '';
+      min-height: 350px;
+      font-size: 0;
+      display: block; }
+
+@media (min-width: 768px) {
+#page-block-fs-panel .fs-panel-item {
+        
+        margin: 0;
+      }
+}
+
+#page-block-fs-panel .fs-panel-item .flair, #page-block-fs-panel .fs-panel-item .flair-left, #page-block-fs-panel .fs-panel-item .flair-right {
+      position: absolute;
+      max-height: 5.625rem;
+      top: 1.25rem; }
+
+#page-block-fs-panel .fs-panel-item .flair img, #page-block-fs-panel .fs-panel-item .flair-left img, #page-block-fs-panel .fs-panel-item .flair-right img {
+        max-width: 100%; }
+
+#page-block-fs-panel .fs-panel-item .flair-left {
+      left: 1.25rem; }
+
+#page-block-fs-panel .fs-panel-item .flair-right {
+      right: 1.25rem; }
+
+#page-block-fs-panel .fs-panel-item .h1, #page-block-fs-panel .fs-panel-item .h2, #page-block-fs-panel .fs-panel-item .h3, #page-block-fs-panel .fs-panel-item .h4, #page-block-fs-panel .fs-panel-item .h5, #page-block-fs-panel .fs-panel-item .h6, #page-block-fs-panel .fs-panel-item h1, #page-block-fs-panel .fs-panel-item h2, #page-block-fs-panel .fs-panel-item h3, #page-block-fs-panel .fs-panel-item h4, #page-block-fs-panel .fs-panel-item h5, #page-block-fs-panel .fs-panel-item h6 {
+      font-weight: 400; }
+
+#page-block-fs-panel .fs-panel-item .editor-text {
+      overflow: hidden; }

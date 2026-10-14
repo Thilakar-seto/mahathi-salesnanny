@@ -1,0 +1,125 @@
+/* <app-section4-temp> — converted from src/app/sharedComponents/section4-temp/section4-temp.component.css */
+:where(app-section4-temp) #healthcare-capabilities-header:not(._) {
+  background-color: #fff;
+  position: relative;
+}
+
+:where(app-section4-temp) .sec-1:not(._) {
+  margin: 6rem 0 5.4rem 0 !important;
+}
+
+:where(app-section4-temp) #healthcare-capabilities-header:not(._) h2:not(._) {
+  text-align: center;
+  line-height: 3.5rem;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+}
+
+:where(app-section4-temp) .underline_cls1:not(._) {
+  position: relative;
+  display: inline-block;
+}
+
+:where(app-section4-temp) .underline_cls1:not(._)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+
+@media (max-width: 1600px) {
+  :where(app-section4-temp) #healthcare-capabilities-header:not(._) h2:not(._) {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :where(app-section4-temp) .underline_cls1:not(._) {
+    position: relative;
+    display: unset;
+  }
+
+  :where(app-section4-temp) #healthcare-capabilities-header:not(._) h2:not(._) {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
+
+  :where(app-section4-temp) .sec-1:not(._) {
+    padding: 0px 0;
+    margin-top: 0px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  :where(app-section4-temp) #healthcare-capabilities-header:not(._) .underline_cls1:not(._)::after {
+    content: none !important;
+    display: none !important;
+    height: 0 !important;
+  }
+
+  :where(app-section4-temp) #healthcare-capabilities-header:not(._) .highlight-pop:not(._) {
+    background: none !important;
+    text-decoration: none !important;
+  }
+
+  :where(app-section4-temp) .big:not(._) {
+    font-size: 0.9rem;
+  }
+
+  :where(app-section4-temp) #healthcare-capabilities-header:not(._) h2:not(._) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+:where(app-section4-temp) .cta-wrapper:not(._) {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+:where(app-section4-temp) .cta-btn:not(._) {
+  background-color: #B55A6B;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 27px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  min-width: 220px;
+  text-align: center;
+}
+
+:where(app-section4-temp) .cta-btn:hover:not(._) {
+  background-color: #b895ad;
+  transform: translateY(-2px);
+}
+
+:where(app-section4-temp) .cta-btn:active:not(._) {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  :where(app-section4-temp) .cta-btn:not(._) {
+    width: 100%;
+    font-size: 0.8rem !important;
+    max-width: 320px;
+  }
+
+  :where(app-section4-temp) .cta-wrapper:not(._) {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    padding: 21px;
+    flex-wrap: wrap;
+  }
+}
