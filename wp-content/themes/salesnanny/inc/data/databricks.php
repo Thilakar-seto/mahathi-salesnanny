@@ -1,189 +1,147 @@
 <?php
 /**
- * Data for the <app-databricks> component (converted from src/app/pages/databricks/databricks.component.ts).
+ * Data for the <app-databricks> component.
  */
 return [
-    'heroImageSrc' => '/assets/images/databricks-hero.webp',
-    'heroImageAlt' => 'Enterprise Databricks implementation and data platform modernization',
-    'challengesIntro' => 'Insurance carriers and healthcare payers face critical data infrastructure gaps. Legacy warehouses create operational silos, slow decision-making, and escalate costs. Databricks transforms these challenges into competitive advantage through a unified Lakehouse architecture.',
-    'challenges' => [
-        [
-            'title' => 'Fragmented Data Silos:',
-            'description' => 'Claims, eligibility, underwriting data scattered across incompatible systems. No unified source of truth. Manual data reconciliation wastes time and creates inconsistencies.',
-        ],
-        [
-            'title' => 'Slow Claims Processing:',
-            'description' => 'Average 15-30 day cycle times. Fraud detection remains manual. STP rates stuck below 40%. Manual workflows cost millions annually in operational overhead.',
-        ],
-        [
-            'title' => 'Underwriting Blindness:',
-            'description' => 'Decisions made on stale data updated daily. Real-time risk assessment impossible. Competitive disadvantage against faster competitors using AI-driven pricing.',
-        ],
-        [
-            'title' => 'Rising Data Costs:',
-            'description' => 'Separate tools for analytics, engineering, and AI. Infrastructure sprawl. Data duplication across systems. Cloud spend 3-4x industry benchmark.',
-        ],
-        [
-            'title' => 'Compliance & Governance Gaps:',
-            'description' => 'Audit trails insufficient for SOC 2, HIPAA. PII masking manual. Row/column-level access control non-existent. Regulatory risk from exam findings on data governance.',
-        ],
-        [
-            'title' => 'AI Capability Gap:',
-            'description' => 'No in-platform AI/ML. Manual fraud detection. Predictive pricing impossible. Generative AI for documentation non-existent. Competitors\' chatbots outpacing internal capabilities.',
-        ],
+    'badgeSrc' => '/assets/images/bronze-badge.png',
+    'stats' => [
+        ['value' => 'Bronze', 'accent' => '', 'title' => 'Databricks partner tier', 'desc' => 'Recognized in 2026 as a Databricks Bronze partner, the first tier of the Brickbuilder Partner Network.'],
+        ['value' => '350', 'accent' => '+', 'title' => 'P&C Insurance Domain Experts', 'desc' => 'Practitioners across claims, policy, billing, underwriting, compliance and TPA programs who shape the data model.'],
+        ['value' => '40', 'accent' => '+', 'title' => 'Guidewire Programs Delivered', 'desc' => 'Guidewire ClaimCenter, PolicyCenter and BillingCenter data knowledge goes into every Lakehouse design.'],
     ],
-    'services' => [
+    'pills' => ['Lakehouse Implementation', 'Data Migration', 'Analytics', 'AI & ML', 'Governance', 'Managed Operations'],
+    'capabilities' => [
+        [
+            'iconKey' => 'lakehouse',
+            'title' => 'Lakehouse Implementation',
+            'lead' => 'Stand up a governed Databricks Lakehouse for claims, policy, billing and member data.',
+            'points' => [
+                'Layered data model from raw to curated tables',
+                'Delta Lake tables for claims, policy and billing',
+                'Ingestion from core systems, vendors and files',
+                'Workspace, cluster and cost-control setup',
+                'Handover with runbooks and documentation',
+            ],
+            'proof' => 'Data model shaped by insurance practitioners',
+        ],
         [
             'iconKey' => 'migration',
-            'title' => 'Zero-Downtime Data Migration',
-            'description' => 'Enterprise-scale warehouse-to-lakehouse migrations without business interruption. We\'ve migrated 2.5B+ records using Change Data Capture (CDC) with bi-directional sync during cutover, ensuring claims processing continues uninterrupted while you transition to Databricks.',
-            'metrics' => [
-                '8-12 week implementation timeline',
-                'Zero data loss, zero incidents',
+            'title' => 'Data Migration',
+            'lead' => 'Move legacy warehouse and data mart workloads to Databricks without stopping daily operations.',
+            'points' => [
+                'Warehouse and ETL assessment',
+                'Phased migration by business domain',
+                'Parallel runs with reconciliation',
+                'Cutover planning and rollback plan',
+                'Retirement of legacy jobs',
             ],
+            'proof' => 'Reconciliation built into every phase',
         ],
         [
             'iconKey' => 'analytics',
-            'title' => 'Real-Time Analytics & Intelligence',
-            'description' => 'Sub-second dashboards on terabyte-scale data. Claims adjusters access live KPIs instantly. Underwriters make real-time decisions. Our implementation enables executive dashboards refreshing every minute, transforming raw data into actionable intelligence for your entire organization.',
-            'metrics' => ['10x faster query performance', 'Sub-second dashboard refresh'],
+            'title' => 'Claims and Underwriting Analytics',
+            'lead' => 'Give adjusters, underwriters and claims leaders current data instead of last night\'s batch.',
+            'points' => [
+                'Cycle time, leakage and reserve dashboards',
+                'Referral and quote-to-bind views for underwriting',
+                'Streaming ingestion from claim and policy events',
+                'Loss and severity analytics',
+                'Connection to Power BI, Tableau and Looker',
+            ],
+            'proof' => 'Built for claims, underwriting and risk teams',
         ],
         [
             'iconKey' => 'ai',
-            'title' => 'AI & Predictive Intelligence',
-            'description' => 'Fraud detection models, claims triage automation, predictive pricing, and risk adjustment—all built on Databricks Foundation Models. We implement generative AI for documentation, create claims copilots, and build underwriting assistants that learn from your historical data to predict outcomes with 92%+ accuracy.',
-            'metrics' => [
-                '92% fraud detection accuracy',
-                'Real-time predictions on millions of records',
+            'title' => 'Agentic AI and Machine Learning',
+            'lead' => 'Apply machine learning and generative AI to claims, SIU and underwriting where the data already sits.',
+            'points' => [
+                'Fraud and SIU referral scoring',
+                'Claims triage and severity models',
+                'Summaries of documents and correspondence',
+                'Copilots for adjusters and underwriters',
+                'Model monitoring with human review steps',
             ],
+            'proof' => 'Human review stays in the loop',
         ],
         [
             'iconKey' => 'governance',
-            'title' => 'Enterprise Governance & Compliance',
-            'description' => 'Unity Catalog provides unified data governance across workspaces. We implement PII masking, column/row-level access control, and comprehensive audit trails. SOC 2, HIPAA, and GDPR compliance built-in from day one. Your data remains secure while enabling democratized analytics access across teams.',
-            'metrics' => [
-                'Automated PII detection & masking',
-                'Complete audit trails for compliance',
+            'title' => 'Governance and Compliance',
+            'lead' => 'Control who sees what, and show auditors where every number came from.',
+            'points' => [
+                'Unity Catalog access control',
+                'Row-level and column-level security',
+                'PII tagging and masking',
+                'Audit logs and data lineage',
+                'Alignment to HIPAA, SOC 2 and state data rules',
             ],
-        ],
-        [
-            'iconKey' => 'etl',
-            'title' => 'Enterprise-Scale Data Integration',
-            'description' => 'Seamless ingestion from APIs, databases, and SaaS platforms (Salesforce, Epic, Workday). Claims data, eligibility records, underwriting information—all flowing in real-time with quality validation. We architect unlimited throughput pipelines with automated error handling and change tracking that adapt to your growing data volume.',
-            'metrics' => [
-                'Real-time & batch ingestion modes',
-                'Automated quality validation',
-            ],
+            'proof' => 'Audit-ready from the first release',
         ],
         [
             'iconKey' => 'managed',
             'title' => 'Managed Databricks Operations',
-            'description' => 'End-to-end platform management so you focus on business value. 24/7 monitoring, performance tuning, security patches, cluster optimization, cost management. We handle infrastructure upgrades without service interruption, conduct quarterly health checks, and proactively optimize based on usage patterns. SLA-backed support with dedicated Mahathi engineers.',
-            'metrics' => [
-                '24/7 proactive monitoring & support',
-                '60-70% cost savings vs. legacy warehouses',
+            'lead' => 'Run the Lakehouse after go-live, with monitoring, tuning and cost control.',
+            'points' => [
+                'Job and pipeline monitoring',
+                'Performance and cluster tuning',
+                'Cost and usage reporting',
+                'Release and platform change management',
+                'Support under agreed service levels',
             ],
+            'proof' => 'Run by the team that built it',
         ],
     ],
-    'whyIntro' => 'Databricks Lakehouse Platform uniquely addresses the data infrastructure needs of insurers and healthcare payers—delivering unified architecture, real-time intelligence, and enterprise compliance at a fraction of legacy warehouse costs.',
-    'whyFeatures' => [
-        [
-            'title' => 'Unified Architecture',
-            'description' => 'Single platform for BI, ML, and data engineering eliminates tool sprawl. Consolidate from 5-7 separate systems into one. Reduce infrastructure complexity and operational overhead.',
-        ],
-        [
-            'title' => 'Enterprise Scale',
-            'description' => 'Handle 2.5B+ records with sub-second query response. Process terabyte-scale datasets instantly. Scale from millions to billions of records without performance degradation.',
-        ],
-        [
-            'title' => 'Real-Time Intelligence',
-            'description' => 'Live dashboards refresh every minute. Streaming data ingestion from claims, eligibility, and underwriting systems. Real-time fraud detection and instant underwriting decisions.',
-        ],
-        [
-            'title' => 'Built-In AI/ML',
-            'description' => 'Databricks Foundation Models pre-installed. LLMOps, prompt engineering, model versioning native. No separate ML platform needed. Fraud detection and predictive pricing out-of-box.',
-        ],
-        [
-            'title' => 'Cost Efficiency',
-            'description' => '3-5x cheaper than legacy data warehouses (Redshift, Snowflake). Shared compute across BI and analytics. Automatic scaling means pay only for what you use. Average $400K annual savings.',
-        ],
-        [
-            'title' => 'Compliance by Design',
-            'description' => 'Unity Catalog provides governance across workspaces. Built-in PII detection and masking. Row/column-level security controls. Complete audit trails for HIPAA, SOC 2, GDPR compliance.',
-        ],
-        [
-            'title' => 'Zero-Downtime Upgrades',
-            'description' => 'Platform updates without service interruption. Disaster recovery built-in. Multi-region failover. Your claims processing and analytics run 24/7 with no manual intervention.',
-        ],
-        [
-            'title' => 'Certified Partnership',
-            'description' => 'Mahathi is an official Databricks Bronze Partner. 100+ implementations, 15+ certified consultants, 2.5B+ records migrated, 0 production incidents. Deep insurance and healthcare expertise.',
-        ],
+    'challenges' => [
+        ['iconKey' => 'lock', 'title' => 'Core data stays locked in the core', 'desc' => 'Claims, policy and billing data sit inside Guidewire, Duck Creek and legacy systems. Reports come from nightly extracts, and every team keeps its own version of the numbers.'],
+        ['iconKey' => 'clock', 'title' => 'Claims and underwriting run on yesterday\'s data', 'desc' => 'Adjusters and underwriters wait for batch reports. Severity changes, referrals and reserve movement show up after the decision window has closed.'],
+        ['iconKey' => 'warning', 'title' => 'AI pilots stall on governance', 'desc' => 'Models get built in notebooks outside a controlled platform. Carriers then cannot show regulators where data came from or who used it, so pilots never reach production.'],
     ],
-    'mahathiReasons' => [
-        [
-            'title' => 'Certified Bronze Partner',
-            'description' => 'Official Databricks partnership. Recognized expertise and ongoing commitment to latest innovations.',
-        ],
-        [
-            'title' => '100+ Proven Implementations',
-            'description' => 'Successful deployments across insurance, healthcare, finance. 2.5B+ records migrated. Zero-downtime, zero-incident track record.',
-        ],
-        [
-            'title' => 'Industry Deep Expertise',
-            'description' => '15+ certified Databricks consultants. Specialists in claims processing, compliance, underwriting, and regulatory requirements.',
-        ],
-        [
-            'title' => 'Managed Services & Support',
-            'description' => '24/7 monitoring, performance optimization, security patches. We manage infrastructure—you focus on business outcomes.',
-        ],
-    ],
-    'outcomes' => [
-        [
-            'title' => '50% Claims Cycle Reduction',
-            'description' => 'Real-time dashboards cut claims adjudication time in half. Claims adjusters triage instantly instead of waiting days. Straight-through processing increased from 35% to 78%. Annual claims cost savings: $200K+.',
-        ],
-        [
-            'title' => '92% Fraud Detection Accuracy',
-            'description' => 'AI models trained on historical claims data detect suspicious patterns in real-time. False positive rate cut from 18% to 4%. Investigated claims recovery rate increased 40%. Annual fraud prevention: $400K+.',
-        ],
-        [
-            'title' => '15-Min Underwriting Decisions',
-            'description' => 'Real-time data access enables instant risk assessment. Underwriting turn-around time dropped from 48 hours to 15 minutes. Quote generation automated. Revenue per underwriter increased 35%.',
-        ],
+    'solutions' => [
+        ['num' => '01', 'title' => 'Unify core data without disrupting the core.', 'body' => 'Mahathi maps claims, policy and billing data from the core platforms, lands it on the Lakehouse in layers, and reconciles every phase against source. Daily operations keep running while the new platform takes over reporting.', 'proofNum' => '40+', 'proofText' => 'Guidewire programs delivered, with ClaimCenter, PolicyCenter and BillingCenter data knowledge'],
+        ['num' => '02', 'title' => 'Put current data in front of claims and underwriting.', 'body' => 'Streaming ingestion and curated tables give adjusters, underwriters and claims leaders a live view of cycle time, leakage and referrals, in the BI tools they already use.', 'proofNum' => '1', 'proofText' => 'governed source for claims, policy and billing reporting'],
+        ['num' => '03', 'title' => 'Take AI from pilot to production, with controls.', 'body' => 'Models, prompts and data stay inside one governed platform, with access control, lineage and human review steps. Insurance practitioners check the rules and outputs before anything reaches a claim file.', 'proofNum' => '350+', 'proofText' => 'P&C domain experts available to review models, rules and outputs'],
     ],
     'faqs' => [
         [
-            'question' => 'What is the difference between Databricks and a traditional data warehouse?',
-            'answer' => 'Databricks Lakehouse combines the reliability and governance of data warehouses with the scale and cost-efficiency of data lakes. You get ACID transactions, schema enforcement, and SQL analytics at petabyte scale without the cost of traditional warehouses like Redshift or Snowflake.',
+            'question' => 'What does Databricks Bronze partner status mean for Mahathi?',
+            'answerParas' => [
+                'Mahathi was recognized as a Databricks Bronze partner in 2026. Bronze is the first tier of the Databricks Brickbuilder Partner Network, which now runs four tiers: Bronze, Silver, Gold and Platinum.',
+                'A tier shows active partnership with Databricks. It does not replace a delivery check, so Mahathi shares the named practitioners and relevant insurance experience for your project during scoping.',
+            ],
+        ],
+        [
+            'question' => 'Can Mahathi migrate our data warehouse to Databricks without stopping claims operations?',
+            'answerParas' => [
+                'Mahathi plans migrations in phases by business domain, runs old and new platforms in parallel, and reconciles results before each cutover.',
+                'Timelines and any cutover window depend on data volume, source systems and your release calendar. Mahathi sets both during discovery instead of promising a fixed number up front.',
+            ],
         ],
         [
             'question' => 'How long does a Databricks implementation take?',
-            'answer' => 'Typical implementations span 8-12 weeks depending on data volume, complexity, and integrations needed. Discovery: 2-3 weeks. Architecture & pilot: 3-4 weeks. Migration: 2-3 weeks. Hardening & go-live: 1-2 weeks. Mahathi has migrated 2.5B+ records with zero downtime.',
+            'answerParas' => [
+                'Most programs start with one domain, such as claims or underwriting reporting, and expand in releases. The first release is scoped in discovery based on source systems, data quality and governance needs.',
+                'Mahathi gives a plan with milestones and named owners before build starts, so your team knows what arrives and when.',
+            ],
         ],
         [
-            'question' => 'Is there downtime during data migration?',
-            'answer' => 'No. Mahathi uses Change Data Capture (CDC) for bi-directional sync during the migration window. You continue processing claims and eligibility requests. We synchronize at cutover—typically a 30-60 minute validation window, not hours or days.',
+            'question' => 'Does Mahathi connect Databricks to Guidewire and other core systems?',
+            'answerParas' => [
+                'Yes. Mahathi connects Databricks to Guidewire ClaimCenter, PolicyCenter and BillingCenter, and to Duck Creek, Fiserv, TPA platforms, mailroom feeds and vendor files.',
+                'Ingestion uses the pattern that fits each source, such as APIs, events or scheduled files, with quality checks at every step.',
+            ],
         ],
         [
-            'question' => 'How does Databricks handle compliance (HIPAA, SOC 2)?',
-            'answer' => 'Databricks has inherent HIPAA and SOC 2 compliance. We layer on additional security: VPC isolation, CMK encryption, audit logging for all data access, PII masking, and row/column-level access control. Your security and compliance teams remain in control.',
+            'question' => 'How does Mahathi handle governance and sensitive data on Databricks?',
+            'answerParas' => [
+                'Mahathi uses Unity Catalog for access control, row-level and column-level security, PII tagging and masking, audit logs and lineage. Sensitive claim and member data stays inside your cloud environment.',
+                'Mahathi works with your security and compliance teams to align the design with HIPAA, SOC 2 and the state and NAIC requirements that apply to you.',
+            ],
         ],
         [
-            'question' => 'What about data governance and PII protection?',
-            'answer' => 'Unity Catalog provides comprehensive governance. Automated PII detection and masking. Sensitive data tags. Access control by role, department, or individual. Complete audit trails for all queries and data access. Lineage tracking from source to destination.',
-        ],
-        [
-            'question' => 'Can we continue using existing BI tools?',
-            'answer' => 'Yes. Databricks connects natively to Tableau, Power BI, Looker, QlikView, and other tools via standard SQL connectors. No tool replacement needed. Your analysts continue using familiar interfaces on faster, cheaper infrastructure.',
-        ],
-        [
-            'question' => 'How much will this cost?',
-            'answer' => 'Databricks typically costs 60-70% less than legacy data warehouses like Redshift or Snowflake due to shared compute, storage optimization, and auto-scaling. Implementation varies by scope: $200K-$500K for enterprise deployments. We provide detailed cost modeling during discovery.',
-        ],
-        [
-            'question' => 'What happens after go-live? Does Mahathi stick around?',
-            'answer' => 'Yes. We offer managed services (24/7 support, monitoring, optimization), training, and ongoing optimization. Most clients retain us post-implementation for performance tuning, new feature adoption, and quarterly health checks.',
+            'question' => 'What happens after go-live?',
+            'answerParas' => [
+                'Mahathi offers managed Databricks operations, including pipeline monitoring, performance tuning, cost reporting and release management under agreed service levels.',
+                'Many carriers keep the same team for the next release, so each new use case builds on the data model already in place.',
+            ],
         ],
     ],
 ];

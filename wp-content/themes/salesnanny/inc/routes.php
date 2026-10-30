@@ -23,7 +23,7 @@ return [
         '/contact-us' => 'contactus',
         '/news' => 'news',
         '/insurance/p-and-c-solution' => 'workers-compensiation',
-        '/insurance' => 'modern-workers-compensation',
+        '/insurance/workers-compensation' => 'modern-workers-compensation',
         '/insurance/managed-care-organization' => 'managed-care-organization',
         '/insurance/life-and-annuity' => 'lifeandannutiy',
         '/insurance/re-insurance' => 'reinsurance',
@@ -46,6 +46,7 @@ return [
         '/dashboard' => '/',
         '/guidewire' => '/insurance/guidewire',
         '/insurance/databricks' => '/databricks',
+        '/insurance' => '/#our-solutions',
         '/main-temp' => '/',
     ],
     'tags'      => [

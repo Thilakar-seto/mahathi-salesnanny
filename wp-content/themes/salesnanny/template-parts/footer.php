@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) { exit; }
               <div class="col-12 footer-single-column">
                 <div class="footer_link_12">
                   <h1 class="footer_font_style">Who We Serve</h1>
-                  <p data-href="<?= esc_url(mh_url('/insurance')) ?>">Workers Comp Carriers</p>
+                  <p data-href="<?= esc_url(mh_url('/insurance/workers-compensation')) ?>">Workers Comp Carriers</p>
                   <p data-href="<?= esc_url(mh_url('/insurance/p-and-c-solution')) ?>">P&amp;C Carriers</p>
                   <p data-href="<?= esc_url(mh_url('/insurance/p-and-c-solution')) ?>">TPAs</p>
                   <p data-href="<?= esc_url(mh_url('/healthcare/claims-management')) ?>">Claims Management Companies </p>
@@ -30,8 +30,8 @@ if (!defined('ABSPATH')) { exit; }
                   <p data-href="<?= esc_url(mh_url('/healthcare')) ?>">Healthcare Intermediaries</p>
                 </div>
                 <div class="footer_link_12">
-                  <h1 class="footer_font_style">OUR SOLUTIONS</h1>
-                  <p data-href="<?= esc_url(mh_url('/insurance')) ?>">Workers Comp</p>
+                  <h1 class="footer_font_style" data-href="<?= esc_url(mh_url('/insurance')) ?>" style="cursor:pointer;">OUR SOLUTIONS</h1>
+                  <p data-href="<?= esc_url(mh_url('/insurance/workers-compensation')) ?>">Workers Comp</p>
                   <p data-href="<?= esc_url(mh_url('/insurance/p-and-c-solution')) ?>">Property &amp; Casualty (P&amp;C)</p>
                   <p data-href="<?= esc_url(mh_url('/insurance/re-insurance')) ?>">Reinsurance</p>
                   <p data-href="<?= esc_url(mh_url('/insurance/life-and-annuity')) ?>">Life &amp; Annuity</p>

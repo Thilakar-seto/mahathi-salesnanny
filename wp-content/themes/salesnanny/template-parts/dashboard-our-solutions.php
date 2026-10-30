@@ -6,7 +6,7 @@
  */
 if (!defined('ABSPATH')) { exit; }
 ?>
-<section class="vg-wrapper">
+<section class="vg-wrapper" id="our-solutions">
   <h2 class="vg-section-title">OUR SOLUTIONS</h2>
   <div class="vg-grid">
     <div class="vg-stack vg-stack--a">

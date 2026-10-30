@@ -573,42 +573,20 @@ return [
             ],
         ],
     ],
-    '/insurance' => [
-        'title' => 'Workers Compensation Technology Services',
-        'description' => 'Mahathi modernizes workers\' compensation operations for carriers, TPAs, MGAs, and self-insureds across policy, claims, medical, and compliance.',
+    '/insurance/workers-compensation' => [
+        'title' => 'Workers\' Compensation Claims Management Services | Mahathi',
+        'description' => 'Workers\' compensation claims management, vendor coordination, medical and pharmacy management, FROI/SROI reporting and Guidewire ClaimCenter services.',
         'image' => '/assets/images/Workers_Comp_banner.jpeg',
-        'rawTitle' => false,
-        'schemas' => [
-            [
-                '@context' => 'https://schema.org',
-                '@graph' => [
-                    [
-                        '@type' => 'WebPage',
-                        '@id' => 'https://www.mahathiinfotech.com/insurance/#webpage',
-                        'url' => 'https://www.mahathiinfotech.com/insurance',
-                        'name' => 'Insurance Solutions',
-                        'description' => 'Comprehensive insurance solutions designed to improve operations, compliance, and customer experience.',
-                        'publisher' => [
-                            '@id' => 'https://www.mahathiinfotech.com/#organization',
-                        ],
-                    ],
-                    [
-                        '@type' => 'Service',
-                        '@id' => 'https://www.mahathiinfotech.com/insurance/#service',
-                        'name' => 'Insurance Solutions',
-                        'serviceType' => 'Insurance Solutions',
-                        'description' => 'Comprehensive insurance solutions designed to improve operations, compliance, and customer experience.',
-                        'provider' => [
-                            '@id' => 'https://www.mahathiinfotech.com/#organization',
-                        ],
-                        'areaServed' => [
-                            '@type' => 'Country',
-                            'name' => 'United States',
-                        ],
-                    ],
-                ],
-            ],
-        ],
+        'rawTitle' => true,
+        'schemas' => mh_service_schemas(
+            "Workers' Compensation Claims Management and Services",
+            "Workers' compensation claims management, policy administration, billing, compliance and technology services",
+            '/insurance/workers-compensation',
+            'Insurance Solutions',
+            '/insurance/workers-compensation',
+            "Workers' Compensation",
+            'modern-workers-compensation'
+        ),
     ],
     '/insurance/managed-care-organization' => [
         'title' => 'Managed Care Technology Services',
@@ -743,59 +721,19 @@ return [
         'schemas' => [],
     ],
     '/databricks' => [
-        'title' => 'Enterprise Databricks Implementation Services | Mahathi',
-        'description' => 'Accelerate your data transformation with Mahathi\'s Databricks implementation services. Certified Bronze Partner for migration, AI, and Lakehouse solutions.',
+        'title' => 'Databricks Implementation Services for Insurers | Mahathi',
+        'description' => 'Mahathi, a Databricks Bronze partner, helps P&C carriers, TPAs and healthcare payers unify claims and policy data on a governed Databricks Lakehouse.',
         'image' => null,
         'rawTitle' => true,
-        'schemas' => [
-            [
-                '@context' => 'https://schema.org',
-                '@type' => 'Service',
-                'name' => 'Enterprise Databricks Implementation Services',
-                'description' => 'Databricks implementation and migration services for insurance carriers and healthcare payers. Mahathi is an official Databricks Bronze Partner.',
-                'provider' => [
-                    '@type' => 'Organization',
-                    'name' => 'Mahathi Infotech',
-                    'url' => 'https://mahathiinfotech.com',
-                    'logo' => 'https://mahathiinfotech.com/logo.png',
-                    'sameAs' => 'https://mahathiinfotech.com/databricks',
-                ],
-                'serviceType' => [
-                    'Databricks Service',
-                    'Databricks Implementation',
-                    'Data Migration',
-                    'Analytics Platform',
-                ],
-                'areaServed' => ['US', 'North America'],
-                'offers' => [
-                    '@type' => 'AggregateOffer',
-                    'priceCurrency' => 'USD',
-                    'price' => 'Contact for pricing',
-                ],
-            ],
-            [
-                '@context' => 'https://schema.org',
-                '@type' => 'FAQPage',
-                'mainEntity' => [
-                    [
-                        '@type' => 'Question',
-                        'name' => 'What is a Databricks implementation?',
-                        'acceptedAnswer' => [
-                            '@type' => 'Answer',
-                            'text' => 'A Databricks implementation is the complete deployment and configuration of the Databricks Lakehouse Platform for your organization, including data migration, governance setup, and optimization for your specific use cases.',
-                        ],
-                    ],
-                    [
-                        '@type' => 'Question',
-                        'name' => 'How long does a Databricks migration take?',
-                        'acceptedAnswer' => [
-                            '@type' => 'Answer',
-                            'text' => 'Most enterprise Databricks migrations take 8-12 weeks depending on data volume and complexity. Mahathi has migrated 2.5B+ records with zero downtime.',
-                        ],
-                    ],
-                ],
-            ],
-        ],
+        'schemas' => mh_service_schemas(
+            'Databricks Implementation and Migration Services for Insurance',
+            'Databricks Lakehouse implementation, data migration, analytics, AI and managed operations for insurance carriers, TPAs and healthcare payers',
+            '/databricks',
+            'AI Enablement',
+            '/ai-enablement',
+            'Databricks',
+            'databricks'
+        ),
     ],
     '/digital-services' => [
         'title' => 'Digital Transformation Services',

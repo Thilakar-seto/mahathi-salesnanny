@@ -148,12 +148,12 @@ $mh_resources = array(
                         <div class="col-md-8 col-lg-8 text-left py-0 border-right">
                           <div class="row">
                             <div class="col-md-8 col-lg-8 py-3">
-                              <h2 class="text-left"><strong>Our Solutions:</strong></h2>
+                              <h2 class="text-left" data-href="<?= esc_url(mh_url('/insurance')) ?>" style="cursor:pointer;"><strong>Our Solutions:</strong></h2>
                               <p class="text-left">Achieve your business goals with our comprehensive solution portfolio.</p>
                             </div>
                           </div>
                           <div class="row">
-                            <div data-href="<?= esc_url(mh_url('/insurance')) ?>" class="col-md-6 col-lg-6 py-3 our_solution_box">
+                            <div data-href="<?= esc_url(mh_url('/insurance/workers-compensation')) ?>" class="col-md-6 col-lg-6 py-3 our_solution_box">
                               <h4 style="color: #76A379;"><b>Workers Comp</b></h4>
                               <p class="text-left"> Commercial Carrier Enablement, Policy Admin, Billing, Claims Management, Medical &amp; Pharmacy Management, Investigative Services, Litigation Management, Regulator &amp; Compliance, and Loss Control Services</p>
                             </div>
@@ -392,7 +392,7 @@ $mh_resources = array(
             </li>
             <li class="nav-item level-1-nav">
               <div class="container mobile-main" data-mh-action="toggleMobileSub" data-mh-args="<?= esc_attr(wp_json_encode(['insurance'])) ?>"><a class="nav-link">INSURANCE Solutions</a><i class="fas fa-chevron-down"></i></div>
-              <div class="mobile-submenu" data-mh-submenu="insurance" hidden><a href="<?= esc_url(mh_url('/insurance')) ?>">Workers Comp</a><a href="<?= esc_url(mh_url('/insurance/p-and-c-solution')) ?>">Property &amp; Casualty</a><a href="<?= esc_url(mh_url('/insurance/managed-care-organization')) ?>">​Managed Care Organizations</a><a href="<?= esc_url(mh_url('/insurance/life-and-annuity')) ?>">Life &amp; Annuity</a><a href="<?= esc_url(mh_url('/insurance/re-insurance')) ?>">Reinsurance</a><a href="<?= esc_url(mh_url('/insurance/guidewire')) ?>">Guidewire</a></div>
+              <div class="mobile-submenu" data-mh-submenu="insurance" hidden><a href="<?= esc_url(mh_url('/insurance/workers-compensation')) ?>">Workers Comp</a><a href="<?= esc_url(mh_url('/insurance/p-and-c-solution')) ?>">Property &amp; Casualty</a><a href="<?= esc_url(mh_url('/insurance/managed-care-organization')) ?>">​Managed Care Organizations</a><a href="<?= esc_url(mh_url('/insurance/life-and-annuity')) ?>">Life &amp; Annuity</a><a href="<?= esc_url(mh_url('/insurance/re-insurance')) ?>">Reinsurance</a><a href="<?= esc_url(mh_url('/insurance/guidewire')) ?>">Guidewire</a></div>
             </li>
             <li class="nav-item level-1-nav">
               <div class="container mobile-main" data-mh-action="toggleMobileSub" data-mh-args="<?= esc_attr(wp_json_encode(['healthcare'])) ?>"><a class="nav-link">HEALTHCARE Solutions</a><i class="fas fa-chevron-down"></i></div>

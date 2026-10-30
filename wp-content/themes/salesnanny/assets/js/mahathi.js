@@ -692,6 +692,15 @@
   MH.actions['setActivePill'] = function (el) {
     MH.qa('.cap-pill', el.parentNode).forEach(function (p) { p.classList.toggle('active', p === el); });
   };
+  // Databricks / Workers' Comp pills: activate the pill, scroll to its card and flash it
+  MH.actions['scrollToCap'] = function (el, args) {
+    MH.qa('.cap-pill', el.parentNode).forEach(function (p) { p.classList.toggle('active', p === el); });
+    var card = args[0] && document.getElementById(args[0]);
+    if (!card) return;
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('flash');
+    setTimeout(function () { card.classList.remove('flash'); }, 1400);
+  };
   MH.actions['toggleFaq'] = function (el) {
     var item = el.closest('.faq-item');
     if (!item) return;

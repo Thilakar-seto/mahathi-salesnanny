@@ -7,7 +7,7 @@ return [
         [
             'category' => 'Insurance Technology',
             'slug' => 'insurance-technology',
-            'ctaRoute' => '/insurance',
+            'ctaRoute' => '/insurance/workers-compensation',
             'items' => [
                 [
                     'id' => 'ins-001',

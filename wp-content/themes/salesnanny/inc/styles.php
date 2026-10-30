@@ -22,7 +22,7 @@ return [
     '/contact-us' => ['contactus', 'contact-banner'],
     '/news' => ['news', 'newsbanner'],
     '/insurance/p-and-c-solution' => ['workers-compensiation', 'main-template'],
-    '/insurance' => ['modern-workers-compensation', 'main-template'],
+    '/insurance/workers-compensation' => ['modern-workers-compensation'],
     '/insurance/managed-care-organization' => ['managed-care-organization', 'main-template'],
     '/insurance/life-and-annuity' => ['lifeandannutiy', 'main-template'],
     '/insurance/re-insurance' => ['reinsurance', 'main-template'],

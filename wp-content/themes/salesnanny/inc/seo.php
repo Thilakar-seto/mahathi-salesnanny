@@ -25,6 +25,50 @@ function mh_seo(): array {
 	return $all[ mh_current_route() ] ?? array();
 }
 
+/**
+ * JSON-LD (Service + FAQPage + BreadcrumbList) for a service page. The FAQ answers
+ * are read from the page's own data file so the markup and the schema stay in step.
+ */
+function mh_service_schemas( string $name, string $service_type, string $path, string $parent_name, string $parent_path, string $crumb, string $data_key ): array {
+	$base      = 'https://www.mahathiinfotech.com';
+	$questions = array();
+	foreach ( (array) ( mh_data( $data_key )['faqs'] ?? array() ) as $faq ) {
+		$questions[] = array(
+			'@type'          => 'Question',
+			'name'           => $faq['question'] ?? '',
+			'acceptedAnswer' => array(
+				'@type' => 'Answer',
+				'text'  => implode( ' ', (array) ( $faq['answerParas'] ?? array() ) ),
+			),
+		);
+	}
+	return array(
+		array(
+			'@context'    => 'https://schema.org',
+			'@type'       => 'Service',
+			'name'        => $name,
+			'serviceType' => $service_type,
+			'provider'    => array( '@type' => 'Organization', '@id' => $base . '/#organization', 'name' => 'Mahathi Infotech LLC' ),
+			'areaServed'  => 'US',
+			'url'         => $base . $path,
+		),
+		array(
+			'@context'   => 'https://schema.org',
+			'@type'      => 'FAQPage',
+			'mainEntity' => $questions,
+		),
+		array(
+			'@context'        => 'https://schema.org',
+			'@type'           => 'BreadcrumbList',
+			'itemListElement' => array(
+				array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $base . '/' ),
+				array( '@type' => 'ListItem', 'position' => 2, 'name' => $parent_name, 'item' => $base . $parent_path ),
+				array( '@type' => 'ListItem', 'position' => 3, 'name' => $crumb, 'item' => $base . $path ),
+			),
+		),
+	);
+}
+
 /** Final <title> following the SeoService rules. */
 function mh_seo_title(): string {
 	$seo   = mh_seo();
