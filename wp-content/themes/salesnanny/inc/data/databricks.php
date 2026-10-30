@@ -4,6 +4,8 @@
  */
 return [
     'badgeSrc' => '/assets/images/bronze-badge.png',
+    'heroImageSrc' => '/assets/images/databricks-hero-data.webp',
+    'heroImageAlt' => 'Team reviewing analytics dashboards and performance charts on a unified data platform',
     'stats' => [
         ['value' => 'Bronze', 'accent' => '', 'title' => 'Databricks partner tier', 'desc' => 'Recognized in 2026 as a Databricks Bronze partner, the first tier of the Brickbuilder Partner Network.'],
         ['value' => '350', 'accent' => '+', 'title' => 'P&C Insurance Domain Experts', 'desc' => 'Practitioners across claims, policy, billing, underwriting, compliance and TPA programs who shape the data model.'],

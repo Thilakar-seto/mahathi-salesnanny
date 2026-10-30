@@ -1032,6 +1032,17 @@
   }
 }
 
+/* Sage tint so the photo sits in the page's colour theme */
+:where(app-modern-workers-compensation) .hero-image:not(._)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(79, 97, 73, 0.30) 0%, rgba(148, 168, 140, 0.18) 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
 /* ====== Capability cards: scroll target + flash from the pills ====== */
 :where(app-modern-workers-compensation) .cap-card:not(._) {
   scroll-margin-top: 110px;

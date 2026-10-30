@@ -1032,34 +1032,56 @@
   }
 }
 
-/* ====== Hero scene (inline SVG instead of a photo) ====== */
-:where(app-databricks) .hero-image.hero-scene:not(._) {
-  background: linear-gradient(145deg, #F5F8F3 0%, #E4EBE0 100%);
-}
-
-:where(app-databricks) .hero-scene:not(._) .scene:not(._) {
+/* Sage tint so the photo sits in the page's colour theme */
+:where(app-databricks) .hero-image:not(._)::after {
+  content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  max-width: none;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(79, 97, 73, 0.32) 0%, rgba(148, 168, 140, 0.18) 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  border-radius: inherit;
 }
 
-:where(app-databricks) .badge-float:not(._) {
+/* The photo is clipped on its own so the badge can hang over its edge */
+:where(app-databricks) .hero-image:not(._) {
+  overflow: visible;
+}
+
+:where(app-databricks) .hero-photo:not(._) {
+  border-radius: inherit;
+}
+
+/* ====== Partner badge floating over the hero photo ====== */
+:where(app-databricks) .hero-badge:not(._) {
+  position: absolute;
+  left: 2%;
+  top: -7%;
+  z-index: 2;
+  width: clamp(104px, 23%, 140px);
+  height: auto;
+  filter: drop-shadow(0 14px 24px rgba(15, 26, 42, 0.38));
   animation: mh-bfloat 6s ease-in-out infinite;
 }
 
 @keyframes mh-bfloat {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
 
-/* The scene sits 30 units right of centre to clear the rounded left edge on desktop;
-   on the round crop (stacked layout) it goes back to the middle. */
 @media (max-width: 900px) {
-  :where(app-databricks) .hero-scene .scene:not(._) {
-    transform: translateX(-5%);
+  /* the photo is a circle here: badge hangs off its upper-left edge */
+  :where(app-databricks) .hero-badge:not(._) {
+    left: 0;
+    top: 0;
+    width: clamp(88px, 26%, 116px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(app-databricks) .hero-badge:not(._) {
+    animation: none;
   }
 }
 
@@ -1077,8 +1099,3 @@
   font-family: inherit;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  :where(app-databricks) .badge-float:not(._) {
-    animation: none;
-  }
-}

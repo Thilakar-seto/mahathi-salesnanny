@@ -3,8 +3,8 @@
  * Data for the <app-modern-workers-compensation> component.
  */
 return [
-    'heroImageSrc' => '/assets/images/workers-comp-hero.webp',
-    'heroImageAlt' => 'Warehouse team moving palletized goods, representing workplace injury and workers\' compensation claims',
+    'heroImageSrc' => '/assets/images/workers_compensation.jpg',
+    'heroImageAlt' => 'Claims team reviewing a workers\' compensation claim file together',
     'stats' => [
         ['value' => '30', 'accent' => '+', 'title' => 'Carriers Supported', 'desc' => 'Long-term partnerships across more than a decade, built around measurable outcomes.'],
         ['value' => '350', 'accent' => '+', 'title' => 'P&C Insurance Domain Experts', 'desc' => 'Practitioners across claims administration, policy operations, compliance and core platforms.'],
