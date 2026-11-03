@@ -86,6 +86,11 @@ add_filter(
 	}
 );
 
+/** Design previews under /v2/ stay out of search results and the sitemap. */
+function mh_is_preview_route( string $route ): bool {
+	return 0 === strpos( $route, '/v2/' );
+}
+
 /** True when the current request is one of the Mahathi routes. */
 function mh_is_route(): bool {
 	global $mh_route_path;
@@ -106,6 +111,9 @@ add_action(
 		$image       = ! empty( $seo['image'] ) ? mh_asset_url( $seo['image'] ) : mh_asset_url( 'images/mahathi_logo_White.png' );
 
 		echo '<meta name="description" content="' . esc_attr( $description ) . '">' . "\n";
+		if ( mh_is_preview_route( mh_current_route() ) ) {
+			echo '<meta name="robots" content="noindex, follow">' . "\n";
+		}
 		echo '<link rel="canonical" href="' . esc_url( $canonical ) . '">' . "\n";
 		echo '<meta property="og:title" content="' . esc_attr( $title ) . '">' . "\n";
 		echo '<meta property="og:description" content="' . esc_attr( $description ) . '">' . "\n";
@@ -181,6 +189,9 @@ function mh_sitemap(): void {
 	echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 	echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 	foreach ( array_keys( mh_routes()['routes'] ) as $route ) {
+		if ( mh_is_preview_route( $route ) ) {
+			continue;
+		}
 		$meta = mh_sitemap_meta( $route );
 		$loc  = '/' === $route ? home_url( '/' ) : home_url( $route );
 		echo '  <url><loc>' . esc_url( $loc ) . '</loc><changefreq>' . $meta['changefreq'] . '</changefreq><priority>' . $meta['priority'] . '</priority></url>' . "\n";

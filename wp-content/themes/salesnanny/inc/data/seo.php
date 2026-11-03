@@ -574,8 +574,8 @@ return [
         ],
     ],
     '/insurance/workers-compensation' => [
-        'title' => 'Workers\' Compensation Claims Management Services | Mahathi',
-        'description' => 'Workers\' compensation claims management, vendor coordination, medical and pharmacy management, FROI/SROI reporting and Guidewire ClaimCenter services.',
+        'title' => 'Workers’ Compensation Claims Management & Services | Mahathi Infotech',
+        'description' => 'Workers’ compensation claims management, claims oversight, TPA and vendor coordination, medical and pharmacy management, FROI/SROI compliance and Guidewire ClaimCenter services for carriers, employers and TPAs.',
         'image' => '/assets/images/Workers_Comp_banner.jpeg',
         'rawTitle' => true,
         'schemas' => mh_service_schemas(
@@ -706,6 +706,51 @@ return [
         'rawTitle' => true,
         'schemas' => [],
     ],
+    '/v2/databricks' => [
+        'title' => 'Enterprise Databricks Implementation Services | Mahathi',
+        'description' => 'Accelerate your data transformation with Mahathi\'s Databricks implementation services. Certified Bronze Partner for migration, AI, and Lakehouse solutions.',
+        'image' => null,
+        'rawTitle' => true,
+        'schemas' => mh_service_schemas(
+            'Databricks Implementation and Migration Services for Insurance',
+            'Databricks Lakehouse implementation, data migration, analytics, AI and managed operations for insurance carriers, TPAs and healthcare payers',
+            '/v2/databricks',
+            'AI Enablement',
+            '/ai-enablement',
+            'Databricks',
+            'v2-databricks'
+        ),
+    ],
+    '/v2/guidewire' => [
+        'title' => 'Guidewire Services for P&C Insurance Carriers | Mahathi',
+        'description' => 'Implement and migrate Guidewire for P&C carriers with certified experts combining Guidewire expertise and deep insurance domain knowledge. Contact us.',
+        'image' => null,
+        'rawTitle' => true,
+        'schemas' => mh_service_schemas(
+            'Guidewire Services for P&C Insurance Carriers',
+            'Guidewire implementation, cloud migration, integration, testing and managed services for P&C carriers, MGAs and TPAs',
+            '/v2/guidewire',
+            'Insurance Solutions',
+            '/insurance',
+            'Guidewire',
+            'v2-guidewire'
+        ),
+    ],
+    '/v2/workers-compensation' => [
+        'title' => 'Workers\' Compensation Claims Management Services | Mahathi',
+        'description' => 'Workers\' compensation claims management, vendor coordination, medical and pharmacy management, FROI/SROI reporting and Guidewire ClaimCenter services.',
+        'image' => null,
+        'rawTitle' => true,
+        'schemas' => mh_service_schemas(
+            'Workers’ Compensation Claims Management Services',
+            'Workers’ compensation claims management, vendor coordination, medical and pharmacy management, FROI and SROI reporting',
+            '/v2/workers-compensation',
+            'Insurance Solutions',
+            '/insurance',
+            'Workers’ Compensation',
+            'v2-workers-compensation'
+        ),
+    ],
     '/blog' => [
         'title' => 'Insurance & Healthcare Tech Insights | Mahathi',
         'description' => 'Expert insights on Guidewire migration, P&C, Workers’ Comp, healthcare claims, and AI-driven automation for insurance and healthcare enterprises.',
@@ -721,8 +766,8 @@ return [
         'schemas' => [],
     ],
     '/databricks' => [
-        'title' => 'Databricks Implementation Services for Insurers | Mahathi',
-        'description' => 'Mahathi, a Databricks Bronze partner, helps P&C carriers, TPAs and healthcare payers unify claims and policy data on a governed Databricks Lakehouse.',
+        'title' => 'Enterprise Databricks Implementation Services | Mahathi',
+        'description' => 'Accelerate your data transformation with Mahathi\'s Databricks implementation services. Certified Bronze Partner for migration, AI, and Lakehouse solutions.',
         'image' => null,
         'rawTitle' => true,
         'schemas' => mh_service_schemas(

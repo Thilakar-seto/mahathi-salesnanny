@@ -28,6 +28,9 @@ return [
     '/insurance/re-insurance' => ['reinsurance', 'main-template'],
     '/insurance/guidewire' => ['guidewire'],
     '/databricks' => ['databricks'],
+    '/v2/databricks' => ['v2-databricks'],
+    '/v2/guidewire' => ['v2-guidewire'],
+    '/v2/workers-compensation' => ['v2-workers-compensation'],
     '/digital-services' => ['digitalservices', 'main-template'],
     '/integrated-mailroom' => ['health-top-banner', 'section2-temp', 'section4-temp'],
     '/workbench-solution' => [
