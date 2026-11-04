@@ -11,49 +11,49 @@ return [
         [
             'question' => 'What is the difference between Databricks and a traditional data warehouse?',
             'answerParas' => [
-                'Databricks Lakehouse combines the reliability and governance of data warehouses with the scale and cost-efficiency of data lakes. You get ACID transactions, schema enforcement, and SQL analytics at petabyte scale without the cost of traditional warehouses like Redshift or Snowflake.',
+                'Databricks Lakehouse brings reporting, governance and AI onto one platform. In one engagement, four operating units that each ran a separate warehouse moved to one Lakehouse, built on the Medallion architecture and governed in Unity Catalog.',
             ],
         ],
         [
             'question' => 'How long does a Databricks implementation take?',
             'answerParas' => [
-                'Typical implementations span 8-12 weeks depending on data volume, complexity, and integrations needed. Discovery: 2-3 weeks. Architecture & pilot: 3-4 weeks. Migration: 2-3 weeks. Hardening & go-live: 1-2 weeks. Mahathi has migrated 2.5B+ records with zero downtime.',
+                'Timelines depend on scope. A Databricks readiness assessment took 8 weeks from assessment to an approved, phased roadmap, mapping 150+ jobs and reports.',
             ],
         ],
         [
-            'question' => 'Is there downtime during data migration?',
+            'question' => 'How do you prove the migrated numbers match?',
             'answerParas' => [
-                'No. Mahathi uses Change Data Capture (CDC) for bi-directional sync during the migration window. You continue processing claims and eligibility requests. We synchronize at cutover, typically a 30-60 minute validation window, not hours or days.',
+                'We check three levels of proof on every data load: completeness, accuracy and business meaning. Every converted query must give the same answer as legacy, and business owners verify the KPIs they rely on.',
             ],
         ],
         [
-            'question' => 'How does Databricks handle compliance (HIPAA, SOC 2)?',
+            'question' => 'How does Mahathi find out why a number is off?',
             'answerParas' => [
-                'Databricks has inherent HIPAA and SOC 2 compliance. We layer on additional security: VPC isolation, CMK encryption, audit logging for all data access, PII masking, and row/column-level access control. Your security and compliance teams remain in control.',
+                'AI and data lineage show why. The issue goes to its owner with full context, and only the affected data is re-run.',
             ],
         ],
         [
-            'question' => 'What about data governance and PII protection?',
+            'question' => 'What about data governance?',
             'answerParas' => [
-                'Unity Catalog provides comprehensive governance. Automated PII detection and masking. Sensitive data tags. Access control by role, department, or individual. Complete audit trails for all queries and data access. Lineage tracking from source to destination.',
+                'Unity Catalog provides governance. Every table has audit-ready proof behind each sign-off, and the sign-off dashboard shows match status for every table in one live view.',
             ],
         ],
         [
             'question' => 'Can we continue using existing BI tools?',
             'answerParas' => [
-                'Yes. Databricks connects natively to Tableau, Power BI, Looker, QlikView, and other tools via standard SQL connectors. No tool replacement needed. Your analysts continue using familiar interfaces on faster, cheaper infrastructure.',
+                'Reports can be rebuilt on Databricks SQL and validated with business users. In one engagement, 400+ SSRS reports were rebuilt in Power BI on Databricks SQL, and refresh time dropped from hours to minutes.',
             ],
         ],
         [
             'question' => 'How much will this cost?',
             'answerParas' => [
-                'Databricks typically costs 60-70% less than legacy data warehouses like Redshift or Snowflake due to shared compute, storage optimization, and auto-scaling. Implementation varies by scope: $200K-$500K for enterprise deployments. We provide detailed cost modeling during discovery.',
+                'Cost depends on scope. For one Fortune 500 enterprise, consolidating four operating units on one Lakehouse brought 75% lower platform cost. A readiness assessment sizes migration cost and risk before you commit.',
             ],
         ],
         [
-            'question' => 'What happens after go-live? Does Mahathi stick around?',
+            'question' => 'What does Mahathi bring from week one?',
             'answerParas' => [
-                'Yes. We offer managed services (24/7 support, monitoring, optimization), training, and ongoing optimization. Most clients retain us post-implementation for performance tuning, new feature adoption, and quarterly health checks.',
+                'The same process and tools from week one: a data match engine, an AI SQL converter, an AI root-cause finder and a sign-off dashboard, so go-live stays on track.',
             ],
         ],
     ],
